@@ -1,24 +1,50 @@
 {
-  "name": "[pg]-🕶️-matrix.",
-  "private": true,
+  "name": "matrix-digital-rain",
   "version": "0.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "start": "node server.mjs",
+    "preview": "vite preview",
+    "test": "node --test",
+    "deadcode": "knip --no-progress",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint .",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check .",
+    "check": "pnpm typecheck && pnpm lint && pnpm format:check && pnpm deadcode && pnpm test && pnpm build"
   },
   "dependencies": {
-    "@google/genai": "^2.9.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "three": "0.164.1",
-    "tweakpane": "4.0.3"
+    "@google/genai": "^2.16.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "three": "^0.185.1",
+    "tweakpane": "^4.0.5"
   },
   "devDependencies": {
-    "@types/node": "^22.14.0",
-    "@vitejs/plugin-react": "^5.0.0",
-    "typescript": "~5.8.2",
-    "vite": "^6.2.0"
+    "@tailwindcss/vite": "^4.3.3",
+    "@tweakpane/core": "2.0.5",
+    "@types/node": "^26.2.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
+    "@types/three": "^0.185.0",
+    "@vitejs/plugin-react": "^6.0.5",
+    "knip": "6.32.0",
+    "oxfmt": "^0.62.0",
+    "oxlint": "^1.77.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.1"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "packageManager": "pnpm@11.21.0",
+  "knip": {
+    "ignoreDependencies": [
+      "@tweakpane/core"
+    ]
   }
 }

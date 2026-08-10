@@ -1,0 +1,80 @@
+{
+  "current_commit": "0371ce8e8044c543ca952f9ff99ab81fd7612748",
+  "working_tree_dirty": true,
+  "generated_at": "2026-08-10T01:52:28Z",
+  "scanned_scope": [
+    "."
+  ],
+  "excluded_directories": [
+    ".cache",
+    ".git",
+    ".hg",
+    ".next",
+    ".nuxt",
+    ".svn",
+    ".turbo",
+    ".venv",
+    "__pycache__",
+    "build",
+    "coverage",
+    "dist",
+    "docs/codemap",
+    "generated",
+    "node_modules",
+    "out",
+    "target",
+    "vendor",
+    "venv"
+  ],
+  "fingerprint_algorithm": "sha256-path-content-v1",
+  "modules": [
+    {
+      "id": ".",
+      "path": ".",
+      "file_count": 19,
+      "fingerprint": "f98dedf959a39293d24de5aa6a93f2b0d8ebd0e47ee8af04bfc1618ac557af3b"
+    },
+    {
+      "id": ".vscode",
+      "path": ".vscode",
+      "file_count": 1,
+      "fingerprint": "e41ec12dcb3d135ea0410aae4677515951d55217f0e7598b0f4fa26ff880f2ca"
+    },
+    {
+      "id": "api",
+      "path": "api",
+      "file_count": 2,
+      "fingerprint": "c7e76f6a0ece68799831564603094d9e81a1aed3e5a5433d400419af8f4d2ff4"
+    },
+    {
+      "id": "components",
+      "path": "components",
+      "file_count": 3,
+      "fingerprint": "ec58e3bfdffccab2da83e453f0295240d3558c614f02748978a7efecb55b7742"
+    },
+    {
+      "id": "config",
+      "path": "config",
+      "file_count": 4,
+      "fingerprint": "55dfd7d9e4c781f5d17c36523dc3bd3f0e3351d18eab4a4064e3ca42be727aad"
+    },
+    {
+      "id": "docs",
+      "path": "docs",
+      "file_count": 3,
+      "fingerprint": "4797c13cd547622edd4d4efa8aff3acb388913cd8b182d2f1bbbf36bcd0da7db"
+    },
+    {
+      "id": "services",
+      "path": "services",
+      "file_count": 1,
+      "fingerprint": "05289872cbcf0e5b7ad3f3a263e062f46a0587ae0c2f110796c6fb3fde38e66e"
+    },
+    {
+      "id": "utils",
+      "path": "utils",
+      "file_count": 3,
+      "fingerprint": "ad578f2fe66e076408147e7290274f705627b8e4fa9611e30345ff459139a2ae"
+    }
+  ]
+}

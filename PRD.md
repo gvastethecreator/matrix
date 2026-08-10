@@ -1,27 +1,27 @@
+# Matrix Playground — alcance de producto
 
-# Matrix Playground PRD
+## Objetivo
 
-## 1. Goal
-Create a high-performance, visually stunning "Digital Rain" (Matrix) playground that allows users to customize every aspect of the effect, from physics to typography.
+Ofrecer un editor de lluvia digital de alto rendimiento que permita explorar estilos, interacción y tipografía, y exportar el resultado sin depender del editor.
 
-## 2. Target Audience
-- Developers looking for background components.
-- Digital artists exploring generative aesthetics.
-- Users who enjoy high-fidelity "hacker" visuals.
+## Usuarios
 
-## 3. Key Features
-- **Real-time Rendering**: Canvas-based digital rain with variable frame rates.
-- **Customization Suite**:
-  - Color palettes (Presets + Custom hex).
-  - Typography (Binary, Katakana, Hex, Matrix, AI-generated).
-  - Physics (Speed, density, fade rates).
-  - Glow and Post-processing (Bloom, perspective).
-- **Presets**: One-click themes (Classic, Cyberpunk, Ghost, Terminal).
-- **Export/Import**: Save and load configurations via JSON.
-- **AI Integration**: Use Gemini to generate custom "alien" character strings or secret messages.
+- Desarrolladores que necesitan fondos animados.
+- Artistas digitales que exploran estética generativa.
+- Usuarios que quieren crear y compartir una configuración Matrix propia.
 
-## 4. Technical Constraints
-- No backend; 100% client-side.
-- React 18/19 with Tailwind CSS.
-- Lucide-React for iconography.
-- Framer Motion for smooth UI transitions.
+## Capacidades actuales
+
+- Render WebGL con instancias y atlas de glifos.
+- Presets, aleatorización y persistencia local.
+- Controles de color, tipografía, movimiento, profundidad, rastro e interacción.
+- Efectos de cursor `grow`, `attract`, `repel` y `swirl`, más efecto de salida `splash`.
+- Glifos temáticos opcionales con Gemini mediante un límite server-side.
+- Exportación de HTML autónomo con fallback de descarga si el portapapeles falla.
+
+## Restricciones
+
+- React 19.2, TypeScript 7, Three.js r185, Tailwind CSS 4.3 y Vite 8.
+- La experiencia principal funciona sin Gemini; la IA requiere `GEMINI_API_KEY` en el servidor.
+- La clave no puede compilarse ni persistirse en el navegador.
+- La exportación autónoma usa Three.js desde CDN.

@@ -1,29 +1,28 @@
-
-import path from 'path';
-import { defineConfig, loadEnv } from 'vite';
+import path from 'node:path';
+import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
-import { fileURLToPath } from 'url';
+import { defineConfig, loadEnv, type Plugin } from 'vite';
+import { createGlyphsHandler } from './api/generateGlyphs.mjs';
 
-// Fix for __dirname in ESM environments
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const glyphsApi = (apiKey: string | undefined): Plugin => ({
+  name: 'matrix-glyphs-api',
+  configureServer(server) {
+    server.middlewares.use('/api/glyphs', createGlyphsHandler({ apiKey }));
+  },
+});
 
 export default defineConfig(({ mode }) => {
-    const env = loadEnv(mode, '.', '');
-    return {
-      server: {
-        port: 3000,
-        host: '0.0.0.0',
+  const env = loadEnv(mode, '.', '');
+  return {
+    server: {
+      port: 3000,
+      host: '127.0.0.1',
+    },
+    plugins: [react(), tailwindcss(), glyphsApi(env.GEMINI_API_KEY)],
+    resolve: {
+      alias: {
+        '@': path.resolve(import.meta.dirname, '.'),
       },
-      plugins: [react()],
-      define: {
-        'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
-      },
-      resolve: {
-        alias: {
-          '@': path.resolve(__dirname, '.'),
-        }
-      }
-    };
+    },
+  };
 });

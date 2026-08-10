@@ -1,20 +1,6 @@
-# Componentes de la Aplicación
+# Componentes
 
-Esta carpeta contiene los componentes de React que construyen la interfaz de usuario.
+- `ParticleCanvas.tsx`: contiene el motor Three.js y su wrapper React. Crea un único canvas, responde a `ResizeObserver`, actualiza la simulación sin remontarla y libera texturas, geometrías, materiales, listeners y contexto WebGL al desmontarse.
+- `TweakpanePanel.tsx`: crea el panel una vez y sincroniza valores/callbacks mediante referencias para evitar reconstrucciones durante el uso de sliders. Se carga de forma diferida desde `App.tsx`.
 
-## `ParticleCanvas.tsx`
-
-Componente wrapper que conecta React con la lógica imperativa de Three.js.
-- Mantiene el ciclo de vida del canvas.
-- Utiliza `utils/animationLogic.ts` para renderizar la escena.
-
-## `TweakpanePanel.tsx`
-
-Panel de control flotante generado con `tweakpane`.
-- **Features**: Binding bidireccional, presets, botón de reset, drag & drop del panel.
-- **Refactor**: Se ha aislado la lógica de estado mutable para evitar re-renders innecesarios en React mientras se manipulan los sliders.
-
-## ⚠️ Archivos Deprecados
-
-Los siguientes archivos han sido identificados como innecesarios o vacíos durante la auditoría y **deben ser eliminados** para mantener limpio el proyecto:
-- `simplex.ts`: No utilizado en la implementación actual.
+No quedan componentes heredados ni implementaciones Canvas 2D paralelas.

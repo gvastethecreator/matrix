@@ -1,6 +1,5 @@
-
 export type GlyphSet = 'katakana' | 'binary' | 'ascii' | 'runes' | 'greek' | 'math' | 'emojis' | 'custom';
-export type MouseEffect = 'ripple' | 'vortex' | 'explosion' | 'dna' | 'invert' | 'grow' | 'attract' | 'follow' | 'repel' | 'distort' | 'swirl' | 'none';
+export type MouseEffect = 'grow' | 'attract' | 'repel' | 'swirl' | 'none';
 export type StreamDirection = 'down' | 'up' | 'left' | 'right' | 'down-left' | 'down-right' | 'up-left' | 'up-right';
 export type StreamMovement = 'linear' | 'serpentine' | 'zigzag' | 'spiral';
 export type ColorMode = 'monochrome' | 'rainbow-stream' | 'screen-gradient' | 'speed-based';
@@ -82,32 +81,4 @@ export interface Config {
   useSplashEffect: boolean;
   splashRadius: number;
   splashForce: number;
-}
-
-// Added legacy types to fix external component errors
-export enum CharSetType {
-  MATRIX = 'MATRIX',
-  BINARY = 'BINARY',
-  HEX = 'HEX',
-  ALPHA = 'ALPHA',
-  CUSTOM = 'CUSTOM',
-}
-
-export interface MatrixConfig {
-  color: string;
-  fontSize: number;
-  speed: number;
-  density: number;
-  fadeFactor: number;
-  charSet: CharSetType;
-  customChars: string;
-  glow: boolean;
-  bloom: number;
-  perspective: boolean;
-}
-
-export interface Preset {
-  id: string;
-  name: string;
-  config: MatrixConfig;
 }

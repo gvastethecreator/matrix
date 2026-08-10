@@ -1,4 +1,3 @@
-
 import { Config } from '../types';
 
 export const initialConfig: Config = {
@@ -12,11 +11,11 @@ export const initialConfig: Config = {
   fontFamily: 'monospace',
   fontWeight: 'normal',
   backgroundColor: '#000000',
-  
+
   colorMode: 'monochrome',
   glyphColor: '#00ff41',
   leaderColor: '#c8ffc8',
-  
+
   fadeOutSpeed: 0.1,
   characterSpacing: 1.0,
   baseRotation: 0,

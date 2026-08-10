@@ -1,0 +1,855 @@
+{
+  "generated_at": "2026-08-10T01:52:28Z",
+  "generated_from_commit": "0371ce8e8044c543ca952f9ff99ab81fd7612748",
+  "scope": [
+    "."
+  ],
+  "nodes": [
+    {
+      "id": "api",
+      "path": "api",
+      "role": "Owns the tracked files for the api module.",
+      "type": "interface",
+      "boundary": "Api",
+      "entrypoints": [
+        "api/generateGlyphs.mjs:MAX_BODY_BYTES"
+      ],
+      "tests": [
+        "api/generateGlyphs.test.mjs"
+      ],
+      "constraints": [
+        "This baseline uses tracked source and explicit dependency references only."
+      ],
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "api/generateGlyphs.mjs",
+            "symbol": "MAX_BODY_BYTES"
+          }
+        ]
+      }
+    },
+    {
+      "id": "app",
+      "path": "App.tsx",
+      "role": "Owns the tracked files for the App module.",
+      "type": "module",
+      "boundary": "App",
+      "entrypoints": [
+        "App.tsx:TweakpanePanel"
+      ],
+      "tests": [],
+      "constraints": [
+        "This baseline uses tracked source and explicit dependency references only."
+      ],
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "App.tsx",
+            "symbol": "TweakpanePanel"
+          }
+        ]
+      }
+    },
+    {
+      "id": "components",
+      "path": "components",
+      "role": "Owns the tracked files for the components module.",
+      "type": "interface",
+      "boundary": "Components",
+      "entrypoints": [
+        "components/README.md:Componentes"
+      ],
+      "tests": [],
+      "constraints": [
+        "This baseline uses tracked source and explicit dependency references only."
+      ],
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "components/README.md",
+            "symbol": "Componentes"
+          }
+        ]
+      }
+    },
+    {
+      "id": "config",
+      "path": "config",
+      "role": "Owns the tracked files for the config module.",
+      "type": "module",
+      "boundary": "Config",
+      "entrypoints": [
+        "config/README.md:Configuración de la Aplicación"
+      ],
+      "tests": [],
+      "constraints": [
+        "This baseline uses tracked source and explicit dependency references only."
+      ],
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "config/README.md",
+            "symbol": "Configuración de la Aplicación"
+          }
+        ]
+      }
+    },
+    {
+      "id": "external-dependencies",
+      "path": "App.tsx",
+      "role": "Represents external packages referenced by tracked source files.",
+      "type": "external",
+      "boundary": "External",
+      "entrypoints": [
+        "App.tsx:react"
+      ],
+      "tests": [],
+      "constraints": [
+        "Only dependencies with literal tracked-source references appear here."
+      ],
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "App.tsx",
+            "symbol": "react"
+          }
+        ]
+      }
+    },
+    {
+      "id": "index",
+      "path": "index.html",
+      "role": "Owns the tracked files for the index module.",
+      "type": "module",
+      "boundary": "Index",
+      "entrypoints": [
+        "index.html:Matrix BG | Generador de Fondos Interactivos"
+      ],
+      "tests": [],
+      "constraints": [
+        "This baseline uses tracked source and explicit dependency references only."
+      ],
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "index.html",
+            "symbol": "Matrix BG | Generador de Fondos Interactivos"
+          }
+        ]
+      }
+    },
+    {
+      "id": "repository",
+      "path": "README.md",
+      "role": "Owns the tracked files for the repository module.",
+      "type": "module",
+      "boundary": "Repository",
+      "entrypoints": [
+        "README.md:Matrix Digital Rain"
+      ],
+      "tests": [],
+      "constraints": [
+        "This baseline uses tracked source and explicit dependency references only."
+      ],
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "README.md",
+            "symbol": "Matrix Digital Rain"
+          }
+        ]
+      }
+    },
+    {
+      "id": "server",
+      "path": "server.mjs",
+      "role": "Owns the tracked files for the server module.",
+      "type": "service",
+      "boundary": "Server",
+      "entrypoints": [
+        "server.mjs:root"
+      ],
+      "tests": [],
+      "constraints": [
+        "This baseline uses tracked source and explicit dependency references only."
+      ],
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "server.mjs",
+            "symbol": "root"
+          }
+        ]
+      }
+    },
+    {
+      "id": "services",
+      "path": "services",
+      "role": "Owns the tracked files for the services module.",
+      "type": "service",
+      "boundary": "Services",
+      "entrypoints": [
+        "services/geminiService.ts:GeminiService"
+      ],
+      "tests": [],
+      "constraints": [
+        "This baseline uses tracked source and explicit dependency references only."
+      ],
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "services/geminiService.ts",
+            "symbol": "GeminiService"
+          }
+        ]
+      }
+    },
+    {
+      "id": "styles",
+      "path": "styles.css",
+      "role": "Owns the tracked files for the styles module.",
+      "type": "module",
+      "boundary": "Styles",
+      "entrypoints": [
+        "styles.css:@import 'tailwindcss';"
+      ],
+      "tests": [],
+      "constraints": [
+        "This baseline uses tracked source and explicit dependency references only."
+      ],
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "styles.css",
+            "symbol": "@import 'tailwindcss';"
+          }
+        ]
+      }
+    },
+    {
+      "id": "types",
+      "path": "types.ts",
+      "role": "Owns the tracked files for the types module.",
+      "type": "module",
+      "boundary": "Types",
+      "entrypoints": [
+        "types.ts:GlyphSet"
+      ],
+      "tests": [],
+      "constraints": [
+        "This baseline uses tracked source and explicit dependency references only."
+      ],
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "types.ts",
+            "symbol": "GlyphSet"
+          }
+        ]
+      }
+    },
+    {
+      "id": "utils",
+      "path": "utils",
+      "role": "Owns the tracked files for the utils module.",
+      "type": "module",
+      "boundary": "Utils",
+      "entrypoints": [
+        "utils/README.md:Utilidades"
+      ],
+      "tests": [],
+      "constraints": [
+        "This baseline uses tracked source and explicit dependency references only."
+      ],
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "utils/README.md",
+            "symbol": "Utilidades"
+          }
+        ]
+      }
+    },
+    {
+      "id": "vite-config",
+      "path": "vite.config.ts",
+      "role": "Owns the tracked files for the vite.config module.",
+      "type": "module",
+      "boundary": "Vite.Config",
+      "entrypoints": [
+        "vite.config.ts:glyphsApi"
+      ],
+      "tests": [],
+      "constraints": [
+        "This baseline uses tracked source and explicit dependency references only."
+      ],
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "vite.config.ts",
+            "symbol": "glyphsApi"
+          }
+        ]
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "api",
+      "to": "external-dependencies",
+      "type": "imports",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "api/generateGlyphs.mjs",
+            "symbol": "@google/genai"
+          }
+        ]
+      }
+    },
+    {
+      "from": "app",
+      "to": "components",
+      "type": "imports",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "App.tsx",
+            "symbol": "./components/ParticleCanvas"
+          },
+          {
+            "path": "App.tsx",
+            "symbol": "./components/TweakpanePanel"
+          }
+        ]
+      }
+    },
+    {
+      "from": "app",
+      "to": "config",
+      "type": "imports",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "App.tsx",
+            "symbol": "./config/initialConfig"
+          },
+          {
+            "path": "App.tsx",
+            "symbol": "./config/presets"
+          }
+        ]
+      }
+    },
+    {
+      "from": "app",
+      "to": "external-dependencies",
+      "type": "imports",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "App.tsx",
+            "symbol": "react"
+          }
+        ]
+      }
+    },
+    {
+      "from": "app",
+      "to": "services",
+      "type": "imports",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "App.tsx",
+            "symbol": "./services/geminiService"
+          }
+        ]
+      }
+    },
+    {
+      "from": "app",
+      "to": "types",
+      "type": "imports",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "App.tsx",
+            "symbol": "./types"
+          }
+        ]
+      }
+    },
+    {
+      "from": "app",
+      "to": "utils",
+      "type": "imports",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "App.tsx",
+            "symbol": "./utils/exportHtml"
+          },
+          {
+            "path": "App.tsx",
+            "symbol": "./utils/random"
+          }
+        ]
+      }
+    },
+    {
+      "from": "components",
+      "to": "app",
+      "type": "reads",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "components/README.md",
+            "symbol": "App.tsx"
+          }
+        ]
+      }
+    },
+    {
+      "from": "components",
+      "to": "config",
+      "type": "imports",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "components/ParticleCanvas.tsx",
+            "symbol": "../config/constants"
+          },
+          {
+            "path": "components/TweakpanePanel.tsx",
+            "symbol": "../config/initialConfig"
+          },
+          {
+            "path": "components/TweakpanePanel.tsx",
+            "symbol": "../config/constants"
+          }
+        ]
+      }
+    },
+    {
+      "from": "components",
+      "to": "external-dependencies",
+      "type": "imports",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "components/ParticleCanvas.tsx",
+            "symbol": "react"
+          },
+          {
+            "path": "components/ParticleCanvas.tsx",
+            "symbol": "three"
+          },
+          {
+            "path": "components/TweakpanePanel.tsx",
+            "symbol": "react"
+          },
+          {
+            "path": "components/TweakpanePanel.tsx",
+            "symbol": "tweakpane"
+          }
+        ]
+      }
+    },
+    {
+      "from": "components",
+      "to": "types",
+      "type": "imports",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "components/ParticleCanvas.tsx",
+            "symbol": "../types"
+          },
+          {
+            "path": "components/TweakpanePanel.tsx",
+            "symbol": "../types"
+          }
+        ]
+      }
+    },
+    {
+      "from": "config",
+      "to": "types",
+      "type": "imports",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "config/constants.ts",
+            "symbol": "../types"
+          },
+          {
+            "path": "config/initialConfig.ts",
+            "symbol": "../types"
+          },
+          {
+            "path": "config/presets.ts",
+            "symbol": "../types"
+          }
+        ]
+      }
+    },
+    {
+      "from": "index",
+      "to": "app",
+      "type": "imports",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "index.tsx",
+            "symbol": "./App"
+          }
+        ]
+      }
+    },
+    {
+      "from": "index",
+      "to": "external-dependencies",
+      "type": "imports",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "index.html",
+            "symbol": "https://fonts.googleapis.com"
+          },
+          {
+            "path": "index.html",
+            "symbol": "https://fonts.gstatic.com"
+          },
+          {
+            "path": "index.html",
+            "symbol": "https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400..900&family=Share+Tech+Mono&family=VT323&family=Zen+Dots&display=swap"
+          },
+          {
+            "path": "index.tsx",
+            "symbol": "react"
+          },
+          {
+            "path": "index.tsx",
+            "symbol": "react-dom/client"
+          }
+        ]
+      }
+    },
+    {
+      "from": "index",
+      "to": "styles",
+      "type": "imports",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "index.tsx",
+            "symbol": "./styles.css"
+          }
+        ]
+      }
+    },
+    {
+      "from": "repository",
+      "to": "api",
+      "type": "reads",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "README.md",
+            "symbol": "api/generateGlyphs.mjs"
+          }
+        ]
+      }
+    },
+    {
+      "from": "repository",
+      "to": "app",
+      "type": "reads",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "README.md",
+            "symbol": "App.tsx"
+          }
+        ]
+      }
+    },
+    {
+      "from": "repository",
+      "to": "components",
+      "type": "reads",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "README.md",
+            "symbol": "components/ParticleCanvas.tsx"
+          },
+          {
+            "path": "README.md",
+            "symbol": "components/TweakpanePanel.tsx"
+          }
+        ]
+      }
+    },
+    {
+      "from": "repository",
+      "to": "server",
+      "type": "calls",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "package.json",
+            "symbol": "server.mjs"
+          }
+        ]
+      }
+    },
+    {
+      "from": "repository",
+      "to": "server",
+      "type": "reads",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "README.md",
+            "symbol": "server.mjs"
+          }
+        ]
+      }
+    },
+    {
+      "from": "repository",
+      "to": "utils",
+      "type": "reads",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "README.md",
+            "symbol": "utils/exportHtml.ts"
+          }
+        ]
+      }
+    },
+    {
+      "from": "server",
+      "to": "api",
+      "type": "imports",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "server.mjs",
+            "symbol": "./api/generateGlyphs.mjs"
+          }
+        ]
+      }
+    },
+    {
+      "from": "utils",
+      "to": "components",
+      "type": "imports",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "utils/exportHtml.ts",
+            "symbol": "../components/ParticleCanvas"
+          }
+        ]
+      }
+    },
+    {
+      "from": "utils",
+      "to": "components",
+      "type": "reads",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "utils/README.md",
+            "symbol": "components/ParticleCanvas.tsx"
+          }
+        ]
+      }
+    },
+    {
+      "from": "utils",
+      "to": "config",
+      "type": "imports",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "utils/random.ts",
+            "symbol": "../config/constants"
+          }
+        ]
+      }
+    },
+    {
+      "from": "utils",
+      "to": "external-dependencies",
+      "type": "imports",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "utils/exportHtml.ts",
+            "symbol": "https://unpkg.com/three@0.185.1/build/three.module.js"
+          }
+        ]
+      }
+    },
+    {
+      "from": "utils",
+      "to": "types",
+      "type": "imports",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "utils/exportHtml.ts",
+            "symbol": "../types"
+          },
+          {
+            "path": "utils/random.ts",
+            "symbol": "../types"
+          }
+        ]
+      }
+    },
+    {
+      "from": "vite-config",
+      "to": "api",
+      "type": "imports",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "vite.config.ts",
+            "symbol": "./api/generateGlyphs.mjs"
+          }
+        ]
+      }
+    },
+    {
+      "from": "vite-config",
+      "to": "external-dependencies",
+      "type": "imports",
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "vite.config.ts",
+            "symbol": "@tailwindcss/vite"
+          },
+          {
+            "path": "vite.config.ts",
+            "symbol": "@vitejs/plugin-react"
+          },
+          {
+            "path": "vite.config.ts",
+            "symbol": "vite"
+          }
+        ]
+      }
+    }
+  ],
+  "flows": [
+    {
+      "trigger": "Tracked reference index.tsx:./App",
+      "steps": [
+        "index",
+        "app",
+        "utils",
+        "components",
+        "config",
+        "types"
+      ],
+      "outcome": "The verified dependency path reaches types through 5 step(s)."
+    },
+    {
+      "trigger": "Tracked reference README.md:App.tsx",
+      "steps": [
+        "repository",
+        "app",
+        "utils",
+        "components",
+        "config",
+        "types"
+      ],
+      "outcome": "The verified dependency path reaches types through 5 step(s)."
+    },
+    {
+      "trigger": "Tracked reference README.md:components/ParticleCanvas.tsx",
+      "steps": [
+        "repository",
+        "components",
+        "app",
+        "utils",
+        "config",
+        "types"
+      ],
+      "outcome": "The verified dependency path reaches types through 5 step(s)."
+    },
+    {
+      "trigger": "Tracked reference README.md:utils/exportHtml.ts",
+      "steps": [
+        "repository",
+        "utils",
+        "components",
+        "app",
+        "config",
+        "types"
+      ],
+      "outcome": "The verified dependency path reaches types through 5 step(s)."
+    },
+    {
+      "trigger": "Tracked reference App.tsx:./utils/exportHtml",
+      "steps": [
+        "app",
+        "utils",
+        "components",
+        "config",
+        "types"
+      ],
+      "outcome": "The verified dependency path reaches types through 4 step(s)."
+    }
+  ]
+}

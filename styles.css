@@ -1,0 +1,39 @@
+@import 'tailwindcss';
+
+:root {
+  --tp-base-background-color: hsla(0, 0%, 5%, 0.9);
+  --tp-base-shadow-color: hsla(0, 0%, 0%, 0.5);
+  --tp-button-background-color: hsla(150, 60%, 40%, 1);
+  --tp-button-background-color-active: hsla(150, 60%, 60%, 1);
+  --tp-button-background-color-focus: hsla(150, 60%, 50%, 1);
+  --tp-button-background-color-hover: hsla(150, 60%, 45%, 1);
+  --tp-button-foreground-color: hsla(0, 0%, 100%, 1);
+  --tp-container-background-color: hsla(0, 0%, 0%, 0.6);
+  --tp-container-foreground-color: hsla(150, 50%, 80%, 1);
+  --tp-label-foreground-color: hsla(0, 0%, 80%, 1);
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #000;
+  font-family: 'Zen Dots', sans-serif;
+}
+
+.tp-dfwv {
+  scrollbar-color: #333 #000;
+  scrollbar-width: thin;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -14,6 +14,6 @@ Contiene una colección de configuraciones predefinidas (`presets`). Cada preset
 
 Este archivo centraliza las constantes utilizadas en toda la aplicación. Esto incluye:
 
--   **Conjuntos de Caracteres**: Las cadenas de texto para cada `glyphSet` (Katakana, Binario, ASCII, etc.).
--   **Vectores de Dirección**: Mapeo de las direcciones de flujo (`down`, `up`, etc.) a sus vectores `[x, y]`.
--   **Opciones de Aleatorización**: Arrays con las opciones disponibles para la aleatorización (familias de fuentes, efectos de mouse, etc.).
+- **Conjuntos de Caracteres**: Las cadenas de texto para cada `glyphSet` (Katakana, Binario, ASCII, etc.).
+- **Vectores de Dirección**: Mapeo de las direcciones de flujo (`down`, `up`, etc.) a sus vectores `[x, y]`.
+- **Opciones de Aleatorización**: Arrays con las opciones disponibles para la aleatorización (familias de fuentes, efectos de mouse, etc.).

@@ -1,4 +1,3 @@
-
 import {
   glyphSets,
   mouseEffects,
@@ -15,7 +14,7 @@ import type { Config } from '../types';
  * @param arr El array de entrada.
  * @returns Un elemento aleatorio del array.
  */
-export const getRandomElement = <T,>(arr: readonly T[]): T => arr[Math.floor(Math.random() * arr.length)];
+const getRandomElement = <T>(arr: readonly T[]): T => arr[Math.floor(Math.random() * arr.length)];
 
 /**
  * Genera un número de punto flotante aleatorio dentro de un rango.
@@ -23,7 +22,7 @@ export const getRandomElement = <T,>(arr: readonly T[]): T => arr[Math.floor(Mat
  * @param max El límite superior (exclusivo).
  * @returns Un número flotante aleatorio.
  */
-export const getRandomFloat = (min: number, max: number): number => Math.random() * (max - min) + min;
+const getRandomFloat = (min: number, max: number): number => Math.random() * (max - min) + min;
 
 /**
  * Genera un número entero aleatorio dentro de un rango.
@@ -31,13 +30,17 @@ export const getRandomFloat = (min: number, max: number): number => Math.random(
  * @param max El límite superior (inclusivo).
  * @returns Un número entero aleatorio.
  */
-export const getRandomInt = (min: number, max: number): number => Math.floor(getRandomFloat(min, max + 1));
+const getRandomInt = (min: number, max: number): number => Math.floor(getRandomFloat(min, max + 1));
 
 /**
  * Genera un color hexadecimal aleatorio.
  * @returns Una cadena de texto que representa un color en formato hexadecimal (ej. '#3a8cc9').
  */
-export const getRandomHexColor = (): string => '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+const getRandomHexColor = (): string =>
+  '#' +
+  Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, '0');
 
 /**
  * Genera un objeto de configuración completo con valores aleatorios.
@@ -59,11 +62,11 @@ export const generateRandomConfig = (): Config => {
     fontFamily: getRandomElement(fontFamilies),
     fontWeight: getRandomElement(fontWeights),
     backgroundColor: getRandomHexColor(),
-    
-    colorMode: isColor ? getRandomElement(colorModes.filter(m => m !== 'monochrome')) : 'monochrome',
+
+    colorMode: isColor ? getRandomElement(colorModes.filter((m) => m !== 'monochrome')) : 'monochrome',
     glyphColor: getRandomHexColor(),
     leaderColor: getRandomHexColor(),
-    
+
     fadeOutSpeed: getRandomFloat(0.05, 0.2),
     characterSpacing: getRandomFloat(0.8, 1.5),
     baseRotation: Math.random() > 0.8 ? getRandomInt(0, 360) : 0,

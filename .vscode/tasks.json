@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "🚀 dev", "type": "shell", "command": "pnpm dev", "isBackground": true, "problemMatcher": [] },
+    {
+      "label": "📦 build",
+      "type": "shell",
+      "command": "pnpm build",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    { "label": "▶️ start", "type": "shell", "command": "pnpm start", "isBackground": true, "problemMatcher": [] },
+    { "label": "👁️ preview", "type": "shell", "command": "pnpm preview", "isBackground": true, "problemMatcher": [] },
+    { "label": "🧪 test", "type": "shell", "command": "pnpm test", "group": "test", "problemMatcher": [] },
+    { "label": "🔎 types", "type": "shell", "command": "pnpm typecheck", "problemMatcher": [] },
+    { "label": "🧹 lint", "type": "shell", "command": "pnpm lint", "problemMatcher": [] },
+    { "label": "🪦 dead", "type": "shell", "command": "pnpm deadcode", "problemMatcher": [] },
+    { "label": "✨ format", "type": "shell", "command": "pnpm format", "problemMatcher": [] },
+    { "label": "✅ check", "type": "shell", "command": "pnpm check", "group": "test", "problemMatcher": [] }
+  ]
+}

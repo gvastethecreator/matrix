@@ -1,65 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" href="data:," />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Matrix BG | Generador de Fondos Interactivos</title>
-    <meta name="description" content="Generador de fondos de partículas estilo Matrix altamente configurable con exportación HTML.">
-    <meta name="theme-color" content="#000000">
-    
-    <!-- Fonts: Zen Dots (Requested) + Sci-Fi/Tech Collection -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400..900&family=Share+Tech+Mono&family=VT323&family=Zen+Dots&display=swap" rel="stylesheet">
+    <meta
+      name="description"
+      content="Generador de fondos de partículas estilo Matrix altamente configurable con exportación HTML."
+    />
+    <meta name="theme-color" content="#000000" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      :root {
-        --tp-base-background-color: hsla(0, 0%, 5%, 0.9);
-        --tp-base-shadow-color: hsla(0, 0%, 0%, 0.5);
-        --tp-button-background-color: hsla(150, 60%, 40%, 1);
-        --tp-button-background-color-active: hsla(150, 60%, 60%, 1);
-        --tp-button-background-color-focus: hsla(150, 60%, 50%, 1);
-        --tp-button-background-color-hover: hsla(150, 60%, 45%, 1);
-        --tp-button-foreground-color: hsla(0, 0%, 100%, 1);
-        --tp-container-background-color: hsla(0, 0%, 0%, 0.6);
-        --tp-container-foreground-color: hsla(150, 50%, 80%, 1);
-        --tp-label-foreground-color: hsla(0, 0%, 80%, 1);
-      }
-      body, html, #root {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        background-color: #000;
-        font-family: 'Zen Dots', sans-serif; /* Default UI font fallback */
-      }
-      /* Ocultar scrollbars en Tweakpane para diseño limpio */
-      .tp-dfwv {
-        scrollbar-width: thin;
-        scrollbar-color: #333 #000;
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "tweakpane": "https://unpkg.com/tweakpane@4.0.3/dist/tweakpane.js",
-    "three": "https://unpkg.com/three@0.164.1/build/three.module.js",
-    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
-    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
-    "path": "https://esm.sh/path@^0.12.7",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
-    "vite": "https://esm.sh/vite@^7.3.0",
-    "url": "https://esm.sh/url@^0.11.4"
-  }
-}
-</script>
-</head>
+    <!-- Fonts: Zen Dots (Requested) + Sci-Fi/Tech Collection -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400..900&family=Share+Tech+Mono&family=VT323&family=Zen+Dots&display=swap"
+      rel="stylesheet"
+    />
+  </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>

@@ -8,14 +8,14 @@ import { animationLogicString } from '../components/ParticleCanvas';
  * @returns Una cadena de texto que contiene el documento HTML completo.
  */
 export const generateStandaloneHtml = (config: Config): string => {
-    if (!config || typeof config.numColumns !== 'number' || config.numColumns <= 0) {
-      return '<!-- ERROR: Configuración inválida. El número de columnas debe ser mayor que cero. -->';
-    }
+  if (!config || typeof config.numColumns !== 'number' || config.numColumns <= 0) {
+    return '<!-- ERROR: Configuración inválida. El número de columnas debe ser mayor que cero. -->';
+  }
 
-    // Inyección segura de la configuración y la lógica.
-    // Nota: animationLogicString ya contiene las constantes y la función serializada.
-    const fullScript = `
-        import * as THREE from 'https://unpkg.com/three@0.164.1/build/three.module.js';
+  // Inyección segura de la configuración y la lógica.
+  // Nota: animationLogicString ya contiene las constantes y la función serializada.
+  const fullScript = `
+        import * as THREE from 'https://unpkg.com/three@0.185.1/build/three.module.js';
 
         // --- Configuración Inicial (Inyectada) ---
         const initialConfig = ${JSON.stringify(config, null, 2)};
@@ -34,8 +34,8 @@ export const generateStandaloneHtml = (config: Config): string => {
             }
         });
     `;
-    
-    return `<!DOCTYPE html>
+
+  return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -61,7 +61,7 @@ export const generateStandaloneHtml = (config: Config): string => {
 </head>
 <body>
     <canvas id="matrix-canvas"></canvas>
-    <!-- Cargando Three.js desde CDN (versión compatible con la lógica desarrollada) -->
+    <!-- Three.js fijado a la misma versión compatible que utiliza el editor. -->
     <script type="module">
         ${fullScript}
     </script>
