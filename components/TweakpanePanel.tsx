@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Pane } from 'tweakpane';
 import type { Config } from '../types';
-import { initialConfig } from '../config/initialConfig';
+import { factoryConfig } from '../config/configState';
 import {
   glyphSets,
   fontFamilies,
@@ -18,8 +18,6 @@ interface TweakpanePanelProps {
   applyPreset: (name: string) => void;
   presetNames: string[];
   randomizeConfig: () => void;
-  onAiGenerate: (theme: string) => void;
-  isAiLoading: boolean;
 }
 
 // Helper to convert arrays to Tweakpane options { Label: value }
@@ -32,27 +30,33 @@ const TweakpanePanel: React.FC<TweakpanePanelProps> = ({
   applyPreset,
   presetNames,
   randomizeConfig,
-  onAiGenerate,
-  isAiLoading,
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const paneRef = useRef<Pane | null>(null);
-  const paramsRef = useRef({ ...config, preset: '', aiTheme: 'alien hacker symbols' });
-  const callbacksRef = useRef({ setConfig, applyPreset, randomizeConfig, onAiGenerate });
-  const isAiLoadingRef = useRef(isAiLoading);
+  const paramsRef = useRef({
+    ...config,
+    preset: config.preset ?? '',
+    activePreset: config.preset || 'Custom',
+  });
+  const callbacksRef = useRef({ setConfig, applyPreset, randomizeConfig });
 
-  // Keep refs updated with latest callbacks
   useEffect(() => {
-    callbacksRef.current = { setConfig, applyPreset, randomizeConfig, onAiGenerate };
-    isAiLoadingRef.current = isAiLoading;
-  }, [setConfig, applyPreset, randomizeConfig, onAiGenerate, isAiLoading]);
+    callbacksRef.current = { setConfig, applyPreset, randomizeConfig };
+  }, [setConfig, applyPreset, randomizeConfig]);
 
   // Sync external config changes (e.g. Presets) to Tweakpane UI
   useEffect(() => {
     if (!paneRef.current) return;
     let needsRefresh = false;
     (Object.keys(config) as Array<keyof Config>).forEach((key) => {
-      if (key === 'preset') return;
+      if (key === 'preset') {
+        const active = config.preset || 'Custom';
+        if (paramsRef.current.activePreset !== active) {
+          paramsRef.current.activePreset = active;
+          needsRefresh = true;
+        }
+        return;
+      }
       // @ts-ignore
       if (paramsRef.current[key] !== config[key]) {
         // @ts-ignore
@@ -75,7 +79,7 @@ const TweakpanePanel: React.FC<TweakpanePanelProps> = ({
     paneRef.current = pane;
 
     const updateState = () => {
-      const { preset: _preset, aiTheme: _aiTheme, ...restConfig } = PARAMS;
+      const { preset: _preset, activePreset: _activePreset, ...restConfig } = PARAMS;
       callbacksRef.current.setConfig((prev) => ({ ...prev, ...restConfig }));
     };
 
@@ -101,13 +105,14 @@ const TweakpanePanel: React.FC<TweakpanePanelProps> = ({
         }
       });
 
-    sysFolder.addButton({ title: '🎲 RANDOMIZE SYSTEM' }).on('click', () => callbacksRef.current.randomizeConfig());
-    sysFolder
-      .addButton({ title: '🔄 FACTORY RESET' })
-      .on('click', () => callbacksRef.current.setConfig({ ...initialConfig }));
+    sysFolder.addBinding(PARAMS, 'activePreset', { label: 'Active', readonly: true });
 
-    // --- 2. AI & CONTENT ---
-    const contentFolder = pane.addFolder({ title: 'CONTENT & AI', expanded: false });
+    sysFolder.addButton({ title: '🎲 RANDOMIZE SYSTEM' }).on('click', () => callbacksRef.current.randomizeConfig());
+    sysFolder.addButton({ title: '🔄 FACTORY RESET' }).on('click', () => {
+      callbacksRef.current.setConfig(factoryConfig());
+    });
+
+    const contentFolder = pane.addFolder({ title: 'CONTENT', expanded: false });
 
     contentFolder
       .addBinding(PARAMS, 'glyphSet', {
@@ -123,13 +128,6 @@ const TweakpanePanel: React.FC<TweakpanePanelProps> = ({
         rows: 2,
       })
       .on('change', updateState);
-
-    const aiSub = contentFolder.addFolder({ title: 'Gemini Encryption' });
-    aiSub.addBinding(PARAMS, 'aiTheme', { label: 'Concept' });
-    aiSub.addButton({ title: '✨ GENERATE GLYPHS' }).on('click', () => {
-      if (isAiLoadingRef.current) return;
-      callbacksRef.current.onAiGenerate(PARAMS.aiTheme);
-    });
 
     // --- 3. OPTICS (Appearance) ---
     const lookFolder = pane.addFolder({ title: 'OPTICS', expanded: false });

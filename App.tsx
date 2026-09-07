@@ -1,11 +1,22 @@
 import React, { useState, useCallback, useMemo, useEffect, useRef } from 'react';
 import type { Config } from './types';
 import ParticleCanvas from './components/ParticleCanvas';
-import { generateStandaloneHtml } from './utils/exportHtml';
-import { initialConfig } from './config/initialConfig';
+import { getAnimationLogicString } from './utils/exportEngine';
+import { applyPreset, UI_VISIBLE_STORAGE_KEY } from './config/configState';
 import { presets } from './config/presets';
+import { generateStandaloneHtml } from './utils/exportHtml';
 import { generateRandomConfig } from './utils/random';
-import { geminiService } from './services/geminiService';
+import { decideExportDelivery, downloadExportFilename } from './utils/exportDelivery';
+import { createPersistScheduler, loadConfig } from './utils/persist';
+import {
+  customGlyphNotice,
+  panelFallbackLabel,
+  persistErrorMessage,
+  readUiVisible,
+  stealthPressed,
+  toggleStealth,
+  writeUiVisible,
+} from './utils/editorUx';
 
 const TweakpanePanel = React.lazy(() => import('./components/TweakpanePanel'));
 
@@ -34,67 +45,67 @@ const copyText = async (text: string) => {
   }
 };
 
+const triggerDownload = (html: string, filename: string) => {
+  const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  URL.revokeObjectURL(url);
+};
+
 const App: React.FC = () => {
-  // Cargar config inicial de localStorage si existe con sanitización profunda
-  const [config, setConfig] = useState<Config>(() => {
-    const saved = localStorage.getItem('matrix_config');
-    if (saved) {
-      try {
-        const parsed = JSON.parse(saved);
-        const merged = { ...initialConfig, ...parsed };
-
-        // Sanitizar campos numéricos críticos para evitar que valores inválidos desactiven el renderizador
-        if (typeof merged.numColumns !== 'number' || merged.numColumns <= 0)
-          merged.numColumns = initialConfig.numColumns;
-        if (typeof merged.fontSize !== 'number' || merged.fontSize <= 0) merged.fontSize = initialConfig.fontSize;
-        if (typeof merged.perspective !== 'number' || merged.perspective <= 0)
-          merged.perspective = initialConfig.perspective;
-        if (typeof merged.minSpeed !== 'number' || merged.minSpeed < 0) merged.minSpeed = initialConfig.minSpeed;
-        if (typeof merged.maxSpeed !== 'number' || merged.maxSpeed <= 0) merged.maxSpeed = initialConfig.maxSpeed;
-        if (typeof merged.maxTrailLength !== 'number' || merged.maxTrailLength <= 0)
-          merged.maxTrailLength = initialConfig.maxTrailLength;
-        if (typeof merged.minTrailLength !== 'number' || merged.minTrailLength <= 0)
-          merged.minTrailLength = initialConfig.minTrailLength;
-        if (typeof merged.characterSpacing !== 'number' || merged.characterSpacing <= 0)
-          merged.characterSpacing = initialConfig.characterSpacing;
-
-        // Sanitizar colores
-        if (!merged.glyphColor || typeof merged.glyphColor !== 'string') merged.glyphColor = initialConfig.glyphColor;
-        if (!merged.leaderColor || typeof merged.leaderColor !== 'string')
-          merged.leaderColor = initialConfig.leaderColor;
-        if (!merged.backgroundColor || typeof merged.backgroundColor !== 'string')
-          merged.backgroundColor = initialConfig.backgroundColor;
-
-        return merged;
-      } catch {
-        return initialConfig;
-      }
-    }
-    return initialConfig;
-  });
-
-  const [isUiVisible, setIsUiVisible] = useState(true);
+  const [persistError, setPersistError] = useState<string | null>(null);
+  const persist = useMemo(
+    () =>
+      createPersistScheduler(window.localStorage, {
+        onResult: (result) => {
+          setPersistError(result.ok ? null : persistErrorMessage);
+        },
+      }),
+    [],
+  );
+  const [config, setConfig] = useState<Config>(() => loadConfig(window.localStorage));
+  const [isUiVisible, setIsUiVisible] = useState(() =>
+    readUiVisible(window.localStorage.getItem(UI_VISIBLE_STORAGE_KEY)),
+  );
   const [copyState, setCopyState] = useState<'idle' | 'loading' | 'success' | 'downloaded' | 'error'>('idle');
-  const [isAiGenerating, setIsAiGenerating] = useState(false);
-  const [aiError, setAiError] = useState<string | null>(null);
   const copyResetTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(
     () => () => {
       if (copyResetTimer.current) clearTimeout(copyResetTimer.current);
+      persist.flush();
     },
-    [],
+    [persist],
   );
 
-  // Persistir cambios
   useEffect(() => {
-    localStorage.setItem('matrix_config', JSON.stringify(config));
-  }, [config]);
+    persist.push(config);
+  }, [config, persist]);
 
-  const applyPreset = useCallback((presetName: string) => {
-    if (presets[presetName]) {
-      setConfig((prev) => ({ ...prev, ...presets[presetName], preset: presetName }));
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(UI_VISIBLE_STORAGE_KEY, writeUiVisible(isUiVisible));
+    } catch {
+      setPersistError(persistErrorMessage);
     }
+  }, [isUiVisible]);
+
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key !== 'Escape') return;
+      setIsUiVisible((visible) => toggleStealth(visible));
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
+
+  const applyNamedPreset = useCallback((presetName: string) => {
+    setConfig((prev) => applyPreset(prev, presetName));
   }, []);
 
   const presetNames = useMemo(() => Object.keys(presets), []);
@@ -103,43 +114,18 @@ const App: React.FC = () => {
     setConfig(generateRandomConfig());
   }, []);
 
-  const handleGenerateAiGlyphs = useCallback(async (theme: string) => {
-    setIsAiGenerating(true);
-    setAiError(null);
-    try {
-      const glyphs = await geminiService.generateThematicGlyphs(theme);
-      setConfig((prev) => ({
-        ...prev,
-        glyphSet: 'custom',
-        customGlyphSet: glyphs,
-      }));
-    } catch (error) {
-      console.warn('AI generation unavailable:', error);
-      setAiError(error instanceof Error ? error.message : 'No se pudieron generar los glifos.');
-    } finally {
-      setIsAiGenerating(false);
-    }
-  }, []);
-
   const handleCopyHtml = useCallback(async () => {
     if (copyResetTimer.current) clearTimeout(copyResetTimer.current);
     setCopyState('loading');
     try {
       await new Promise((resolve) => setTimeout(resolve, 200));
-      const html = generateStandaloneHtml(config);
+      const html = generateStandaloneHtml(config, getAnimationLogicString());
+      const delivery = decideExportDelivery(await copyText(html), Date.now());
 
-      if (await copyText(html)) {
+      if (delivery.kind === 'copied') {
         setCopyState('success');
       } else {
-        const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = `matrix-digital-rain-${Date.now()}.html`;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        URL.revokeObjectURL(url);
+        triggerDownload(html, delivery.filename);
         setCopyState('downloaded');
       }
 
@@ -150,6 +136,13 @@ const App: React.FC = () => {
     }
   }, [config]);
 
+  const handleDownloadHtml = useCallback(() => {
+    const html = generateStandaloneHtml(config, getAnimationLogicString());
+    triggerDownload(html, downloadExportFilename(Date.now()));
+  }, [config]);
+
+  const charsetNotice = customGlyphNotice(config);
+
   const Icons = {
     Settings: () => (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -159,7 +152,7 @@ const App: React.FC = () => {
     ),
     EyeOff: () => (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <path d="M17.94 17.94A10.07 10.07 0 0 1 12 19c-7 0-11-7-11-7a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 7 11 7a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24L2 2l20 20" />
+        <path d="M17.94 17.94A10.07 10.07 0 0 1 12 19c-7 0-11-7-11-7a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 7 11 7a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1 -4.24 -4.24M2 2l20 20" />
       </svg>
     ),
     Download: () => (
@@ -183,38 +176,46 @@ const App: React.FC = () => {
       <div
         className={`transition-all duration-500 ease-in-out ${isUiVisible ? 'opacity-100' : 'opacity-0 pointer-events-none translate-x-10'}`}
       >
-        <React.Suspense fallback={null}>
+        <React.Suspense
+          fallback={
+            <div
+              className="fixed top-4 right-4 z-30 rounded-xl border border-white/10 bg-black/60 px-4 py-3 text-xs uppercase tracking-widest text-white/70"
+              role="status"
+            >
+              {panelFallbackLabel}
+            </div>
+          }
+        >
           <TweakpanePanel
             config={config}
             setConfig={setConfig}
-            applyPreset={applyPreset}
+            applyPreset={applyNamedPreset}
             presetNames={presetNames}
             randomizeConfig={randomizeConfig}
-            onAiGenerate={handleGenerateAiGlyphs}
-            isAiLoading={isAiGenerating}
           />
         </React.Suspense>
       </div>
 
-      <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 p-1.5 rounded-full bg-black/60 backdrop-blur-xl border border-white/10 shadow-[0_0_30px_rgba(0,0,0,0.5)] transition-all hover:scale-105 active:scale-95">
+      <div className="fixed bottom-8 left-1/2 z-50 flex -translate-x-1/2 items-center gap-2 rounded-full border border-white/10 bg-black/60 p-1.5 shadow-[0_0_30px_rgba(0,0,0,0.5)] backdrop-blur-xl transition-all hover:scale-105 active:scale-95">
         <button
-          onClick={() => setIsUiVisible(!isUiVisible)}
+          onClick={() => setIsUiVisible((visible) => toggleStealth(visible))}
           aria-label={isUiVisible ? 'Ocultar controles' : 'Mostrar controles'}
-          className="p-3 rounded-full hover:bg-white/10 text-white/70 transition-colors"
+          aria-pressed={stealthPressed(isUiVisible)}
+          className="rounded-full p-3 text-white/70 transition-colors hover:bg-white/10"
           title="Toggle Controls"
         >
           {isUiVisible ? <Icons.EyeOff /> : <Icons.Settings />}
         </button>
 
-        <div className="w-px h-6 bg-white/10 mx-1"></div>
+        <div className="mx-1 h-6 w-px bg-white/10"></div>
 
         <button
           onClick={handleCopyHtml}
           disabled={copyState !== 'idle'}
           className={`
-            flex items-center gap-2 px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest transition-all duration-300
-            ${copyState === 'idle' ? 'bg-white text-black hover:bg-green-400 shadow-[0_0_20px_rgba(255,255,255,0.1)]' : ''}
-            ${copyState === 'loading' ? 'bg-zinc-800 text-zinc-500 cursor-wait' : ''}
+            flex items-center gap-2 rounded-full px-6 py-2.5 text-xs font-bold tracking-widest uppercase transition-all duration-300
+            ${copyState === 'idle' ? 'bg-white text-black shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:bg-green-400' : ''}
+            ${copyState === 'loading' ? 'cursor-wait bg-zinc-800 text-zinc-500' : ''}
             ${copyState === 'success' ? 'bg-green-600 text-white' : ''}
             ${copyState === 'downloaded' ? 'bg-blue-600 text-white' : ''}
             ${copyState === 'error' ? 'bg-red-600 text-white' : ''}
@@ -242,36 +243,34 @@ const App: React.FC = () => {
           )}
           {copyState === 'error' && <span>Error</span>}
         </button>
+
+        <button
+          onClick={handleDownloadHtml}
+          className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2.5 text-xs font-bold tracking-widest text-white uppercase hover:bg-white/20"
+        >
+          Descargar HTML
+        </button>
       </div>
 
       {!isUiVisible && (
-        <div className="fixed top-8 left-8 z-40 text-[10px] text-white/20 uppercase tracking-[0.3em] pointer-events-none">
+        <div className="pointer-events-none fixed top-8 left-8 z-40 text-[10px] tracking-[0.3em] text-white/20 uppercase">
           Stealth Mode Active
         </div>
       )}
 
-      {isAiGenerating && (
-        <div
-          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/40 backdrop-blur-sm"
-          role="status"
-          aria-live="polite"
-        >
-          <div className="flex flex-col items-center gap-4">
-            <div className="w-12 h-12 border-2 border-green-500/30 border-t-green-500 rounded-full animate-spin"></div>
-            <span className="text-xs uppercase tracking-[0.2em] text-green-500 animate-pulse">
-              Decrypting AI Sequence...
-            </span>
-          </div>
+      {charsetNotice && (
+        <div className="fixed top-8 left-1/2 z-40 max-w-[min(90vw,28rem)] -translate-x-1/2 rounded-lg border border-amber-500/40 bg-amber-950/90 px-4 py-2 text-sm text-amber-100">
+          {charsetNotice}
         </div>
       )}
 
-      {aiError && (
+      {persistError && (
         <div
-          className="fixed bottom-24 left-1/2 z-[70] max-w-[min(90vw,32rem)] -translate-x-1/2 rounded-lg border border-red-500/40 bg-red-950/95 px-4 py-3 text-sm text-red-100 shadow-2xl"
+          className="fixed bottom-40 left-1/2 z-[70] max-w-[min(90vw,32rem)] -translate-x-1/2 rounded-lg border border-amber-500/40 bg-amber-950/95 px-4 py-3 text-sm text-amber-100 shadow-2xl"
           role="alert"
         >
-          <span>{aiError}</span>
-          <button className="ml-4 font-bold text-white underline" onClick={() => setAiError(null)}>
+          <span>{persistError}</span>
+          <button className="ml-4 font-bold text-white underline" onClick={() => setPersistError(null)}>
             Cerrar
           </button>
         </div>
