@@ -1,4 +1,4 @@
-import type { GlyphSet, MouseEffect, StreamDirection, StreamMovement, ColorMode } from '../types';
+import type { GlyphSet, MouseEffect, StreamDirection, StreamMovement, ColorMode } from '../types.ts';
 
 // --- Conjuntos de Caracteres ---
 export const KATAKANA =

@@ -10,6 +10,10 @@ Define el estado de configuración inicial que se carga cuando la aplicación se
 
 Contiene una colección de configuraciones predefinidas (`presets`). Cada preset es un objeto parcial de `Config` que permite cambiar rápidamente la estética de la animación a un estilo específico (ej. "Cyberpunk", "Caída Binaria").
 
+## Políticas
+
+`configState`, `glyphSet`, `motion`, `coloring` y `enginePin` concentran saneado, charset, movimiento, color y el pin de Three.js. Las pruebas `node --test` importan esas interfaces.
+
 ## `constants.ts`
 
 Este archivo centraliza las constantes utilizadas en toda la aplicación. Esto incluye:

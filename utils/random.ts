@@ -1,3 +1,5 @@
+import type { Config } from '../types.ts';
+import { normalizeRange } from '../config/configState.ts';
 import {
   glyphSets,
   mouseEffects,
@@ -6,8 +8,7 @@ import {
   streamDirections,
   streamMovements,
   colorModes,
-} from '../config/constants';
-import type { Config } from '../types';
+} from '../config/constants.ts';
 
 /**
  * Devuelve un elemento aleatorio de un array.
@@ -52,7 +53,10 @@ export const generateRandomConfig = (): Config => {
   const useGhost = Math.random() > 0.5;
   const useSplash = Math.random() > 0.5;
   const newMovement = getRandomElement(streamMovements);
-  const isColor = Math.random() > 0.7; // 30% de probabilidad de modo de color especial
+  const isColor = Math.random() > 0.7;
+  const [minSpeed, maxSpeed] = normalizeRange(getRandomFloat(1, 15), getRandomFloat(1, 15));
+  const [minTrailLength, maxTrailLength] = normalizeRange(getRandomInt(5, 80), getRandomInt(5, 80));
+  const [minZ, maxZ] = normalizeRange(useZ ? getRandomFloat(-50, 150) : 0, useZ ? getRandomFloat(-50, 150) : 50);
 
   return {
     numColumns: getRandomInt(50, 200),
@@ -77,20 +81,20 @@ export const generateRandomConfig = (): Config => {
     glowIntensity: useG ? getRandomFloat(1.0, 4.0) : 1.5,
     useGhosting: useGhost,
     ghostingIntensity: useGhost ? getRandomFloat(0.1, 0.9) : 0.5,
-    minSpeed: getRandomFloat(1, 5),
-    maxSpeed: getRandomFloat(5, 15),
+    minSpeed,
+    maxSpeed,
     glitchChance: getRandomFloat(0, 0.1),
     characterSwapRate: getRandomFloat(0.01, 0.1),
-    minTrailLength: getRandomInt(5, 20),
-    maxTrailLength: getRandomInt(25, 80),
+    minTrailLength,
+    maxTrailLength,
     streamDirection: getRandomElement(streamDirections),
     streamMovement: newMovement,
     movementAmplitude: newMovement !== 'linear' ? getRandomFloat(5, 50) : 10,
     movementFrequency: newMovement !== 'linear' ? getRandomFloat(0.05, 0.5) : 0.1,
     useZAxis: useZ,
     perspective: useZ ? getRandomFloat(100, 400) : 150,
-    minZ: useZ ? getRandomFloat(-50, 0) : 0,
-    maxZ: useZ ? getRandomFloat(50, 150) : 50,
+    minZ,
+    maxZ,
     mouseEffect: getRandomElement(mouseEffects),
     mouseRadius: getRandomFloat(50, 250),
     mouseForce: getRandomFloat(1, 10),

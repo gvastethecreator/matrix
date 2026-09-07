@@ -1,4 +1,4 @@
-import { Config } from '../types';
+import type { Config } from '../types.ts';
 
 /**
  * @description Define una colección de configuraciones predefinidas para el efecto "Matrix Rain".

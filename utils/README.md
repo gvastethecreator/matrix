@@ -1,6 +1,10 @@
 # Utilidades
 
-- `exportHtml.ts`: genera un documento HTML autónomo con la configuración actual y el motor serializado. Mantiene Three.js fijado a r185 para no desalinearse del editor.
-- `random.ts`: helpers puros de selección, números, colores y configuración aleatoria.
+- `exportEngine.ts`: fuente del motor de exportación. `THREE` entra como argumento; el texto no sale de `Function#toString()`.
+- `exportHtml.ts`: genera un documento HTML autónomo a partir de la configuración y de la fuente del motor. No importa ParticleCanvas.
+- `exportDelivery.ts`: decide copiar o descargar el HTML.
+- `persist.ts`: lee y escribe `matrix_config` con debounce.
+- `editorUx.ts`: stealth, avisos y validación de tema.
+- `random.ts`: helpers puros de selección, números, colores y configuración aleatoria con rangos ordenados.
 
-El motor de animación vive en `components/ParticleCanvas.tsx` porque comparte el ciclo de vida del canvas y también expone la representación serializable usada por el exportador.
+El canvas ejecuta la misma fuente que el HTML exportado, inyectando el namespace `THREE` del editor.

@@ -1,34 +1,22 @@
-import type { Config } from '../types';
-import { animationLogicString } from '../components/ParticleCanvas';
+import type { Config } from '../types.ts';
+import { THREE_MODULE_VERSION } from '../config/enginePin.ts';
 
-/**
- * Genera un archivo HTML autónomo con la animación "Matrix Rain" acelerada por Three.js,
- * basado en la configuración proporcionada.
- * @param config - El objeto de configuración actual de la animación.
- * @returns Una cadena de texto que contiene el documento HTML completo.
- */
-export const generateStandaloneHtml = (config: Config): string => {
+export const generateStandaloneHtml = (config: Config, animationLogicString: string): string => {
   if (!config || typeof config.numColumns !== 'number' || config.numColumns <= 0) {
     return '<!-- ERROR: Configuración inválida. El número de columnas debe ser mayor que cero. -->';
   }
 
-  // Inyección segura de la configuración y la lógica.
-  // Nota: animationLogicString ya contiene las constantes y la función serializada.
   const fullScript = `
-        import * as THREE from 'https://unpkg.com/three@0.185.1/build/three.module.js';
+        import * as THREE from 'https://unpkg.com/three@${THREE_MODULE_VERSION}/build/three.module.js';
 
-        // --- Configuración Inicial (Inyectada) ---
-        const initialConfig = ${JSON.stringify(config, null, 2)};
-        
-        // --- Motor de Animación ---
+        const initialConfig = ${JSON.stringify(config)};
+
         ${animationLogicString}
 
-        // --- Inicialización ---
         window.addEventListener('load', () => {
             const canvas = document.getElementById('matrix-canvas');
             if (canvas) {
-                // Iniciar animación
-                runMatrixAnimation(canvas, initialConfig);
+                runMatrixAnimation(THREE, canvas, initialConfig);
             } else {
                 console.error('Elemento Canvas no encontrado');
             }
