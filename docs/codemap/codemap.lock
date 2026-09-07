@@ -1,19 +1,22 @@
 {
-  "current_commit": "0371ce8e8044c543ca952f9ff99ab81fd7612748",
+  "source_commit": "23e1ab48d3476ff48dedaa1c50dd1552996fc11d",
   "working_tree_dirty": true,
-  "generated_at": "2026-08-10T01:52:28Z",
+  "generated_at": "2026-09-07T01:30:05Z",
   "scanned_scope": [
     "."
   ],
   "excluded_directories": [
+    ".agents",
     ".cache",
     ".git",
     ".hg",
     ".next",
     ".nuxt",
+    ".obsidian",
     ".svn",
     ".turbo",
     ".venv",
+    ".vscode",
     "__pycache__",
     "build",
     "coverage",
@@ -26,55 +29,49 @@
     "vendor",
     "venv"
   ],
-  "fingerprint_algorithm": "sha256-path-content-v1",
+  "fingerprint_algorithm": "sha256-path-content-v2",
   "modules": [
     {
       "id": ".",
       "path": ".",
       "file_count": 19,
-      "fingerprint": "f98dedf959a39293d24de5aa6a93f2b0d8ebd0e47ee8af04bfc1618ac557af3b"
-    },
-    {
-      "id": ".vscode",
-      "path": ".vscode",
-      "file_count": 1,
-      "fingerprint": "e41ec12dcb3d135ea0410aae4677515951d55217f0e7598b0f4fa26ff880f2ca"
+      "fingerprint": "ce9f02d877c849ea0156120bfb1551779222e79d3f11d7e9f8635b63de3580c9"
     },
     {
       "id": "api",
       "path": "api",
       "file_count": 2,
-      "fingerprint": "c7e76f6a0ece68799831564603094d9e81a1aed3e5a5433d400419af8f4d2ff4"
+      "fingerprint": "2df5eb76aedd8f893e332ef471eafee9f9daa3bf0f5d16fd7544060189ddf38b"
     },
     {
       "id": "components",
       "path": "components",
       "file_count": 3,
-      "fingerprint": "ec58e3bfdffccab2da83e453f0295240d3558c614f02748978a7efecb55b7742"
+      "fingerprint": "d64fad74828a8e8243eb0e7e7c6821bf8fa60c80de4b3ff1f097d865910fd6a5"
     },
     {
       "id": "config",
       "path": "config",
       "file_count": 4,
-      "fingerprint": "55dfd7d9e4c781f5d17c36523dc3bd3f0e3351d18eab4a4064e3ca42be727aad"
+      "fingerprint": "dd6af5812a7155a4d225044c9cf46d297053df78a00a97a60ca316599dd8760c"
     },
     {
       "id": "docs",
       "path": "docs",
       "file_count": 3,
-      "fingerprint": "4797c13cd547622edd4d4efa8aff3acb388913cd8b182d2f1bbbf36bcd0da7db"
+      "fingerprint": "d40f8273b03db03730ec9835f13f76fbd8dce6d600c52498a83d08e424d6411c"
     },
     {
       "id": "services",
       "path": "services",
       "file_count": 1,
-      "fingerprint": "05289872cbcf0e5b7ad3f3a263e062f46a0587ae0c2f110796c6fb3fde38e66e"
+      "fingerprint": "5920f0424a8f5542e1db8d8acde609ec21212dee1480379a3891aee48bedcc85"
     },
     {
       "id": "utils",
       "path": "utils",
       "file_count": 3,
-      "fingerprint": "ad578f2fe66e076408147e7290274f705627b8e4fa9611e30345ff459139a2ae"
+      "fingerprint": "cab3e7f85ff007291e1a3137c6ca8da38c7765e3472b531a566cb34c50ad8cbd"
     }
   ]
 }
