@@ -1,21 +1,81 @@
 {
   "version": "2.0.0",
   "tasks": [
-    { "label": "🚀 dev", "type": "shell", "command": "pnpm dev", "isBackground": true, "problemMatcher": [] },
     {
-      "label": "📦 build",
+      "label": "Dev",
+      "type": "shell",
+      "command": "pnpm dev",
+      "isBackground": true,
+      "problemMatcher": [],
+      "icon": { "id": "vm-running", "color": "terminal.ansiGreen" }
+    },
+    {
+      "label": "Start",
+      "type": "shell",
+      "command": "pnpm start",
+      "isBackground": true,
+      "problemMatcher": [],
+      "icon": { "id": "play", "color": "terminal.ansiGreen" }
+    },
+    {
+      "label": "Test",
+      "type": "shell",
+      "command": "pnpm test",
+      "group": "test",
+      "problemMatcher": [],
+      "icon": { "id": "beaker", "color": "terminal.ansiYellow" }
+    },
+    {
+      "label": "Lint",
+      "type": "shell",
+      "command": "pnpm lint",
+      "problemMatcher": [],
+      "icon": { "id": "search", "color": "terminal.ansiCyan" }
+    },
+    {
+      "label": "Format",
+      "type": "shell",
+      "command": "pnpm format",
+      "problemMatcher": [],
+      "icon": { "id": "sparkle", "color": "terminal.ansiMagenta" }
+    },
+    {
+      "label": "Types",
+      "type": "shell",
+      "command": "pnpm typecheck",
+      "problemMatcher": [],
+      "icon": { "id": "symbol-class", "color": "terminal.ansiBlue" }
+    },
+    {
+      "label": "Build",
       "type": "shell",
       "command": "pnpm build",
       "group": { "kind": "build", "isDefault": true },
-      "problemMatcher": []
+      "problemMatcher": [],
+      "icon": { "id": "package", "color": "terminal.ansiBlue" }
     },
-    { "label": "▶️ start", "type": "shell", "command": "pnpm start", "isBackground": true, "problemMatcher": [] },
-    { "label": "👁️ preview", "type": "shell", "command": "pnpm preview", "isBackground": true, "problemMatcher": [] },
-    { "label": "🧪 test", "type": "shell", "command": "pnpm test", "group": "test", "problemMatcher": [] },
-    { "label": "🔎 types", "type": "shell", "command": "pnpm typecheck", "problemMatcher": [] },
-    { "label": "🧹 lint", "type": "shell", "command": "pnpm lint", "problemMatcher": [] },
-    { "label": "🪦 dead", "type": "shell", "command": "pnpm deadcode", "problemMatcher": [] },
-    { "label": "✨ format", "type": "shell", "command": "pnpm format", "problemMatcher": [] },
-    { "label": "✅ check", "type": "shell", "command": "pnpm check", "group": "test", "problemMatcher": [] }
+    {
+      "label": "Preview",
+      "type": "shell",
+      "command": "pnpm preview",
+      "isBackground": true,
+      "problemMatcher": [],
+      "icon": { "id": "open-preview", "color": "terminal.ansiWhite" }
+    },
+    {
+      "label": "Dead",
+      "type": "shell",
+      "command": "pnpm deadcode",
+      "problemMatcher": [],
+      "icon": { "id": "trash", "color": "terminal.ansiRed" }
+    },
+    {
+      "label": "Check",
+      "type": "shell",
+      "command": "pnpm check",
+      "group": "test",
+      "problemMatcher": [],
+      "icon": { "id": "check-all", "color": "terminal.ansiGreen" }
+    }
   ]
 }
