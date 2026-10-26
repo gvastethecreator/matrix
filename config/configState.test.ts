@@ -16,6 +16,12 @@ test('ARC-01 invalid numeric fields fall back to initial values', () => {
   assert.ok(merged.maxSpeed > 0);
 });
 
+test('ARC-01 invalid stored custom glyph text becomes an empty charset', () => {
+  const restored = parseStoredConfig('{"glyphSet":"custom","customGlyphSet":null}');
+  assert.equal(restored.customGlyphSet, '');
+  assert.equal(mergeStoredConfig({ customGlyphSet: 'ΔΨ' }).customGlyphSet, 'ΔΨ');
+});
+
 test('ARC-01 missing colors fall back to initial values', () => {
   const merged = mergeStoredConfig({ glyphColor: null, leaderColor: 12, backgroundColor: '' });
   assert.equal(merged.glyphColor, initialConfig.glyphColor);

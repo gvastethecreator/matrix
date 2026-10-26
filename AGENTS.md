@@ -1,23 +1,22 @@
 # AGENTS
 
-Matrix digital-rain editor. React 19, TypeScript 7, Vite 8, Three.js r185, Tweakpane, pnpm 12.
+Browser-only Matrix digital-rain editor. Keep the existing stack and `pnpm@12.0.0` from `package.json`.
 
 ## Commands
 
-- `pnpm dev` — Vite at `127.0.0.1:3000`
-- `pnpm build` then `pnpm start` — `dist/` at `127.0.0.1:4173`
-- `pnpm test` — `node --test` (colocated policy tests)
-- `pnpm check` — typecheck, lint, format, knip, test, build
-- `pnpm deadcode` / `pnpm typecheck` / `pnpm lint` / `pnpm format`
+- `pnpm dev`: Vite at `127.0.0.1:3000`.
+- `pnpm build` then `pnpm start`: serve `dist/` at `127.0.0.1:4173`.
+- `pnpm check`: types, lint, formatting, Knip, build, then tests. Building first keeps production-export checks current.
+- Other commands live in `package.json`; `.vscode/tasks.json` mirrors daily tasks.
 
 ## Boundaries
 
-- Do not revert `packageManager` `pnpm@12.0.0`.
-- Tickets live in `.scratch/matrix/issues/`. Never under `docs/`.
-- Logs only under `logs/` (gitignored).
-- Keep mouse effects `grow` / `attract` / `repel` / `swirl` plus splash.
-- Local-only tracker. Do not open GitHub Issues or enable Actions unless asked.
+- Tickets are local-only under `.scratch/matrix/issues/`, never `docs/`. Do not open GitHub Issues or enable Actions unless asked. The existing Pages deployment is authorized.
+- Logs go under ignored `logs/`.
+- Preserve `grow`, `attract`, `repel`, `swirl`, and splash.
+- Keep `matrix_config` and `matrix_ui_visible` stable.
+- The editor and HTML export share injected engine source with a `THREE` parameter. Do not serialize engine closures with `Function#toString()`.
 
-## Map
+## Code map
 
 Read `docs/codemap/codemap.md` before module edits. Refresh `docs/codemap/{json,md,html,lock}` together when boundaries or flows change.

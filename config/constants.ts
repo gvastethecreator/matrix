@@ -1,17 +1,21 @@
 import type { GlyphSet, MouseEffect, StreamDirection, StreamMovement, ColorMode } from '../types.ts';
 
-// --- Conjuntos de Caracteres ---
-export const FILM = 'ﾊﾐﾋｰｳｼﾅﾓﾆｻﾜﾂｵﾘｱﾎﾃﾏｹﾒｴｶｷﾑﾕﾗｾﾈｽﾀﾇﾍ012345789Z:・."=*+-<>¦｜';
-export const KATAKANA =
-  'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
-export const ASCII = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234456789!@#$%^&*()_+-=[]{}|;:",.<>/?`~';
-export const BINARY = '01';
-export const RUNES = 'ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚾᛁᛃᛇᛈᛉᛊᛏᛒᛖᛗᛚᛜᛞᛟ';
-export const GREEK = 'ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθικλμνξοπρστυφχψω';
-export const MATH = '∀∂∃∄∅∇∈∉∋∌∎∏∐∑−∓∔∕∖∗∘∙√∛∜∝∞∟∠∡∢∣∤∥∦∧∨∩∪∫∬∮';
-export const EMOJIS = '😂👍❤️😊🤔🔥🎉✨💯✅';
+export const GLYPH_SET_TABLE: Record<Exclude<GlyphSet, 'custom'>, string> = {
+  film: 'ﾊﾐﾋｰｳｼﾅﾓﾆｻﾜﾂｵﾘｱﾎﾃﾏｹﾒｴｶｷﾑﾕﾗｾﾈｽﾀﾇﾍ012345789Z:・."=*+-<>¦｜',
+  katakana:
+    'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン',
+  ascii: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234456789!@#$%^&*()_+-=[]{}|;:",.<>/?`~',
+  binary: '01',
+  runes: 'ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚾᛁᛃᛇᛈᛉᛊᛏᛒᛖᛗᛚᛜᛞᛟ',
+  greek: 'ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθικλμνξοπρστυφχψω',
+  math: '∀∂∃∄∅∇∈∉∋∌∎∏∐∑−∓∔∕∖∗∘∙√∛∜∝∞∟∠∡∢∣∤∥∦∧∨∩∪∫∬∮',
+  emojis: '😂👍❤️😊🤔🔥🎉✨💯✅',
+};
 
-// --- Vectores de Dirección ---
+export const MAX_GLYPHS = 1_000_000;
+export const MAX_STREAMS = 16_384;
+export const STRUCTURAL_REBUILD_MS = 100;
+
 export const directionVectors: Record<StreamDirection, [number, number]> = {
   down: [0, -1],
   up: [0, 1],
@@ -23,7 +27,6 @@ export const directionVectors: Record<StreamDirection, [number, number]> = {
   'up-right': [Math.SQRT1_2, Math.SQRT1_2],
 };
 
-// --- Opciones para Aleatorización ---
 export const glyphSets: readonly GlyphSet[] = [
   'film',
   'katakana',
@@ -37,7 +40,6 @@ export const glyphSets: readonly GlyphSet[] = [
 ];
 export const mouseEffects: readonly MouseEffect[] = ['grow', 'attract', 'repel', 'swirl', 'none'];
 
-// Added Zen Dots and other Sci-Fi fonts
 export const fontFamilies: readonly string[] = [
   'monospace',
   'Zen Dots',

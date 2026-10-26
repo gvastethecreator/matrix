@@ -1,15 +1,15 @@
 # Code map: matrix
 
-Generated: 2026-10-26T07:40:25Z | Commit: `ae0941cff904` | Schema: 2
-Generation: `4155122298f15235193a60e5f1eee4f80d80e53b6ed290488d75e273cb2d3f4f`
+Generated: 2026-10-26T16:26:43Z | Commit: `c75bfba74580` | Schema: 2
+Generation: `a32ce495a9c00ceb2812654ef0fdfb9269cf6c2d0c2deb0333650c3c684c17f8`
 Scope: . | Inventory: working-tree
-Nodes: 48 | Edges: 155 | Flows: 0
+Nodes: 42 | Edges: 132 | Flows: 0
 
 ## Coverage
 
-- Analysis: **partial**; 33 analyzed of 34 included files.
+- Analysis: **partial**; 27 analyzed of 28 included files.
 - Configuration files: 1; omitted untracked files: 0.
-- Unresolved references and analysis limits: 161.
+- Unresolved references and analysis limits: 112.
 - Static references and call paths do not prove runtime execution or test coverage.
 
 ## Modules
@@ -17,24 +17,24 @@ Nodes: 48 | Edges: 155 | Flows: 0
 - `App.tsx` | module | Repository | callers: index.tsx | callees: components/ParticleCanvas.tsx, components/TweakpanePanel.tsx, config/configState.ts, config/configState.ts | tests: 0 | entry: none
 - `components/ParticleCanvas.tsx` | module | Repository | callers: App.tsx | callees: external:javascript:react, external:javascript:react, external:javascript:three, types.ts | tests: 0 | entry: none
 - `components/TweakpanePanel.tsx` | module | Repository | callers: App.tsx | callees: config/configState.ts, config/configState.ts, config/constants.ts, external:javascript:react | tests: 0 | entry: none
-- `config/coloring.test.ts` | module | Repository | callers: none | callees: config/coloring.ts, config/coloring.ts, external:javascript:node:assert, external:javascript:node:test | tests: 0 | entry: none
-- `config/coloring.ts` | module | Repository | callers: config/coloring.test.ts, config/coloring.test.ts | callees: types.ts | tests: 1 | entry: none
 - `config/configState.test.ts` | module | Repository | callers: none | callees: config/configState.ts, config/configState.ts, config/initialConfig.ts, external:javascript:node:assert | tests: 0 | entry: none
 - `config/configState.ts` | module | Repository | callers: App.tsx, App.tsx, components/TweakpanePanel.tsx, components/TweakpanePanel.tsx | callees: config/initialConfig.ts, config/presets.ts, types.ts | tests: 4 | entry: none
-- `config/constants.ts` | module | Repository | callers: components/TweakpanePanel.tsx, config/glyphSet.test.ts, config/glyphSet.ts, utils/exportEngine.ts | callees: types.ts | tests: 1 | entry: none
+- `config/constants.ts` | module | Repository | callers: components/TweakpanePanel.tsx, utils/exportEngine.ts, utils/random.ts | callees: types.ts | tests: 0 | entry: none
 - `config/enginePin.test.ts` | module | Repository | callers: none | callees: config/enginePin.ts, external:javascript:node:assert, external:javascript:node:fs, external:javascript:node:fs | tests: 0 | entry: none
 - `config/enginePin.ts` | module | Repository | callers: config/enginePin.test.ts, utils/exportHtml.test.ts, utils/exportHtml.ts | callees: none | tests: 2 | entry: none
-- `config/glyphSet.test.ts` | module | Repository | callers: none | callees: config/constants.ts, config/glyphSet.ts, config/glyphSet.ts, external:javascript:node:assert | tests: 0 | entry: none
-- `config/glyphSet.ts` | module | Repository | callers: config/glyphSet.test.ts, config/glyphSet.test.ts, utils/exportEngine.ts | callees: config/constants.ts, types.ts | tests: 1 | entry: none
-- `config/initialConfig.ts` | module | Repository | callers: config/configState.test.ts, config/configState.ts, config/motion.test.ts, config/presets.ts | callees: types.ts | tests: 2 | entry: none
-- `config/motion.test.ts` | module | Repository | callers: none | callees: config/initialConfig.ts, config/motion.ts, config/motion.ts, external:javascript:node:assert | tests: 0 | entry: none
-- `config/motion.ts` | module | Repository | callers: config/motion.test.ts, config/motion.test.ts, utils/exportEngine.ts | callees: types.ts | tests: 1 | entry: none
+- `config/initialConfig.ts` | module | Repository | callers: config/configState.test.ts, config/configState.ts, config/presets.ts | callees: types.ts | tests: 1 | entry: none
 - `config/presets.ts` | module | Repository | callers: App.tsx, config/configState.ts | callees: config/initialConfig.ts, types.ts | tests: 0 | entry: none
 - `external:javascript:@tailwindcss/vite` | external | External | callers: vite.config.ts, vite.config.ts | callees: none | tests: 0 | entry: none
 - `external:javascript:@vitejs/plugin-react` | external | External | callers: vite.config.ts, vite.config.ts | callees: none | tests: 0 | entry: none
-- `external:javascript:node:assert` | external | External | callers: config/coloring.test.ts, config/configState.test.ts, config/enginePin.test.ts, config/glyphSet.test.ts | callees: none | tests: 11 | entry: none
+- `external:javascript:node:assert` | external | External | callers: config/configState.test.ts, config/enginePin.test.ts, utils/editorUx.test.ts, utils/exportDelivery.test.ts | callees: none | tests: 8 | entry: none
 - `external:javascript:node:fs` | external | External | callers: config/enginePin.test.ts, config/enginePin.test.ts, server.mjs, server.mjs | callees: none | tests: 4 | entry: none
-- Showing 20 of 48 nodes. Query `impact --module <path>` or open the HTML hierarchy for the rest.
+- `external:javascript:node:http` | external | External | callers: server.mjs, server.mjs | callees: none | tests: 0 | entry: none
+- `external:javascript:node:path` | external | External | callers: server.mjs, utils/exportEngine.test.ts, utils/exportEngine.test.ts, vite.config.ts | callees: none | tests: 1 | entry: none
+- `external:javascript:node:test` | external | External | callers: config/configState.test.ts, config/configState.test.ts, config/enginePin.test.ts, config/enginePin.test.ts | callees: none | tests: 8 | entry: none
+- `external:javascript:node:url` | external | External | callers: server.mjs, server.mjs, utils/exportEngine.test.ts, utils/exportEngine.test.ts | callees: none | tests: 1 | entry: none
+- `external:javascript:node:vm` | external | External | callers: utils/exportEngine.test.ts, utils/exportEngine.test.ts | callees: none | tests: 1 | entry: none
+- `external:javascript:react` | external | External | callers: App.tsx, App.tsx, components/ParticleCanvas.tsx, components/ParticleCanvas.tsx | callees: none | tests: 0 | entry: none
+- Showing 20 of 42 nodes. Query `impact --module <path>` or open the HTML hierarchy for the rest.
 
 ## Edges
 
@@ -71,12 +71,6 @@ Nodes: 48 | Edges: 155 | Flows: 0
 - `components/TweakpanePanel.tsx` -> `external:javascript:react` | imports
 - `components/TweakpanePanel.tsx` -> `external:javascript:tweakpane` | imports
 - `components/TweakpanePanel.tsx` -> `types.ts` | imports (type only)
-- `config/coloring.test.ts` -> `config/coloring.ts` | calls
-- `config/coloring.test.ts` -> `config/coloring.ts` | imports
-- `config/coloring.test.ts` -> `external:javascript:node:assert` | imports
-- `config/coloring.test.ts` -> `external:javascript:node:test` | calls
-- `config/coloring.test.ts` -> `external:javascript:node:test` | imports
-- `config/coloring.ts` -> `types.ts` | imports (type only)
 - `config/configState.test.ts` -> `config/configState.ts` | calls
 - `config/configState.test.ts` -> `config/configState.ts` | imports
 - `config/configState.test.ts` -> `config/initialConfig.ts` | imports
@@ -88,22 +82,28 @@ Nodes: 48 | Edges: 155 | Flows: 0
 - `config/configState.ts` -> `types.ts` | imports (type only)
 - `config/constants.ts` -> `types.ts` | imports (type only)
 - `config/enginePin.test.ts` -> `config/enginePin.ts` | imports
-- Showing 50 of 155 edges; JSON contains every edge and its evidence.
+- `config/enginePin.test.ts` -> `external:javascript:node:assert` | imports
+- `config/enginePin.test.ts` -> `external:javascript:node:fs` | calls
+- `config/enginePin.test.ts` -> `external:javascript:node:fs` | imports
+- `config/enginePin.test.ts` -> `external:javascript:node:test` | calls
+- `config/enginePin.test.ts` -> `external:javascript:node:test` | imports
+- `config/initialConfig.ts` -> `types.ts` | imports (type only)
+- Showing 50 of 132 edges; JSON contains every edge and its evidence.
 
 ## Unknown
 
-- `App.tsx:21`: object-member-call-not-resolved (React)
-- `config/coloring.test.ts:17`: object-member-call-not-resolved (assert)
-- `config/coloring.test.ts:18`: object-member-call-not-resolved (assert)
-- `config/coloring.test.ts:19`: object-member-call-not-resolved (assert)
-- `config/coloring.test.ts:25`: object-member-call-not-resolved (assert)
-- `config/coloring.test.ts:37`: object-member-call-not-resolved (assert)
-- `config/coloring.test.ts:38`: object-member-call-not-resolved (assert)
-- `config/coloring.test.ts:39`: object-member-call-not-resolved (assert)
+- `App.tsx:13`: object-member-call-not-resolved (React)
 - `config/configState.test.ts:7`: object-member-call-not-resolved (assert)
 - `config/configState.test.ts:12`: object-member-call-not-resolved (assert)
 - `config/configState.test.ts:13`: object-member-call-not-resolved (assert)
 - `config/configState.test.ts:14`: object-member-call-not-resolved (assert)
+- `config/configState.test.ts:15`: object-member-call-not-resolved (assert)
+- `config/configState.test.ts:16`: object-member-call-not-resolved (assert)
+- `config/configState.test.ts:21`: object-member-call-not-resolved (assert)
+- `config/configState.test.ts:22`: object-member-call-not-resolved (assert)
+- `config/configState.test.ts:27`: object-member-call-not-resolved (assert)
+- `config/configState.test.ts:28`: object-member-call-not-resolved (assert)
+- `config/configState.test.ts:29`: object-member-call-not-resolved (assert)
 
 ## Flows
 

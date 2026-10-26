@@ -2,6 +2,7 @@
   "name": "matrix-digital-rain",
   "version": "0.0.0",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -14,7 +15,7 @@
     "lint": "oxlint .",
     "format": "oxfmt --write .",
     "format:check": "oxfmt --check .",
-    "check": "pnpm typecheck && pnpm lint && pnpm format:check && pnpm deadcode && pnpm test && pnpm build"
+    "check": "pnpm typecheck && pnpm lint && pnpm format:check && pnpm deadcode && pnpm build && pnpm test"
   },
   "dependencies": {
     "react": "^19.2.8",

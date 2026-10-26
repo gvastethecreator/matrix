@@ -58,6 +58,9 @@ export const mergeStoredConfig = (raw: unknown): Config => {
   const merged = { ...initialConfig, ...raw } as Config;
   sanitizeNumbers(merged);
   sanitizeColors(merged);
+  if (typeof merged.customGlyphSet !== 'string') {
+    merged.customGlyphSet = '';
+  }
   return merged;
 };
 

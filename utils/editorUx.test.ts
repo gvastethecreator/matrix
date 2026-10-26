@@ -1,22 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
-import {
-  customGlyphNotice,
-  panelFallbackLabel,
-  persistErrorMessage,
-  readUiVisible,
-  stealthPressed,
-  toggleStealth,
-  writeUiVisible,
-} from './editorUx.ts';
-
-test('UX-01 stealth toggle and aria-pressed', () => {
-  assert.equal(toggleStealth(true), false);
-  assert.equal(toggleStealth(false), true);
-  assert.equal(stealthPressed(true), true);
-  assert.equal(stealthPressed(false), false);
-});
+import { customGlyphNotice, panelFallbackLabel, persistErrorMessage, readUiVisible } from './editorUx.ts';
 
 test('UX-02 panel fallback label is non-empty', () => {
   assert.ok(panelFallbackLabel.length > 0);
@@ -25,8 +10,8 @@ test('UX-02 panel fallback label is non-empty', () => {
 test('UX-04 stealth persistence parses booleans', () => {
   assert.equal(readUiVisible(null), true);
   assert.equal(readUiVisible('false'), false);
-  assert.equal(writeUiVisible(true), 'true');
-  assert.equal(writeUiVisible(false), 'false');
+  assert.equal(readUiVisible('true'), true);
+  assert.equal(readUiVisible('invalid'), true);
 });
 
 test('UX-07 empty custom charset notice', () => {

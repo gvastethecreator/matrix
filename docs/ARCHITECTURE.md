@@ -1,36 +1,40 @@
-# Arquitectura
+# Contributor architecture overview
 
-## Flujo principal
+The editor and standalone exports run the same Three.js engine. React owns editor state; the engine owns rendering and GPU resources. The app has no application API or database.
 
-1. `index.tsx` monta `App` y carga el CSS generado por Tailwind.
-2. `App.tsx` carga y persiste `matrix_config` a través de la política de configuración, mantiene el estado y delega el render a `ParticleCanvas`.
-3. `ParticleCanvas` conserva un controlador Three.js entre renders. Los cambios visuales actualizan uniformes. El motor observa el tamaño del canvas tanto en el editor como en el HTML exportado. Charset/fuente reconstruyen el atlas; densidad, longitud, velocidad y profundidad reconstruyen streams con debounce.
-4. `TweakpanePanel` se descarga como chunk separado y modifica el estado mediante callbacks estables.
-5. La exportación incrusta `getAnimationLogicString()`, un texto del motor donde `THREE` es un parámetro. El minificador no puede reescribir esos identificadores porque no salen de `Function#toString()`.
+## Module ownership
 
-## Módulos de política
+| Path                                           | Responsibility                                                                             |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `App.tsx`                                      | Configuration state, backend status, clipboard/download actions, and control visibility.   |
+| `components/ParticleCanvas.tsx`                | Canvas and engine-controller lifecycle. Configuration updates keep the controller mounted. |
+| `components/TweakpanePanel.tsx`                | Lazy-loaded controls with stable callback and value references.                            |
+| `config/initialConfig.ts`, `config/presets.ts` | Defaults and partial named presets.                                                        |
+| `config/constants.ts`                          | Glyph strings, selectable options, direction vectors, and renderer budgets.                |
+| `config/configState.ts`                        | Stored-config parsing, defaults, numeric range normalization, and preset application.      |
+| `utils/persist.ts`                             | Debounced storage writes, duplicate-write suppression, flush, and write-error results.     |
+| `utils/exportEngine.ts`                        | Shared WebGPU/WebGL2 renderer, shader effects, pointer interaction, resize, and cleanup.   |
+| `utils/exportHtml.ts`, `config/enginePin.ts`   | Standalone document generation and the Three.js CDN version pin.                           |
+| `utils/exportDelivery.ts`, `utils/editorUx.ts` | Export delivery decisions, stored visibility parsing, and editor notices.                  |
+| `utils/random.ts`                              | Random configurations with ordered speed, trail, and depth ranges.                         |
+| `server.mjs`                                   | Local serving of an existing `dist/` build. GitHub Pages does not use this server.         |
 
-La validación y el cálculo que el editor y las pruebas comparten viven detrás de pocas interfaces:
+## Configuration and persistence
 
-- Combinar, sanear y aplicar presets.
-- Resolver charset, movimiento, color y presupuesto de glifos.
-- Persistencia con debounce y omisión de escrituras iguales.
-- Entrega del HTML (copiar o descargar).
+`App` owns the active `Config`. The panel sends changes to React; it does not own a second saved configuration. `configState` combines saved values with defaults and normalizes the numeric ranges it validates.
 
-## Rendimiento
+The saved keys are `matrix_config` and `matrix_ui_visible`. Keep them stable. Persistence batches rapid edits, skips unchanged serialized values, and flushes pending changes during cleanup. Write failures are reported to the user. Custom glyph text uses a visible placeholder when empty or invalid.
 
-- El motor usa `WebGPURenderer` (`three/webgpu`) y nodos TSL, así que un solo código compila a WGSL en WebGPU y a GLSL en el respaldo WebGL2. `?webgl` fuerza el respaldo. El HTML exportado importa `three.webgpu.js`.
-- `InstancedBufferGeometry` dibuja la lluvia en una llamada. Una `DataTexture` de floats guarda ocho números por columna (carril, distancia recorrida, semillas y tono); cada glifo los lee con `textureLoad`, porque WebGPU no tiene divisor de instancias.
-- El índice de cada glifo sale de `instanceIndex`. El shader calcula profundidad, longitud, posición, color, carácter, giro, glitch e interacción. Velocidad, longitud y profundidad son uniformes, así que cambiarlas no reconstruye buffers. JavaScript solo avanza la distancia de cada columna por frame.
-- La lluvia se acumula en un búfer HDR con mezcla premultiplicada; el fundido multiplica ese búfer. No se usa `MAX` porque el backend WebGL2 de three r185 no traduce `MinEquation`/`MaxEquation`. Después corren seis niveles de bloom (dual filter) y una composición con fondo, aberración, scanlines, viñeta, grano y glitch.
-- El mensaje es una máscara de canvas. Una rejilla instanciada dibuja solo las celdas dentro de la máscara, con gotas analíticas por columna.
-- El atlas agrupa grafemas Unicode en una cuadrícula con celdas acolchadas. Se reconstruye al cambiar charset, familia o peso; cambiar el tamaño solo modifica un uniforme.
-- Las texturas anteriores se liberan después de cada reconstrucción.
-- La persistencia agrupa escrituras; la animación se pausa con la pestaña oculta.
-- El límite de 1.000.000 de glifos recorta columnas antes de reservar buffers. Es un límite de capacidad, no una garantía de FPS; el tamaño de los glifos y la superposición pueden saturar el llenado de píxeles.
-- Movimiento, suavizado del cursor y desvanecimiento usan tiempo transcurrido. Al volver de una pestaña oculta se reinicia el reloj para evitar saltos. Se limita el paso a 50 ms tras una pausa larga.
-- Tweakpane se carga de forma diferida. La fuente de exportación se construye al exportar, no al importar el canvas.
+## Rendering and export
 
-## Decisiones pendientes
+`getAnimationLogicString()` returns engine source with `THREE` as a parameter. The editor injects its local Three.js namespace. Standalone HTML imports the pinned `three.webgpu.js` module. Keep this source independent of surrounding closures and do not replace it with `Function#toString()`; minification would change that contract.
 
-- Three.js sigue dominando el bundle principal porque el exportador serializa el mismo motor y necesita el namespace `THREE`. Separarlo en un paquete de motor compartido podría reducir más el cliente, pero requiere rediseñar el contrato del HTML exportado y no es una limpieza segura.
+One TSL graph supports both WebGPU and the WebGL2 fallback. Glyph transforms and visual effects run in the shader. Font or character-set changes rebuild the glyph atlas; ordinary visual changes update uniforms. The engine observes canvas size, pauses while the document is hidden, and disposes its resources and listeners when destroyed.
+
+Preserve `grow`, `attract`, `repel`, `swirl`, splash, and the direct download path. Rendering limits are capacity bounds; they do not promise a frame rate.
+
+## Verification
+
+`pnpm check` builds before running tests so the export test can inspect the fresh production bundle. The existing tests cover saved configuration, random ranges, persistence, export documents, and engine instance limits and lifecycle. Renderer or interaction changes also need a rendered browser check.
+
+The generated [code map](codemap/codemap.md) contains static source relationships. Its unresolved references remain visible; it is not runtime proof.

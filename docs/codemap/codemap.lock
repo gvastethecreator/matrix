@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "source_commit": "ae0941cff9043935ae224aa2b259711fe4d8f7cd",
+  "source_commit": "c75bfba745809b68aaa0da9b78d3c7126c16a53b",
   "working_tree_dirty": true,
-  "generated_at": "2026-10-26T07:40:25Z",
-  "generation_id": "4155122298f15235193a60e5f1eee4f80d80e53b6ed290488d75e273cb2d3f4f",
+  "generated_at": "2026-10-26T16:26:43Z",
+  "generation_id": "a32ce495a9c00ceb2812654ef0fdfb9269cf6c2d0c2deb0333650c3c684c17f8",
   "analysis": {
     "version": "syntax-1",
     "digest": "aac5588c813568478eb34b9cb090e19685ad183efe6d8b3496f261834a7c0f44"
@@ -46,8 +46,8 @@
         "path": "App.tsx",
         "origin": "tracked",
         "state": "present",
-        "digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
-        "size": 11134
+        "digest": "0503531d079c78ff14a390cfeca520c3cfa91ce58849e621be2aabcb426ffff3",
+        "size": 10474
       },
       {
         "path": "components/ParticleCanvas.tsx",
@@ -64,39 +64,25 @@
         "size": 11217
       },
       {
-        "path": "config/coloring.test.ts",
-        "origin": "tracked",
-        "state": "present",
-        "digest": "ba51dc8f6068af9204c913c1c4ae4c0ee68ce06fd4ce5df251e1dd1e514d65ea",
-        "size": 1240
-      },
-      {
-        "path": "config/coloring.ts",
-        "origin": "tracked",
-        "state": "present",
-        "digest": "a30d3e839ca799e3155ef57fdc9b1b25bd0ccb6ba23691a99962e415cf5f52c6",
-        "size": 2363
-      },
-      {
         "path": "config/configState.test.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
-        "size": 2657
+        "digest": "3393c8c881c70a9507e1fc642e9ac8c593a96300acef1977e906b2e16ab42ad0",
+        "size": 2959
       },
       {
         "path": "config/configState.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "5386bafc320e9f2ce625a3597419c50c05b149f3fc669efaf742ce452159e2da",
-        "size": 2755
+        "digest": "3279832f4e26d4f150d9b64643ff34cce89d72c7905b12680af26c5624703258",
+        "size": 2842
       },
       {
         "path": "config/constants.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "ba7d5c597be32850bdba31aa01a9237e72bc35973791bd44f5bc2044fa6257fb",
-        "size": 2553
+        "digest": "4d471772ac313b9d668305baef5d01ce531c8fa39210121b54e6c97254fbfd48",
+        "size": 2504
       },
       {
         "path": "config/enginePin.test.ts",
@@ -113,39 +99,11 @@
         "size": 47
       },
       {
-        "path": "config/glyphSet.test.ts",
-        "origin": "tracked",
-        "state": "present",
-        "digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
-        "size": 1604
-      },
-      {
-        "path": "config/glyphSet.ts",
-        "origin": "tracked",
-        "state": "present",
-        "digest": "fdf2b1a15b799cf4d47459af7b6f03b8305f5db3b6f83ab978cd0963a65b3c9b",
-        "size": 1387
-      },
-      {
         "path": "config/initialConfig.ts",
         "origin": "tracked",
         "state": "present",
         "digest": "6dc30078916c3066027524bc1104d78cc8fc2ce07721b31fdaac2f1769674ce6",
         "size": 1254
-      },
-      {
-        "path": "config/motion.test.ts",
-        "origin": "tracked",
-        "state": "present",
-        "digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
-        "size": 2316
-      },
-      {
-        "path": "config/motion.ts",
-        "origin": "tracked",
-        "state": "present",
-        "digest": "c404f48e2d45bf834abad55b3ada614d060b6843b8bd86db27cfe289efb0acf7",
-        "size": 1803
       },
       {
         "path": "config/presets.ts",
@@ -165,8 +123,8 @@
         "path": "package.json",
         "origin": "tracked",
         "state": "present",
-        "digest": "2b7a3df31cb4830ae5204957d19e90bff92a975ab186c4a3a6245c325219763b",
-        "size": 1219
+        "digest": "aeb25835013b33b8ade428628dfc87c6b4224c20ef55fa055f988c13e0f2b07f",
+        "size": 1239
       },
       {
         "path": "server.mjs",
@@ -193,15 +151,15 @@
         "path": "utils/editorUx.test.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "ff4b80f969af369e872e98a45920cf49fb1fd9ea8cb9f0aa57b564253dcc76c4",
-        "size": 1936
+        "digest": "18339d0d83e6b5920a8ddf0235ef0f94e36f775201f2762383feb215532d7a47",
+        "size": 1636
       },
       {
         "path": "utils/editorUx.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "7a4706cbb771e9e4a99f5dd1ca4a20d4e4db787b732eb7c7d10e0bf4f0004a83",
-        "size": 907
+        "digest": "3088906f7c1780cd157ff22c3df58e5303ba33e843b938bce658f00e2a1d0135",
+        "size": 583
       },
       {
         "path": "utils/exportDelivery.test.ts",
@@ -221,15 +179,15 @@
         "path": "utils/exportEngine.test.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
-        "size": 5595
+        "digest": "dfc222006be0c0ae3e25dd98dafe4665ecd01075d09afb90dc8aceb89952de24",
+        "size": 5457
       },
       {
         "path": "utils/exportEngine.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "fdc3c95240b08a0e9157a007b9877a8bf97ce909dda55889d08aebf3836e8b21",
-        "size": 34360
+        "digest": "26c6257a45458109ab2151723b5871509df528cdd8e723e706a5f78a88385337",
+        "size": 34299
       },
       {
         "path": "utils/exportHtml.test.ts",
@@ -256,8 +214,8 @@
         "path": "utils/persist.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "dbc820546ad5e1c8c5487c9b9853bd7de07042f1850edb65fee26e3f9776e7cb",
-        "size": 2510
+        "digest": "115a385db642d34fa6eab1af4587886bb382e45e49263d82e2639130dda39ab1",
+        "size": 2385
       },
       {
         "path": "utils/random.test.ts",
@@ -281,12 +239,12 @@
         "size": 371
       }
     ],
-    "digest": "0d0a2fcb6f8964c66ff3572884a33dbcb80af0507471c50400032b3137eb5601"
+    "digest": "baedc438c61d2608f6fa8c82e32e018dcc25d021d0663b7b2a0e8562f2008605"
   },
-  "source_digest": "966b6484e1b4bb19e9647a3aa3b0502bec1a6650d8d82d65ece7e64cf0affc13",
+  "source_digest": "eadee31d4e2cf474d6a3dbeee7dcb7b3497f9e2566e74f3ea8fbe0fb15834077",
   "artifact_hashes": {
-    "codemap.json": "93f565c98c6476cdfb2f827b22bbe2ee7c895de7c5fbb7714322760fc613389c",
-    "codemap.md": "5ceb371556cdb726082c96cc9bb13f7517f3b2015f3515e4dff7128bb185d7dc",
-    "codemap.html": "2d448e3cfc2e93ed1534f53b346456834049d26bebf7f61e822c429733422501"
+    "codemap.json": "b1080aec9388c6688872cc34f584ec0f748222a858c9a9cb9f1b1a3b422efeb8",
+    "codemap.md": "9c1d48f4146ddb77b403e072eca95604218a8dde21dbe0ddf0b314e013dffa6e",
+    "codemap.html": "4f6f4249f15c36d8af71a5b69f82b64298691aa98ad837c7cd330460128ebd63"
   }
 }

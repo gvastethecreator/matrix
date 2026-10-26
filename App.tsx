@@ -8,40 +8,16 @@ import { generateStandaloneHtml } from './utils/exportHtml';
 import { generateRandomConfig } from './utils/random';
 import { decideExportDelivery, downloadExportFilename } from './utils/exportDelivery';
 import { createPersistScheduler, loadConfig } from './utils/persist';
-import {
-  customGlyphNotice,
-  panelFallbackLabel,
-  persistErrorMessage,
-  readUiVisible,
-  stealthPressed,
-  toggleStealth,
-  writeUiVisible,
-} from './utils/editorUx';
+import { customGlyphNotice, panelFallbackLabel, persistErrorMessage, readUiVisible } from './utils/editorUx';
 
 const TweakpanePanel = React.lazy(() => import('./components/TweakpanePanel'));
 
 const copyText = async (text: string) => {
   try {
-    if (navigator.clipboard?.writeText) {
-      await navigator.clipboard.writeText(text);
-      return true;
-    }
-  } catch (error) {
-    console.warn('Clipboard API export failed, trying legacy copy.', error);
-  }
-
-  const textArea = document.createElement('textarea');
-  textArea.value = text;
-  textArea.setAttribute('readonly', '');
-  textArea.style.position = 'fixed';
-  textArea.style.left = '-9999px';
-  document.body.appendChild(textArea);
-  textArea.select();
-
-  try {
-    return document.execCommand('copy');
-  } finally {
-    document.body.removeChild(textArea);
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch {
+    return false;
   }
 };
 
@@ -90,7 +66,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     try {
-      window.localStorage.setItem(UI_VISIBLE_STORAGE_KEY, writeUiVisible(isUiVisible));
+      window.localStorage.setItem(UI_VISIBLE_STORAGE_KEY, String(isUiVisible));
     } catch {
       setPersistError(persistErrorMessage);
     }
@@ -99,7 +75,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
       if (event.key !== 'Escape') return;
-      setIsUiVisible((visible) => toggleStealth(visible));
+      setIsUiVisible((visible) => !visible);
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
@@ -119,7 +95,6 @@ const App: React.FC = () => {
     if (copyResetTimer.current) clearTimeout(copyResetTimer.current);
     setCopyState('loading');
     try {
-      await new Promise((resolve) => setTimeout(resolve, 200));
       const html = generateStandaloneHtml(config, getAnimationLogicString());
       const delivery = decideExportDelivery(await copyText(html), Date.now());
 
@@ -199,9 +174,9 @@ const App: React.FC = () => {
 
       <div className="fixed bottom-8 left-1/2 z-50 flex -translate-x-1/2 items-center gap-2 rounded-full border border-white/10 bg-black/60 p-1.5 shadow-[0_0_30px_rgba(0,0,0,0.5)] backdrop-blur-xl transition-all hover:scale-105 active:scale-95">
         <button
-          onClick={() => setIsUiVisible((visible) => toggleStealth(visible))}
+          onClick={() => setIsUiVisible((visible) => !visible)}
           aria-label={isUiVisible ? 'Ocultar controles' : 'Mostrar controles'}
-          aria-pressed={stealthPressed(isUiVisible)}
+          aria-pressed={isUiVisible}
           className="rounded-full p-3 text-white/70 transition-colors hover:bg-white/10"
           title="Toggle Controls"
         >

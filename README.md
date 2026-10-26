@@ -1,66 +1,63 @@
 # Matrix Digital Rain
 
-Editor visual de lluvia digital con React, TypeScript, Three.js y Tweakpane. Permite ajustar el render WebGL en tiempo real, guardar la configuración y exportar una página HTML autónoma.
+Interactive Matrix digital-rain editor with WebGPU, WebGL2, and standalone HTML export.
 
-[Abrir la demo](https://gvastethecreator.github.io/matrix/).
+[Open the live demo](https://gvastethecreator.github.io/matrix/).
 
-La lluvia usa `WebGPURenderer` de three.js con shaders TSL: WebGPU cuando el navegador lo ofrece y WebGL2 como respaldo automático. Añade `?webgl` a la URL para forzar WebGL2; una etiqueta junto a la barra inferior muestra el backend activo. Las instancias calculan transformaciones, color, giro y efectos de cursor en el shader. Se dibuja en un búfer HDR y pasa por bloom multinivel, aberración cromática, scanlines, viñeta y grano. El juego Film usa katakana de media anchura en espejo, como la película, y es el predeterminado. Grid Lock fija los glifos a la rejilla; la profundidad Z añade niebla y desenfoque, y Camera Drift mueve la cámara para mostrar el volumen. Al cargar, la lluvia empieza a caer desde arriba. Un clic lanza una onda; el campo Message dibuja un texto con la propia lluvia. El control Density permite hasta 8.000 columnas, con un presupuesto total de 1.000.000 de glifos. El límite es de capacidad; la fluidez depende de la GPU, resolución, tamaño de los glifos y superposición.
+## Use the editor
 
-Los presets **Lluvia Densa** y **Marea Digital** muestran mayor densidad y movimiento ondulado. El giro, la mutación de caracteres y el glitch se ajustan desde los controles existentes. La velocidad usa tiempo transcurrido para conservar el ritmo entre pantallas con distinta frecuencia.
+Choose a preset from **Library**, then adjust the character set, colors, motion, depth, and pointer effects. **Message** draws text with the rain. **Export HTML** copies a standalone page and downloads it if clipboard access fails. **Descargar HTML** downloads the page directly. Press Escape to show or hide the controls.
 
-## Requisitos
+The editor saves your configuration in browser storage. It does not need an API key or an application backend. Exported pages load Three.js from a CDN and need a network connection.
 
-- Node.js 22.12 o posterior.
-- pnpm 12 mediante Corepack o una instalación local.
+The renderer uses WebGPU when available and WebGL2 otherwise. Add `?webgl` to force WebGL2. Density supports up to 8,000 columns within a total budget of 1,000,000 glyphs. This is a capacity limit, not an FPS guarantee. Frame rate depends on the GPU, resolution, glyph size, and overlap.
 
-## Inicio rápido
+## Run locally
 
-```powershell
+Use Node.js 22.12 or later and pnpm 12. Install the locked dependencies and start the editor:
+
+```sh
 pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-La app queda disponible en `http://127.0.0.1:3000`.
+Open `http://127.0.0.1:3000`.
 
-## Comandos
+## Development commands
 
-| Comando          | Uso                                                 |
-| ---------------- | --------------------------------------------------- |
-| `pnpm dev`       | Servidor de desarrollo                              |
-| `pnpm build`     | Build de producción en `dist/`                      |
-| `pnpm start`     | Servidor de producción local; requiere build previo |
-| `pnpm preview`   | Vista previa estática del build                     |
-| `pnpm test`      | Pruebas de políticas y exportación                  |
-| `pnpm deadcode`  | Archivos, exports y dependencias sin uso            |
-| `pnpm typecheck` | TypeScript sin emitir archivos                      |
-| `pnpm lint`      | Análisis con Oxlint                                 |
-| `pnpm format`    | Formato con Oxfmt                                   |
-| `pnpm check`     | Gate completo, incluido código muerto               |
+The scripts in `package.json` are the command source of truth. VS Code tasks expose the same commands.
 
-## Arquitectura
+| Command             | Purpose                                                                                                                  |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `pnpm dev`          | Start the development server.                                                                                            |
+| `pnpm check`        | Run types, lint, formatting, dead-code checks, build, and tests.                                                         |
+| `pnpm test`         | Run configuration, persistence, and export tests with `node --test`. Build first to include the production-bundle check. |
+| `pnpm typecheck`    | Check TypeScript without emitting files.                                                                                 |
+| `pnpm lint`         | Run Oxlint.                                                                                                              |
+| `pnpm format`       | Apply Oxfmt formatting.                                                                                                  |
+| `pnpm format:check` | Check formatting without writing files.                                                                                  |
+| `pnpm deadcode`     | Find unused files, exports, and dependencies with Knip.                                                                  |
+| `pnpm build`        | Build the app into `dist/`.                                                                                              |
+| `pnpm start`        | Serve an existing local build at `http://127.0.0.1:4173`.                                                                |
+| `pnpm preview`      | Preview the static build with Vite.                                                                                      |
 
-- `App.tsx`: estado persistido, acciones de usuario y carga diferida del panel.
-- `components/ParticleCanvas.tsx`: conecta React con el motor compartido de `utils/exportEngine.ts`.
-- `components/TweakpanePanel.tsx`: controles imperativos conectados a React mediante referencias estables.
-- `server.mjs`: servicio del build en producción local.
-- `utils/exportHtml.ts`: exportador autónomo fijado a la misma versión de Three.js.
+`pnpm start` accepts `HOST` and `PORT` environment variables. Its defaults are `127.0.0.1` and `4173`.
 
-Más detalle en [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md), [docs/DEPENDENCY_UPDATES.md](docs/DEPENDENCY_UPDATES.md) y [docs/QUALITY_AUDIT.md](docs/QUALITY_AUDIT.md).
-
-## Operación
-
-- `pnpm start` escucha en `127.0.0.1:4173` por defecto. `HOST` y `PORT` permiten cambiarlo.
-- El HTML exportado carga Three.js desde un CDN; necesita conexión al abrirse por primera vez.
+See the [contributor architecture overview](docs/ARCHITECTURE.md) for module ownership and supported boundaries.
 
 ## GitHub Pages
 
-Cada push a `main` publica la demo mediante `.github/workflows/pages.yml`. También se puede ejecutar desde Actions con **Run workflow**. El job instala las dependencias con pnpm 12, ejecuta `pnpm build --base=/matrix/` y publica `dist/`. Pages sirve archivos estáticos; no ejecuta `server.mjs`.
+Pushes to `main` deploy through `.github/workflows/pages.yml`. You can also select **Run workflow** in Actions. The single job installs the locked dependencies, runs `pnpm build --base=/matrix/`, and publishes `dist/`. Pages serves static files and does not run `server.mjs`.
 
-Para probar el mismo build antes de publicar:
+To preview the Pages build locally:
 
-```powershell
+```sh
 pnpm build --base=/matrix/
 pnpm preview --base=/matrix/ --host 127.0.0.1
 ```
 
-La vista previa queda disponible en `http://127.0.0.1:4173/matrix/`. El desarrollo con `pnpm dev` conserva la ruta `/`.
+Open `http://127.0.0.1:4173/matrix/`. Development with `pnpm dev` uses `/`.
+
+## License
+
+[MIT](LICENSE).

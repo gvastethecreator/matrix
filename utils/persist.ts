@@ -76,8 +76,5 @@ export const createPersistScheduler = (
       }, delayMs);
     },
     flush,
-    writesAvoided(config: Config): boolean {
-      return shouldSkipPersist(lastSerialized, serializeConfig(config));
-    },
   };
 };

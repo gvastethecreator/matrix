@@ -1,6 +1,13 @@
-import { directionVectors, colorModes, mouseEffects, streamMovements } from '../config/constants.ts';
-import { GLYPH_SET_TABLE } from '../config/glyphSet.ts';
-import { MAX_GLYPHS, MAX_STREAMS, STRUCTURAL_REBUILD_MS } from '../config/motion.ts';
+import {
+  directionVectors,
+  colorModes,
+  mouseEffects,
+  streamMovements,
+  GLYPH_SET_TABLE,
+  MAX_GLYPHS,
+  MAX_STREAMS,
+  STRUCTURAL_REBUILD_MS,
+} from '../config/constants.ts';
 
 export const getAnimationLogicString = (): string => `
 function runMatrixAnimation(THREE, canvas, initialConfig) {

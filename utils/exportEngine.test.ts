@@ -18,7 +18,6 @@ test('PERF-10 engine source is injected text with THREE.*, not Function#toString
   assert.match(source, /new THREE\.NodeMaterial\(/);
   assert.match(source, /THREE\.TSL/);
   assert.equal(source.includes('.toString()'), false);
-  assert.equal(source.includes('resolveGlyphSet.toString'), false);
   const kind = new Function(`${source}\nreturn typeof runMatrixAnimation;`)();
   assert.equal(kind, 'function');
 });
@@ -33,7 +32,6 @@ test('production index bundle keeps injected THREE.* engine text', { skip: !dist
   assert.equal(bundle.includes('new THREE.Scene('), true);
   assert.equal(bundle.includes('new THREE.WebGPURenderer('), true);
   assert.equal(bundle.includes('animationLogic.toString'), false);
-  assert.equal(bundle.includes('glyphColorForMode.toString'), false);
 });
 
 test('ARC-03 standalone HTML calls the injected THREE engine', () => {
