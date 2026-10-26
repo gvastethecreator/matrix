@@ -1,6 +1,6 @@
 # AGENTS
 
-Private Matrix digital-rain editor. React 19, TypeScript 7, Vite 8, Three.js r185, Tweakpane, pnpm 12.
+Matrix digital-rain editor. React 19, TypeScript 7, Vite 8, Three.js r185, Tweakpane, pnpm 12.
 
 ## Commands
 
