@@ -133,7 +133,7 @@ const TweakpanePanel: React.FC<TweakpanePanelProps> = ({
     const lookFolder = pane.addFolder({ title: 'OPTICS', expanded: false });
 
     lookFolder
-      .addBinding(PARAMS, 'numColumns', { min: 10, max: 400, step: 1, label: 'Density' })
+      .addBinding(PARAMS, 'numColumns', { min: 10, max: 2000, step: 1, label: 'Density' })
       .on('change', updateState);
     lookFolder
       .addBinding(PARAMS, 'fontSize', { min: 8, max: 64, step: 1, label: 'Glyph Size' })

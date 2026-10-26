@@ -1,10 +1,44 @@
 import type { Config } from '../types.ts';
+import { initialConfig } from './initialConfig.ts';
 
 /**
  * @description Define una colección de configuraciones predefinidas para el efecto "Matrix Rain".
  * Cada preset ajusta múltiples parámetros para lograr una estética visual única.
  */
 export const presets: Record<string, Partial<Config>> = {
+  'Lluvia Densa': {
+    ...initialConfig,
+    numColumns: 1200,
+    fontSize: 10,
+    minTrailLength: 40,
+    maxTrailLength: 120,
+    minSpeed: 1,
+    maxSpeed: 4,
+    minZ: 0,
+    maxZ: 400,
+    glowIntensity: 0.6,
+    fadeOutSpeed: 0.3,
+  },
+  'Marea Digital': {
+    ...initialConfig,
+    numColumns: 600,
+    glyphSet: 'binary',
+    fontSize: 12,
+    minTrailLength: 30,
+    maxTrailLength: 100,
+    minSpeed: 1,
+    maxSpeed: 3,
+    maxZ: 300,
+    streamMovement: 'serpentine',
+    movementAmplitude: 35,
+    movementFrequency: 0.15,
+    glyphColor: '#33aaff',
+    leaderColor: '#ccffff',
+    glowColor: '#0066ff',
+    glowIntensity: 0.8,
+    fadeOutSpeed: 0.2,
+    mouseEffect: 'swirl',
+  },
   'Matrix Clásico': {
     numColumns: 100,
     glyphSet: 'katakana',

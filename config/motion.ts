@@ -1,6 +1,6 @@
 import type { Config, StreamMovement } from '../types.ts';
 
-export const MAX_GLYPHS = 60_000;
+export const MAX_GLYPHS = 200_000;
 export const STRUCTURAL_REBUILD_MS = 100;
 
 export const getStreamBounds = (width: number, height: number, perspective: number, z: number) => {
@@ -35,15 +35,14 @@ export const shouldRebuildAtlas = (prev: Config, next: Config): boolean =>
   prev.glyphSet !== next.glyphSet ||
   prev.customGlyphSet !== next.customGlyphSet ||
   prev.fontFamily !== next.fontFamily ||
-  prev.fontWeight !== next.fontWeight ||
-  prev.fontSize !== next.fontSize;
+  prev.fontWeight !== next.fontWeight;
 
 export const shouldUpdateCamera = (prev: Pick<Config, 'perspective'>, next: Pick<Config, 'perspective'>): boolean =>
   prev.perspective !== next.perspective;
 
 export const shouldRunAnimation = (hidden: boolean): boolean => !hidden;
 
-export const clampGlyphBudget = (numColumns: number, maxTrailLength: number, maxGlyphs = 60_000): number => {
+export const clampGlyphBudget = (numColumns: number, maxTrailLength: number, maxGlyphs = MAX_GLYPHS): number => {
   const trail = Math.max(1, maxTrailLength);
   const columns = Math.max(1, Math.floor(numColumns));
   const product = columns * trail;

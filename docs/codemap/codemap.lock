@@ -1,77 +1,292 @@
 {
-  "source_commit": "23e1ab48d3476ff48dedaa1c50dd1552996fc11d",
+  "schema_version": 2,
+  "source_commit": "33302d930a9c304fa40ab417e1f03da1b9c0d458",
   "working_tree_dirty": true,
-  "generated_at": "2026-09-07T01:30:05Z",
-  "scanned_scope": [
-    "."
-  ],
-  "excluded_directories": [
-    ".agents",
-    ".cache",
-    ".git",
-    ".hg",
-    ".next",
-    ".nuxt",
-    ".obsidian",
-    ".svn",
-    ".turbo",
-    ".venv",
-    ".vscode",
-    "__pycache__",
-    "build",
-    "coverage",
-    "dist",
-    "docs/codemap",
-    "generated",
-    "node_modules",
-    "out",
-    "target",
-    "vendor",
-    "venv"
-  ],
-  "fingerprint_algorithm": "sha256-path-content-v2",
-  "modules": [
-    {
-      "id": ".",
-      "path": ".",
-      "file_count": 19,
-      "fingerprint": "ce9f02d877c849ea0156120bfb1551779222e79d3f11d7e9f8635b63de3580c9"
+  "generated_at": "2026-10-26T06:38:10Z",
+  "generation_id": "29b0b4c68d67bdfeae24d4392777b43f0ddebc8f24750257a75f11dd43175700",
+  "analysis": {
+    "version": "syntax-1",
+    "digest": "aac5588c813568478eb34b9cb090e19685ad183efe6d8b3496f261834a7c0f44"
+  },
+  "inventory": {
+    "policy": {
+      "inventory": "working-tree",
+      "scope": [
+        "."
+      ],
+      "exclude": [
+        ".agents",
+        ".cache",
+        ".git",
+        ".hg",
+        ".next",
+        ".nuxt",
+        ".obsidian",
+        ".scratch",
+        ".svn",
+        ".turbo",
+        ".venv",
+        ".vscode",
+        "__pycache__",
+        "build",
+        "coverage",
+        "dist",
+        "docs/codemap",
+        "generated",
+        "node_modules",
+        "out",
+        "target",
+        "vendor",
+        "venv"
+      ],
+      "config_digest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
     },
-    {
-      "id": "api",
-      "path": "api",
-      "file_count": 2,
-      "fingerprint": "2df5eb76aedd8f893e332ef471eafee9f9daa3bf0f5d16fd7544060189ddf38b"
-    },
-    {
-      "id": "components",
-      "path": "components",
-      "file_count": 3,
-      "fingerprint": "d64fad74828a8e8243eb0e7e7c6821bf8fa60c80de4b3ff1f097d865910fd6a5"
-    },
-    {
-      "id": "config",
-      "path": "config",
-      "file_count": 4,
-      "fingerprint": "dd6af5812a7155a4d225044c9cf46d297053df78a00a97a60ca316599dd8760c"
-    },
-    {
-      "id": "docs",
-      "path": "docs",
-      "file_count": 3,
-      "fingerprint": "d40f8273b03db03730ec9835f13f76fbd8dce6d600c52498a83d08e424d6411c"
-    },
-    {
-      "id": "services",
-      "path": "services",
-      "file_count": 1,
-      "fingerprint": "5920f0424a8f5542e1db8d8acde609ec21212dee1480379a3891aee48bedcc85"
-    },
-    {
-      "id": "utils",
-      "path": "utils",
-      "file_count": 3,
-      "fingerprint": "cab3e7f85ff007291e1a3137c6ca8da38c7765e3472b531a566cb34c50ad8cbd"
-    }
-  ]
+    "files": [
+      {
+        "path": "App.tsx",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+        "size": 10764
+      },
+      {
+        "path": "components/ParticleCanvas.tsx",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "11c9dce109ccf09032fff675c8ce6461e42405aad259a9fb7c3b765374ad5d48",
+        "size": 1776
+      },
+      {
+        "path": "components/TweakpanePanel.tsx",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "13228dcf29b341d8cebfb6afb4b957a4ee2af6247ac24e9acbf74678cc62af31",
+        "size": 10160
+      },
+      {
+        "path": "config/coloring.test.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "ba51dc8f6068af9204c913c1c4ae4c0ee68ce06fd4ce5df251e1dd1e514d65ea",
+        "size": 1240
+      },
+      {
+        "path": "config/coloring.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "a30d3e839ca799e3155ef57fdc9b1b25bd0ccb6ba23691a99962e415cf5f52c6",
+        "size": 2363
+      },
+      {
+        "path": "config/configState.test.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+        "size": 2599
+      },
+      {
+        "path": "config/configState.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "5386bafc320e9f2ce625a3597419c50c05b149f3fc669efaf742ce452159e2da",
+        "size": 2755
+      },
+      {
+        "path": "config/constants.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "0a0bdb3f275cf6f657d804b2d2628622a70253d31b968c8ff21e44ffd3e1d04f",
+        "size": 2396
+      },
+      {
+        "path": "config/enginePin.test.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "d1f80eb4f80945fe2e0aed40fd2d1263b44e09ab6ad25cf28ee284ce89d82ec8",
+        "size": 448
+      },
+      {
+        "path": "config/enginePin.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "0ad334d5ca3d593c136c84137d4c25559ad413dd20a8db21743220fee62d6447",
+        "size": 47
+      },
+      {
+        "path": "config/glyphSet.test.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+        "size": 1547
+      },
+      {
+        "path": "config/glyphSet.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "764c6a538f1c374f6f831c8d6e46166d1a1dc26fcc5433e1db80073aaff0be32",
+        "size": 1367
+      },
+      {
+        "path": "config/initialConfig.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "cc13c2cc21580a56a99d4a7d4475a5a396076dd21e7d2171c90e59fb47ff4d03",
+        "size": 1061
+      },
+      {
+        "path": "config/motion.test.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+        "size": 2314
+      },
+      {
+        "path": "config/motion.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "38138873539a4d434df6099a6fe3a391207e64768287e0a7d176d6499bdd5c71",
+        "size": 1766
+      },
+      {
+        "path": "config/presets.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "aa5ec559f6f3e366ed552e03c970bf52bfbdc5cc63322636af6fd6da8b77488e",
+        "size": 4068
+      },
+      {
+        "path": "index.tsx",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "35d64fd8059a06798edc007343d43e9fce5dc4dba3fbec8e023a60e7364c3c54",
+        "size": 401
+      },
+      {
+        "path": "package.json",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "2b7a3df31cb4830ae5204957d19e90bff92a975ab186c4a3a6245c325219763b",
+        "size": 1219
+      },
+      {
+        "path": "server.mjs",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "ccb323c0aaf48fe246f5468171c25ee049ae27b4587fcf1253c75701e5a37b62",
+        "size": 1487
+      },
+      {
+        "path": "tsconfig.json",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "ba3620fafbe514d6c8c754896aa784878d06666b29e8bc6a3c2c06e8fde9b1cd",
+        "size": 528
+      },
+      {
+        "path": "types.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "9f0cbecfbb0653d384929e59065baaf05c7257849b7deeb44f0e12344ae5602b",
+        "size": 1550
+      },
+      {
+        "path": "utils/editorUx.test.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "ff4b80f969af369e872e98a45920cf49fb1fd9ea8cb9f0aa57b564253dcc76c4",
+        "size": 1936
+      },
+      {
+        "path": "utils/editorUx.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "7a4706cbb771e9e4a99f5dd1ca4a20d4e4db787b732eb7c7d10e0bf4f0004a83",
+        "size": 907
+      },
+      {
+        "path": "utils/exportDelivery.test.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "1a4c6a6d1c62d5258bb5b6f949f502ee5d87d9c3ecc9bb58c36ccf8bfa9d2ad4",
+        "size": 809
+      },
+      {
+        "path": "utils/exportDelivery.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "579cc5c75f3b2837fab962b098a0f3c26d214fa2e75a1bfc9e4df8f84f7fa685",
+        "size": 436
+      },
+      {
+        "path": "utils/exportEngine.test.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+        "size": 5312
+      },
+      {
+        "path": "utils/exportEngine.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "37761c60fba9b282063ef8e086dcbdc25c955a79fb1149f10f6c152d2e1a0a7d",
+        "size": 18904
+      },
+      {
+        "path": "utils/exportHtml.test.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "0554db78f0eb21ba1b693cd8776abf28236e71efa09f6f9dc1e29b5a8e97a7a2",
+        "size": 2035
+      },
+      {
+        "path": "utils/exportHtml.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "81e27d53445f6364e70ed8472d05210f687906b4cce69c4f2f6038c6de7a11aa",
+        "size": 1905
+      },
+      {
+        "path": "utils/persist.test.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "86f3258efeb437c229967e5e215a922a1e867c8e266f6fd7e3329f3face2e7b8",
+        "size": 3002
+      },
+      {
+        "path": "utils/persist.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "dbc820546ad5e1c8c5487c9b9853bd7de07042f1850edb65fee26e3f9776e7cb",
+        "size": 2510
+      },
+      {
+        "path": "utils/random.test.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "6551fe3c87950a5eae1d0ead5f747edf4546826de12cfe9b3baed15c0bc686c7",
+        "size": 557
+      },
+      {
+        "path": "utils/random.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "d8c9b092d6b100d93f27afc0b7bec07a5ccd8dbfd2ec2672d0a09b730b813990",
+        "size": 3827
+      },
+      {
+        "path": "vite.config.ts",
+        "origin": "tracked",
+        "state": "present",
+        "digest": "99880b8352fbdad32c4ce37033632dfc1fe3d64461cdd98e4940acc76fbdbdc6",
+        "size": 371
+      }
+    ],
+    "digest": "3bb37592fac23e5422ed68a2dd6d77ea8d420ea74179be9e60088f68e8b9def9"
+  },
+  "source_digest": "b6c09ac8e3ad0e127070d1867e97112a1ef182b8c9a069ef30025d37c717cb1c",
+  "artifact_hashes": {
+    "codemap.json": "fa5831f2419ffff1a301dd57fa121ce924d2905f73025c2bb115ebe6530d7177",
+    "codemap.md": "5c8c44c17e429c8364743067af0caac637f172ad22bcd49e11afbb277b1f4e6b",
+    "codemap.html": "ede3fb02afb7aee3cf27073ceb765feb681eef291f4c8ac4429ed869f5ada2c1"
+  }
 }

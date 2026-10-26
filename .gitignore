@@ -17,6 +17,10 @@ dist-ssr
 coverage/
 playwright-report/
 test-results/
+docs/codemap/.staging/
+docs/codemap/.review/
+docs/codemap/.publication/
+docs/codemap/.publisher.lock
 
 # Editor directories and files
 .vscode/*

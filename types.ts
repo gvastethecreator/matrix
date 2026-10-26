@@ -4,31 +4,6 @@ export type StreamDirection = 'down' | 'up' | 'left' | 'right' | 'down-left' | '
 export type StreamMovement = 'linear' | 'serpentine' | 'zigzag' | 'spiral';
 export type ColorMode = 'monochrome' | 'rainbow-stream' | 'screen-gradient' | 'speed-based';
 
-export interface Glyph {
-  char: string;
-  x: number;
-  vx: number;
-  y: number;
-  vy: number;
-  scale: number;
-  angle: number;
-  rotSpeed: number;
-}
-
-export interface Stream {
-  id: number;
-  x: number;
-  y: number;
-  z: number;
-  speed: number;
-  glyphs: Glyph[];
-  length: number;
-  mutationRate: number;
-  directionMultiplier: number;
-  currentDir: [number, number];
-  hue: number;
-}
-
 export interface Config {
   // General
   numColumns: number;

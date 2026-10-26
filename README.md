@@ -2,6 +2,10 @@
 
 Editor visual de lluvia digital con React, TypeScript, Three.js y Tweakpane. Permite ajustar el render WebGL en tiempo real, guardar la configuración y exportar una página HTML autónoma.
 
+La lluvia usa instancias WebGL2 con transformaciones, color, giro y efectos de cursor en el shader. El control Density permite hasta 2.000 columnas, con un presupuesto total de 200.000 glifos. El límite es de capacidad; la fluidez depende de la GPU, resolución, tamaño de los glifos y superposición.
+
+Los presets **Lluvia Densa** y **Marea Digital** muestran mayor densidad y movimiento ondulado. El giro, la mutación de caracteres y el glitch se ajustan desde los controles existentes. La velocidad usa tiempo transcurrido para conservar el ritmo entre pantallas con distinta frecuencia.
+
 ## Requisitos
 
 - Node.js 22.12 o posterior.
@@ -34,7 +38,7 @@ La app queda disponible en `http://127.0.0.1:3000`.
 ## Arquitectura
 
 - `App.tsx`: estado persistido, acciones de usuario y carga diferida del panel.
-- `components/ParticleCanvas.tsx`: motor WebGL, atlas de glifos, interacción y liberación de recursos GPU.
+- `components/ParticleCanvas.tsx`: conecta React con el motor compartido de `utils/exportEngine.ts`.
 - `components/TweakpanePanel.tsx`: controles imperativos conectados a React mediante referencias estables.
 - `server.mjs`: servicio del build en producción local.
 - `utils/exportHtml.ts`: exportador autónomo fijado a la misma versión de Three.js.

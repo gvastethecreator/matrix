@@ -35,12 +35,14 @@ test('PERF-03 atlas rebuilds for charset or font, not for color', () => {
   assert.equal(shouldRebuildAtlas(initialConfig, nextColor), false);
   assert.equal(shouldRebuildAtlas(initialConfig, { ...initialConfig, fontWeight: 'bold' }), true);
   assert.equal(shouldRebuildAtlas(initialConfig, { ...initialConfig, customGlyphSet: 'XYZ' }), true);
+  assert.equal(shouldRebuildAtlas(initialConfig, { ...initialConfig, fontSize: 32 }), false);
 });
 
 test('PERF-04 glyph budget never exceeds the instance cap', () => {
   assert.ok(clampGlyphBudget(400, 200, 60_000) * 200 <= 60_000);
   assert.equal(clampGlyphBudget(10, 10, 60_000), 10);
-  assert.equal(MAX_GLYPHS, 60_000);
+  assert.equal(clampGlyphBudget(2000, 200) * 200, MAX_GLYPHS);
+  assert.equal(MAX_GLYPHS, 200_000);
 });
 
 test('PERF-05 animation pauses while hidden', () => {

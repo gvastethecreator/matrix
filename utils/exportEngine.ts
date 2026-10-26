@@ -1,20 +1,98 @@
-import { directionVectors } from '../config/constants.ts';
+import { directionVectors, colorModes, mouseEffects, streamMovements } from '../config/constants.ts';
 import { GLYPH_SET_TABLE } from '../config/glyphSet.ts';
 import { MAX_GLYPHS, STRUCTURAL_REBUILD_MS } from '../config/motion.ts';
 
 const VERTEX_SHADER = `
-attribute vec4 aGlyphUv;
-attribute vec4 aGlyphColor;
+attribute vec4 aStream;
+attribute vec4 aMotion;
+attribute float aTrailIndex;
+uniform float uTime;
+uniform float uFontSize;
+uniform float uSpacing;
+uniform float uCellScale;
+uniform vec2 uAtlasGrid;
+uniform float uGlyphCount;
+uniform int uMovement;
+uniform float uAmplitude;
+uniform float uFrequency;
+uniform float uRotation;
+uniform float uSpin;
+uniform float uSwapRate;
+uniform float uGlitchChance;
+uniform int uColorMode;
+uniform vec3 uGlyphColor;
+uniform vec3 uLeaderColor;
+uniform vec2 uSpeedRange;
+uniform float uHeight;
+uniform vec2 uMouse;
+uniform float uMouseStrength;
+uniform int uMouseEffect;
+uniform float uMouseRadius;
+uniform float uMouseForce;
+uniform vec2 uSplash;
+uniform float uSplashStrength;
+uniform float uSplashRadius;
+uniform float uSplashForce;
 varying vec2 vUv;
 varying vec4 vColor;
+
+float hash(float n) {
+    return fract(sin(n) * 43758.5453);
+}
+
+vec3 hsl(float h, float s, float l) {
+    vec3 rgb = clamp(abs(mod(h * 6.0 + vec3(0.0, 4.0, 2.0), 6.0) - 3.0) - 1.0, 0.0, 1.0);
+    return l + (rgb - 0.5) * (1.0 - abs(2.0 * l - 1.0)) * s;
+}
+
 void main() {
-    vUv = uv * aGlyphUv.zw + aGlyphUv.xy;
-    vColor = aGlyphColor;
-    vec4 localPosition = vec4(position, 1.0);
-    #ifdef USE_INSTANCING
-        localPosition = instanceMatrix * localPosition;
-    #endif
-    gl_Position = projectionMatrix * modelViewMatrix * localPosition;
+    float index = aTrailIndex;
+    if (index >= aStream.w) {
+        vUv = vec2(0.0);
+        vColor = vec4(0.0);
+        gl_Position = vec4(2.0, 2.0, 2.0, 1.0);
+        return;
+    }
+    float seed = aMotion.w * 1000.0;
+    float phase = uTime * uFrequency * 6.0 + seed;
+    vec2 offset = vec2(0.0);
+    if (uMovement == 1) offset.x = sin(phase) * uAmplitude;
+    if (uMovement == 2) offset.x = sign(sin(phase)) * uAmplitude;
+    if (uMovement == 3) offset = vec2(cos(phase), sin(phase)) * uAmplitude;
+    vec2 world = aStream.xy - index * uFontSize * uSpacing * aMotion.xy + offset;
+    float normalizedY = clamp((world.y + uHeight * 0.5) / uHeight, 0.0, 1.0);
+    float scale = 1.0;
+    vec2 delta = world - uMouse;
+    float distance = max(length(delta), 0.001);
+    float force = max(0.0, 1.0 - distance / uMouseRadius) * uMouseForce * uMouseStrength;
+    if (uMouseEffect == 0) scale += force * 0.45;
+    if (uMouseEffect == 1) world -= delta / distance * force * 9.0;
+    if (uMouseEffect == 2) world += delta / distance * force * 9.0;
+    if (uMouseEffect == 3) world += vec2(-delta.y, delta.x) / distance * force * 9.0;
+    delta = world - uSplash;
+    distance = max(length(delta), 0.001);
+    world += delta / distance * max(0.0, 1.0 - distance / uSplashRadius) * uSplashForce * uSplashStrength * 9.0;
+
+    float tick = floor(uTime * 60.0 * uSwapRate);
+    float glyph = floor(hash(seed + index * 13.37 + tick * 7.13) * uGlyphCount);
+    float glitch = step(1.0 - uGlitchChance, hash(seed + floor(uTime * 12.0)));
+    world.x += glitch * (hash(seed + index) - 0.5) * uFontSize;
+    vec2 cell = vec2(mod(glyph, uAtlasGrid.x), floor(glyph / uAtlasGrid.x));
+    vUv = vec2((cell.x + uv.x) / uAtlasGrid.x, 1.0 - (cell.y + 1.0 - uv.y) / uAtlasGrid.y);
+
+    bool leader = index < 0.5;
+    vec3 color = leader ? uLeaderColor : uGlyphColor;
+    if (uColorMode == 1) color = hsl(aMotion.w, 0.85, leader ? 0.72 : 0.48);
+    if (uColorMode == 2) color = hsl(normalizedY * 0.7, 0.8, leader ? 0.7 : 0.45);
+    if (uColorMode == 3) {
+        float span = uSpeedRange.y - uSpeedRange.x;
+        float speed = span == 0.0 ? 0.5 : clamp((aMotion.z - uSpeedRange.x) / span, 0.0, 1.0);
+        color = hsl(0.35 - speed * 0.35, 0.9, leader ? 0.7 : 0.4 + speed * 0.2);
+    }
+    vColor = vec4(color, 1.0 - index / aStream.w);
+    float angle = radians(uRotation + uTime * uSpin);
+    vec2 local = mat2(cos(angle), sin(angle), -sin(angle), cos(angle)) * position.xy;
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(world + local * uFontSize * uCellScale * scale, -aStream.z, 1.0);
 }
 `;
 
@@ -26,24 +104,17 @@ uniform float uGlowIntensity;
 uniform float uTime;
 varying vec2 vUv;
 varying vec4 vColor;
-
 void main() {
     vec4 tex = texture2D(uAtlas, vUv);
     if (tex.a < 0.1) discard;
-
     vec3 base = vColor.rgb;
     float flicker = 0.95 + 0.05 * sin(uTime * 20.0 + vUv.y * 100.0);
-
     if (uUseGlow) {
         float core = smoothstep(0.5, 0.9, tex.a);
-        vec3 glowColor = uGlowColor;
-        if (dot(glowColor, glowColor) < 0.0001) {
-            glowColor = base;
-        }
+        vec3 glowColor = dot(uGlowColor, uGlowColor) < 0.0001 ? base : uGlowColor;
         vec3 glow = glowColor * uGlowIntensity * tex.a;
         base = mix(glow, base + glow * 0.3, core);
     }
-
     gl_FragColor = vec4(base * flicker, vColor.a * tex.a);
 }
 `;
@@ -51,537 +122,314 @@ void main() {
 export const getAnimationLogicString = (): string => `
 function runMatrixAnimation(THREE, canvas, initialConfig) {
   const directionVectors = ${JSON.stringify(directionVectors)};
+  const colorModes = ${JSON.stringify(colorModes)};
+  const mouseEffects = ${JSON.stringify(mouseEffects)};
+  const streamMovements = ${JSON.stringify(streamMovements)};
   const GLYPH_SET_TABLE = ${JSON.stringify(GLYPH_SET_TABLE)};
-  const STRUCTURAL_REBUILD_MS = ${STRUCTURAL_REBUILD_MS};
   const MAX_GLYPHS = ${MAX_GLYPHS};
-  const VERTEX_SHADER = ${JSON.stringify(VERTEX_SHADER)};
-  const FRAGMENT_SHADER = ${JSON.stringify(FRAGMENT_SHADER)};
-
-  function resolveGlyphSet(glyphSet, customGlyphSet) {
-    if (glyphSet === 'custom') {
-      const custom = typeof customGlyphSet === 'string' ? customGlyphSet : '';
-      return custom.trim() ? custom : '?';
-    }
-    return GLYPH_SET_TABLE[glyphSet] || GLYPH_SET_TABLE.katakana;
-  }
-
-  function createGlyphSetCache() {
-    let lastSet = '';
-    let lastCustom = '';
-    let lastValue = '';
-    return function cached(glyphSet, customGlyphSet) {
-      const custom = customGlyphSet == null ? '' : customGlyphSet;
-      if (glyphSet === lastSet && custom === lastCustom && lastValue !== '') {
-        return lastValue;
-      }
-      lastSet = glyphSet;
-      lastCustom = custom;
-      lastValue = resolveGlyphSet(glyphSet, custom);
-      return lastValue;
-    };
-  }
-
-  function getStreamBounds(width, height, perspective, z) {
-    const aspect = width / height;
-    const distance = Math.max(1, perspective + z);
-    const h = distance * (height / (2 * perspective));
-    const w = h * aspect;
-    return { w: w, h: h };
-  }
-
-  function movementOffset(kind, time, amplitude, frequency, id) {
-    if (kind === 'linear' || amplitude === 0) {
-      return [0, 0];
-    }
-    const phase = time * frequency * 6 + id * 0.35;
-    if (kind === 'serpentine') {
-      return [Math.sin(phase) * amplitude, 0];
-    }
-    if (kind === 'zigzag') {
-      return [Math.sign(Math.sin(phase)) * amplitude, 0];
-    }
-    return [Math.cos(phase) * amplitude, Math.sin(phase) * amplitude];
-  }
-
-  function shouldRebuildAtlas(prev, next) {
-    return (
-      prev.glyphSet !== next.glyphSet ||
-      prev.customGlyphSet !== next.customGlyphSet ||
-      prev.fontFamily !== next.fontFamily ||
-      prev.fontWeight !== next.fontWeight ||
-      prev.fontSize !== next.fontSize
-    );
-  }
-
-  function shouldUpdateCamera(prev, next) {
-    return prev.perspective !== next.perspective;
-  }
-
-  function shouldRunAnimation(hidden) {
-    return !hidden;
-  }
-
-  function clampGlyphBudget(numColumns, maxTrailLength, maxGlyphs) {
-    const cap = maxGlyphs == null ? 60000 : maxGlyphs;
-    const trail = Math.max(1, maxTrailLength);
-    const columns = Math.max(1, Math.floor(numColumns));
-    const product = columns * trail;
-    if (product <= cap) {
-      return columns;
-    }
-    return Math.max(1, Math.floor(cap / trail));
-  }
-
-  function glyphColorForMode(input) {
-    function hexToRgb(hex) {
-      const normalized = hex.charAt(0) === '#' ? hex.slice(1) : hex;
-      const packed = Number.parseInt(normalized.padEnd(6, '0').slice(0, 6), 16);
-      if (!Number.isFinite(packed)) {
-        return { r: 0, g: 1, b: 0.25 };
-      }
-      return {
-        r: ((packed >> 16) & 255) / 255,
-        g: ((packed >> 8) & 255) / 255,
-        b: (packed & 255) / 255,
-      };
-    }
-    function hslToRgb(h, s, l) {
-      const hue = ((h % 1) + 1) % 1;
-      const c = (1 - Math.abs(2 * l - 1)) * s;
-      const x = c * (1 - Math.abs(((hue * 6) % 2) - 1));
-      const m = l - c / 2;
-      let r = 0;
-      let g = 0;
-      let b = 0;
-      const sector = Math.floor(hue * 6);
-      if (sector === 0) {
-        r = c;
-        g = x;
-        b = 0;
-      } else if (sector === 1) {
-        r = x;
-        g = c;
-        b = 0;
-      } else if (sector === 2) {
-        r = 0;
-        g = c;
-        b = x;
-      } else if (sector === 3) {
-        r = 0;
-        g = x;
-        b = c;
-      } else if (sector === 4) {
-        r = x;
-        g = 0;
-        b = c;
-      } else {
-        r = c;
-        g = 0;
-        b = x;
-      }
-      return { r: r + m, g: g + m, b: b + m };
-    }
-    if (input.colorMode === 'rainbow-stream') {
-      return hslToRgb(input.streamHue, 0.85, input.isLeader ? 0.72 : 0.48);
-    }
-    if (input.colorMode === 'screen-gradient') {
-      const y = Math.min(1, Math.max(0, input.normalizedY));
-      return hslToRgb(y * 0.7, 0.8, input.isLeader ? 0.7 : 0.45);
-    }
-    if (input.colorMode === 'speed-based') {
-      const span = input.maxSpeed - input.minSpeed;
-      const t = span === 0 ? 0.5 : Math.min(1, Math.max(0, (input.speed - input.minSpeed) / span));
-      return hslToRgb(0.35 - t * 0.35, 0.9, input.isLeader ? 0.7 : 0.4 + t * 0.2);
-    }
-    return hexToRgb(input.isLeader ? input.leaderColor : input.glyphColor);
-  }
-
+  const STRUCTURAL_REBUILD_MS = ${STRUCTURAL_REBUILD_MS};
   let config = Object.assign({}, initialConfig);
-  let width = Math.max(canvas.clientWidth || window.innerWidth || 1024, 100);
-  let height = Math.max(canvas.clientHeight || window.innerHeight || 768, 100);
-  let streams = [];
-  let mouse = null;
+  let width = Math.max(canvas.clientWidth || window.innerWidth, 100);
+  let height = Math.max(canvas.clientHeight || window.innerHeight, 100);
   let time = 0;
+  let lastFrame = null;
   let animationFrameId;
-  let splashWorldPos = null;
-  let splashTTL = 0;
-  const SPLASH_DURATION = 60;
-  let running = true;
-  let debounceTimer = null;
+  let debounceTimer;
   let atlasDirty = false;
-  const glyphCache = createGlyphSetCache();
-  const getGlyphSet = function () {
-    return glyphCache(config.glyphSet, config.customGlyphSet);
-  };
-
-  const getBoundsForStream = function (stream) {
-    return getStreamBounds(width, height, config.perspective, stream.z);
-  };
-
-  const resetStreamPosition = function (stream, dir) {
-    Object.assign(stream, {
-      glyphs: [],
-      speed: Math.random() * (config.maxSpeed - config.minSpeed) + config.minSpeed,
-      length: Math.floor(Math.random() * (config.maxTrailLength - config.minTrailLength) + config.minTrailLength),
-      z: config.useZAxis ? Math.random() * (config.maxZ - config.minZ) + config.minZ : 0,
-      currentDir: directionVectors[dir].slice(),
-      directionMultiplier: 1,
-      mutationRate: Math.random() * 0.5 + 0.5,
-      hue: Math.random(),
-    });
-
-    if (stream.z >= config.perspective) {
-      stream.z = config.perspective - 10;
-    }
-
-    const bounds = getBoundsForStream(stream);
-    const margin = 1.1;
-    const dv = directionVectors[dir];
-    const isH = Math.abs(dv[0]) > 0.1;
-    const isV = Math.abs(dv[1]) > 0.1;
-
-    if (isV) {
-      stream.x = Math.random() * bounds.w * 2 - bounds.w;
-      stream.y = bounds.h * margin * -Math.sign(dv[1]);
-    }
-    if (isH) {
-      if (!isV || Math.random() > 0.5) {
-        stream.x = bounds.w * margin * -Math.sign(dv[0]);
-        stream.y = Math.random() * bounds.h * 2 - bounds.h;
-      }
-    }
-  };
+  let mouseInside = false;
+  let splashAge = 1;
+  let streams = [];
+  let geometry;
+  let streamAttr;
+  let motionAttr;
+  let atlas;
 
   const scene = new THREE.Scene();
   const calculateFov = function () {
     return 2 * Math.atan(height / (2 * config.perspective)) * (180 / Math.PI);
   };
   const camera = new THREE.PerspectiveCamera(calculateFov(), width / height, 1, 3000);
-  camera.position.set(0, 0, config.perspective);
-  camera.lookAt(0, 0, 0);
-
+  camera.position.z = config.perspective;
   const renderer = new THREE.WebGLRenderer({
-    canvas: canvas,
-    antialias: false,
-    alpha: true,
-    powerPreference: 'high-performance',
-    preserveDrawingBuffer: true,
+    canvas: canvas, antialias: false, alpha: false,
+    powerPreference: 'high-performance', preserveDrawingBuffer: true,
   });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  renderer.setSize(width, height);
-  renderer.setClearColor(0x000000, 1);
+  renderer.setSize(width, height, false);
+  renderer.setClearColor(config.backgroundColor, 1);
   renderer.autoClear = false;
 
-  let atlas;
-  const createTextureAtlas = function () {
-    const previousTexture = atlas && atlas.texture;
-    const chars = Array.from(new Set(getGlyphSet()));
-    const atlasCanvas = document.createElement('canvas');
-    const ctx = atlasCanvas.getContext('2d');
-    if (!ctx) return;
-
-    const fontSize = 48;
-    ctx.font = config.fontWeight + ' ' + fontSize + 'px ' + config.fontFamily + ', monospace';
-    const padding = 8;
-    const dims = chars.map(function (char) {
-      return { char: char, glyphWidth: Math.ceil(ctx.measureText(char).width) };
-    });
-    const totalW = dims.reduce(function (sum, dimension) {
-      return sum + dimension.glyphWidth + padding * 2;
-    }, 0);
-
-    atlasCanvas.width = Math.max(totalW, 1);
-    atlasCanvas.height = fontSize + padding * 2;
-    ctx.font = config.fontWeight + ' ' + fontSize + 'px ' + config.fontFamily + ', monospace';
-    ctx.fillStyle = '#ffffff';
-    ctx.textBaseline = 'middle';
-    ctx.clearRect(0, 0, atlasCanvas.width, atlasCanvas.height);
-
-    const metrics = new Map();
-    let curX = 0;
-    dims.forEach(function (item) {
-      const u = (curX + padding) / atlasCanvas.width;
-      const v = padding / atlasCanvas.height;
-      const uw = item.glyphWidth / atlasCanvas.width;
-      const vh = fontSize / atlasCanvas.height;
-      metrics.set(item.char, {
-        u: u,
-        v: v,
-        width: item.glyphWidth * (config.fontSize / fontSize),
-        height: config.fontSize,
-        uw: uw,
-        vh: vh,
-      });
-      ctx.fillText(item.char, curX + padding, atlasCanvas.height / 2);
-      curX += item.glyphWidth + padding * 2;
-    });
-
-    const texture = new THREE.CanvasTexture(atlasCanvas);
-    texture.minFilter = THREE.LinearMipMapLinearFilter;
-    texture.magFilter = THREE.LinearFilter;
-    texture.generateMipmaps = true;
-    texture.needsUpdate = true;
-    atlas = { texture: texture, metrics: metrics, fontHeight: config.fontSize };
-    if (previousTexture && previousTexture.dispose) previousTexture.dispose();
+  const uniforms = {
+    uTime: { value: 0 },
+    uAtlas: { value: null },
+    uAtlasGrid: { value: new THREE.Vector2(1, 1) },
+    uGlyphCount: { value: 1 },
+    uCellScale: { value: 1 },
+    uFontSize: { value: config.fontSize },
+    uSpacing: { value: config.characterSpacing },
+    uMovement: { value: 0 },
+    uAmplitude: { value: config.movementAmplitude },
+    uFrequency: { value: config.movementFrequency },
+    uRotation: { value: config.baseRotation },
+    uSpin: { value: config.rotationSpeed },
+    uSwapRate: { value: config.characterSwapRate },
+    uGlitchChance: { value: config.glitchChance },
+    uColorMode: { value: 0 },
+    uGlyphColor: { value: new THREE.Color() },
+    uLeaderColor: { value: new THREE.Color() },
+    uSpeedRange: { value: new THREE.Vector2() },
+    uHeight: { value: height },
+    uMouse: { value: new THREE.Vector2() },
+    uMouseStrength: { value: 0 },
+    uMouseEffect: { value: 0 },
+    uMouseRadius: { value: config.mouseRadius },
+    uMouseForce: { value: config.mouseForce },
+    uSplash: { value: new THREE.Vector2() },
+    uSplashStrength: { value: 0 },
+    uSplashRadius: { value: config.splashRadius },
+    uSplashForce: { value: config.splashForce },
+    uUseGlow: { value: config.useGlow },
+    uGlowColor: { value: new THREE.Color() },
+    uGlowIntensity: { value: config.glowIntensity },
   };
-
-  const initStreams = function () {
-    const columns = clampGlyphBudget(config.numColumns, config.maxTrailLength, MAX_GLYPHS);
-    streams = Array.from({ length: columns }, function (_, i) {
-      const s = { id: i };
-      resetStreamPosition(s, config.streamDirection);
-      return s;
-    });
-  };
-
-  const maxGlyphs = MAX_GLYPHS;
-  const geometry = new THREE.PlaneGeometry(1, 1);
   const material = new THREE.ShaderMaterial({
-    uniforms: {
-      uAtlas: { value: null },
-      uUseGlow: { value: config.useGlow },
-      uGlowColor: { value: new THREE.Color(config.glowColor) },
-      uGlowIntensity: { value: config.glowIntensity },
-      uTime: { value: 0 },
-    },
-    vertexShader: VERTEX_SHADER,
-    fragmentShader: FRAGMENT_SHADER,
-    transparent: true,
-    blending: THREE.NormalBlending,
-    depthTest: false,
-    depthWrite: false,
+    uniforms: uniforms,
+    vertexShader: ${JSON.stringify(VERTEX_SHADER)},
+    fragmentShader: ${JSON.stringify(FRAGMENT_SHADER)},
+    transparent: true, depthTest: false, depthWrite: false,
   });
-
-  const mesh = new THREE.InstancedMesh(geometry, material, maxGlyphs);
-  mesh.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+  const mesh = new THREE.Mesh(new THREE.InstancedBufferGeometry(), material);
   mesh.frustumCulled = false;
   scene.add(mesh);
-
-  const uvAttr = new THREE.InstancedBufferAttribute(new Float32Array(maxGlyphs * 4), 4);
-  geometry.setAttribute('aGlyphUv', uvAttr);
-  const colorAttr = new THREE.InstancedBufferAttribute(new Float32Array(maxGlyphs * 4), 4);
-  geometry.setAttribute('aGlyphColor', colorAttr);
-
   const fadeMat = new THREE.MeshBasicMaterial({
-    color: config.backgroundColor,
-    transparent: true,
-    opacity: config.fadeOutSpeed,
-    depthWrite: false,
-    depthTest: false,
+    color: config.backgroundColor, transparent: true,
+    opacity: config.fadeOutSpeed, depthWrite: false, depthTest: false,
   });
   const fadeMesh = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), fadeMat);
   const fadeScene = new THREE.Scene();
   fadeScene.add(fadeMesh);
   const fadeCam = new THREE.OrthographicCamera(-1, 1, 1, -1, -5, 5);
 
+  const syncUniforms = function () {
+    uniforms.uFontSize.value = config.fontSize;
+    uniforms.uSpacing.value = config.characterSpacing;
+    uniforms.uMovement.value = streamMovements.indexOf(config.streamMovement);
+    uniforms.uAmplitude.value = config.movementAmplitude;
+    uniforms.uFrequency.value = config.movementFrequency;
+    uniforms.uRotation.value = config.baseRotation;
+    uniforms.uSpin.value = config.rotationSpeed;
+    uniforms.uSwapRate.value = config.characterSwapRate;
+    uniforms.uGlitchChance.value = config.glitchChance;
+    uniforms.uColorMode.value = colorModes.indexOf(config.colorMode);
+    uniforms.uGlyphColor.value.set(config.glyphColor).convertLinearToSRGB();
+    uniforms.uLeaderColor.value.set(config.leaderColor).convertLinearToSRGB();
+    uniforms.uSpeedRange.value.set(config.minSpeed, config.maxSpeed);
+    uniforms.uMouseEffect.value = mouseEffects.indexOf(config.mouseEffect);
+    uniforms.uMouseRadius.value = Math.max(1, config.mouseRadius);
+    uniforms.uMouseForce.value = config.mouseForce;
+    uniforms.uSplashRadius.value = Math.max(1, config.splashRadius);
+    uniforms.uSplashForce.value = config.splashForce;
+    uniforms.uUseGlow.value = config.useGlow;
+    uniforms.uGlowColor.value.set(config.glowColor);
+    uniforms.uGlowIntensity.value = config.glowIntensity;
+    fadeMat.color.set(config.backgroundColor);
+    camera.position.z = config.perspective;
+    camera.fov = calculateFov();
+    camera.updateProjectionMatrix();
+  };
+
+  const createTextureAtlas = function () {
+    const custom = typeof config.customGlyphSet === 'string' ? config.customGlyphSet : '';
+    const glyphs = config.glyphSet === 'custom'
+      ? (custom.trim() ? custom : '?')
+      : GLYPH_SET_TABLE[config.glyphSet] || GLYPH_SET_TABLE.katakana;
+    const chars = Array.from(new Set(Array.from(
+      new Intl.Segmenter(undefined, { granularity: 'grapheme' }).segment(glyphs),
+      function (entry) { return entry.segment; }
+    )));
+    const atlasCanvas = document.createElement('canvas');
+    const ctx = atlasCanvas.getContext('2d');
+    if (!ctx) throw new Error('No se pudo crear el atlas de caracteres.');
+    const font = config.fontWeight + ' 48px ' + config.fontFamily + ', monospace';
+    ctx.font = font;
+    const cellSize = Math.ceil(chars.reduce(function (size, char) {
+      return Math.max(size, ctx.measureText(char).width + 16);
+    }, 64));
+    const maxCells = Math.floor(renderer.capabilities.maxTextureSize / cellSize);
+    const columns = Math.min(maxCells, Math.ceil(Math.sqrt(chars.length)));
+    const rows = Math.ceil(chars.length / columns);
+    if (rows > maxCells) throw new Error('El conjunto de caracteres supera el tamaño de textura de esta GPU.');
+    atlasCanvas.width = columns * cellSize;
+    atlasCanvas.height = rows * cellSize;
+    ctx.font = font;
+    ctx.fillStyle = '#ffffff';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    chars.forEach(function (char, i) {
+      ctx.fillText(char, (i % columns + 0.5) * cellSize, (Math.floor(i / columns) + 0.5) * cellSize);
+    });
+    const texture = new THREE.CanvasTexture(atlasCanvas);
+    texture.minFilter = THREE.LinearFilter;
+    texture.magFilter = THREE.LinearFilter;
+    texture.generateMipmaps = false;
+    if (atlas) atlas.dispose();
+    atlas = texture;
+    uniforms.uAtlas.value = atlas;
+    uniforms.uAtlasGrid.value.set(columns, rows);
+    uniforms.uGlyphCount.value = chars.length;
+    uniforms.uCellScale.value = cellSize / 48;
+  };
+
+  const resetStream = function (stream, spread) {
+    const dv = directionVectors[config.streamDirection];
+    stream.z = config.useZAxis ? config.minZ + Math.random() * (config.maxZ - config.minZ) : 0;
+    stream.z = Math.max(1 - config.perspective, stream.z);
+    stream.speed = config.minSpeed + Math.random() * (config.maxSpeed - config.minSpeed);
+    stream.length = Math.max(1, Math.min(streamAttr.meshPerAttribute,
+      Math.floor(config.minTrailLength + Math.random() * (config.maxTrailLength - config.minTrailLength + 1))));
+    stream.dx = dv[0];
+    stream.dy = dv[1];
+    stream.hue = Math.random();
+    const depth = (config.perspective + stream.z) / config.perspective;
+    const w = width * 0.5 * depth;
+    const h = height * 0.5 * depth;
+    stream.x = (Math.random() * 2 - 1) * w;
+    stream.y = (Math.random() * 2 - 1) * h;
+    if (!spread) {
+      if (dv[1] !== 0) stream.y = -Math.sign(dv[1]) * (h + config.fontSize);
+      else stream.x = -Math.sign(dv[0]) * (w + config.fontSize);
+    }
+  };
+
+  const initStreams = function () {
+    const trail = Math.min(MAX_GLYPHS, Math.max(1, Math.floor(config.maxTrailLength)));
+    const columns = Math.min(Math.max(1, Math.floor(config.numColumns)), Math.floor(MAX_GLYPHS / trail));
+    const next = new THREE.InstancedBufferGeometry();
+    const plane = new THREE.PlaneGeometry(1, 1);
+    next.setIndex(plane.index);
+    next.setAttribute('position', plane.attributes.position);
+    next.setAttribute('uv', plane.attributes.uv);
+    plane.dispose();
+    const indices = new Float32Array(columns * trail);
+    for (let i = 0; i < indices.length; i++) indices[i] = i % trail;
+    next.setAttribute('aTrailIndex', new THREE.InstancedBufferAttribute(indices, 1));
+    streamAttr = new THREE.InstancedBufferAttribute(new Float32Array(columns * 4), 4, false, trail);
+    motionAttr = new THREE.InstancedBufferAttribute(new Float32Array(columns * 4), 4, false, trail);
+    streamAttr.setUsage(THREE.DynamicDrawUsage);
+    motionAttr.setUsage(THREE.DynamicDrawUsage);
+    next.setAttribute('aStream', streamAttr);
+    next.setAttribute('aMotion', motionAttr);
+    next.instanceCount = columns * trail;
+    mesh.geometry.dispose();
+    geometry = next;
+    mesh.geometry = next;
+    streams = Array.from({ length: columns }, function () {
+      const stream = {};
+      resetStream(stream, true);
+      return stream;
+    });
+  };
+
   const resize = function (w, h) {
+    if (w === width && h === height) return;
     width = Math.max(w, 100);
     height = Math.max(h, 100);
-    renderer.setSize(width, height);
-    camera.fov = calculateFov();
+    renderer.setSize(width, height, false);
     camera.aspect = width / height;
-    camera.updateProjectionMatrix();
+    uniforms.uHeight.value = height;
+    syncUniforms();
     initStreams();
   };
-
-  const onMove = function (e) {
-    mouse = { x: e.clientX - width / 2, y: -(e.clientY - height / 2) };
+  const resizeObserver = new ResizeObserver(function (entries) {
+    const rect = entries[0].contentRect;
+    if (rect.width > 0 && rect.height > 0) resize(rect.width, rect.height);
+  });
+  resizeObserver.observe(canvas);
+  const onMove = function (event) {
+    const rect = canvas.getBoundingClientRect();
+    uniforms.uMouse.value.set(
+      (event.clientX - rect.left) * width / rect.width - width / 2,
+      height / 2 - (event.clientY - rect.top) * height / rect.height
+    );
+    mouseInside = true;
   };
-
   const onLeave = function () {
-    if (config.useSplashEffect && mouse) {
-      splashWorldPos = new THREE.Vector3(mouse.x, mouse.y, 0);
-      splashTTL = SPLASH_DURATION;
+    if (config.useSplashEffect && mouseInside) {
+      uniforms.uSplash.value.copy(uniforms.uMouse.value);
+      splashAge = 0;
     }
-    mouse = null;
+    mouseInside = false;
   };
+  canvas.addEventListener('pointermove', onMove);
+  canvas.addEventListener('pointerleave', onLeave);
 
-  canvas.addEventListener('mousemove', onMove);
-  canvas.addEventListener('mouseleave', onLeave);
-
-  const dummy = new THREE.Object3D();
-
-  const animate = function (t) {
-    if (!shouldRunAnimation(document.hidden)) {
-      running = false;
-      return;
-    }
-    running = true;
-    animationFrameId = requestAnimationFrame(animate);
-    time = t / 1000;
-    material.uniforms.uTime.value = time;
-    camera.position.z = config.perspective;
-    fadeMat.color.set(config.backgroundColor);
-    fadeMat.opacity = config.useGhosting ? config.fadeOutSpeed * (1 - config.ghostingIntensity) : config.fadeOutSpeed;
+  const animate = function (timestamp) {
+    if (document.hidden) { lastFrame = null; return; }
+    const dt = lastFrame === null ? 0 : Math.min((timestamp - lastFrame) / 1000, 0.05);
+    lastFrame = timestamp;
+    time += dt;
+    uniforms.uTime.value = time;
+    const smoothing = 1 - Math.pow(0.9, dt * 60);
+    uniforms.uMouseStrength.value += ((mouseInside ? 1 : 0) - uniforms.uMouseStrength.value) * smoothing;
+    splashAge += dt;
+    uniforms.uSplashStrength.value = config.useSplashEffect ? Math.max(0, 1 - splashAge) : 0;
+    const fade = config.useGhosting ? config.fadeOutSpeed * (1 - config.ghostingIntensity) : config.fadeOutSpeed;
+    fadeMat.opacity = 1 - Math.pow(1 - fade, dt * 60);
     renderer.render(fadeScene, fadeCam);
-
-    let count = 0;
-    const gSet = getGlyphSet();
-    const spacing = config.fontSize * config.characterSpacing;
-
-    for (let s = 0; s < streams.length; s++) {
-      const stream = streams[s];
-      if (count + stream.length > maxGlyphs) continue;
-
-      const dv = directionVectors[config.streamDirection];
-      stream.currentDir[0] += (dv[0] - stream.currentDir[0]) * 0.1;
-      stream.currentDir[1] += (dv[1] - stream.currentDir[1]) * 0.1;
-
-      stream.glyphs.unshift({
-        char: gSet[Math.floor(Math.random() * gSet.length)],
-        x: 0,
-        vx: 0,
-        y: 0,
-        vy: 0,
-        scale: 1,
-        angle: 0,
-        rotSpeed: 0,
-      });
-      if (stream.glyphs.length > stream.length) stream.glyphs.pop();
-
-      const offset = movementOffset(
-        config.streamMovement,
-        time,
-        config.movementAmplitude,
-        config.movementFrequency,
-        stream.id,
-      );
-      const ox = offset[0];
-      const oy = offset[1];
-
-      for (let i = 0; i < stream.glyphs.length; i++) {
-        if (count >= maxGlyphs) break;
-        const g = stream.glyphs[i];
-        if (!atlas) continue;
-        const m = atlas.metrics.get(g.char);
-        if (!m) continue;
-
-        const wx = stream.x - i * spacing * stream.currentDir[0] + ox;
-        const wy = stream.y - i * spacing * stream.currentDir[1] + oy;
-
-        if (mouse && config.mouseEffect !== 'none') {
-          const dx = wx - mouse.x;
-          const dy = wy - mouse.y;
-          const d2 = dx * dx + dy * dy;
-          if (d2 < config.mouseRadius * config.mouseRadius) {
-            const dist = Math.max(Math.sqrt(d2), 0.001);
-            const f = (1 - dist / config.mouseRadius) * config.mouseForce;
-            if (config.mouseEffect === 'repel') {
-              g.x += (dx / dist) * f;
-              g.y += (dy / dist) * f;
-            } else if (config.mouseEffect === 'attract') {
-              g.x -= (dx / dist) * f;
-              g.y -= (dy / dist) * f;
-            } else if (config.mouseEffect === 'swirl') {
-              g.x += (-dy / dist) * f;
-              g.y += (dx / dist) * f;
-            } else if (config.mouseEffect === 'grow') {
-              g.scale = 1 + f * 0.5;
-            }
-          }
-        }
-
-        if (splashWorldPos && splashTTL > 0) {
-          const dx = wx - splashWorldPos.x;
-          const dy = wy - splashWorldPos.y;
-          const distance = Math.max(Math.hypot(dx, dy), 0.001);
-          if (distance < config.splashRadius) {
-            const decay = splashTTL / SPLASH_DURATION;
-            const force = (1 - distance / config.splashRadius) * config.splashForce * decay;
-            g.x += (dx / distance) * force;
-            g.y += (dy / distance) * force;
-          }
-        }
-
-        g.x *= 0.9;
-        g.y *= 0.9;
-        g.scale += (1 - g.scale) * 0.1;
-
-        dummy.position.set(wx + g.x, wy + g.y, -stream.z);
-        dummy.scale.set(m.width * g.scale, m.height * g.scale, 1);
-        dummy.updateMatrix();
-        mesh.setMatrixAt(count, dummy.matrix);
-        uvAttr.setXYZW(count, m.u, m.v, m.uw, m.vh);
-
-        const op = 1 - i / stream.length;
-        const rgb = glyphColorForMode({
-          colorMode: config.colorMode,
-          isLeader: i === 0,
-          glyphColor: config.glyphColor,
-          leaderColor: config.leaderColor,
-          streamHue: stream.hue,
-          normalizedY: height === 0 ? 0.5 : (wy + height / 2) / height,
-          speed: stream.speed,
-          minSpeed: config.minSpeed,
-          maxSpeed: config.maxSpeed,
-        });
-        colorAttr.setXYZW(count, rgb.r, rgb.g, rgb.b, i === 0 ? 1 : op);
-        count++;
+    const dv = directionVectors[config.streamDirection];
+    for (let i = 0; i < streams.length; i++) {
+      const stream = streams[i];
+      stream.dx += (dv[0] - stream.dx) * smoothing;
+      stream.dy += (dv[1] - stream.dy) * smoothing;
+      stream.x += dv[0] * stream.speed * dt * 60;
+      stream.y += dv[1] * stream.speed * dt * 60;
+      const depth = (config.perspective + stream.z) / config.perspective;
+      const tail = stream.length * config.fontSize * config.characterSpacing;
+      const w = width * 0.5 * depth + Math.abs(dv[0]) * tail + config.movementAmplitude;
+      const h = height * 0.5 * depth + Math.abs(dv[1]) * tail + config.movementAmplitude;
+      if (stream.x * dv[0] > w * Math.abs(dv[0]) || stream.y * dv[1] > h * Math.abs(dv[1])) {
+        resetStream(stream, false);
       }
-
-      stream.x += dv[0] * stream.speed;
-      stream.y += dv[1] * stream.speed;
-      const bounds = getBoundsForStream(stream);
-      if (Math.abs(stream.x) > bounds.w * 1.3 || Math.abs(stream.y) > bounds.h * 1.3) {
-        resetStreamPosition(stream, config.streamDirection);
-      }
+      streamAttr.setXYZW(i, stream.x, stream.y, stream.z, stream.length);
+      motionAttr.setXYZW(i, stream.dx, stream.dy, stream.speed, stream.hue);
     }
-
-    if (splashTTL > 0) splashTTL--;
-    else splashWorldPos = null;
-    mesh.count = count;
-    mesh.instanceMatrix.needsUpdate = true;
-    uvAttr.needsUpdate = true;
-    colorAttr.needsUpdate = true;
+    streamAttr.needsUpdate = true;
+    motionAttr.needsUpdate = true;
     renderer.render(scene, camera);
+    animationFrameId = requestAnimationFrame(animate);
   };
-
   const onVisibility = function () {
-    if (shouldRunAnimation(document.hidden)) {
-      if (!running) {
-        animationFrameId = requestAnimationFrame(animate);
-      }
-    } else {
-      running = false;
-      cancelAnimationFrame(animationFrameId);
-    }
+    cancelAnimationFrame(animationFrameId);
+    lastFrame = null;
+    if (!document.hidden) animationFrameId = requestAnimationFrame(animate);
   };
-
   document.addEventListener('visibilitychange', onVisibility);
 
   const update = function (newConfig) {
     const prev = config;
     config = Object.assign({}, newConfig);
-    material.uniforms.uUseGlow.value = config.useGlow;
-    material.uniforms.uGlowColor.value.set(config.glowColor);
-    material.uniforms.uGlowIntensity.value = config.glowIntensity;
-    if (shouldUpdateCamera(prev, config)) {
-      camera.fov = calculateFov();
-      camera.updateProjectionMatrix();
-    }
-    if (shouldRebuildAtlas(prev, config)) {
-      atlasDirty = true;
-    }
-    if (atlasDirty || prev.numColumns !== config.numColumns) {
-      if (debounceTimer) clearTimeout(debounceTimer);
+    syncUniforms();
+    atlasDirty = atlasDirty || ['glyphSet', 'customGlyphSet', 'fontFamily', 'fontWeight'].some(function (key) {
+      return prev[key] !== config[key];
+    });
+    const structureChanged = ['numColumns', 'minTrailLength', 'maxTrailLength', 'minSpeed', 'maxSpeed',
+      'useZAxis', 'minZ', 'maxZ', 'perspective'].some(function (key) { return prev[key] !== config[key]; });
+    if (atlasDirty || structureChanged) {
+      clearTimeout(debounceTimer);
       debounceTimer = setTimeout(function () {
-        if (atlasDirty) {
-          createTextureAtlas();
-          if (atlas) material.uniforms.uAtlas.value = atlas.texture;
-          atlasDirty = false;
-        }
+        if (atlasDirty) { createTextureAtlas(); atlasDirty = false; }
         initStreams();
       }, STRUCTURAL_REBUILD_MS);
     }
   };
-
   const destroy = function () {
     cancelAnimationFrame(animationFrameId);
-    canvas.removeEventListener('mousemove', onMove);
-    canvas.removeEventListener('mouseleave', onLeave);
+    clearTimeout(debounceTimer);
+    canvas.removeEventListener('pointermove', onMove);
+    canvas.removeEventListener('pointerleave', onLeave);
+    resizeObserver.disconnect();
     document.removeEventListener('visibilitychange', onVisibility);
-    if (debounceTimer) clearTimeout(debounceTimer);
-    if (atlas && atlas.texture && atlas.texture.dispose) atlas.texture.dispose();
+    atlas.dispose();
     geometry.dispose();
     material.dispose();
     fadeMat.dispose();
@@ -589,12 +437,11 @@ function runMatrixAnimation(THREE, canvas, initialConfig) {
     renderer.dispose();
     renderer.forceContextLoss();
   };
-
+  syncUniforms();
   createTextureAtlas();
-  if (atlas) material.uniforms.uAtlas.value = atlas.texture;
   initStreams();
   renderer.clear();
-  animate(0);
+  animationFrameId = requestAnimationFrame(animate);
   return { update: update, destroy: destroy, resize: resize };
 }
 `;

@@ -37,18 +37,7 @@ const ParticleCanvas: React.FC<ParticleCanvasProps> = ({ config }) => {
 
     animationController.current = runBoundEngine(canvas, config);
 
-    const resizeObserver = new ResizeObserver((entries) => {
-      for (const entry of entries) {
-        const { width, height } = entry.contentRect;
-        if (width > 0 && height > 0) {
-          animationController.current?.resize(width, height);
-        }
-      }
-    });
-    resizeObserver.observe(container);
-
     return () => {
-      resizeObserver.disconnect();
       animationController.current?.destroy();
       animationController.current = null;
       if (canvas.parentNode === container) {
