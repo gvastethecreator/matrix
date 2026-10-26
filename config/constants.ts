@@ -1,6 +1,7 @@
 import type { GlyphSet, MouseEffect, StreamDirection, StreamMovement, ColorMode } from '../types.ts';
 
 // --- Conjuntos de Caracteres ---
+export const FILM = 'ﾊﾐﾋｰｳｼﾅﾓﾆｻﾜﾂｵﾘｱﾎﾃﾏｹﾒｴｶｷﾑﾕﾗｾﾈｽﾀﾇﾍ012345789Z:・."=*+-<>¦｜';
 export const KATAKANA =
   'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
 export const ASCII = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234456789!@#$%^&*()_+-=[]{}|;:",.<>/?`~';
@@ -24,6 +25,7 @@ export const directionVectors: Record<StreamDirection, [number, number]> = {
 
 // --- Opciones para Aleatorización ---
 export const glyphSets: readonly GlyphSet[] = [
+  'film',
   'katakana',
   'binary',
   'ascii',

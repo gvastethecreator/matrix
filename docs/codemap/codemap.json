@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-26T06:38:10Z",
-  "generated_from_commit": "33302d930a9c304fa40ab417e1f03da1b9c0d458",
+  "generated_at": "2026-10-26T07:40:25Z",
+  "generated_from_commit": "ae0941cff9043935ae224aa2b259711fe4d8f7cd",
   "scope": [
     "."
   ],
@@ -47,22 +47,22 @@
         "path": "App.tsx",
         "origin": "tracked",
         "state": "present",
-        "digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
-        "size": 10764
+        "digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
+        "size": 11134
       },
       {
         "path": "components/ParticleCanvas.tsx",
         "origin": "tracked",
         "state": "present",
-        "digest": "11c9dce109ccf09032fff675c8ce6461e42405aad259a9fb7c3b765374ad5d48",
-        "size": 1776
+        "digest": "d3ca86fe8a5ed6ad8249f3f3c74304c8f4513eec9843465da1c29e1778c80687",
+        "size": 1995
       },
       {
         "path": "components/TweakpanePanel.tsx",
         "origin": "tracked",
         "state": "present",
-        "digest": "13228dcf29b341d8cebfb6afb4b957a4ee2af6247ac24e9acbf74678cc62af31",
-        "size": 10160
+        "digest": "55031bd2baa23f19ada5f0f27e6d07ddef8ba0f459c1736085b834b48177ced3",
+        "size": 11217
       },
       {
         "path": "config/coloring.test.ts",
@@ -82,8 +82,8 @@
         "path": "config/configState.test.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
-        "size": 2599
+        "digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
+        "size": 2657
       },
       {
         "path": "config/configState.ts",
@@ -96,8 +96,8 @@
         "path": "config/constants.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "0a0bdb3f275cf6f657d804b2d2628622a70253d31b968c8ff21e44ffd3e1d04f",
-        "size": 2396
+        "digest": "ba7d5c597be32850bdba31aa01a9237e72bc35973791bd44f5bc2044fa6257fb",
+        "size": 2553
       },
       {
         "path": "config/enginePin.test.ts",
@@ -117,43 +117,43 @@
         "path": "config/glyphSet.test.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
-        "size": 1547
+        "digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
+        "size": 1604
       },
       {
         "path": "config/glyphSet.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "764c6a538f1c374f6f831c8d6e46166d1a1dc26fcc5433e1db80073aaff0be32",
-        "size": 1367
+        "digest": "fdf2b1a15b799cf4d47459af7b6f03b8305f5db3b6f83ab978cd0963a65b3c9b",
+        "size": 1387
       },
       {
         "path": "config/initialConfig.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "cc13c2cc21580a56a99d4a7d4475a5a396076dd21e7d2171c90e59fb47ff4d03",
-        "size": 1061
+        "digest": "6dc30078916c3066027524bc1104d78cc8fc2ce07721b31fdaac2f1769674ce6",
+        "size": 1254
       },
       {
         "path": "config/motion.test.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
-        "size": 2314
+        "digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
+        "size": 2316
       },
       {
         "path": "config/motion.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "38138873539a4d434df6099a6fe3a391207e64768287e0a7d176d6499bdd5c71",
-        "size": 1766
+        "digest": "c404f48e2d45bf834abad55b3ada614d060b6843b8bd86db27cfe289efb0acf7",
+        "size": 1803
       },
       {
         "path": "config/presets.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "aa5ec559f6f3e366ed552e03c970bf52bfbdc5cc63322636af6fd6da8b77488e",
-        "size": 4068
+        "digest": "f5b9d613c4b86849134a0ff55867537e357873a558aff5b9ca082196ff758d7a",
+        "size": 4744
       },
       {
         "path": "index.tsx",
@@ -187,8 +187,8 @@
         "path": "types.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "9f0cbecfbb0653d384929e59065baaf05c7257849b7deeb44f0e12344ae5602b",
-        "size": 1550
+        "digest": "90d8a6397fba726c66c15a886709bb609a307c995cff246ee66766c021716114",
+        "size": 1758
       },
       {
         "path": "utils/editorUx.test.ts",
@@ -222,15 +222,15 @@
         "path": "utils/exportEngine.test.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
-        "size": 5312
+        "digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
+        "size": 5595
       },
       {
         "path": "utils/exportEngine.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "37761c60fba9b282063ef8e086dcbdc25c955a79fb1149f10f6c152d2e1a0a7d",
-        "size": 18904
+        "digest": "fdc3c95240b08a0e9157a007b9877a8bf97ce909dda55889d08aebf3836e8b21",
+        "size": 34360
       },
       {
         "path": "utils/exportHtml.test.ts",
@@ -243,7 +243,7 @@
         "path": "utils/exportHtml.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "81e27d53445f6364e70ed8472d05210f687906b4cce69c4f2f6038c6de7a11aa",
+        "digest": "8a56e971023f4c183ecaf5d51057266f909112323d746583157c81cb7a2bf841",
         "size": 1905
       },
       {
@@ -271,8 +271,8 @@
         "path": "utils/random.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "d8c9b092d6b100d93f27afc0b7bec07a5ccd8dbfd2ec2672d0a09b730b813990",
-        "size": 3827
+        "digest": "8792cd5d8d5df2fc5b93b3e967a0b55bc844ef22b7fb1013c9f74e7595a45f39",
+        "size": 4207
       },
       {
         "path": "vite.config.ts",
@@ -282,7 +282,7 @@
         "size": 371
       }
     ],
-    "digest": "3bb37592fac23e5422ed68a2dd6d77ea8d420ea74179be9e60088f68e8b9def9"
+    "digest": "0d0a2fcb6f8964c66ff3572884a33dbcb80af0507471c50400032b3137eb5601"
   },
   "coverage": {
     "discovered_files": 52,
@@ -661,13 +661,7 @@
       },
       {
         "path": "config/configState.test.ts",
-        "line": 50,
-        "reference": "assert",
-        "reason": "object-member-call-not-resolved"
-      },
-      {
-        "path": "config/configState.test.ts",
-        "line": 54,
+        "line": 51,
         "reference": "assert",
         "reason": "object-member-call-not-resolved"
       },
@@ -679,13 +673,19 @@
       },
       {
         "path": "config/configState.test.ts",
-        "line": 60,
+        "line": 56,
         "reference": "assert",
         "reason": "object-member-call-not-resolved"
       },
       {
         "path": "config/configState.test.ts",
         "line": 61,
+        "reference": "assert",
+        "reason": "object-member-call-not-resolved"
+      },
+      {
+        "path": "config/configState.test.ts",
+        "line": 62,
         "reference": "assert",
         "reason": "object-member-call-not-resolved"
       },
@@ -739,13 +739,13 @@
       },
       {
         "path": "config/glyphSet.test.ts",
-        "line": 17,
+        "line": 14,
         "reference": "assert",
         "reason": "object-member-call-not-resolved"
       },
       {
         "path": "config/glyphSet.test.ts",
-        "line": 21,
+        "line": 18,
         "reference": "assert",
         "reason": "object-member-call-not-resolved"
       },
@@ -769,7 +769,7 @@
       },
       {
         "path": "config/glyphSet.test.ts",
-        "line": 31,
+        "line": 25,
         "reference": "assert",
         "reason": "object-member-call-not-resolved"
       },
@@ -781,13 +781,19 @@
       },
       {
         "path": "config/glyphSet.test.ts",
-        "line": 34,
+        "line": 33,
         "reference": "assert",
         "reason": "object-member-call-not-resolved"
       },
       {
         "path": "config/glyphSet.test.ts",
         "line": 35,
+        "reference": "assert",
+        "reason": "object-member-call-not-resolved"
+      },
+      {
+        "path": "config/glyphSet.test.ts",
+        "line": 36,
         "reference": "assert",
         "reason": "object-member-call-not-resolved"
       },
@@ -1225,79 +1231,73 @@
       },
       {
         "path": "utils/exportEngine.test.ts",
-        "line": 107,
-        "reference": "assert",
-        "reason": "object-member-call-not-resolved"
-      },
-      {
-        "path": "utils/exportEngine.test.ts",
-        "line": 109,
-        "reference": "assert",
-        "reason": "object-member-call-not-resolved"
-      },
-      {
-        "path": "utils/exportEngine.test.ts",
-        "line": 110,
-        "reference": "assert",
-        "reason": "object-member-call-not-resolved"
-      },
-      {
-        "path": "utils/exportEngine.test.ts",
-        "line": 111,
-        "reference": "assert",
-        "reason": "object-member-call-not-resolved"
-      },
-      {
-        "path": "utils/exportEngine.test.ts",
-        "line": 112,
-        "reference": "assert",
-        "reason": "object-member-call-not-resolved"
-      },
-      {
-        "path": "utils/exportEngine.test.ts",
-        "line": 117,
-        "reference": "assert",
-        "reason": "object-member-call-not-resolved"
-      },
-      {
-        "path": "utils/exportEngine.test.ts",
-        "line": 119,
-        "reference": "assert",
-        "reason": "object-member-call-not-resolved"
-      },
-      {
-        "path": "utils/exportEngine.test.ts",
-        "line": 122,
-        "reference": "assert",
-        "reason": "object-member-call-not-resolved"
-      },
-      {
-        "path": "utils/exportEngine.test.ts",
-        "line": 123,
-        "reference": "assert",
-        "reason": "object-member-call-not-resolved"
-      },
-      {
-        "path": "utils/exportEngine.test.ts",
-        "line": 124,
-        "reference": "assert",
-        "reason": "object-member-call-not-resolved"
-      },
-      {
-        "path": "utils/exportEngine.test.ts",
         "line": 125,
         "reference": "assert",
         "reason": "object-member-call-not-resolved"
       },
       {
         "path": "utils/exportEngine.test.ts",
-        "line": 129,
+        "line": 126,
+        "reference": "assert",
+        "reason": "object-member-call-not-resolved"
+      },
+      {
+        "path": "utils/exportEngine.test.ts",
+        "line": 127,
+        "reference": "assert",
+        "reason": "object-member-call-not-resolved"
+      },
+      {
+        "path": "utils/exportEngine.test.ts",
+        "line": 128,
         "reference": "assert",
         "reason": "object-member-call-not-resolved"
       },
       {
         "path": "utils/exportEngine.test.ts",
         "line": 130,
+        "reference": "assert",
+        "reason": "object-member-call-not-resolved"
+      },
+      {
+        "path": "utils/exportEngine.test.ts",
+        "line": 131,
+        "reference": "assert",
+        "reason": "object-member-call-not-resolved"
+      },
+      {
+        "path": "utils/exportEngine.test.ts",
+        "line": 135,
+        "reference": "assert",
+        "reason": "object-member-call-not-resolved"
+      },
+      {
+        "path": "utils/exportEngine.test.ts",
+        "line": 138,
+        "reference": "assert",
+        "reason": "object-member-call-not-resolved"
+      },
+      {
+        "path": "utils/exportEngine.test.ts",
+        "line": 141,
+        "reference": "assert",
+        "reason": "object-member-call-not-resolved"
+      },
+      {
+        "path": "utils/exportEngine.test.ts",
+        "line": 142,
+        "reference": "assert",
+        "reason": "object-member-call-not-resolved"
+      },
+      {
+        "path": "utils/exportEngine.test.ts",
+        "line": 146,
+        "reference": "assert",
+        "reason": "object-member-call-not-resolved"
+      },
+      {
+        "path": "utils/exportEngine.test.ts",
+        "line": 147,
         "reference": "assert",
         "reason": "object-member-call-not-resolved"
       },
@@ -1459,7 +1459,7 @@
       },
       {
         "path": "utils/random.ts",
-        "line": 70,
+        "line": 71,
         "reference": "colorModes",
         "reason": "object-member-call-not-resolved"
       },
@@ -1502,7 +1502,7 @@
             "start_line": 21,
             "end_line": 21,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "definition"
           },
           {
@@ -1511,7 +1511,7 @@
             "start_line": 23,
             "end_line": 23,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "definition"
           },
           {
@@ -1520,7 +1520,7 @@
             "start_line": 48,
             "end_line": 48,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "definition"
           }
         ]
@@ -1663,25 +1663,25 @@
             "start_line": 6,
             "end_line": 6,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "11c9dce109ccf09032fff675c8ce6461e42405aad259a9fb7c3b765374ad5d48",
+            "source_digest": "d3ca86fe8a5ed6ad8249f3f3c74304c8f4513eec9843465da1c29e1778c80687",
             "kind": "definition"
           },
           {
             "path": "components/ParticleCanvas.tsx",
             "symbol": "bindEngine",
-            "start_line": 12,
-            "end_line": 12,
+            "start_line": 13,
+            "end_line": 13,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "11c9dce109ccf09032fff675c8ce6461e42405aad259a9fb7c3b765374ad5d48",
+            "source_digest": "d3ca86fe8a5ed6ad8249f3f3c74304c8f4513eec9843465da1c29e1778c80687",
             "kind": "definition"
           },
           {
             "path": "components/ParticleCanvas.tsx",
             "symbol": "runBoundEngine",
-            "start_line": 20,
-            "end_line": 20,
+            "start_line": 21,
+            "end_line": 21,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "11c9dce109ccf09032fff675c8ce6461e42405aad259a9fb7c3b765374ad5d48",
+            "source_digest": "d3ca86fe8a5ed6ad8249f3f3c74304c8f4513eec9843465da1c29e1778c80687",
             "kind": "definition"
           }
         ]
@@ -1752,7 +1752,7 @@
             "start_line": 15,
             "end_line": 15,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "13228dcf29b341d8cebfb6afb4b957a4ee2af6247ac24e9acbf74678cc62af31",
+            "source_digest": "55031bd2baa23f19ada5f0f27e6d07ddef8ba0f459c1736085b834b48177ced3",
             "kind": "definition"
           },
           {
@@ -1761,7 +1761,7 @@
             "start_line": 24,
             "end_line": 24,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "13228dcf29b341d8cebfb6afb4b957a4ee2af6247ac24e9acbf74678cc62af31",
+            "source_digest": "55031bd2baa23f19ada5f0f27e6d07ddef8ba0f459c1736085b834b48177ced3",
             "kind": "definition"
           },
           {
@@ -1770,7 +1770,7 @@
             "start_line": 27,
             "end_line": 27,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "13228dcf29b341d8cebfb6afb4b957a4ee2af6247ac24e9acbf74678cc62af31",
+            "source_digest": "55031bd2baa23f19ada5f0f27e6d07ddef8ba0f459c1736085b834b48177ced3",
             "kind": "definition"
           }
         ]
@@ -2036,7 +2036,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "file"
           }
         ]
@@ -2099,7 +2099,7 @@
             "start_line": 3,
             "end_line": 3,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "import",
             "resolved_target": "config/configState.ts"
           }
@@ -2113,7 +2113,7 @@
             "start_line": 8,
             "end_line": 8,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "import",
             "resolved_target": "config/configState.ts"
           }
@@ -2155,7 +2155,7 @@
             "start_line": 7,
             "end_line": 7,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "mergeStoredConfig"
@@ -2170,7 +2170,7 @@
             "start_line": 11,
             "end_line": 11,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "mergeStoredConfig"
@@ -2185,7 +2185,7 @@
             "start_line": 20,
             "end_line": 20,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "mergeStoredConfig"
@@ -2200,7 +2200,7 @@
             "start_line": 27,
             "end_line": 27,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "parseStoredConfig"
@@ -2215,7 +2215,7 @@
             "start_line": 28,
             "end_line": 28,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "parseStoredConfig"
@@ -2230,7 +2230,7 @@
             "start_line": 29,
             "end_line": 29,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "parseStoredConfig"
@@ -2245,7 +2245,7 @@
             "start_line": 33,
             "end_line": 33,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "applyPreset"
@@ -2260,7 +2260,7 @@
             "start_line": 33,
             "end_line": 33,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "factoryConfig"
@@ -2275,7 +2275,7 @@
             "start_line": 39,
             "end_line": 39,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "factoryConfig"
@@ -2290,7 +2290,7 @@
             "start_line": 40,
             "end_line": 40,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "applyPreset"
@@ -2305,7 +2305,7 @@
             "start_line": 46,
             "end_line": 46,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "factoryConfig"
@@ -2317,10 +2317,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "normalizeRange(8, 2)",
-            "start_line": 54,
-            "end_line": 54,
+            "start_line": 55,
+            "end_line": 55,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "normalizeRange"
@@ -2332,10 +2332,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "normalizeRange(3, 3)",
-            "start_line": 55,
-            "end_line": 55,
+            "start_line": 56,
+            "end_line": 56,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "normalizeRange"
@@ -2347,10 +2347,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "mergeStoredConfig({ minSpeed: 9, maxSpeed: 3, minTrailLength: 40, maxTrailLength: 8 })",
-            "start_line": 59,
-            "end_line": 59,
+            "start_line": 60,
+            "end_line": 60,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "mergeStoredConfig"
@@ -2365,7 +2365,7 @@
             "start_line": 40,
             "end_line": 40,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "factoryConfig"
@@ -2377,10 +2377,10 @@
           "location": {
             "path": "utils/exportEngine.test.ts",
             "symbol": "factoryConfig()",
-            "start_line": 95,
-            "end_line": 95,
+            "start_line": 113,
+            "end_line": 113,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "factoryConfig"
@@ -2720,11 +2720,11 @@
           "type": "imports",
           "location": {
             "path": "config/glyphSet.test.ts",
-            "symbol": "import { ASCII, BINARY, EMOJIS, GREEK, KATAKANA, MATH, RUNES } from './constants.ts';",
+            "symbol": "import { ASCII, BINARY, EMOJIS, FILM, GREEK, KATAKANA, MATH, RUNES } from './constants.ts';",
             "start_line": 3,
             "end_line": 3,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "import",
             "resolved_target": "config/constants.ts"
           }
@@ -2736,6 +2736,7 @@
         "ASCII",
         "BINARY",
         "EMOJIS",
+        "FILM",
         "GREEK",
         "KATAKANA",
         "MATH",
@@ -2754,29 +2755,29 @@
         "locations": [
           {
             "path": "config/constants.ts",
-            "symbol": "KATAKANA",
+            "symbol": "FILM",
             "start_line": 4,
             "end_line": 4,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0a0bdb3f275cf6f657d804b2d2628622a70253d31b968c8ff21e44ffd3e1d04f",
+            "source_digest": "ba7d5c597be32850bdba31aa01a9237e72bc35973791bd44f5bc2044fa6257fb",
+            "kind": "definition"
+          },
+          {
+            "path": "config/constants.ts",
+            "symbol": "KATAKANA",
+            "start_line": 5,
+            "end_line": 5,
+            "extractor": "tree-sitter-typescript",
+            "source_digest": "ba7d5c597be32850bdba31aa01a9237e72bc35973791bd44f5bc2044fa6257fb",
             "kind": "definition"
           },
           {
             "path": "config/constants.ts",
             "symbol": "ASCII",
-            "start_line": 6,
-            "end_line": 6,
-            "extractor": "tree-sitter-typescript",
-            "source_digest": "0a0bdb3f275cf6f657d804b2d2628622a70253d31b968c8ff21e44ffd3e1d04f",
-            "kind": "definition"
-          },
-          {
-            "path": "config/constants.ts",
-            "symbol": "BINARY",
             "start_line": 7,
             "end_line": 7,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0a0bdb3f275cf6f657d804b2d2628622a70253d31b968c8ff21e44ffd3e1d04f",
+            "source_digest": "ba7d5c597be32850bdba31aa01a9237e72bc35973791bd44f5bc2044fa6257fb",
             "kind": "definition"
           }
         ]
@@ -2979,7 +2980,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "file"
           }
         ]
@@ -3039,7 +3040,7 @@
             "start_line": 4,
             "end_line": 4,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "import",
             "resolved_target": "config/glyphSet.ts"
           }
@@ -3049,11 +3050,26 @@
           "type": "calls",
           "location": {
             "path": "config/glyphSet.test.ts",
-            "symbol": "resolveGlyphSet('katakana', '')",
+            "symbol": "resolveGlyphSet('film', '')",
             "start_line": 7,
             "end_line": 7,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
+            "kind": "call",
+            "resolved_target": "config/glyphSet.ts",
+            "target_symbol": "resolveGlyphSet"
+          }
+        },
+        {
+          "test": "config/glyphSet.test.ts",
+          "type": "calls",
+          "location": {
+            "path": "config/glyphSet.test.ts",
+            "symbol": "resolveGlyphSet('katakana', '')",
+            "start_line": 8,
+            "end_line": 8,
+            "extractor": "tree-sitter-typescript",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "call",
             "resolved_target": "config/glyphSet.ts",
             "target_symbol": "resolveGlyphSet"
@@ -3065,10 +3081,10 @@
           "location": {
             "path": "config/glyphSet.test.ts",
             "symbol": "resolveGlyphSet('ascii', '')",
-            "start_line": 8,
-            "end_line": 8,
+            "start_line": 9,
+            "end_line": 9,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "call",
             "resolved_target": "config/glyphSet.ts",
             "target_symbol": "resolveGlyphSet"
@@ -3080,10 +3096,10 @@
           "location": {
             "path": "config/glyphSet.test.ts",
             "symbol": "resolveGlyphSet('binary', '')",
-            "start_line": 9,
-            "end_line": 9,
+            "start_line": 10,
+            "end_line": 10,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "call",
             "resolved_target": "config/glyphSet.ts",
             "target_symbol": "resolveGlyphSet"
@@ -3095,10 +3111,10 @@
           "location": {
             "path": "config/glyphSet.test.ts",
             "symbol": "resolveGlyphSet('runes', '')",
-            "start_line": 10,
-            "end_line": 10,
+            "start_line": 11,
+            "end_line": 11,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "call",
             "resolved_target": "config/glyphSet.ts",
             "target_symbol": "resolveGlyphSet"
@@ -3110,10 +3126,10 @@
           "location": {
             "path": "config/glyphSet.test.ts",
             "symbol": "resolveGlyphSet('greek', '')",
-            "start_line": 11,
-            "end_line": 11,
+            "start_line": 12,
+            "end_line": 12,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "call",
             "resolved_target": "config/glyphSet.ts",
             "target_symbol": "resolveGlyphSet"
@@ -3125,10 +3141,10 @@
           "location": {
             "path": "config/glyphSet.test.ts",
             "symbol": "resolveGlyphSet('math', '')",
-            "start_line": 12,
-            "end_line": 12,
+            "start_line": 13,
+            "end_line": 13,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "call",
             "resolved_target": "config/glyphSet.ts",
             "target_symbol": "resolveGlyphSet"
@@ -3140,10 +3156,10 @@
           "location": {
             "path": "config/glyphSet.test.ts",
             "symbol": "resolveGlyphSet('emojis', '')",
-            "start_line": 13,
-            "end_line": 13,
+            "start_line": 14,
+            "end_line": 14,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "call",
             "resolved_target": "config/glyphSet.ts",
             "target_symbol": "resolveGlyphSet"
@@ -3155,10 +3171,10 @@
           "location": {
             "path": "config/glyphSet.test.ts",
             "symbol": "resolveGlyphSet('custom', 'ΔΨ')",
-            "start_line": 17,
-            "end_line": 17,
+            "start_line": 18,
+            "end_line": 18,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "call",
             "resolved_target": "config/glyphSet.ts",
             "target_symbol": "resolveGlyphSet"
@@ -3170,10 +3186,10 @@
           "location": {
             "path": "config/glyphSet.test.ts",
             "symbol": "resolveGlyphSet('custom', '')",
-            "start_line": 21,
-            "end_line": 21,
+            "start_line": 22,
+            "end_line": 22,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "call",
             "resolved_target": "config/glyphSet.ts",
             "target_symbol": "resolveGlyphSet"
@@ -3185,10 +3201,10 @@
           "location": {
             "path": "config/glyphSet.test.ts",
             "symbol": "resolveGlyphSet('custom', '   ')",
-            "start_line": 22,
-            "end_line": 22,
+            "start_line": 23,
+            "end_line": 23,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "call",
             "resolved_target": "config/glyphSet.ts",
             "target_symbol": "resolveGlyphSet"
@@ -3200,10 +3216,10 @@
           "location": {
             "path": "config/glyphSet.test.ts",
             "symbol": "resolveGlyphSet('unknown', '')",
-            "start_line": 23,
-            "end_line": 23,
+            "start_line": 24,
+            "end_line": 24,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "call",
             "resolved_target": "config/glyphSet.ts",
             "target_symbol": "resolveGlyphSet"
@@ -3215,10 +3231,10 @@
           "location": {
             "path": "config/glyphSet.test.ts",
             "symbol": "charsetFromConfig({ glyphSet: 'custom', customGlyphSet: '' })",
-            "start_line": 24,
-            "end_line": 24,
+            "start_line": 25,
+            "end_line": 25,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "call",
             "resolved_target": "config/glyphSet.ts",
             "target_symbol": "charsetFromConfig"
@@ -3230,10 +3246,10 @@
           "location": {
             "path": "config/glyphSet.test.ts",
             "symbol": "createGlyphSetCache()",
-            "start_line": 28,
-            "end_line": 28,
+            "start_line": 29,
+            "end_line": 29,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "call",
             "resolved_target": "config/glyphSet.ts",
             "target_symbol": "createGlyphSetCache"
@@ -3257,25 +3273,25 @@
             "start_line": 4,
             "end_line": 4,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "764c6a538f1c374f6f831c8d6e46166d1a1dc26fcc5433e1db80073aaff0be32",
+            "source_digest": "fdf2b1a15b799cf4d47459af7b6f03b8305f5db3b6f83ab978cd0963a65b3c9b",
             "kind": "definition"
           },
           {
             "path": "config/glyphSet.ts",
             "symbol": "resolveGlyphSet",
-            "start_line": 14,
-            "end_line": 14,
+            "start_line": 15,
+            "end_line": 15,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "764c6a538f1c374f6f831c8d6e46166d1a1dc26fcc5433e1db80073aaff0be32",
+            "source_digest": "fdf2b1a15b799cf4d47459af7b6f03b8305f5db3b6f83ab978cd0963a65b3c9b",
             "kind": "definition"
           },
           {
             "path": "config/glyphSet.ts",
             "symbol": "createGlyphSetCache",
-            "start_line": 26,
-            "end_line": 26,
+            "start_line": 27,
+            "end_line": 27,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "764c6a538f1c374f6f831c8d6e46166d1a1dc26fcc5433e1db80073aaff0be32",
+            "source_digest": "fdf2b1a15b799cf4d47459af7b6f03b8305f5db3b6f83ab978cd0963a65b3c9b",
             "kind": "definition"
           }
         ]
@@ -3332,7 +3348,7 @@
             "start_line": 4,
             "end_line": 4,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "import",
             "resolved_target": "config/initialConfig.ts"
           }
@@ -3346,7 +3362,7 @@
             "start_line": 3,
             "end_line": 3,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "import",
             "resolved_target": "config/initialConfig.ts"
           }
@@ -3366,7 +3382,7 @@
             "start_line": 3,
             "end_line": 3,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "cc13c2cc21580a56a99d4a7d4475a5a396076dd21e7d2171c90e59fb47ff4d03",
+            "source_digest": "6dc30078916c3066027524bc1104d78cc8fc2ce07721b31fdaac2f1769674ce6",
             "kind": "definition"
           }
         ]
@@ -3423,7 +3439,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "file"
           }
         ]
@@ -3483,7 +3499,7 @@
             "start_line": 4,
             "end_line": 13,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "import",
             "resolved_target": "config/motion.ts"
           }
@@ -3497,7 +3513,7 @@
             "start_line": 16,
             "end_line": 16,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "config/motion.ts",
             "target_symbol": "getStreamBounds"
@@ -3512,7 +3528,7 @@
             "start_line": 24,
             "end_line": 24,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "config/motion.ts",
             "target_symbol": "movementOffset"
@@ -3527,7 +3543,7 @@
             "start_line": 25,
             "end_line": 25,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "config/motion.ts",
             "target_symbol": "movementOffset"
@@ -3542,7 +3558,7 @@
             "start_line": 26,
             "end_line": 26,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "config/motion.ts",
             "target_symbol": "movementOffset"
@@ -3557,7 +3573,7 @@
             "start_line": 27,
             "end_line": 27,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "config/motion.ts",
             "target_symbol": "movementOffset"
@@ -3572,7 +3588,7 @@
             "start_line": 35,
             "end_line": 35,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "config/motion.ts",
             "target_symbol": "shouldRebuildAtlas"
@@ -3587,7 +3603,7 @@
             "start_line": 36,
             "end_line": 36,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "config/motion.ts",
             "target_symbol": "shouldRebuildAtlas"
@@ -3602,7 +3618,7 @@
             "start_line": 37,
             "end_line": 37,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "config/motion.ts",
             "target_symbol": "shouldRebuildAtlas"
@@ -3617,7 +3633,7 @@
             "start_line": 38,
             "end_line": 38,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "config/motion.ts",
             "target_symbol": "shouldRebuildAtlas"
@@ -3632,7 +3648,7 @@
             "start_line": 42,
             "end_line": 42,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "config/motion.ts",
             "target_symbol": "clampGlyphBudget"
@@ -3647,7 +3663,7 @@
             "start_line": 43,
             "end_line": 43,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "config/motion.ts",
             "target_symbol": "clampGlyphBudget"
@@ -3658,11 +3674,11 @@
           "type": "calls",
           "location": {
             "path": "config/motion.test.ts",
-            "symbol": "clampGlyphBudget(2000, 200)",
+            "symbol": "clampGlyphBudget(8000, 200)",
             "start_line": 44,
             "end_line": 44,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "config/motion.ts",
             "target_symbol": "clampGlyphBudget"
@@ -3677,7 +3693,7 @@
             "start_line": 49,
             "end_line": 49,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "config/motion.ts",
             "target_symbol": "shouldRunAnimation"
@@ -3692,7 +3708,7 @@
             "start_line": 50,
             "end_line": 50,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "config/motion.ts",
             "target_symbol": "shouldRunAnimation"
@@ -3707,7 +3723,7 @@
             "start_line": 54,
             "end_line": 54,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "config/motion.ts",
             "target_symbol": "shouldUpdateCamera"
@@ -3722,7 +3738,7 @@
             "start_line": 55,
             "end_line": 55,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "config/motion.ts",
             "target_symbol": "shouldUpdateCamera"
@@ -3733,6 +3749,7 @@
       "is_test": false,
       "symbols": [
         "MAX_GLYPHS",
+        "MAX_STREAMS",
         "STRUCTURAL_REBUILD_MS",
         "clampGlyphBudget",
         "getStreamBounds",
@@ -3750,25 +3767,25 @@
             "start_line": 3,
             "end_line": 3,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "38138873539a4d434df6099a6fe3a391207e64768287e0a7d176d6499bdd5c71",
+            "source_digest": "c404f48e2d45bf834abad55b3ada614d060b6843b8bd86db27cfe289efb0acf7",
+            "kind": "definition"
+          },
+          {
+            "path": "config/motion.ts",
+            "symbol": "MAX_STREAMS",
+            "start_line": 4,
+            "end_line": 4,
+            "extractor": "tree-sitter-typescript",
+            "source_digest": "c404f48e2d45bf834abad55b3ada614d060b6843b8bd86db27cfe289efb0acf7",
             "kind": "definition"
           },
           {
             "path": "config/motion.ts",
             "symbol": "STRUCTURAL_REBUILD_MS",
-            "start_line": 4,
-            "end_line": 4,
+            "start_line": 5,
+            "end_line": 5,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "38138873539a4d434df6099a6fe3a391207e64768287e0a7d176d6499bdd5c71",
-            "kind": "definition"
-          },
-          {
-            "path": "config/motion.ts",
-            "symbol": "getStreamBounds",
-            "start_line": 6,
-            "end_line": 6,
-            "extractor": "tree-sitter-typescript",
-            "source_digest": "38138873539a4d434df6099a6fe3a391207e64768287e0a7d176d6499bdd5c71",
+            "source_digest": "c404f48e2d45bf834abad55b3ada614d060b6843b8bd86db27cfe289efb0acf7",
             "kind": "definition"
           }
         ]
@@ -3822,7 +3839,7 @@
             "start_line": 8,
             "end_line": 8,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "aa5ec559f6f3e366ed552e03c970bf52bfbdc5cc63322636af6fd6da8b77488e",
+            "source_digest": "f5b9d613c4b86849134a0ff55867537e357873a558aff5b9ca082196ff758d7a",
             "kind": "definition"
           }
         ]
@@ -4003,7 +4020,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "import",
             "resolved_target": "external:javascript:node:assert"
           }
@@ -4031,7 +4048,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "import",
             "resolved_target": "external:javascript:node:assert"
           }
@@ -4045,7 +4062,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "import",
             "resolved_target": "external:javascript:node:assert"
           }
@@ -4087,7 +4104,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "import",
             "resolved_target": "external:javascript:node:assert"
           }
@@ -4157,7 +4174,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "import",
             "resolved_target": "external:javascript:node:assert"
           },
@@ -4284,7 +4301,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "import",
             "resolved_target": "external:javascript:node:fs"
           }
@@ -4357,7 +4374,7 @@
             "start_line": 28,
             "end_line": 28,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "external:javascript:node:fs",
             "target_symbol": "existsSync"
@@ -4372,7 +4389,7 @@
             "start_line": 28,
             "end_line": 28,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "external:javascript:node:fs",
             "target_symbol": "readdirSync"
@@ -4387,7 +4404,7 @@
             "start_line": 31,
             "end_line": 31,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "external:javascript:node:fs",
             "target_symbol": "readFileSync"
@@ -4575,7 +4592,7 @@
             "start_line": 3,
             "end_line": 3,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "import",
             "resolved_target": "external:javascript:node:path"
           }
@@ -4589,7 +4606,7 @@
             "start_line": 26,
             "end_line": 26,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "external:javascript:node:path",
             "target_symbol": "join"
@@ -4604,7 +4621,7 @@
             "start_line": 26,
             "end_line": 26,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "external:javascript:node:path",
             "target_symbol": "dirname"
@@ -4619,7 +4636,7 @@
             "start_line": 31,
             "end_line": 31,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "external:javascript:node:path",
             "target_symbol": "join"
@@ -4648,7 +4665,7 @@
             "start_line": 3,
             "end_line": 3,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "import",
             "resolved_target": "external:javascript:node:path"
           },
@@ -4733,7 +4750,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "import",
             "resolved_target": "external:javascript:node:test"
           }
@@ -4761,7 +4778,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "import",
             "resolved_target": "external:javascript:node:test"
           }
@@ -4775,7 +4792,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "import",
             "resolved_target": "external:javascript:node:test"
           }
@@ -4817,7 +4834,7 @@
             "start_line": 4,
             "end_line": 4,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "import",
             "resolved_target": "external:javascript:node:test"
           }
@@ -4918,7 +4935,7 @@
             "start_line": 6,
             "end_line": 8,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -4933,7 +4950,7 @@
             "start_line": 10,
             "end_line": 17,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -4948,7 +4965,7 @@
             "start_line": 19,
             "end_line": 24,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -4963,7 +4980,7 @@
             "start_line": 26,
             "end_line": 30,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -4978,7 +4995,7 @@
             "start_line": 32,
             "end_line": 36,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -4993,7 +5010,7 @@
             "start_line": 38,
             "end_line": 43,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -5004,11 +5021,11 @@
           "type": "calls",
           "location": {
             "path": "config/configState.test.ts",
-            "symbol": "test('ARC-08 factoryConfig clones initialConfig', () => {\n  const clone = factoryConfig();\n  assert.deepEqual(clone, initialConfig);\n  assert.notEqual(clone, initialConfig);\n  clone.numColumns = 1;\n  assert.equal(initialConfig.numColumns, 100);\n})",
+            "symbol": "test('ARC-08 factoryConfig clones initialConfig', () => {\n  const clone = factoryConfig();\n  assert.deepEqual(clone, initialConfig);\n  assert.notEqual(clone, initialConfig);\n  const columns = initialConfig.numColumns;\n  clone.numColumns = columns + 1;\n  assert.equal(initialConfig.numColumns, columns);\n})",
             "start_line": 45,
-            "end_line": 51,
+            "end_line": 52,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -5020,10 +5037,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "test('UX-10 normalizeRange keeps both values in order', () => {\n  assert.deepEqual(normalizeRange(8, 2), [2, 8]);\n  assert.deepEqual(normalizeRange(3, 3), [3, 3]);\n})",
-            "start_line": 53,
-            "end_line": 56,
+            "start_line": 54,
+            "end_line": 57,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -5035,10 +5052,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "test('UX-10 inverted stored speeds are ordered', () => {\n  const merged = mergeStoredConfig({ minSpeed: 9, maxSpeed: 3, minTrailLength: 40, maxTrailLength: 8 });\n  assert.ok(merged.minSpeed <= merged.maxSpeed);\n  assert.ok(merged.minTrailLength <= merged.maxTrailLength);\n})",
-            "start_line": 58,
-            "end_line": 62,
+            "start_line": 59,
+            "end_line": 63,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -5064,11 +5081,11 @@
           "type": "calls",
           "location": {
             "path": "config/glyphSet.test.ts",
-            "symbol": "test('ARC-02 named glyph sets resolve to published strings', () => {\n  assert.equal(resolveGlyphSet('katakana', ''), KATAKANA);\n  assert.equal(resolveGlyphSet('ascii', ''), ASCII);\n  assert.equal(resolveGlyphSet('binary', ''), BINARY);\n  assert.equal(resolveGlyphSet('runes', ''), RUNES);\n  assert.equal(resolveGlyphSet('greek', ''), GREEK);\n  assert.equal(resolveGlyphSet('math', ''), MATH);\n  assert.equal(resolveGlyphSet('emojis', ''), EMOJIS);\n})",
+            "symbol": "test('ARC-02 named glyph sets resolve to published strings', () => {\n  assert.equal(resolveGlyphSet('film', ''), FILM);\n  assert.equal(resolveGlyphSet('katakana', ''), KATAKANA);\n  assert.equal(resolveGlyphSet('ascii', ''), ASCII);\n  assert.equal(resolveGlyphSet('binary', ''), BINARY);\n  assert.equal(resolveGlyphSet('runes', ''), RUNES);\n  assert.equal(resolveGlyphSet('greek', ''), GREEK);\n  assert.equal(resolveGlyphSet('math', ''), MATH);\n  assert.equal(resolveGlyphSet('emojis', ''), EMOJIS);\n})",
             "start_line": 6,
-            "end_line": 14,
+            "end_line": 15,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -5080,10 +5097,10 @@
           "location": {
             "path": "config/glyphSet.test.ts",
             "symbol": "test('ARC-02 custom text is returned when non-empty', () => {\n  assert.equal(resolveGlyphSet('custom', 'ΔΨ'), 'ΔΨ');\n})",
-            "start_line": 16,
-            "end_line": 18,
+            "start_line": 17,
+            "end_line": 19,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -5095,10 +5112,10 @@
           "location": {
             "path": "config/glyphSet.test.ts",
             "symbol": "test('ARC-02 custom empty or unknown set does not return an empty string', () => {\n  assert.equal(resolveGlyphSet('custom', ''), '?');\n  assert.equal(resolveGlyphSet('custom', '   '), '?');\n  assert.equal(resolveGlyphSet('unknown', ''), KATAKANA);\n  assert.notEqual(charsetFromConfig({ glyphSet: 'custom', customGlyphSet: '' }), '');\n})",
-            "start_line": 20,
-            "end_line": 25,
+            "start_line": 21,
+            "end_line": 26,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -5110,10 +5127,10 @@
           "location": {
             "path": "config/glyphSet.test.ts",
             "symbol": "test('PERF-09 cache returns the same string reference until inputs change', () => {\n  const cached = createGlyphSetCache();\n  const first = cached('katakana', '');\n  const second = cached('katakana', '');\n  assert.equal(first, second);\n  assert.equal(first === second, true);\n  const third = cached('binary', '');\n  assert.notEqual(third, first);\n  assert.equal(third, BINARY);\n})",
-            "start_line": 27,
-            "end_line": 36,
+            "start_line": 28,
+            "end_line": 37,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -5128,7 +5145,7 @@
             "start_line": 15,
             "end_line": 21,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -5143,7 +5160,7 @@
             "start_line": 23,
             "end_line": 31,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -5158,7 +5175,7 @@
             "start_line": 33,
             "end_line": 39,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -5169,11 +5186,11 @@
           "type": "calls",
           "location": {
             "path": "config/motion.test.ts",
-            "symbol": "test('PERF-04 glyph budget never exceeds the instance cap', () => {\n  assert.ok(clampGlyphBudget(400, 200, 60_000) * 200 <= 60_000);\n  assert.equal(clampGlyphBudget(10, 10, 60_000), 10);\n  assert.equal(clampGlyphBudget(2000, 200) * 200, MAX_GLYPHS);\n  assert.equal(MAX_GLYPHS, 200_000);\n})",
+            "symbol": "test('PERF-04 glyph budget never exceeds the instance cap', () => {\n  assert.ok(clampGlyphBudget(400, 200, 60_000) * 200 <= 60_000);\n  assert.equal(clampGlyphBudget(10, 10, 60_000), 10);\n  assert.equal(clampGlyphBudget(8000, 200) * 200, MAX_GLYPHS);\n  assert.equal(MAX_GLYPHS, 1_000_000);\n})",
             "start_line": 41,
             "end_line": 46,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -5188,7 +5205,7 @@
             "start_line": 48,
             "end_line": 51,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -5203,7 +5220,7 @@
             "start_line": 53,
             "end_line": 56,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -5218,7 +5235,7 @@
             "start_line": 58,
             "end_line": 60,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -5364,11 +5381,11 @@
           "type": "calls",
           "location": {
             "path": "utils/exportEngine.test.ts",
-            "symbol": "test('PERF-10 engine source is injected text with THREE.*, not Function#toString closures', () => {\n  const source = getAnimationLogicString();\n  assert.match(source, /function runMatrixAnimation\\(THREE, canvas, initialConfig\\)/);\n  assert.match(source, /new THREE\\.Scene\\(/);\n  assert.match(source, /new THREE\\.WebGLRenderer\\(/);\n  assert.match(source, /new THREE\\.InstancedBufferGeometry\\(/);\n  assert.match(source, /new THREE\\.ShaderMaterial\\(/);\n  assert.match(source, /THREE\\.DynamicDrawUsage/);\n  assert.equal(source.includes('.toString()'), false);\n  assert.equal(source.includes('resolveGlyphSet.toString'), false);\n  const kind = new Function(`${source}\\nreturn typeof runMatrixAnimation;`)();\n  assert.equal(kind, 'function');\n})",
+            "symbol": "test('PERF-10 engine source is injected text with THREE.*, not Function#toString closures', () => {\n  const source = getAnimationLogicString();\n  assert.match(source, /function runMatrixAnimation\\(THREE, canvas, initialConfig\\)/);\n  assert.match(source, /new THREE\\.Scene\\(/);\n  assert.match(source, /new THREE\\.WebGPURenderer\\(/);\n  assert.match(source, /new THREE\\.InstancedBufferGeometry\\(/);\n  assert.match(source, /new THREE\\.NodeMaterial\\(/);\n  assert.match(source, /THREE\\.TSL/);\n  assert.equal(source.includes('.toString()'), false);\n  assert.equal(source.includes('resolveGlyphSet.toString'), false);\n  const kind = new Function(`${source}\\nreturn typeof runMatrixAnimation;`)();\n  assert.equal(kind, 'function');\n})",
             "start_line": 12,
             "end_line": 24,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -5379,11 +5396,11 @@
           "type": "calls",
           "location": {
             "path": "utils/exportEngine.test.ts",
-            "symbol": "test('production index bundle keeps injected THREE.* engine text', { skip: !distIndex }, () => {\n  const bundle = readFileSync(join(distAssets, distIndex as string), 'utf8');\n  assert.equal(bundle.includes('function runMatrixAnimation(THREE, canvas, initialConfig)'), true);\n  assert.equal(bundle.includes('new THREE.Scene('), true);\n  assert.equal(bundle.includes('new THREE.WebGLRenderer('), true);\n  assert.equal(bundle.includes('animationLogic.toString'), false);\n  assert.equal(bundle.includes('glyphColorForMode.toString'), false);\n})",
+            "symbol": "test('production index bundle keeps injected THREE.* engine text', { skip: !distIndex }, () => {\n  const bundle = readFileSync(join(distAssets, distIndex as string), 'utf8');\n  assert.equal(bundle.includes('function runMatrixAnimation(THREE, canvas, initialConfig)'), true);\n  assert.equal(bundle.includes('new THREE.Scene('), true);\n  assert.equal(bundle.includes('new THREE.WebGPURenderer('), true);\n  assert.equal(bundle.includes('animationLogic.toString'), false);\n  assert.equal(bundle.includes('glyphColorForMode.toString'), false);\n})",
             "start_line": 30,
             "end_line": 37,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -5394,11 +5411,11 @@
           "type": "calls",
           "location": {
             "path": "utils/exportEngine.test.ts",
-            "symbol": "test('ARC-03 standalone HTML calls the injected THREE engine', () => {\n  const html = generateStandaloneHtml(factoryConfig(), getAnimationLogicString());\n  assert.match(html, /runMatrixAnimation\\(THREE, canvas, initialConfig\\)/);\n  assert.match(html, /new THREE\\.Scene\\(/);\n  assert.match(html, /import \\* as THREE from 'https:\\/\\/unpkg\\.com\\/three@/);\n})",
+            "symbol": "test('ARC-03 standalone HTML calls the injected THREE engine', () => {\n  const html = generateStandaloneHtml(factoryConfig(), getAnimationLogicString());\n  assert.match(html, /runMatrixAnimation\\(THREE, canvas, initialConfig\\)/);\n  assert.match(html, /new THREE\\.Scene\\(/);\n  assert.match(html, /import \\* as THREE from 'https:\\/\\/unpkg\\.com\\/three@[\\d.]+\\/build\\/three\\.webgpu\\.js'/);\n})",
             "start_line": 39,
             "end_line": 44,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -5409,11 +5426,11 @@
           "type": "calls",
           "location": {
             "path": "utils/exportEngine.test.ts",
-            "symbol": "test('shared engine caps instances, updates trails, and advances by elapsed time', () => {\n  let frame: ((time: number) => void) | undefined;\n  let rebuild: (() => void) | undefined;\n  let rain: THREE.Mesh<THREE.InstancedBufferGeometry, THREE.ShaderMaterial> | undefined;\n  let disconnected = false;\n  const canvas = { clientWidth: 1280, clientHeight: 720, addEventListener() {}, removeEventListener() {} };\n  class Renderer {\n    capabilities = { maxTextureSize: 16384 };\n    setPixelRatio() {}\n    setSize() {}\n    setClearColor() {}\n    clear() {}\n    dispose() {}\n    forceContextLoss() {}\n    render(scene: THREE.Scene) {\n      const mesh = scene.children[0] as typeof rain;\n      if (mesh?.geometry.isInstancedBufferGeometry) rain = mesh;\n    }\n  }\n  const run = runInNewContext(`${getAnimationLogicString()}; runMatrixAnimation`, {\n    window: { devicePixelRatio: 1 },\n    document: {\n      hidden: false,\n      addEventListener() {},\n      removeEventListener() {},\n      createElement: () => ({ getContext: () => ({ measureText: () => ({ width: 32 }), fillText() {} }) }),\n    },\n    ResizeObserver: class {\n      observe() {}\n      disconnect() {\n        disconnected = true;\n      }\n    },\n    requestAnimationFrame: (callback: (time: number) => void) => {\n      frame = callback;\n      return 1;\n    },\n    cancelAnimationFrame: () => {\n      frame = undefined;\n    },\n    setTimeout: (callback: () => void) => {\n      rebuild = callback;\n      return 1;\n    },\n    clearTimeout: () => {\n      rebuild = undefined;\n    },\n  });\n  const config = {\n    ...factoryConfig(),\n    numColumns: 2000,\n    minTrailLength: 200,\n    maxTrailLength: 200,\n    minSpeed: 1,\n    maxSpeed: 1,\n    useZAxis: false,\n    glyphSet: 'custom',\n    customGlyphSet: '❤️🔥',\n  };\n  const controller = run({ ...THREE, WebGLRenderer: Renderer }, canvas, config);\n  try {\n    assert.ok(frame);\n    frame(0);\n    assert.ok(rain);\n    assert.equal(rain.geometry.instanceCount, 200_000);\n    assert.equal(rain.geometry.getAttribute('aStream').count, 1000);\n    assert.equal(rain.material.uniforms.uGlyphCount.value, 2);\n    const before = rain.geometry.getAttribute('aStream').getY(0);\n    frame(1000 / 60);\n    frame(1000 / 30);\n    const after = rain.geometry.getAttribute('aStream').getY(0);\n    assert.ok(Math.abs(before - after - 2) < 0.001, 'speed uses elapsed time at 60 units per second');\n    controller.update({ ...config, numColumns: 10, minTrailLength: 8, maxTrailLength: 8, customGlyphSet: null });\n    assert.ok(rebuild);\n    rebuild();\n    frame(50);\n    assert.equal(rain.geometry.instanceCount, 80);\n    assert.equal(rain.geometry.getAttribute('aStream').count, 10);\n    assert.equal(rain.geometry.getAttribute('aStream').getW(0), 8);\n    assert.equal(rain.material.uniforms.uGlyphCount.value, 1, 'invalid saved charset keeps the placeholder');\n  } finally {\n    controller.destroy();\n  }\n  assert.equal(frame, undefined);\n  assert.equal(disconnected, true);\n})",
+            "symbol": "test('shared engine caps instances, updates trails, and advances by elapsed time', async () => {\n  let frame: ((time: number) => void) | undefined;\n  let rebuild: (() => void) | undefined;\n  let rain: THREE.Mesh<THREE.InstancedBufferGeometry> | undefined;\n  let streams: Float32Array | undefined;\n  let glyphsDrawn = 0;\n  let disconnected = false;\n  const canvas = { clientWidth: 1280, clientHeight: 720, addEventListener() {}, removeEventListener() {} };\n  class Renderer {\n    backend = { isWebGPUBackend: true };\n    init() {\n      return Promise.resolve(this);\n    }\n    setPixelRatio() {}\n    setRenderTarget() {}\n    setSize() {}\n    setClearColor() {}\n    clear() {}\n    dispose() {}\n    render(scene: THREE.Object3D) {\n      const mesh = scene.children[0] as typeof rain;\n      if (mesh?.geometry.isInstancedBufferGeometry) rain = mesh;\n    }\n  }\n  class DataTexture extends THREE.DataTexture {\n    constructor(...args: ConstructorParameters<typeof THREE.DataTexture>) {\n      super(...args);\n      if (Object.prototype.toString.call(args[0]) === '[object Float32Array]') streams = args[0] as Float32Array;\n    }\n  }\n  const run = runInNewContext(`${getAnimationLogicString()}; runMatrixAnimation`, {\n    window: { devicePixelRatio: 1 },\n    document: {\n      hidden: false,\n      addEventListener() {},\n      removeEventListener() {},\n      createElement: () => ({\n        getContext: () => ({\n          measureText: () => ({ width: 32 }),\n          fillText() {\n            glyphsDrawn += 1;\n          },\n        }),\n      }),\n    },\n    ResizeObserver: class {\n      observe() {}\n      disconnect() {\n        disconnected = true;\n      }\n    },\n    requestAnimationFrame: (callback: (time: number) => void) => {\n      frame = callback;\n      return 1;\n    },\n    cancelAnimationFrame: () => {\n      frame = undefined;\n    },\n    setTimeout: (callback: () => void) => {\n      rebuild = callback;\n      return 1;\n    },\n    clearTimeout: () => {\n      rebuild = undefined;\n    },\n  });\n  const config = {\n    ...factoryConfig(),\n    numColumns: 6000,\n    minTrailLength: 200,\n    maxTrailLength: 200,\n    minSpeed: 1,\n    maxSpeed: 1,\n    useZAxis: false,\n    glyphSet: 'custom',\n    customGlyphSet: '❤️🔥',\n  };\n  const controller = run({ ...THREE, WebGPURenderer: Renderer, DataTexture }, canvas, config);\n  try {\n    assert.equal(await controller.ready, 'WebGPU');\n    assert.ok(frame);\n    assert.ok(streams);\n    assert.equal(glyphsDrawn, 2, 'graphemes, not code points, become glyphs');\n    frame(0);\n    assert.ok(rain);\n    assert.equal(rain.geometry.instanceCount, 1_000_000);\n    const before = streams[1];\n    frame(1000 / 60);\n    frame(1000 / 30);\n    assert.ok(Math.abs(streams[1] - before - 2) < 0.001, 'speed uses elapsed time at 60 units per second');\n    glyphsDrawn = 0;\n    controller.update({ ...config, numColumns: 10, minTrailLength: 8, maxTrailLength: 8, customGlyphSet: null });\n    assert.ok(rebuild);\n    rebuild();\n    frame(50);\n    assert.equal(rain.geometry.instanceCount, 80);\n    assert.equal(glyphsDrawn, 1, 'invalid saved charset keeps the placeholder');\n  } finally {\n    controller.destroy();\n  }\n  assert.equal(frame, undefined);\n  assert.equal(disconnected, true);\n})",
             "start_line": 46,
-            "end_line": 131,
+            "end_line": 148,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -5607,7 +5624,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "import",
             "resolved_target": "external:javascript:node:test"
           },
@@ -5758,7 +5775,7 @@
             "start_line": 5,
             "end_line": 5,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "import",
             "resolved_target": "external:javascript:node:url"
           }
@@ -5772,7 +5789,7 @@
             "start_line": 26,
             "end_line": 26,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "external:javascript:node:url",
             "target_symbol": "fileURLToPath"
@@ -5801,7 +5818,7 @@
             "start_line": 5,
             "end_line": 5,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "import",
             "resolved_target": "external:javascript:node:url"
           },
@@ -5863,7 +5880,7 @@
             "start_line": 6,
             "end_line": 6,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "import",
             "resolved_target": "external:javascript:node:vm"
           }
@@ -5873,11 +5890,11 @@
           "type": "calls",
           "location": {
             "path": "utils/exportEngine.test.ts",
-            "symbol": "runInNewContext(`${getAnimationLogicString()}; runMatrixAnimation`, {\n    window: { devicePixelRatio: 1 },\n    document: {\n      hidden: false,\n      addEventListener() {},\n      removeEventListener() {},\n      createElement: () => ({ getContext: () => ({ measureText: () => ({ width: 32 }), fillText() {} }) }),\n    },\n    ResizeObserver: class {\n      observe() {}\n      disconnect() {\n        disconnected = true;\n      }\n    },\n    requestAnimationFrame: (callback: (time: number) => void) => {\n      frame = callback;\n      return 1;\n    },\n    cancelAnimationFrame: () => {\n      frame = undefined;\n    },\n    setTimeout: (callback: () => void) => {\n      rebuild = callback;\n      return 1;\n    },\n    clearTimeout: () => {\n      rebuild = undefined;\n    },\n  })",
-            "start_line": 65,
-            "end_line": 93,
+            "symbol": "runInNewContext(`${getAnimationLogicString()}; runMatrixAnimation`, {\n    window: { devicePixelRatio: 1 },\n    document: {\n      hidden: false,\n      addEventListener() {},\n      removeEventListener() {},\n      createElement: () => ({\n        getContext: () => ({\n          measureText: () => ({ width: 32 }),\n          fillText() {\n            glyphsDrawn += 1;\n          },\n        }),\n      }),\n    },\n    ResizeObserver: class {\n      observe() {}\n      disconnect() {\n        disconnected = true;\n      }\n    },\n    requestAnimationFrame: (callback: (time: number) => void) => {\n      frame = callback;\n      return 1;\n    },\n    cancelAnimationFrame: () => {\n      frame = undefined;\n    },\n    setTimeout: (callback: () => void) => {\n      rebuild = callback;\n      return 1;\n    },\n    clearTimeout: () => {\n      rebuild = undefined;\n    },\n  })",
+            "start_line": 76,
+            "end_line": 111,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "external:javascript:node:vm",
             "target_symbol": "runInNewContext"
@@ -5896,17 +5913,17 @@
             "start_line": 6,
             "end_line": 6,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "import",
             "resolved_target": "external:javascript:node:vm"
           },
           {
             "path": "utils/exportEngine.test.ts",
-            "symbol": "runInNewContext(`${getAnimationLogicString()}; runMatrixAnimation`, {\n    window: { devicePixelRatio: 1 },\n    document: {\n      hidden: false,\n      addEventListener() {},\n      removeEventListener() {},\n      createElement: () => ({ getContext: () => ({ measureText: () => ({ width: 32 }), fillText() {} }) }),\n    },\n    ResizeObserver: class {\n      observe() {}\n      disconnect() {\n        disconnected = true;\n      }\n    },\n    requestAnimationFrame: (callback: (time: number) => void) => {\n      frame = callback;\n      return 1;\n    },\n    cancelAnimationFrame: () => {\n      frame = undefined;\n    },\n    setTimeout: (callback: () => void) => {\n      rebuild = callback;\n      return 1;\n    },\n    clearTimeout: () => {\n      rebuild = undefined;\n    },\n  })",
-            "start_line": 65,
-            "end_line": 93,
+            "symbol": "runInNewContext(`${getAnimationLogicString()}; runMatrixAnimation`, {\n    window: { devicePixelRatio: 1 },\n    document: {\n      hidden: false,\n      addEventListener() {},\n      removeEventListener() {},\n      createElement: () => ({\n        getContext: () => ({\n          measureText: () => ({ width: 32 }),\n          fillText() {\n            glyphsDrawn += 1;\n          },\n        }),\n      }),\n    },\n    ResizeObserver: class {\n      observe() {}\n      disconnect() {\n        disconnected = true;\n      }\n    },\n    requestAnimationFrame: (callback: (time: number) => void) => {\n      frame = callback;\n      return 1;\n    },\n    cancelAnimationFrame: () => {\n      frame = undefined;\n    },\n    setTimeout: (callback: () => void) => {\n      rebuild = callback;\n      return 1;\n    },\n    clearTimeout: () => {\n      rebuild = undefined;\n    },\n  })",
+            "start_line": 76,
+            "end_line": 111,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "external:javascript:node:vm",
             "target_symbol": "runInNewContext"
@@ -5949,7 +5966,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "import",
             "resolved_target": "external:javascript:react"
           },
@@ -5959,7 +5976,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "11c9dce109ccf09032fff675c8ce6461e42405aad259a9fb7c3b765374ad5d48",
+            "source_digest": "d3ca86fe8a5ed6ad8249f3f3c74304c8f4513eec9843465da1c29e1778c80687",
             "kind": "import",
             "resolved_target": "external:javascript:react"
           },
@@ -5969,7 +5986,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "13228dcf29b341d8cebfb6afb4b957a4ee2af6247ac24e9acbf74678cc62af31",
+            "source_digest": "55031bd2baa23f19ada5f0f27e6d07ddef8ba0f459c1736085b834b48177ced3",
             "kind": "import",
             "resolved_target": "external:javascript:react"
           }
@@ -6068,11 +6085,11 @@
           "type": "imports",
           "location": {
             "path": "utils/exportEngine.test.ts",
-            "symbol": "import * as THREE from 'three';",
+            "symbol": "import * as THREE from 'three/webgpu';",
             "start_line": 7,
             "end_line": 7,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "import",
             "resolved_target": "external:javascript:three"
           }
@@ -6086,21 +6103,21 @@
         "locations": [
           {
             "path": "components/ParticleCanvas.tsx",
-            "symbol": "import * as THREE from 'three';",
+            "symbol": "import * as THREE from 'three/webgpu';",
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "11c9dce109ccf09032fff675c8ce6461e42405aad259a9fb7c3b765374ad5d48",
+            "source_digest": "d3ca86fe8a5ed6ad8249f3f3c74304c8f4513eec9843465da1c29e1778c80687",
             "kind": "import",
             "resolved_target": "external:javascript:three"
           },
           {
             "path": "utils/exportEngine.test.ts",
-            "symbol": "import * as THREE from 'three';",
+            "symbol": "import * as THREE from 'three/webgpu';",
             "start_line": 7,
             "end_line": 7,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "import",
             "resolved_target": "external:javascript:three"
           }
@@ -6142,7 +6159,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "13228dcf29b341d8cebfb6afb4b957a4ee2af6247ac24e9acbf74678cc62af31",
+            "source_digest": "55031bd2baa23f19ada5f0f27e6d07ddef8ba0f459c1736085b834b48177ced3",
             "kind": "import",
             "resolved_target": "external:javascript:tweakpane"
           }
@@ -6446,7 +6463,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "9f0cbecfbb0653d384929e59065baaf05c7257849b7deeb44f0e12344ae5602b",
+            "source_digest": "90d8a6397fba726c66c15a886709bb609a307c995cff246ee66766c021716114",
             "kind": "definition"
           },
           {
@@ -6455,7 +6472,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "9f0cbecfbb0653d384929e59065baaf05c7257849b7deeb44f0e12344ae5602b",
+            "source_digest": "90d8a6397fba726c66c15a886709bb609a307c995cff246ee66766c021716114",
             "kind": "definition"
           },
           {
@@ -6464,7 +6481,7 @@
             "start_line": 3,
             "end_line": 3,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "9f0cbecfbb0653d384929e59065baaf05c7257849b7deeb44f0e12344ae5602b",
+            "source_digest": "90d8a6397fba726c66c15a886709bb609a307c995cff246ee66766c021716114",
             "kind": "definition"
           }
         ]
@@ -7075,7 +7092,7 @@
             "start_line": 26,
             "end_line": 26,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "definition"
           },
           {
@@ -7084,7 +7101,7 @@
             "start_line": 27,
             "end_line": 27,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "definition"
           }
         ]
@@ -7204,7 +7221,7 @@
             "start_line": 9,
             "end_line": 9,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "import",
             "resolved_target": "utils/exportEngine.ts"
           }
@@ -7218,7 +7235,7 @@
             "start_line": 13,
             "end_line": 13,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "utils/exportEngine.ts",
             "target_symbol": "getAnimationLogicString"
@@ -7233,7 +7250,7 @@
             "start_line": 40,
             "end_line": 40,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "utils/exportEngine.ts",
             "target_symbol": "getAnimationLogicString"
@@ -7245,10 +7262,10 @@
           "location": {
             "path": "utils/exportEngine.test.ts",
             "symbol": "getAnimationLogicString()",
-            "start_line": 65,
-            "end_line": 65,
+            "start_line": 76,
+            "end_line": 76,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "utils/exportEngine.ts",
             "target_symbol": "getAnimationLogicString"
@@ -7258,8 +7275,6 @@
       "analysis": "analyzed",
       "is_test": false,
       "symbols": [
-        "FRAGMENT_SHADER",
-        "VERTEX_SHADER",
         "getAnimationLogicString"
       ],
       "evidence": {
@@ -7267,29 +7282,11 @@
         "locations": [
           {
             "path": "utils/exportEngine.ts",
-            "symbol": "VERTEX_SHADER",
+            "symbol": "getAnimationLogicString",
             "start_line": 5,
             "end_line": 5,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "37761c60fba9b282063ef8e086dcbdc25c955a79fb1149f10f6c152d2e1a0a7d",
-            "kind": "definition"
-          },
-          {
-            "path": "utils/exportEngine.ts",
-            "symbol": "FRAGMENT_SHADER",
-            "start_line": 99,
-            "end_line": 99,
-            "extractor": "tree-sitter-typescript",
-            "source_digest": "37761c60fba9b282063ef8e086dcbdc25c955a79fb1149f10f6c152d2e1a0a7d",
-            "kind": "definition"
-          },
-          {
-            "path": "utils/exportEngine.ts",
-            "symbol": "getAnimationLogicString",
-            "start_line": 122,
-            "end_line": 122,
-            "extractor": "tree-sitter-typescript",
-            "source_digest": "37761c60fba9b282063ef8e086dcbdc25c955a79fb1149f10f6c152d2e1a0a7d",
+            "source_digest": "fdc3c95240b08a0e9157a007b9877a8bf97ce909dda55889d08aebf3836e8b21",
             "kind": "definition"
           }
         ]
@@ -7449,7 +7446,7 @@
             "start_line": 10,
             "end_line": 10,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "import",
             "resolved_target": "utils/exportHtml.ts"
           }
@@ -7477,7 +7474,7 @@
             "start_line": 40,
             "end_line": 40,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "utils/exportHtml.ts",
             "target_symbol": "generateStandaloneHtml"
@@ -7543,7 +7540,7 @@
             "start_line": 4,
             "end_line": 4,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "81e27d53445f6364e70ed8472d05210f687906b4cce69c4f2f6038c6de7a11aa",
+            "source_digest": "8a56e971023f4c183ecaf5d51057266f909112323d746583157c81cb7a2bf841",
             "kind": "definition"
           }
         ]
@@ -7976,7 +7973,7 @@
             "start_line": 18,
             "end_line": 18,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d8c9b092d6b100d93f27afc0b7bec07a5ccd8dbfd2ec2672d0a09b730b813990",
+            "source_digest": "8792cd5d8d5df2fc5b93b3e967a0b55bc844ef22b7fb1013c9f74e7595a45f39",
             "kind": "definition"
           },
           {
@@ -7985,7 +7982,7 @@
             "start_line": 26,
             "end_line": 26,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d8c9b092d6b100d93f27afc0b7bec07a5ccd8dbfd2ec2672d0a09b730b813990",
+            "source_digest": "8792cd5d8d5df2fc5b93b3e967a0b55bc844ef22b7fb1013c9f74e7595a45f39",
             "kind": "definition"
           },
           {
@@ -7994,7 +7991,7 @@
             "start_line": 34,
             "end_line": 34,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d8c9b092d6b100d93f27afc0b7bec07a5ccd8dbfd2ec2672d0a09b730b813990",
+            "source_digest": "8792cd5d8d5df2fc5b93b3e967a0b55bc844ef22b7fb1013c9f74e7595a45f39",
             "kind": "definition"
           }
         ]
@@ -8129,7 +8126,7 @@
             "start_line": 3,
             "end_line": 3,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "import",
             "resolved_target": "components/ParticleCanvas.tsx"
           }
@@ -8152,7 +8149,7 @@
             "start_line": 21,
             "end_line": 21,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "import",
             "resolved_target": "components/TweakpanePanel.tsx"
           }
@@ -8172,10 +8169,10 @@
           {
             "path": "App.tsx",
             "symbol": "applyPreset(prev, presetName)",
-            "start_line": 108,
-            "end_line": 108,
+            "start_line": 109,
+            "end_line": 109,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "applyPreset"
@@ -8199,7 +8196,7 @@
             "start_line": 5,
             "end_line": 5,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "import",
             "resolved_target": "config/configState.ts"
           }
@@ -8222,7 +8219,7 @@
             "start_line": 6,
             "end_line": 6,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "import",
             "resolved_target": "config/presets.ts"
           }
@@ -8235,7 +8232,7 @@
       "to": "external:javascript:react",
       "type": "calls",
       "type_only": false,
-      "evidence_count": 15,
+      "evidence_count": 16,
       "evidence": {
         "status": "verified",
         "locations": [
@@ -8245,7 +8242,18 @@
             "start_line": 61,
             "end_line": 61,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
+            "kind": "call",
+            "resolved_target": "external:javascript:react",
+            "target_symbol": "useState"
+          },
+          {
+            "path": "App.tsx",
+            "symbol": "useState<string | null>(null)",
+            "start_line": 62,
+            "end_line": 62,
+            "extractor": "tree-sitter-tsx",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "call",
             "resolved_target": "external:javascript:react",
             "target_symbol": "useState"
@@ -8253,24 +8261,13 @@
           {
             "path": "App.tsx",
             "symbol": "useMemo(\n    () =>\n      createPersistScheduler(window.localStorage, {\n        onResult: (result) => {\n          setPersistError(result.ok ? null : persistErrorMessage);\n        },\n      }),\n    [],\n  )",
-            "start_line": 62,
-            "end_line": 70,
+            "start_line": 63,
+            "end_line": 71,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "call",
             "resolved_target": "external:javascript:react",
             "target_symbol": "useMemo"
-          },
-          {
-            "path": "App.tsx",
-            "symbol": "useState<Config>(() => loadConfig(window.localStorage))",
-            "start_line": 71,
-            "end_line": 71,
-            "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
-            "kind": "call",
-            "resolved_target": "external:javascript:react",
-            "target_symbol": "useState"
           }
         ]
       }
@@ -8291,7 +8288,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "import",
             "resolved_target": "external:javascript:react"
           }
@@ -8314,7 +8311,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "import",
             "resolved_target": "types.ts"
           }
@@ -8334,10 +8331,10 @@
           {
             "path": "App.tsx",
             "symbol": "readUiVisible(window.localStorage.getItem(UI_VISIBLE_STORAGE_KEY))",
-            "start_line": 73,
-            "end_line": 73,
+            "start_line": 74,
+            "end_line": 74,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "call",
             "resolved_target": "utils/editorUx.ts",
             "target_symbol": "readUiVisible"
@@ -8345,10 +8342,10 @@
           {
             "path": "App.tsx",
             "symbol": "writeUiVisible(isUiVisible)",
-            "start_line": 92,
-            "end_line": 92,
+            "start_line": 93,
+            "end_line": 93,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "call",
             "resolved_target": "utils/editorUx.ts",
             "target_symbol": "writeUiVisible"
@@ -8356,10 +8353,10 @@
           {
             "path": "App.tsx",
             "symbol": "toggleStealth(visible)",
-            "start_line": 101,
-            "end_line": 101,
+            "start_line": 102,
+            "end_line": 102,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "call",
             "resolved_target": "utils/editorUx.ts",
             "target_symbol": "toggleStealth"
@@ -8383,7 +8380,7 @@
             "start_line": 11,
             "end_line": 19,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "import",
             "resolved_target": "utils/editorUx.ts"
           }
@@ -8403,10 +8400,10 @@
           {
             "path": "App.tsx",
             "symbol": "decideExportDelivery(await copyText(html), Date.now())",
-            "start_line": 123,
-            "end_line": 123,
+            "start_line": 124,
+            "end_line": 124,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "call",
             "resolved_target": "utils/exportDelivery.ts",
             "target_symbol": "decideExportDelivery"
@@ -8414,10 +8411,10 @@
           {
             "path": "App.tsx",
             "symbol": "downloadExportFilename(Date.now())",
-            "start_line": 141,
-            "end_line": 141,
+            "start_line": 142,
+            "end_line": 142,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "call",
             "resolved_target": "utils/exportDelivery.ts",
             "target_symbol": "downloadExportFilename"
@@ -8441,7 +8438,7 @@
             "start_line": 9,
             "end_line": 9,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "import",
             "resolved_target": "utils/exportDelivery.ts"
           }
@@ -8461,10 +8458,10 @@
           {
             "path": "App.tsx",
             "symbol": "getAnimationLogicString()",
-            "start_line": 122,
-            "end_line": 122,
+            "start_line": 123,
+            "end_line": 123,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "call",
             "resolved_target": "utils/exportEngine.ts",
             "target_symbol": "getAnimationLogicString"
@@ -8472,10 +8469,10 @@
           {
             "path": "App.tsx",
             "symbol": "getAnimationLogicString()",
-            "start_line": 140,
-            "end_line": 140,
+            "start_line": 141,
+            "end_line": 141,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "call",
             "resolved_target": "utils/exportEngine.ts",
             "target_symbol": "getAnimationLogicString"
@@ -8499,7 +8496,7 @@
             "start_line": 4,
             "end_line": 4,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "import",
             "resolved_target": "utils/exportEngine.ts"
           }
@@ -8519,10 +8516,10 @@
           {
             "path": "App.tsx",
             "symbol": "generateStandaloneHtml(config, getAnimationLogicString())",
-            "start_line": 122,
-            "end_line": 122,
+            "start_line": 123,
+            "end_line": 123,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "call",
             "resolved_target": "utils/exportHtml.ts",
             "target_symbol": "generateStandaloneHtml"
@@ -8530,10 +8527,10 @@
           {
             "path": "App.tsx",
             "symbol": "generateStandaloneHtml(config, getAnimationLogicString())",
-            "start_line": 140,
-            "end_line": 140,
+            "start_line": 141,
+            "end_line": 141,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "call",
             "resolved_target": "utils/exportHtml.ts",
             "target_symbol": "generateStandaloneHtml"
@@ -8557,7 +8554,7 @@
             "start_line": 7,
             "end_line": 7,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "import",
             "resolved_target": "utils/exportHtml.ts"
           }
@@ -8577,10 +8574,10 @@
           {
             "path": "App.tsx",
             "symbol": "createPersistScheduler(window.localStorage, {\n        onResult: (result) => {\n          setPersistError(result.ok ? null : persistErrorMessage);\n        },\n      })",
-            "start_line": 64,
-            "end_line": 68,
+            "start_line": 65,
+            "end_line": 69,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "call",
             "resolved_target": "utils/persist.ts",
             "target_symbol": "createPersistScheduler"
@@ -8588,10 +8585,10 @@
           {
             "path": "App.tsx",
             "symbol": "loadConfig(window.localStorage)",
-            "start_line": 71,
-            "end_line": 71,
+            "start_line": 72,
+            "end_line": 72,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "call",
             "resolved_target": "utils/persist.ts",
             "target_symbol": "loadConfig"
@@ -8615,7 +8612,7 @@
             "start_line": 10,
             "end_line": 10,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "import",
             "resolved_target": "utils/persist.ts"
           }
@@ -8635,10 +8632,10 @@
           {
             "path": "App.tsx",
             "symbol": "generateRandomConfig()",
-            "start_line": 114,
-            "end_line": 114,
+            "start_line": 115,
+            "end_line": 115,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "call",
             "resolved_target": "utils/random.ts",
             "target_symbol": "generateRandomConfig"
@@ -8662,7 +8659,7 @@
             "start_line": 8,
             "end_line": 8,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "da0efbcb2664a8d54b329bb334c0e7e6a5950cd2074fee93cba0f8cbd8810a46",
+            "source_digest": "7e69602da08e5f8a8197c37ae6beaef2bdd7707e55217f71fdcdea3d368ed7cc",
             "kind": "import",
             "resolved_target": "utils/random.ts"
           }
@@ -8682,10 +8679,10 @@
           {
             "path": "components/ParticleCanvas.tsx",
             "symbol": "useRef<HTMLDivElement>(null)",
-            "start_line": 27,
-            "end_line": 27,
+            "start_line": 29,
+            "end_line": 29,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "11c9dce109ccf09032fff675c8ce6461e42405aad259a9fb7c3b765374ad5d48",
+            "source_digest": "d3ca86fe8a5ed6ad8249f3f3c74304c8f4513eec9843465da1c29e1778c80687",
             "kind": "call",
             "resolved_target": "external:javascript:react",
             "target_symbol": "useRef"
@@ -8693,21 +8690,21 @@
           {
             "path": "components/ParticleCanvas.tsx",
             "symbol": "useRef<EngineController | null>(null)",
-            "start_line": 28,
-            "end_line": 28,
+            "start_line": 30,
+            "end_line": 30,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "11c9dce109ccf09032fff675c8ce6461e42405aad259a9fb7c3b765374ad5d48",
+            "source_digest": "d3ca86fe8a5ed6ad8249f3f3c74304c8f4513eec9843465da1c29e1778c80687",
             "kind": "call",
             "resolved_target": "external:javascript:react",
             "target_symbol": "useRef"
           },
           {
             "path": "components/ParticleCanvas.tsx",
-            "symbol": "useEffect(() => {\n    const container = containerRef.current;\n    if (!container) return;\n\n    const canvas = document.createElement('canvas');\n    canvas.className = 'absolute inset-0 w-full h-full block';\n    container.replaceChildren(canvas);\n\n    animationController.current = runBoundEngine(canvas, config);\n\n    return () => {\n      animationController.current?.destroy();\n      animationController.current = null;\n      if (canvas.parentNode === container) {\n        container.removeChild(canvas);\n      }\n    };\n    // eslint-disable-next-line react-hooks/exhaustive-deps\n  }, [])",
-            "start_line": 30,
-            "end_line": 48,
+            "symbol": "useEffect(() => {\n    const container = containerRef.current;\n    if (!container) return;\n\n    const canvas = document.createElement('canvas');\n    canvas.className = 'absolute inset-0 w-full h-full block';\n    container.replaceChildren(canvas);\n\n    const controller = runBoundEngine(canvas, config);\n    animationController.current = controller;\n    void controller.ready.then((backend) => {\n      if (backend) onBackend(backend);\n    });\n\n    return () => {\n      animationController.current?.destroy();\n      animationController.current = null;\n      if (canvas.parentNode === container) {\n        container.removeChild(canvas);\n      }\n    };\n    // eslint-disable-next-line react-hooks/exhaustive-deps\n  }, [])",
+            "start_line": 32,
+            "end_line": 54,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "11c9dce109ccf09032fff675c8ce6461e42405aad259a9fb7c3b765374ad5d48",
+            "source_digest": "d3ca86fe8a5ed6ad8249f3f3c74304c8f4513eec9843465da1c29e1778c80687",
             "kind": "call",
             "resolved_target": "external:javascript:react",
             "target_symbol": "useEffect"
@@ -8731,7 +8728,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "11c9dce109ccf09032fff675c8ce6461e42405aad259a9fb7c3b765374ad5d48",
+            "source_digest": "d3ca86fe8a5ed6ad8249f3f3c74304c8f4513eec9843465da1c29e1778c80687",
             "kind": "import",
             "resolved_target": "external:javascript:react"
           }
@@ -8750,11 +8747,11 @@
         "locations": [
           {
             "path": "components/ParticleCanvas.tsx",
-            "symbol": "import * as THREE from 'three';",
+            "symbol": "import * as THREE from 'three/webgpu';",
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "11c9dce109ccf09032fff675c8ce6461e42405aad259a9fb7c3b765374ad5d48",
+            "source_digest": "d3ca86fe8a5ed6ad8249f3f3c74304c8f4513eec9843465da1c29e1778c80687",
             "kind": "import",
             "resolved_target": "external:javascript:three"
           }
@@ -8777,7 +8774,7 @@
             "start_line": 3,
             "end_line": 3,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "11c9dce109ccf09032fff675c8ce6461e42405aad259a9fb7c3b765374ad5d48",
+            "source_digest": "d3ca86fe8a5ed6ad8249f3f3c74304c8f4513eec9843465da1c29e1778c80687",
             "kind": "import",
             "resolved_target": "types.ts"
           }
@@ -8797,10 +8794,10 @@
           {
             "path": "components/ParticleCanvas.tsx",
             "symbol": "getAnimationLogicString()",
-            "start_line": 14,
-            "end_line": 14,
+            "start_line": 15,
+            "end_line": 15,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "11c9dce109ccf09032fff675c8ce6461e42405aad259a9fb7c3b765374ad5d48",
+            "source_digest": "d3ca86fe8a5ed6ad8249f3f3c74304c8f4513eec9843465da1c29e1778c80687",
             "kind": "call",
             "resolved_target": "utils/exportEngine.ts",
             "target_symbol": "getAnimationLogicString"
@@ -8824,7 +8821,7 @@
             "start_line": 4,
             "end_line": 4,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "11c9dce109ccf09032fff675c8ce6461e42405aad259a9fb7c3b765374ad5d48",
+            "source_digest": "d3ca86fe8a5ed6ad8249f3f3c74304c8f4513eec9843465da1c29e1778c80687",
             "kind": "import",
             "resolved_target": "utils/exportEngine.ts"
           }
@@ -8847,7 +8844,7 @@
             "start_line": 112,
             "end_line": 112,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "13228dcf29b341d8cebfb6afb4b957a4ee2af6247ac24e9acbf74678cc62af31",
+            "source_digest": "55031bd2baa23f19ada5f0f27e6d07ddef8ba0f459c1736085b834b48177ced3",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "factoryConfig"
@@ -8871,7 +8868,7 @@
             "start_line": 4,
             "end_line": 4,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "13228dcf29b341d8cebfb6afb4b957a4ee2af6247ac24e9acbf74678cc62af31",
+            "source_digest": "55031bd2baa23f19ada5f0f27e6d07ddef8ba0f459c1736085b834b48177ced3",
             "kind": "import",
             "resolved_target": "config/configState.ts"
           }
@@ -8894,7 +8891,7 @@
             "start_line": 5,
             "end_line": 13,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "13228dcf29b341d8cebfb6afb4b957a4ee2af6247ac24e9acbf74678cc62af31",
+            "source_digest": "55031bd2baa23f19ada5f0f27e6d07ddef8ba0f459c1736085b834b48177ced3",
             "kind": "import",
             "resolved_target": "config/constants.ts"
           }
@@ -8917,7 +8914,7 @@
             "start_line": 34,
             "end_line": 34,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "13228dcf29b341d8cebfb6afb4b957a4ee2af6247ac24e9acbf74678cc62af31",
+            "source_digest": "55031bd2baa23f19ada5f0f27e6d07ddef8ba0f459c1736085b834b48177ced3",
             "kind": "call",
             "resolved_target": "external:javascript:react",
             "target_symbol": "useRef"
@@ -8928,7 +8925,7 @@
             "start_line": 35,
             "end_line": 35,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "13228dcf29b341d8cebfb6afb4b957a4ee2af6247ac24e9acbf74678cc62af31",
+            "source_digest": "55031bd2baa23f19ada5f0f27e6d07ddef8ba0f459c1736085b834b48177ced3",
             "kind": "call",
             "resolved_target": "external:javascript:react",
             "target_symbol": "useRef"
@@ -8939,7 +8936,7 @@
             "start_line": 36,
             "end_line": 40,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "13228dcf29b341d8cebfb6afb4b957a4ee2af6247ac24e9acbf74678cc62af31",
+            "source_digest": "55031bd2baa23f19ada5f0f27e6d07ddef8ba0f459c1736085b834b48177ced3",
             "kind": "call",
             "resolved_target": "external:javascript:react",
             "target_symbol": "useRef"
@@ -8963,7 +8960,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "13228dcf29b341d8cebfb6afb4b957a4ee2af6247ac24e9acbf74678cc62af31",
+            "source_digest": "55031bd2baa23f19ada5f0f27e6d07ddef8ba0f459c1736085b834b48177ced3",
             "kind": "import",
             "resolved_target": "external:javascript:react"
           }
@@ -8986,7 +8983,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "13228dcf29b341d8cebfb6afb4b957a4ee2af6247ac24e9acbf74678cc62af31",
+            "source_digest": "55031bd2baa23f19ada5f0f27e6d07ddef8ba0f459c1736085b834b48177ced3",
             "kind": "import",
             "resolved_target": "external:javascript:tweakpane"
           }
@@ -9009,7 +9006,7 @@
             "start_line": 3,
             "end_line": 3,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "13228dcf29b341d8cebfb6afb4b957a4ee2af6247ac24e9acbf74678cc62af31",
+            "source_digest": "55031bd2baa23f19ada5f0f27e6d07ddef8ba0f459c1736085b834b48177ced3",
             "kind": "import",
             "resolved_target": "types.ts"
           }
@@ -9216,7 +9213,7 @@
             "start_line": 7,
             "end_line": 7,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "mergeStoredConfig"
@@ -9227,7 +9224,7 @@
             "start_line": 11,
             "end_line": 11,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "mergeStoredConfig"
@@ -9238,7 +9235,7 @@
             "start_line": 20,
             "end_line": 20,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "mergeStoredConfig"
@@ -9262,7 +9259,7 @@
             "start_line": 3,
             "end_line": 3,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "import",
             "resolved_target": "config/configState.ts"
           }
@@ -9285,7 +9282,7 @@
             "start_line": 4,
             "end_line": 4,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "import",
             "resolved_target": "config/initialConfig.ts"
           }
@@ -9308,7 +9305,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "import",
             "resolved_target": "external:javascript:node:assert"
           }
@@ -9331,7 +9328,7 @@
             "start_line": 6,
             "end_line": 8,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -9342,7 +9339,7 @@
             "start_line": 10,
             "end_line": 17,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -9353,7 +9350,7 @@
             "start_line": 19,
             "end_line": 24,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -9377,7 +9374,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d0a4cdd9f4b26699a95cb8d2fefa810a4413ce66551fa231db8af4d107cd051d",
+            "source_digest": "297ada63476e3cdd39a28684a4af87c61c0be2498e57911746b7c9f945142368",
             "kind": "import",
             "resolved_target": "external:javascript:node:test"
           }
@@ -9469,7 +9466,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0a0bdb3f275cf6f657d804b2d2628622a70253d31b968c8ff21e44ffd3e1d04f",
+            "source_digest": "ba7d5c597be32850bdba31aa01a9237e72bc35973791bd44f5bc2044fa6257fb",
             "kind": "import",
             "resolved_target": "types.ts"
           }
@@ -9628,11 +9625,11 @@
         "locations": [
           {
             "path": "config/glyphSet.test.ts",
-            "symbol": "import { ASCII, BINARY, EMOJIS, GREEK, KATAKANA, MATH, RUNES } from './constants.ts';",
+            "symbol": "import { ASCII, BINARY, EMOJIS, FILM, GREEK, KATAKANA, MATH, RUNES } from './constants.ts';",
             "start_line": 3,
             "end_line": 3,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "import",
             "resolved_target": "config/constants.ts"
           }
@@ -9645,17 +9642,28 @@
       "to": "config/glyphSet.ts",
       "type": "calls",
       "type_only": false,
-      "evidence_count": 13,
+      "evidence_count": 14,
       "evidence": {
         "status": "verified",
         "locations": [
           {
             "path": "config/glyphSet.test.ts",
-            "symbol": "resolveGlyphSet('katakana', '')",
+            "symbol": "resolveGlyphSet('film', '')",
             "start_line": 7,
             "end_line": 7,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
+            "kind": "call",
+            "resolved_target": "config/glyphSet.ts",
+            "target_symbol": "resolveGlyphSet"
+          },
+          {
+            "path": "config/glyphSet.test.ts",
+            "symbol": "resolveGlyphSet('katakana', '')",
+            "start_line": 8,
+            "end_line": 8,
+            "extractor": "tree-sitter-typescript",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "call",
             "resolved_target": "config/glyphSet.ts",
             "target_symbol": "resolveGlyphSet"
@@ -9663,21 +9671,10 @@
           {
             "path": "config/glyphSet.test.ts",
             "symbol": "resolveGlyphSet('ascii', '')",
-            "start_line": 8,
-            "end_line": 8,
-            "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
-            "kind": "call",
-            "resolved_target": "config/glyphSet.ts",
-            "target_symbol": "resolveGlyphSet"
-          },
-          {
-            "path": "config/glyphSet.test.ts",
-            "symbol": "resolveGlyphSet('binary', '')",
             "start_line": 9,
             "end_line": 9,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "call",
             "resolved_target": "config/glyphSet.ts",
             "target_symbol": "resolveGlyphSet"
@@ -9701,7 +9698,7 @@
             "start_line": 4,
             "end_line": 4,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "import",
             "resolved_target": "config/glyphSet.ts"
           }
@@ -9724,7 +9721,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "import",
             "resolved_target": "external:javascript:node:assert"
           }
@@ -9743,11 +9740,11 @@
         "locations": [
           {
             "path": "config/glyphSet.test.ts",
-            "symbol": "test('ARC-02 named glyph sets resolve to published strings', () => {\n  assert.equal(resolveGlyphSet('katakana', ''), KATAKANA);\n  assert.equal(resolveGlyphSet('ascii', ''), ASCII);\n  assert.equal(resolveGlyphSet('binary', ''), BINARY);\n  assert.equal(resolveGlyphSet('runes', ''), RUNES);\n  assert.equal(resolveGlyphSet('greek', ''), GREEK);\n  assert.equal(resolveGlyphSet('math', ''), MATH);\n  assert.equal(resolveGlyphSet('emojis', ''), EMOJIS);\n})",
+            "symbol": "test('ARC-02 named glyph sets resolve to published strings', () => {\n  assert.equal(resolveGlyphSet('film', ''), FILM);\n  assert.equal(resolveGlyphSet('katakana', ''), KATAKANA);\n  assert.equal(resolveGlyphSet('ascii', ''), ASCII);\n  assert.equal(resolveGlyphSet('binary', ''), BINARY);\n  assert.equal(resolveGlyphSet('runes', ''), RUNES);\n  assert.equal(resolveGlyphSet('greek', ''), GREEK);\n  assert.equal(resolveGlyphSet('math', ''), MATH);\n  assert.equal(resolveGlyphSet('emojis', ''), EMOJIS);\n})",
             "start_line": 6,
-            "end_line": 14,
+            "end_line": 15,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -9755,10 +9752,10 @@
           {
             "path": "config/glyphSet.test.ts",
             "symbol": "test('ARC-02 custom text is returned when non-empty', () => {\n  assert.equal(resolveGlyphSet('custom', 'ΔΨ'), 'ΔΨ');\n})",
-            "start_line": 16,
-            "end_line": 18,
+            "start_line": 17,
+            "end_line": 19,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -9766,10 +9763,10 @@
           {
             "path": "config/glyphSet.test.ts",
             "symbol": "test('ARC-02 custom empty or unknown set does not return an empty string', () => {\n  assert.equal(resolveGlyphSet('custom', ''), '?');\n  assert.equal(resolveGlyphSet('custom', '   '), '?');\n  assert.equal(resolveGlyphSet('unknown', ''), KATAKANA);\n  assert.notEqual(charsetFromConfig({ glyphSet: 'custom', customGlyphSet: '' }), '');\n})",
-            "start_line": 20,
-            "end_line": 25,
+            "start_line": 21,
+            "end_line": 26,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -9793,7 +9790,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "334197c79224a6522eb111d608eee1b4fe1684cba933e43d20057e2b684f7c2b",
+            "source_digest": "a5c8169d11cf8380df688c1d4894915a25338a7dc61afe86306ce5fdb057d942",
             "kind": "import",
             "resolved_target": "external:javascript:node:test"
           }
@@ -9812,11 +9809,11 @@
         "locations": [
           {
             "path": "config/glyphSet.ts",
-            "symbol": "import { ASCII, BINARY, EMOJIS, GREEK, KATAKANA, MATH, RUNES } from './constants.ts';",
+            "symbol": "import { ASCII, BINARY, EMOJIS, FILM, GREEK, KATAKANA, MATH, RUNES } from './constants.ts';",
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "764c6a538f1c374f6f831c8d6e46166d1a1dc26fcc5433e1db80073aaff0be32",
+            "source_digest": "fdf2b1a15b799cf4d47459af7b6f03b8305f5db3b6f83ab978cd0963a65b3c9b",
             "kind": "import",
             "resolved_target": "config/constants.ts"
           }
@@ -9839,7 +9836,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "764c6a538f1c374f6f831c8d6e46166d1a1dc26fcc5433e1db80073aaff0be32",
+            "source_digest": "fdf2b1a15b799cf4d47459af7b6f03b8305f5db3b6f83ab978cd0963a65b3c9b",
             "kind": "import",
             "resolved_target": "types.ts"
           }
@@ -9862,7 +9859,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "cc13c2cc21580a56a99d4a7d4475a5a396076dd21e7d2171c90e59fb47ff4d03",
+            "source_digest": "6dc30078916c3066027524bc1104d78cc8fc2ce07721b31fdaac2f1769674ce6",
             "kind": "import",
             "resolved_target": "types.ts"
           }
@@ -9885,7 +9882,7 @@
             "start_line": 3,
             "end_line": 3,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "import",
             "resolved_target": "config/initialConfig.ts"
           }
@@ -9908,7 +9905,7 @@
             "start_line": 16,
             "end_line": 16,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "config/motion.ts",
             "target_symbol": "getStreamBounds"
@@ -9919,7 +9916,7 @@
             "start_line": 24,
             "end_line": 24,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "config/motion.ts",
             "target_symbol": "movementOffset"
@@ -9930,7 +9927,7 @@
             "start_line": 25,
             "end_line": 25,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "config/motion.ts",
             "target_symbol": "movementOffset"
@@ -9954,7 +9951,7 @@
             "start_line": 4,
             "end_line": 13,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "import",
             "resolved_target": "config/motion.ts"
           }
@@ -9977,7 +9974,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "import",
             "resolved_target": "external:javascript:node:assert"
           }
@@ -10000,7 +9997,7 @@
             "start_line": 15,
             "end_line": 21,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -10011,7 +10008,7 @@
             "start_line": 23,
             "end_line": 31,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -10022,7 +10019,7 @@
             "start_line": 33,
             "end_line": 39,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -10046,7 +10043,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "7831b2eed0adfcc1ec0a71a01482c2956d01d19d99c34fd055566abcb0d14f5e",
+            "source_digest": "1b6c63f5804ef85a93c3cdf25c39053b1f8eb034c79c991730d6686f9932982b",
             "kind": "import",
             "resolved_target": "external:javascript:node:test"
           }
@@ -10069,7 +10066,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "38138873539a4d434df6099a6fe3a391207e64768287e0a7d176d6499bdd5c71",
+            "source_digest": "c404f48e2d45bf834abad55b3ada614d060b6843b8bd86db27cfe289efb0acf7",
             "kind": "import",
             "resolved_target": "types.ts"
           }
@@ -10092,7 +10089,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "aa5ec559f6f3e366ed552e03c970bf52bfbdc5cc63322636af6fd6da8b77488e",
+            "source_digest": "f5b9d613c4b86849134a0ff55867537e357873a558aff5b9ca082196ff758d7a",
             "kind": "import",
             "resolved_target": "config/initialConfig.ts"
           }
@@ -10115,7 +10112,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "aa5ec559f6f3e366ed552e03c970bf52bfbdc5cc63322636af6fd6da8b77488e",
+            "source_digest": "f5b9d613c4b86849134a0ff55867537e357873a558aff5b9ca082196ff758d7a",
             "kind": "import",
             "resolved_target": "types.ts"
           }
@@ -10796,7 +10793,7 @@
             "start_line": 40,
             "end_line": 40,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "factoryConfig"
@@ -10804,10 +10801,10 @@
           {
             "path": "utils/exportEngine.test.ts",
             "symbol": "factoryConfig()",
-            "start_line": 95,
-            "end_line": 95,
+            "start_line": 113,
+            "end_line": 113,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "factoryConfig"
@@ -10831,7 +10828,7 @@
             "start_line": 8,
             "end_line": 8,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "import",
             "resolved_target": "config/configState.ts"
           }
@@ -10854,7 +10851,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "import",
             "resolved_target": "external:javascript:node:assert"
           }
@@ -10877,7 +10874,7 @@
             "start_line": 28,
             "end_line": 28,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "external:javascript:node:fs",
             "target_symbol": "existsSync"
@@ -10888,7 +10885,7 @@
             "start_line": 28,
             "end_line": 28,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "external:javascript:node:fs",
             "target_symbol": "readdirSync"
@@ -10899,7 +10896,7 @@
             "start_line": 31,
             "end_line": 31,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "external:javascript:node:fs",
             "target_symbol": "readFileSync"
@@ -10923,7 +10920,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "import",
             "resolved_target": "external:javascript:node:fs"
           }
@@ -10946,7 +10943,7 @@
             "start_line": 26,
             "end_line": 26,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "external:javascript:node:path",
             "target_symbol": "join"
@@ -10957,7 +10954,7 @@
             "start_line": 26,
             "end_line": 26,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "external:javascript:node:path",
             "target_symbol": "dirname"
@@ -10968,7 +10965,7 @@
             "start_line": 31,
             "end_line": 31,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "external:javascript:node:path",
             "target_symbol": "join"
@@ -10992,7 +10989,7 @@
             "start_line": 3,
             "end_line": 3,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "import",
             "resolved_target": "external:javascript:node:path"
           }
@@ -11011,33 +11008,33 @@
         "locations": [
           {
             "path": "utils/exportEngine.test.ts",
-            "symbol": "test('PERF-10 engine source is injected text with THREE.*, not Function#toString closures', () => {\n  const source = getAnimationLogicString();\n  assert.match(source, /function runMatrixAnimation\\(THREE, canvas, initialConfig\\)/);\n  assert.match(source, /new THREE\\.Scene\\(/);\n  assert.match(source, /new THREE\\.WebGLRenderer\\(/);\n  assert.match(source, /new THREE\\.InstancedBufferGeometry\\(/);\n  assert.match(source, /new THREE\\.ShaderMaterial\\(/);\n  assert.match(source, /THREE\\.DynamicDrawUsage/);\n  assert.equal(source.includes('.toString()'), false);\n  assert.equal(source.includes('resolveGlyphSet.toString'), false);\n  const kind = new Function(`${source}\\nreturn typeof runMatrixAnimation;`)();\n  assert.equal(kind, 'function');\n})",
+            "symbol": "test('PERF-10 engine source is injected text with THREE.*, not Function#toString closures', () => {\n  const source = getAnimationLogicString();\n  assert.match(source, /function runMatrixAnimation\\(THREE, canvas, initialConfig\\)/);\n  assert.match(source, /new THREE\\.Scene\\(/);\n  assert.match(source, /new THREE\\.WebGPURenderer\\(/);\n  assert.match(source, /new THREE\\.InstancedBufferGeometry\\(/);\n  assert.match(source, /new THREE\\.NodeMaterial\\(/);\n  assert.match(source, /THREE\\.TSL/);\n  assert.equal(source.includes('.toString()'), false);\n  assert.equal(source.includes('resolveGlyphSet.toString'), false);\n  const kind = new Function(`${source}\\nreturn typeof runMatrixAnimation;`)();\n  assert.equal(kind, 'function');\n})",
             "start_line": 12,
             "end_line": 24,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
           },
           {
             "path": "utils/exportEngine.test.ts",
-            "symbol": "test('production index bundle keeps injected THREE.* engine text', { skip: !distIndex }, () => {\n  const bundle = readFileSync(join(distAssets, distIndex as string), 'utf8');\n  assert.equal(bundle.includes('function runMatrixAnimation(THREE, canvas, initialConfig)'), true);\n  assert.equal(bundle.includes('new THREE.Scene('), true);\n  assert.equal(bundle.includes('new THREE.WebGLRenderer('), true);\n  assert.equal(bundle.includes('animationLogic.toString'), false);\n  assert.equal(bundle.includes('glyphColorForMode.toString'), false);\n})",
+            "symbol": "test('production index bundle keeps injected THREE.* engine text', { skip: !distIndex }, () => {\n  const bundle = readFileSync(join(distAssets, distIndex as string), 'utf8');\n  assert.equal(bundle.includes('function runMatrixAnimation(THREE, canvas, initialConfig)'), true);\n  assert.equal(bundle.includes('new THREE.Scene('), true);\n  assert.equal(bundle.includes('new THREE.WebGPURenderer('), true);\n  assert.equal(bundle.includes('animationLogic.toString'), false);\n  assert.equal(bundle.includes('glyphColorForMode.toString'), false);\n})",
             "start_line": 30,
             "end_line": 37,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
           },
           {
             "path": "utils/exportEngine.test.ts",
-            "symbol": "test('ARC-03 standalone HTML calls the injected THREE engine', () => {\n  const html = generateStandaloneHtml(factoryConfig(), getAnimationLogicString());\n  assert.match(html, /runMatrixAnimation\\(THREE, canvas, initialConfig\\)/);\n  assert.match(html, /new THREE\\.Scene\\(/);\n  assert.match(html, /import \\* as THREE from 'https:\\/\\/unpkg\\.com\\/three@/);\n})",
+            "symbol": "test('ARC-03 standalone HTML calls the injected THREE engine', () => {\n  const html = generateStandaloneHtml(factoryConfig(), getAnimationLogicString());\n  assert.match(html, /runMatrixAnimation\\(THREE, canvas, initialConfig\\)/);\n  assert.match(html, /new THREE\\.Scene\\(/);\n  assert.match(html, /import \\* as THREE from 'https:\\/\\/unpkg\\.com\\/three@[\\d.]+\\/build\\/three\\.webgpu\\.js'/);\n})",
             "start_line": 39,
             "end_line": 44,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -11061,7 +11058,7 @@
             "start_line": 4,
             "end_line": 4,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "import",
             "resolved_target": "external:javascript:node:test"
           }
@@ -11084,7 +11081,7 @@
             "start_line": 26,
             "end_line": 26,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "external:javascript:node:url",
             "target_symbol": "fileURLToPath"
@@ -11108,7 +11105,7 @@
             "start_line": 5,
             "end_line": 5,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "import",
             "resolved_target": "external:javascript:node:url"
           }
@@ -11127,11 +11124,11 @@
         "locations": [
           {
             "path": "utils/exportEngine.test.ts",
-            "symbol": "runInNewContext(`${getAnimationLogicString()}; runMatrixAnimation`, {\n    window: { devicePixelRatio: 1 },\n    document: {\n      hidden: false,\n      addEventListener() {},\n      removeEventListener() {},\n      createElement: () => ({ getContext: () => ({ measureText: () => ({ width: 32 }), fillText() {} }) }),\n    },\n    ResizeObserver: class {\n      observe() {}\n      disconnect() {\n        disconnected = true;\n      }\n    },\n    requestAnimationFrame: (callback: (time: number) => void) => {\n      frame = callback;\n      return 1;\n    },\n    cancelAnimationFrame: () => {\n      frame = undefined;\n    },\n    setTimeout: (callback: () => void) => {\n      rebuild = callback;\n      return 1;\n    },\n    clearTimeout: () => {\n      rebuild = undefined;\n    },\n  })",
-            "start_line": 65,
-            "end_line": 93,
+            "symbol": "runInNewContext(`${getAnimationLogicString()}; runMatrixAnimation`, {\n    window: { devicePixelRatio: 1 },\n    document: {\n      hidden: false,\n      addEventListener() {},\n      removeEventListener() {},\n      createElement: () => ({\n        getContext: () => ({\n          measureText: () => ({ width: 32 }),\n          fillText() {\n            glyphsDrawn += 1;\n          },\n        }),\n      }),\n    },\n    ResizeObserver: class {\n      observe() {}\n      disconnect() {\n        disconnected = true;\n      }\n    },\n    requestAnimationFrame: (callback: (time: number) => void) => {\n      frame = callback;\n      return 1;\n    },\n    cancelAnimationFrame: () => {\n      frame = undefined;\n    },\n    setTimeout: (callback: () => void) => {\n      rebuild = callback;\n      return 1;\n    },\n    clearTimeout: () => {\n      rebuild = undefined;\n    },\n  })",
+            "start_line": 76,
+            "end_line": 111,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "external:javascript:node:vm",
             "target_symbol": "runInNewContext"
@@ -11155,7 +11152,7 @@
             "start_line": 6,
             "end_line": 6,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "import",
             "resolved_target": "external:javascript:node:vm"
           }
@@ -11174,11 +11171,11 @@
         "locations": [
           {
             "path": "utils/exportEngine.test.ts",
-            "symbol": "import * as THREE from 'three';",
+            "symbol": "import * as THREE from 'three/webgpu';",
             "start_line": 7,
             "end_line": 7,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "import",
             "resolved_target": "external:javascript:three"
           }
@@ -11201,7 +11198,7 @@
             "start_line": 13,
             "end_line": 13,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "utils/exportEngine.ts",
             "target_symbol": "getAnimationLogicString"
@@ -11212,7 +11209,7 @@
             "start_line": 40,
             "end_line": 40,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "utils/exportEngine.ts",
             "target_symbol": "getAnimationLogicString"
@@ -11220,10 +11217,10 @@
           {
             "path": "utils/exportEngine.test.ts",
             "symbol": "getAnimationLogicString()",
-            "start_line": 65,
-            "end_line": 65,
+            "start_line": 76,
+            "end_line": 76,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "utils/exportEngine.ts",
             "target_symbol": "getAnimationLogicString"
@@ -11247,7 +11244,7 @@
             "start_line": 9,
             "end_line": 9,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "import",
             "resolved_target": "utils/exportEngine.ts"
           }
@@ -11270,7 +11267,7 @@
             "start_line": 40,
             "end_line": 40,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "call",
             "resolved_target": "utils/exportHtml.ts",
             "target_symbol": "generateStandaloneHtml"
@@ -11294,7 +11291,7 @@
             "start_line": 10,
             "end_line": 10,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "5a07ebd7e220c2ea2e53eb9f6ea88005b03e06b319e1d259ed041ee176ade126",
+            "source_digest": "86b04058caf8ec0df84b1c0070b9506de8f024ef032865a01dcea304bdea9268",
             "kind": "import",
             "resolved_target": "utils/exportHtml.ts"
           }
@@ -11317,7 +11314,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "37761c60fba9b282063ef8e086dcbdc25c955a79fb1149f10f6c152d2e1a0a7d",
+            "source_digest": "fdc3c95240b08a0e9157a007b9877a8bf97ce909dda55889d08aebf3836e8b21",
             "kind": "import",
             "resolved_target": "config/constants.ts"
           }
@@ -11340,7 +11337,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "37761c60fba9b282063ef8e086dcbdc25c955a79fb1149f10f6c152d2e1a0a7d",
+            "source_digest": "fdc3c95240b08a0e9157a007b9877a8bf97ce909dda55889d08aebf3836e8b21",
             "kind": "import",
             "resolved_target": "config/glyphSet.ts"
           }
@@ -11359,11 +11356,11 @@
         "locations": [
           {
             "path": "utils/exportEngine.ts",
-            "symbol": "import { MAX_GLYPHS, STRUCTURAL_REBUILD_MS } from '../config/motion.ts';",
+            "symbol": "import { MAX_GLYPHS, MAX_STREAMS, STRUCTURAL_REBUILD_MS } from '../config/motion.ts';",
             "start_line": 3,
             "end_line": 3,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "37761c60fba9b282063ef8e086dcbdc25c955a79fb1149f10f6c152d2e1a0a7d",
+            "source_digest": "fdc3c95240b08a0e9157a007b9877a8bf97ce909dda55889d08aebf3836e8b21",
             "kind": "import",
             "resolved_target": "config/motion.ts"
           }
@@ -11686,7 +11683,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "81e27d53445f6364e70ed8472d05210f687906b4cce69c4f2f6038c6de7a11aa",
+            "source_digest": "8a56e971023f4c183ecaf5d51057266f909112323d746583157c81cb7a2bf841",
             "kind": "import",
             "resolved_target": "config/enginePin.ts"
           }
@@ -11709,7 +11706,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "81e27d53445f6364e70ed8472d05210f687906b4cce69c4f2f6038c6de7a11aa",
+            "source_digest": "8a56e971023f4c183ecaf5d51057266f909112323d746583157c81cb7a2bf841",
             "kind": "import",
             "resolved_target": "types.ts"
           }
@@ -12171,7 +12168,7 @@
             "start_line": 57,
             "end_line": 57,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d8c9b092d6b100d93f27afc0b7bec07a5ccd8dbfd2ec2672d0a09b730b813990",
+            "source_digest": "8792cd5d8d5df2fc5b93b3e967a0b55bc844ef22b7fb1013c9f74e7595a45f39",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "normalizeRange"
@@ -12182,7 +12179,7 @@
             "start_line": 58,
             "end_line": 58,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d8c9b092d6b100d93f27afc0b7bec07a5ccd8dbfd2ec2672d0a09b730b813990",
+            "source_digest": "8792cd5d8d5df2fc5b93b3e967a0b55bc844ef22b7fb1013c9f74e7595a45f39",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "normalizeRange"
@@ -12193,7 +12190,7 @@
             "start_line": 59,
             "end_line": 59,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d8c9b092d6b100d93f27afc0b7bec07a5ccd8dbfd2ec2672d0a09b730b813990",
+            "source_digest": "8792cd5d8d5df2fc5b93b3e967a0b55bc844ef22b7fb1013c9f74e7595a45f39",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "normalizeRange"
@@ -12217,7 +12214,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d8c9b092d6b100d93f27afc0b7bec07a5ccd8dbfd2ec2672d0a09b730b813990",
+            "source_digest": "8792cd5d8d5df2fc5b93b3e967a0b55bc844ef22b7fb1013c9f74e7595a45f39",
             "kind": "import",
             "resolved_target": "config/configState.ts"
           }
@@ -12240,7 +12237,7 @@
             "start_line": 3,
             "end_line": 11,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d8c9b092d6b100d93f27afc0b7bec07a5ccd8dbfd2ec2672d0a09b730b813990",
+            "source_digest": "8792cd5d8d5df2fc5b93b3e967a0b55bc844ef22b7fb1013c9f74e7595a45f39",
             "kind": "import",
             "resolved_target": "config/constants.ts"
           }
@@ -12263,7 +12260,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "d8c9b092d6b100d93f27afc0b7bec07a5ccd8dbfd2ec2672d0a09b730b813990",
+            "source_digest": "8792cd5d8d5df2fc5b93b3e967a0b55bc844ef22b7fb1013c9f74e7595a45f39",
             "kind": "import",
             "resolved_target": "types.ts"
           }
@@ -12677,7 +12674,7 @@
     }
   ],
   "triggers": [],
-  "source_digest": "b6c09ac8e3ad0e127070d1867e97112a1ef182b8c9a069ef30025d37c717cb1c",
+  "source_digest": "966b6484e1b4bb19e9647a3aa3b0502bec1a6650d8d82d65ece7e64cf0affc13",
   "changes": {
     "added_nodes": [],
     "removed_nodes": [],
@@ -12688,5 +12685,5 @@
     "changed": false,
     "changed_node_ids": []
   },
-  "generation_id": "29b0b4c68d67bdfeae24d4392777b43f0ddebc8f24750257a75f11dd43175700"
+  "generation_id": "4155122298f15235193a60e5f1eee4f80d80e53b6ed290488d75e273cb2d3f4f"
 }

@@ -7,7 +7,7 @@ export const generateStandaloneHtml = (config: Config, animationLogicString: str
   }
 
   const fullScript = `
-        import * as THREE from 'https://unpkg.com/three@${THREE_MODULE_VERSION}/build/three.module.js';
+        import * as THREE from 'https://unpkg.com/three@${THREE_MODULE_VERSION}/build/three.webgpu.js';
 
         const initialConfig = ${JSON.stringify(config)};
 

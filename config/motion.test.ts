@@ -41,8 +41,8 @@ test('PERF-03 atlas rebuilds for charset or font, not for color', () => {
 test('PERF-04 glyph budget never exceeds the instance cap', () => {
   assert.ok(clampGlyphBudget(400, 200, 60_000) * 200 <= 60_000);
   assert.equal(clampGlyphBudget(10, 10, 60_000), 10);
-  assert.equal(clampGlyphBudget(2000, 200) * 200, MAX_GLYPHS);
-  assert.equal(MAX_GLYPHS, 200_000);
+  assert.equal(clampGlyphBudget(8000, 200) * 200, MAX_GLYPHS);
+  assert.equal(MAX_GLYPHS, 1_000_000);
 });
 
 test('PERF-05 animation pauses while hidden', () => {

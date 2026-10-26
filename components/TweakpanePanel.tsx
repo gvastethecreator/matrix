@@ -129,11 +129,13 @@ const TweakpanePanel: React.FC<TweakpanePanelProps> = ({
       })
       .on('change', updateState);
 
+    contentFolder.addBinding(PARAMS, 'message', { label: 'Message' }).on('change', updateState);
+
     // --- 3. OPTICS (Appearance) ---
     const lookFolder = pane.addFolder({ title: 'OPTICS', expanded: false });
 
     lookFolder
-      .addBinding(PARAMS, 'numColumns', { min: 10, max: 2000, step: 1, label: 'Density' })
+      .addBinding(PARAMS, 'numColumns', { min: 10, max: 8000, step: 1, label: 'Density' })
       .on('change', updateState);
     lookFolder
       .addBinding(PARAMS, 'fontSize', { min: 8, max: 64, step: 1, label: 'Glyph Size' })
@@ -151,6 +153,7 @@ const TweakpanePanel: React.FC<TweakpanePanelProps> = ({
       })
       .on('change', updateState);
 
+    lookFolder.addBinding(PARAMS, 'cellSnap', { label: 'Grid Lock' }).on('change', updateState);
     lookFolder
       .addBinding(PARAMS, 'characterSpacing', { min: 0.5, max: 2.0, label: 'Line Height' })
       .on('change', updateState);
@@ -180,6 +183,16 @@ const TweakpanePanel: React.FC<TweakpanePanelProps> = ({
     fxFolder.addBinding(PARAMS, 'useGlow', { label: 'Bloom' }).on('change', updateState);
     fxFolder.addBinding(PARAMS, 'glowColor', { label: 'Bloom Tint' }).on('change', updateState);
     fxFolder.addBinding(PARAMS, 'glowIntensity', { min: 0, max: 10, label: 'Intensity' }).on('change', updateState);
+    fxFolder.addBinding(PARAMS, 'bloomRadius', { min: 0, max: 1, label: 'Spread' }).on('change', updateState);
+
+    fxFolder.addBlade({ view: 'separator' });
+
+    fxFolder
+      .addBinding(PARAMS, 'chromaticAberration', { min: 0, max: 1, label: 'Aberration' })
+      .on('change', updateState);
+    fxFolder.addBinding(PARAMS, 'scanlines', { min: 0, max: 1, label: 'Scanlines' }).on('change', updateState);
+    fxFolder.addBinding(PARAMS, 'vignette', { min: 0, max: 1, label: 'Vignette' }).on('change', updateState);
+    fxFolder.addBinding(PARAMS, 'grain', { min: 0, max: 1, label: 'Grain' }).on('change', updateState);
 
     fxFolder.addBlade({ view: 'separator' });
 
@@ -234,7 +247,9 @@ const TweakpanePanel: React.FC<TweakpanePanelProps> = ({
     spaceFolder.addBinding(PARAMS, 'useZAxis', { label: 'Z-Depth' }).on('change', updateState);
     spaceFolder.addBinding(PARAMS, 'perspective', { min: 10, max: 1000, label: 'FOV' }).on('change', updateState);
     spaceFolder.addBinding(PARAMS, 'minZ', { min: -200, max: 100, label: 'Near Plane' }).on('change', updateState);
-    spaceFolder.addBinding(PARAMS, 'maxZ', { min: 0, max: 500, label: 'Far Plane' }).on('change', updateState);
+    spaceFolder.addBinding(PARAMS, 'maxZ', { min: 0, max: 1000, label: 'Far Plane' }).on('change', updateState);
+    spaceFolder.addBinding(PARAMS, 'depthOfField', { min: 0, max: 1, label: 'Depth Blur' }).on('change', updateState);
+    spaceFolder.addBinding(PARAMS, 'cameraDrift', { min: 0, max: 1, label: 'Camera Drift' }).on('change', updateState);
 
     // --- 8. INTERACTION ---
     const inputFolder = pane.addFolder({ title: 'INTERACTION', expanded: false });

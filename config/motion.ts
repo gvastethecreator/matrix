@@ -1,6 +1,7 @@
 import type { Config, StreamMovement } from '../types.ts';
 
-export const MAX_GLYPHS = 200_000;
+export const MAX_GLYPHS = 1_000_000;
+export const MAX_STREAMS = 16_384;
 export const STRUCTURAL_REBUILD_MS = 100;
 
 export const getStreamBounds = (width: number, height: number, perspective: number, z: number) => {

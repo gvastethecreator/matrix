@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import * as THREE from 'three';
+import * as THREE from 'three/webgpu';
 import type { Config } from '../types.ts';
 import { getAnimationLogicString } from '../utils/exportEngine.ts';
 
@@ -7,6 +7,7 @@ type EngineController = {
   update: (newConfig: Config) => void;
   destroy: () => void;
   resize: (w: number, h: number) => void;
+  ready: Promise<string | null>;
 };
 
 const bindEngine = new Function(
@@ -21,9 +22,10 @@ const runBoundEngine = bindEngine(THREE);
 
 interface ParticleCanvasProps {
   config: Config;
+  onBackend: (backend: string) => void;
 }
 
-const ParticleCanvas: React.FC<ParticleCanvasProps> = ({ config }) => {
+const ParticleCanvas: React.FC<ParticleCanvasProps> = ({ config, onBackend }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const animationController = useRef<EngineController | null>(null);
 
@@ -35,7 +37,11 @@ const ParticleCanvas: React.FC<ParticleCanvasProps> = ({ config }) => {
     canvas.className = 'absolute inset-0 w-full h-full block';
     container.replaceChildren(canvas);
 
-    animationController.current = runBoundEngine(canvas, config);
+    const controller = runBoundEngine(canvas, config);
+    animationController.current = controller;
+    void controller.ready.then((backend) => {
+      if (backend) onBackend(backend);
+    });
 
     return () => {
       animationController.current?.destroy();

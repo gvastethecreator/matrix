@@ -1,4 +1,4 @@
-export type GlyphSet = 'katakana' | 'binary' | 'ascii' | 'runes' | 'greek' | 'math' | 'emojis' | 'custom';
+export type GlyphSet = 'film' | 'katakana' | 'binary' | 'ascii' | 'runes' | 'greek' | 'math' | 'emojis' | 'custom';
 export type MouseEffect = 'grow' | 'attract' | 'repel' | 'swirl' | 'none';
 export type StreamDirection = 'down' | 'up' | 'left' | 'right' | 'down-left' | 'down-right' | 'up-left' | 'up-right';
 export type StreamMovement = 'linear' | 'serpentine' | 'zigzag' | 'spiral';
@@ -9,6 +9,7 @@ export interface Config {
   numColumns: number;
   glyphSet: GlyphSet;
   customGlyphSet: string;
+  message: string;
   preset?: string;
 
   // Appearance
@@ -23,6 +24,7 @@ export interface Config {
   characterSpacing: number;
   baseRotation: number;
   rotationSpeed: number;
+  cellSnap: boolean;
 
   // Effects
   useGlow: boolean;
@@ -30,6 +32,11 @@ export interface Config {
   glowIntensity: number;
   useGhosting: boolean;
   ghostingIntensity: number;
+  bloomRadius: number;
+  chromaticAberration: number;
+  scanlines: number;
+  vignette: number;
+  grain: number;
 
   // Behavior
   minSpeed: number;
@@ -48,6 +55,8 @@ export interface Config {
   perspective: number;
   minZ: number;
   maxZ: number;
+  depthOfField: number;
+  cameraDrift: number;
 
   // Interaction
   mouseEffect: MouseEffect;

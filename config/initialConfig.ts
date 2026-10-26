@@ -2,9 +2,10 @@ import type { Config } from '../types.ts';
 
 export const initialConfig: Config = {
   // General
-  numColumns: 100,
-  glyphSet: 'katakana',
+  numColumns: 260,
+  glyphSet: 'film',
   customGlyphSet: '01',
+  message: '',
 
   // Appearance
   fontSize: 16,
@@ -20,6 +21,7 @@ export const initialConfig: Config = {
   characterSpacing: 1.0,
   baseRotation: 0,
   rotationSpeed: 0,
+  cellSnap: true,
 
   // Glow Effect
   useGlow: true,
@@ -29,6 +31,13 @@ export const initialConfig: Config = {
   // Ghosting Effect
   useGhosting: false,
   ghostingIntensity: 0.5,
+
+  // Post-processing
+  bloomRadius: 0.7,
+  chromaticAberration: 0.2,
+  scanlines: 0.15,
+  vignette: 0.55,
+  grain: 0.12,
 
   // Behavior
   minSpeed: 2,
@@ -47,6 +56,8 @@ export const initialConfig: Config = {
   perspective: 150,
   minZ: 0,
   maxZ: 50,
+  depthOfField: 0.5,
+  cameraDrift: 0.35,
 
   // Interactivity
   mouseEffect: 'grow',

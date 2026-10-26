@@ -46,8 +46,9 @@ test('ARC-08 factoryConfig clones initialConfig', () => {
   const clone = factoryConfig();
   assert.deepEqual(clone, initialConfig);
   assert.notEqual(clone, initialConfig);
-  clone.numColumns = 1;
-  assert.equal(initialConfig.numColumns, 100);
+  const columns = initialConfig.numColumns;
+  clone.numColumns = columns + 1;
+  assert.equal(initialConfig.numColumns, columns);
 });
 
 test('UX-10 normalizeRange keeps both values in order', () => {

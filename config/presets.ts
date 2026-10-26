@@ -6,6 +6,40 @@ import { initialConfig } from './initialConfig.ts';
  * Cada preset ajusta múltiples parámetros para lograr una estética visual única.
  */
 export const presets: Record<string, Partial<Config>> = {
+  'Despierta, Neo': {
+    ...initialConfig,
+    numColumns: 420,
+    message: 'WAKE UP, NEO',
+    glowIntensity: 1.8,
+  },
+  'Abismo 3D': {
+    ...initialConfig,
+    numColumns: 2200,
+    fontSize: 14,
+    minTrailLength: 15,
+    maxTrailLength: 60,
+    minSpeed: 2,
+    maxSpeed: 7,
+    perspective: 300,
+    minZ: -100,
+    maxZ: 900,
+    depthOfField: 0.9,
+    glowIntensity: 2,
+  },
+  'Terminal CRT': {
+    ...initialConfig,
+    numColumns: 300,
+    glyphSet: 'ascii',
+    fontFamily: 'VT323',
+    fontSize: 20,
+    useZAxis: false,
+    glyphColor: '#33ff66',
+    glitchChance: 0.03,
+    scanlines: 0.8,
+    chromaticAberration: 0.8,
+    grain: 0.35,
+    vignette: 0.85,
+  },
   'Lluvia Densa': {
     ...initialConfig,
     numColumns: 1200,
@@ -41,7 +75,7 @@ export const presets: Record<string, Partial<Config>> = {
   },
   'Matrix Clásico': {
     numColumns: 100,
-    glyphSet: 'katakana',
+    glyphSet: 'film',
     fontSize: 16,
     fontFamily: 'monospace',
     fontWeight: 'normal',

@@ -1,9 +1,10 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { ASCII, BINARY, EMOJIS, GREEK, KATAKANA, MATH, RUNES } from './constants.ts';
+import { ASCII, BINARY, EMOJIS, FILM, GREEK, KATAKANA, MATH, RUNES } from './constants.ts';
 import { charsetFromConfig, createGlyphSetCache, resolveGlyphSet } from './glyphSet.ts';
 
 test('ARC-02 named glyph sets resolve to published strings', () => {
+  assert.equal(resolveGlyphSet('film', ''), FILM);
   assert.equal(resolveGlyphSet('katakana', ''), KATAKANA);
   assert.equal(resolveGlyphSet('ascii', ''), ASCII);
   assert.equal(resolveGlyphSet('binary', ''), BINARY);

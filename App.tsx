@@ -59,6 +59,7 @@ const triggerDownload = (html: string, filename: string) => {
 
 const App: React.FC = () => {
   const [persistError, setPersistError] = useState<string | null>(null);
+  const [backend, setBackend] = useState<string | null>(null);
   const persist = useMemo(
     () =>
       createPersistScheduler(window.localStorage, {
@@ -170,7 +171,7 @@ const App: React.FC = () => {
   return (
     <main className="relative w-screen h-screen overflow-hidden bg-black text-white font-mono selection:bg-green-500/30">
       <div className="absolute inset-0 z-0">
-        <ParticleCanvas config={config} />
+        <ParticleCanvas config={config} onBackend={setBackend} />
       </div>
 
       <div
@@ -255,6 +256,12 @@ const App: React.FC = () => {
       {!isUiVisible && (
         <div className="pointer-events-none fixed top-8 left-8 z-40 text-[10px] tracking-[0.3em] text-white/20 uppercase">
           Stealth Mode Active
+        </div>
+      )}
+
+      {backend && isUiVisible && (
+        <div className="pointer-events-none fixed bottom-9 left-6 z-40 rounded-full border border-white/10 bg-black/60 px-3 py-1.5 text-[10px] tracking-[0.25em] text-white/50 uppercase backdrop-blur-md">
+          {backend}
         </div>
       )}
 

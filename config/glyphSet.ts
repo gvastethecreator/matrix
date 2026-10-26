@@ -1,7 +1,8 @@
 import type { Config, GlyphSet } from '../types.ts';
-import { ASCII, BINARY, EMOJIS, GREEK, KATAKANA, MATH, RUNES } from './constants.ts';
+import { ASCII, BINARY, EMOJIS, FILM, GREEK, KATAKANA, MATH, RUNES } from './constants.ts';
 
 export const GLYPH_SET_TABLE: Record<Exclude<GlyphSet, 'custom'>, string> = {
+  film: FILM,
   katakana: KATAKANA,
   ascii: ASCII,
   binary: BINARY,
