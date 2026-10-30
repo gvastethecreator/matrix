@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "source_commit": "d39923e85e341d38398c9517d36ca8425b5fd2da",
-  "working_tree_dirty": true,
-  "generated_at": "2026-10-30T01:51:49Z",
-  "generation_id": "cb14aa4d95d5db248f2e0d98e13d1d6d16fd3a2243c9e0dd72e7b554d0aac780",
+  "source_commit": "7982808540217dabef049e8a39f0b275ef9dafc4",
+  "working_tree_dirty": false,
+  "generated_at": "2026-10-30T02:51:09Z",
+  "generation_id": "e8ac6a0339c46bc3bab2781c314e577dc0d3ec7617e2dbcc46833b2c8b90f7fc",
   "analysis": {
     "version": "syntax-1",
     "digest": "ae6d608d107619ec3efae990b53b43e523c90e8f5d2c3e86ab86c9e8ec95d260"
@@ -95,7 +95,7 @@
         "path": "config/enginePin.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "0ad334d5ca3d593c136c84137d4c25559ad413dd20a8db21743220fee62d6447",
+        "digest": "263f462aef0e6244c1ec368f952433c4fb56649b182e5d1711ba47c4a69a2f1c",
         "size": 47
       },
       {
@@ -114,14 +114,14 @@
       },
       {
         "path": "engine/matrixRain.js",
-        "origin": "untracked",
+        "origin": "tracked",
         "state": "present",
         "digest": "8300bb96117f6f35a5b76167bd8403f24fd55fde3e2871adb2c3d55023323a43",
         "size": 44769
       },
       {
         "path": "engine/matrixRain.test.ts",
-        "origin": "untracked",
+        "origin": "tracked",
         "state": "present",
         "digest": "91cc32ddf02a72252c7a6bead1e0296acf5cc2fe44a5f254808dfa564b7d3cda",
         "size": 5335
@@ -137,7 +137,7 @@
         "path": "package.json",
         "origin": "tracked",
         "state": "present",
-        "digest": "aeb25835013b33b8ade428628dfc87c6b4224c20ef55fa055f988c13e0f2b07f",
+        "digest": "12ea26e591be84db332d7176e2d1e8d4764ada3d4f0b4a55aefa629808c866ee",
         "size": 1239
       },
       {
@@ -190,20 +190,6 @@
         "size": 436
       },
       {
-        "path": "utils/exportEngine.test.ts",
-        "origin": "tracked",
-        "state": "missing",
-        "digest": null,
-        "size": 0
-      },
-      {
-        "path": "utils/exportEngine.ts",
-        "origin": "tracked",
-        "state": "missing",
-        "digest": null,
-        "size": 0
-      },
-      {
         "path": "utils/exportHtml.test.ts",
         "origin": "tracked",
         "state": "present",
@@ -247,7 +233,7 @@
       },
       {
         "path": "utils/revealImage.ts",
-        "origin": "untracked",
+        "origin": "tracked",
         "state": "present",
         "digest": "7c016f340ac45518552975ce40f14be1dc77fbb733d79af271243b604e218f34",
         "size": 648
@@ -256,16 +242,16 @@
         "path": "vite.config.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "99880b8352fbdad32c4ce37033632dfc1fe3d64461cdd98e4940acc76fbdbdc6",
-        "size": 371
+        "digest": "67a824ed6a8678fed1f9b93a87fbf363e84adfdeb3f438639e826baf60f537f5",
+        "size": 639
       }
     ],
-    "digest": "eaf13a82bb8624a4c4d13caf24874dab49fb510d922255668ef833f042247853"
+    "digest": "f3c369f280cbc038540eaa85934362ceef161e6c899209822b28694352fb4633"
   },
-  "source_digest": "a388bb686d768e14cca0005bcf18dfced141be2b443cbc3ce550ee92293e2efb",
+  "source_digest": "8aabecca843ea533439f9fa699122ebb1c0a1469a910c4aeba055d5be7f775ee",
   "artifact_hashes": {
-    "codemap.json": "9e0d888ca2267b6afc6dfe07e8510dad52584454ff6478dd9fa19a918f615723",
-    "codemap.md": "dded29a728a8a7f6762878c2e89e8c132a42b301a3191ec9613342ef440a1f63",
-    "codemap.html": "94828e6074bc5d60a9ad20148948aaf65b239550c9a8b04cbfdcae7048964938"
+    "codemap.json": "dd241f2c22ecb62496beb21e57b8e30862b447cdd4b1d990bb4c3304b0b8f98e",
+    "codemap.md": "40bfd7ea015d3f991cf395910ffee04e8f019a23f885088c37eee3b4b8ba61dc",
+    "codemap.html": "e4d81c7cef4673a405a662a084b9fb796543ca250b052b9a20453bf3f001c2bc"
   }
 }

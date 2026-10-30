@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-30T01:51:49Z",
-  "generated_from_commit": "d39923e85e341d38398c9517d36ca8425b5fd2da",
+  "generated_at": "2026-10-30T02:51:09Z",
+  "generated_from_commit": "7982808540217dabef049e8a39f0b275ef9dafc4",
   "scope": [
     "."
   ],
@@ -96,7 +96,7 @@
         "path": "config/enginePin.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "0ad334d5ca3d593c136c84137d4c25559ad413dd20a8db21743220fee62d6447",
+        "digest": "263f462aef0e6244c1ec368f952433c4fb56649b182e5d1711ba47c4a69a2f1c",
         "size": 47
       },
       {
@@ -115,14 +115,14 @@
       },
       {
         "path": "engine/matrixRain.js",
-        "origin": "untracked",
+        "origin": "tracked",
         "state": "present",
         "digest": "8300bb96117f6f35a5b76167bd8403f24fd55fde3e2871adb2c3d55023323a43",
         "size": 44769
       },
       {
         "path": "engine/matrixRain.test.ts",
-        "origin": "untracked",
+        "origin": "tracked",
         "state": "present",
         "digest": "91cc32ddf02a72252c7a6bead1e0296acf5cc2fe44a5f254808dfa564b7d3cda",
         "size": 5335
@@ -138,7 +138,7 @@
         "path": "package.json",
         "origin": "tracked",
         "state": "present",
-        "digest": "aeb25835013b33b8ade428628dfc87c6b4224c20ef55fa055f988c13e0f2b07f",
+        "digest": "12ea26e591be84db332d7176e2d1e8d4764ada3d4f0b4a55aefa629808c866ee",
         "size": 1239
       },
       {
@@ -191,20 +191,6 @@
         "size": 436
       },
       {
-        "path": "utils/exportEngine.test.ts",
-        "origin": "tracked",
-        "state": "missing",
-        "digest": null,
-        "size": 0
-      },
-      {
-        "path": "utils/exportEngine.ts",
-        "origin": "tracked",
-        "state": "missing",
-        "digest": null,
-        "size": 0
-      },
-      {
         "path": "utils/exportHtml.test.ts",
         "origin": "tracked",
         "state": "present",
@@ -248,7 +234,7 @@
       },
       {
         "path": "utils/revealImage.ts",
-        "origin": "untracked",
+        "origin": "tracked",
         "state": "present",
         "digest": "7c016f340ac45518552975ce40f14be1dc77fbb733d79af271243b604e218f34",
         "size": 648
@@ -257,15 +243,15 @@
         "path": "vite.config.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "99880b8352fbdad32c4ce37033632dfc1fe3d64461cdd98e4940acc76fbdbdc6",
-        "size": 371
+        "digest": "67a824ed6a8678fed1f9b93a87fbf363e84adfdeb3f438639e826baf60f537f5",
+        "size": 639
       }
     ],
-    "digest": "eaf13a82bb8624a4c4d13caf24874dab49fb510d922255668ef833f042247853"
+    "digest": "f3c369f280cbc038540eaa85934362ceef161e6c899209822b28694352fb4633"
   },
   "coverage": {
-    "discovered_files": 43,
-    "included_files": 31,
+    "discovered_files": 41,
+    "included_files": 29,
     "analyzed_files": 28,
     "configuration_files": 1,
     "file_statuses": [
@@ -352,14 +338,6 @@
       {
         "path": "utils/exportDelivery.ts",
         "status": "analyzed"
-      },
-      {
-        "path": "utils/exportEngine.test.ts",
-        "status": "missing"
-      },
-      {
-        "path": "utils/exportEngine.ts",
-        "status": "missing"
       },
       {
         "path": "utils/exportHtml.test.ts",
@@ -1102,7 +1080,7 @@
       },
       {
         "path": "vite.config.ts",
-        "line": 14,
+        "line": 22,
         "reference": "path",
         "reason": "object-member-call-not-resolved"
       }
@@ -2416,7 +2394,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0ad334d5ca3d593c136c84137d4c25559ad413dd20a8db21743220fee62d6447",
+            "source_digest": "263f462aef0e6244c1ec368f952433c4fb56649b182e5d1711ba47c4a69a2f1c",
             "kind": "definition"
           }
         ]
@@ -2774,7 +2752,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "99880b8352fbdad32c4ce37033632dfc1fe3d64461cdd98e4940acc76fbdbdc6",
+            "source_digest": "67a824ed6a8678fed1f9b93a87fbf363e84adfdeb3f438639e826baf60f537f5",
             "kind": "import",
             "resolved_target": "external:javascript:@tailwindcss/vite"
           },
@@ -2784,7 +2762,7 @@
             "start_line": 11,
             "end_line": 11,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "99880b8352fbdad32c4ce37033632dfc1fe3d64461cdd98e4940acc76fbdbdc6",
+            "source_digest": "67a824ed6a8678fed1f9b93a87fbf363e84adfdeb3f438639e826baf60f537f5",
             "kind": "call",
             "resolved_target": "external:javascript:@tailwindcss/vite",
             "target_symbol": "default"
@@ -2827,7 +2805,7 @@
             "start_line": 3,
             "end_line": 3,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "99880b8352fbdad32c4ce37033632dfc1fe3d64461cdd98e4940acc76fbdbdc6",
+            "source_digest": "67a824ed6a8678fed1f9b93a87fbf363e84adfdeb3f438639e826baf60f537f5",
             "kind": "import",
             "resolved_target": "external:javascript:@vitejs/plugin-react"
           },
@@ -2837,7 +2815,7 @@
             "start_line": 11,
             "end_line": 11,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "99880b8352fbdad32c4ce37033632dfc1fe3d64461cdd98e4940acc76fbdbdc6",
+            "source_digest": "67a824ed6a8678fed1f9b93a87fbf363e84adfdeb3f438639e826baf60f537f5",
             "kind": "call",
             "resolved_target": "external:javascript:@vitejs/plugin-react",
             "target_symbol": "default"
@@ -3473,7 +3451,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "99880b8352fbdad32c4ce37033632dfc1fe3d64461cdd98e4940acc76fbdbdc6",
+            "source_digest": "67a824ed6a8678fed1f9b93a87fbf363e84adfdeb3f438639e826baf60f537f5",
             "kind": "import",
             "resolved_target": "external:javascript:node:path"
           }
@@ -4735,17 +4713,17 @@
             "start_line": 4,
             "end_line": 4,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "99880b8352fbdad32c4ce37033632dfc1fe3d64461cdd98e4940acc76fbdbdc6",
+            "source_digest": "67a824ed6a8678fed1f9b93a87fbf363e84adfdeb3f438639e826baf60f537f5",
             "kind": "import",
             "resolved_target": "external:javascript:vite"
           },
           {
             "path": "vite.config.ts",
-            "symbol": "defineConfig({\n  server: {\n    port: 3000,\n    host: '127.0.0.1',\n  },\n  plugins: [react(), tailwindcss()],\n  resolve: {\n    alias: {\n      '@': path.resolve(import.meta.dirname, '.'),\n    },\n  },\n})",
+            "symbol": "defineConfig({\n  server: {\n    port: 3000,\n    host: '127.0.0.1',\n  },\n  plugins: [react(), tailwindcss()],\n  build: {\n    rolldownOptions: {\n      output: {\n        // Three.js changes less often than the app, so its own chunk stays cached across deploys.\n        codeSplitting: { groups: [{ name: 'three', test: /[\\\\/]node_modules[\\\\/]three[\\\\/]/ }] },\n      },\n    },\n  },\n  resolve: {\n    alias: {\n      '@': path.resolve(import.meta.dirname, '.'),\n    },\n  },\n})",
             "start_line": 6,
-            "end_line": 17,
+            "end_line": 25,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "99880b8352fbdad32c4ce37033632dfc1fe3d64461cdd98e4940acc76fbdbdc6",
+            "source_digest": "67a824ed6a8678fed1f9b93a87fbf363e84adfdeb3f438639e826baf60f537f5",
             "kind": "call",
             "resolved_target": "external:javascript:vite",
             "target_symbol": "defineConfig"
@@ -4846,7 +4824,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "json-manifest",
-            "source_digest": "aeb25835013b33b8ade428628dfc87c6b4224c20ef55fa055f988c13e0f2b07f",
+            "source_digest": "12ea26e591be84db332d7176e2d1e8d4764ada3d4f0b4a55aefa629808c866ee",
             "kind": "file"
           }
         ]
@@ -6319,7 +6297,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "99880b8352fbdad32c4ce37033632dfc1fe3d64461cdd98e4940acc76fbdbdc6",
+            "source_digest": "67a824ed6a8678fed1f9b93a87fbf363e84adfdeb3f438639e826baf60f537f5",
             "kind": "file"
           }
         ]
@@ -9825,7 +9803,7 @@
             "start_line": 11,
             "end_line": 11,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "99880b8352fbdad32c4ce37033632dfc1fe3d64461cdd98e4940acc76fbdbdc6",
+            "source_digest": "67a824ed6a8678fed1f9b93a87fbf363e84adfdeb3f438639e826baf60f537f5",
             "kind": "call",
             "resolved_target": "external:javascript:@tailwindcss/vite",
             "target_symbol": "default"
@@ -9849,7 +9827,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "99880b8352fbdad32c4ce37033632dfc1fe3d64461cdd98e4940acc76fbdbdc6",
+            "source_digest": "67a824ed6a8678fed1f9b93a87fbf363e84adfdeb3f438639e826baf60f537f5",
             "kind": "import",
             "resolved_target": "external:javascript:@tailwindcss/vite"
           }
@@ -9872,7 +9850,7 @@
             "start_line": 11,
             "end_line": 11,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "99880b8352fbdad32c4ce37033632dfc1fe3d64461cdd98e4940acc76fbdbdc6",
+            "source_digest": "67a824ed6a8678fed1f9b93a87fbf363e84adfdeb3f438639e826baf60f537f5",
             "kind": "call",
             "resolved_target": "external:javascript:@vitejs/plugin-react",
             "target_symbol": "default"
@@ -9896,7 +9874,7 @@
             "start_line": 3,
             "end_line": 3,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "99880b8352fbdad32c4ce37033632dfc1fe3d64461cdd98e4940acc76fbdbdc6",
+            "source_digest": "67a824ed6a8678fed1f9b93a87fbf363e84adfdeb3f438639e826baf60f537f5",
             "kind": "import",
             "resolved_target": "external:javascript:@vitejs/plugin-react"
           }
@@ -9919,7 +9897,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "99880b8352fbdad32c4ce37033632dfc1fe3d64461cdd98e4940acc76fbdbdc6",
+            "source_digest": "67a824ed6a8678fed1f9b93a87fbf363e84adfdeb3f438639e826baf60f537f5",
             "kind": "import",
             "resolved_target": "external:javascript:node:path"
           }
@@ -9938,11 +9916,11 @@
         "locations": [
           {
             "path": "vite.config.ts",
-            "symbol": "defineConfig({\n  server: {\n    port: 3000,\n    host: '127.0.0.1',\n  },\n  plugins: [react(), tailwindcss()],\n  resolve: {\n    alias: {\n      '@': path.resolve(import.meta.dirname, '.'),\n    },\n  },\n})",
+            "symbol": "defineConfig({\n  server: {\n    port: 3000,\n    host: '127.0.0.1',\n  },\n  plugins: [react(), tailwindcss()],\n  build: {\n    rolldownOptions: {\n      output: {\n        // Three.js changes less often than the app, so its own chunk stays cached across deploys.\n        codeSplitting: { groups: [{ name: 'three', test: /[\\\\/]node_modules[\\\\/]three[\\\\/]/ }] },\n      },\n    },\n  },\n  resolve: {\n    alias: {\n      '@': path.resolve(import.meta.dirname, '.'),\n    },\n  },\n})",
             "start_line": 6,
-            "end_line": 17,
+            "end_line": 25,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "99880b8352fbdad32c4ce37033632dfc1fe3d64461cdd98e4940acc76fbdbdc6",
+            "source_digest": "67a824ed6a8678fed1f9b93a87fbf363e84adfdeb3f438639e826baf60f537f5",
             "kind": "call",
             "resolved_target": "external:javascript:vite",
             "target_symbol": "defineConfig"
@@ -9966,7 +9944,7 @@
             "start_line": 4,
             "end_line": 4,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "99880b8352fbdad32c4ce37033632dfc1fe3d64461cdd98e4940acc76fbdbdc6",
+            "source_digest": "67a824ed6a8678fed1f9b93a87fbf363e84adfdeb3f438639e826baf60f537f5",
             "kind": "import",
             "resolved_target": "external:javascript:vite"
           }
@@ -10206,7 +10184,7 @@
     }
   ],
   "triggers": [],
-  "source_digest": "a388bb686d768e14cca0005bcf18dfced141be2b443cbc3ce550ee92293e2efb",
+  "source_digest": "8aabecca843ea533439f9fa699122ebb1c0a1469a910c4aeba055d5be7f775ee",
   "changes": {
     "added_nodes": [],
     "removed_nodes": [],
@@ -10217,5 +10195,5 @@
     "changed": false,
     "changed_node_ids": []
   },
-  "generation_id": "cb14aa4d95d5db248f2e0d98e13d1d6d16fd3a2243c9e0dd72e7b554d0aac780"
+  "generation_id": "e8ac6a0339c46bc3bab2781c314e577dc0d3ec7617e2dbcc46833b2c8b90f7fc"
 }

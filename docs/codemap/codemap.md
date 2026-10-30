@@ -1,13 +1,13 @@
 # Code map: matrix
 
-Generated: 2026-10-30T01:51:49Z | Commit: `d39923e85e34` | Schema: 2
-Generation: `cb14aa4d95d5db248f2e0d98e13d1d6d16fd3a2243c9e0dd72e7b554d0aac780`
+Generated: 2026-10-30T02:51:09Z | Commit: `798280854021` | Schema: 2
+Generation: `e8ac6a0339c46bc3bab2781c314e577dc0d3ec7617e2dbcc46833b2c8b90f7fc`
 Scope: . | Inventory: working-tree
 Nodes: 43 | Edges: 131 | Flows: 0
 
 ## Coverage
 
-- Analysis: **partial**; 28 analyzed of 31 included files.
+- Analysis: **partial**; 28 analyzed of 29 included files.
 - Configuration files: 1; omitted untracked files: 0.
 - Unresolved references and analysis limits: 110.
 - Static references and call paths do not prove runtime execution or test coverage.
