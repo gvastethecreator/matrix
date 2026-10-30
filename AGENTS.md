@@ -1,6 +1,6 @@
 # AGENTS
 
-Browser-only Matrix digital-rain editor. Keep the existing stack and `pnpm@12.0.0` from `package.json`.
+Browser-only Matrix digital-rain editor. Keep the existing stack and the pnpm version pinned in `package.json`.
 
 ## Commands
 

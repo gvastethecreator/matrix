@@ -1,1 +1,1 @@
-export const THREE_MODULE_VERSION = '0.185.1';
+export const THREE_MODULE_VERSION = '0.186.1';
