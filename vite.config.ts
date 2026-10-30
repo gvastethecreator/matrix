@@ -9,6 +9,14 @@ export default defineConfig({
     host: '127.0.0.1',
   },
   plugins: [react(), tailwindcss()],
+  build: {
+    rolldownOptions: {
+      output: {
+        // Three.js changes less often than the app, so its own chunk stays cached across deploys.
+        codeSplitting: { groups: [{ name: 'three', test: /[\\/]node_modules[\\/]three[\\/]/ }] },
+      },
+    },
+  },
   resolve: {
     alias: {
       '@': path.resolve(import.meta.dirname, '.'),
