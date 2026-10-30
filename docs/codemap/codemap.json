@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-30T03:35:20Z",
-  "generated_from_commit": "ebfb8ec28e79ec0d6a8f588c8ee75a929bb8970d",
+  "generated_at": "2026-10-30T05:29:37Z",
+  "generated_from_commit": "ae176b512c4b69c1607d89bef4d77d96c40d4b92",
   "scope": [
     "."
   ],
@@ -47,15 +47,15 @@
         "path": "App.tsx",
         "origin": "tracked",
         "state": "present",
-        "digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
-        "size": 9308
+        "digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
+        "size": 9048
       },
       {
         "path": "components/ControlPanel.tsx",
-        "origin": "untracked",
+        "origin": "tracked",
         "state": "present",
-        "digest": "8c61a0b1d9035e0a8228127dc1893b0b0e0898afe04cc3fcd706c038ea1fbeab",
-        "size": 13160
+        "digest": "951cc879b948ae7531519f6d6043b85fae3a0f91b2a1350a58a306a3194ff966",
+        "size": 14213
       },
       {
         "path": "components/ParticleCanvas.tsx",
@@ -68,8 +68,8 @@
         "path": "config/configState.test.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
-        "size": 3540
+        "digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
+        "size": 4264
       },
       {
         "path": "config/configState.ts",
@@ -87,7 +87,7 @@
       },
       {
         "path": "config/controls.ts",
-        "origin": "untracked",
+        "origin": "tracked",
         "state": "present",
         "digest": "0b3e4584da7d981084b0c14d9a17f4a6e0f60d0c7b3ba7f24dbdfb0f28429b03",
         "size": 5925
@@ -117,8 +117,8 @@
         "path": "config/presets.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "f7c33c4a7c6fc33fe682d93d6632f7c886e826226e1c55eed219a4141ff80c0b",
-        "size": 6828
+        "digest": "f49715440245742ffd8386053b5e855bb622faeea76f4bd19cdb566d18f5fd0c",
+        "size": 11966
       },
       {
         "path": "engine/matrixRain.js",
@@ -229,15 +229,15 @@
         "path": "utils/random.test.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "6551fe3c87950a5eae1d0ead5f747edf4546826de12cfe9b3baed15c0bc686c7",
-        "size": 557
+        "digest": "cbe681cb524b6f208a56758d4422399ccddd246e5a69a03df4cb8a4c2ac4fd0c",
+        "size": 1258
       },
       {
         "path": "utils/random.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "13b10a241262d5991bcb6548b010c4e1b81b1a2e44a105aeec6329ada038bb0f",
-        "size": 4490
+        "digest": "a1aafa9665a0547526f98939fb6b93df247cc16e4e90229e1edc2a4366e30aff",
+        "size": 3761
       },
       {
         "path": "utils/revealImage.ts",
@@ -254,7 +254,7 @@
         "size": 639
       }
     ],
-    "digest": "ee1881b759ff436816253ef710b76a0bfd2bae7bfa3b7b3b533c82fce349e061"
+    "digest": "88a689cb1d46f888c1d47ffdf483b170b2304e612478c0dfb3396bb666a6addd"
   },
   "coverage": {
     "discovered_files": 42,
@@ -443,19 +443,13 @@
       },
       {
         "path": "components/ControlPanel.tsx",
-        "line": 313,
+        "line": 314,
         "reference": "sections",
         "reason": "object-member-call-not-resolved"
       },
       {
         "path": "config/configState.test.ts",
-        "line": 8,
-        "reference": "assert",
-        "reason": "object-member-call-not-resolved"
-      },
-      {
-        "path": "config/configState.test.ts",
-        "line": 13,
+        "line": 9,
         "reference": "assert",
         "reason": "object-member-call-not-resolved"
       },
@@ -485,7 +479,7 @@
       },
       {
         "path": "config/configState.test.ts",
-        "line": 22,
+        "line": 18,
         "reference": "assert",
         "reason": "object-member-call-not-resolved"
       },
@@ -497,7 +491,7 @@
       },
       {
         "path": "config/configState.test.ts",
-        "line": 28,
+        "line": 24,
         "reference": "assert",
         "reason": "object-member-call-not-resolved"
       },
@@ -515,7 +509,7 @@
       },
       {
         "path": "config/configState.test.ts",
-        "line": 34,
+        "line": 31,
         "reference": "assert",
         "reason": "object-member-call-not-resolved"
       },
@@ -533,7 +527,7 @@
       },
       {
         "path": "config/configState.test.ts",
-        "line": 41,
+        "line": 37,
         "reference": "assert",
         "reason": "object-member-call-not-resolved"
       },
@@ -545,7 +539,7 @@
       },
       {
         "path": "config/configState.test.ts",
-        "line": 48,
+        "line": 43,
         "reference": "assert",
         "reason": "object-member-call-not-resolved"
       },
@@ -557,7 +551,7 @@
       },
       {
         "path": "config/configState.test.ts",
-        "line": 54,
+        "line": 50,
         "reference": "assert",
         "reason": "object-member-call-not-resolved"
       },
@@ -569,13 +563,13 @@
       },
       {
         "path": "config/configState.test.ts",
-        "line": 58,
+        "line": 56,
         "reference": "assert",
         "reason": "object-member-call-not-resolved"
       },
       {
         "path": "config/configState.test.ts",
-        "line": 62,
+        "line": 59,
         "reference": "assert",
         "reason": "object-member-call-not-resolved"
       },
@@ -587,7 +581,7 @@
       },
       {
         "path": "config/configState.test.ts",
-        "line": 68,
+        "line": 64,
         "reference": "assert",
         "reason": "object-member-call-not-resolved"
       },
@@ -599,13 +593,43 @@
       },
       {
         "path": "config/configState.test.ts",
-        "line": 76,
+        "line": 70,
         "reference": "assert",
         "reason": "object-member-call-not-resolved"
       },
       {
         "path": "config/configState.test.ts",
-        "line": 79,
+        "line": 77,
+        "reference": "assert",
+        "reason": "object-member-call-not-resolved"
+      },
+      {
+        "path": "config/configState.test.ts",
+        "line": 80,
+        "reference": "assert",
+        "reason": "object-member-call-not-resolved"
+      },
+      {
+        "path": "config/configState.test.ts",
+        "line": 87,
+        "reference": "assert",
+        "reason": "object-member-call-not-resolved"
+      },
+      {
+        "path": "config/configState.test.ts",
+        "line": 88,
+        "reference": "sections",
+        "reason": "object-member-call-not-resolved"
+      },
+      {
+        "path": "config/configState.test.ts",
+        "line": 90,
+        "reference": "assert",
+        "reason": "object-member-call-not-resolved"
+      },
+      {
+        "path": "config/configState.test.ts",
+        "line": 93,
         "reference": "assert",
         "reason": "object-member-call-not-resolved"
       },
@@ -1061,38 +1085,74 @@
       },
       {
         "path": "utils/random.test.ts",
-        "line": 8,
-        "reference": "assert",
-        "reason": "object-member-call-not-resolved"
-      },
-      {
-        "path": "utils/random.test.ts",
-        "line": 9,
-        "reference": "assert",
-        "reason": "object-member-call-not-resolved"
-      },
-      {
-        "path": "utils/random.test.ts",
-        "line": 10,
-        "reference": "assert",
-        "reason": "object-member-call-not-resolved"
-      },
-      {
-        "path": "utils/random.test.ts",
         "line": 11,
         "reference": "assert",
         "reason": "object-member-call-not-resolved"
       },
       {
         "path": "utils/random.test.ts",
-        "line": 12,
+        "line": 13,
+        "reference": "assert",
+        "reason": "object-member-call-not-resolved"
+      },
+      {
+        "path": "utils/random.test.ts",
+        "line": 14,
+        "reference": "assert",
+        "reason": "object-member-call-not-resolved"
+      },
+      {
+        "path": "utils/random.test.ts",
+        "line": 15,
+        "reference": "assert",
+        "reason": "object-member-call-not-resolved"
+      },
+      {
+        "path": "utils/random.test.ts",
+        "line": 16,
+        "reference": "assert",
+        "reason": "object-member-call-not-resolved"
+      },
+      {
+        "path": "utils/random.test.ts",
+        "line": 17,
+        "reference": "assert",
+        "reason": "object-member-call-not-resolved"
+      },
+      {
+        "path": "utils/random.test.ts",
+        "line": 18,
+        "reference": "assert",
+        "reason": "object-member-call-not-resolved"
+      },
+      {
+        "path": "utils/random.test.ts",
+        "line": 19,
+        "reference": "assert",
+        "reason": "object-member-call-not-resolved"
+      },
+      {
+        "path": "utils/random.test.ts",
+        "line": 20,
         "reference": "assert",
         "reason": "object-member-call-not-resolved"
       },
       {
         "path": "utils/random.ts",
-        "line": 75,
-        "reference": "colorModes",
+        "line": 55,
+        "reference": "paletteNames",
+        "reason": "object-member-call-not-resolved"
+      },
+      {
+        "path": "utils/random.ts",
+        "line": 62,
+        "reference": "streamDirections",
+        "reason": "object-member-call-not-resolved"
+      },
+      {
+        "path": "utils/random.ts",
+        "line": 80,
+        "reference": "sections",
         "reason": "object-member-call-not-resolved"
       },
       {
@@ -1133,28 +1193,28 @@
           {
             "path": "App.tsx",
             "symbol": "IDLE_MS",
-            "start_line": 15,
-            "end_line": 15,
+            "start_line": 14,
+            "end_line": 14,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "definition"
           },
           {
             "path": "App.tsx",
             "symbol": "copyText",
-            "start_line": 17,
-            "end_line": 17,
+            "start_line": 16,
+            "end_line": 16,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "definition"
           },
           {
             "path": "App.tsx",
             "symbol": "triggerDownload",
-            "start_line": 26,
-            "end_line": 26,
+            "start_line": 25,
+            "end_line": 25,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "definition"
           }
         ]
@@ -1248,16 +1308,6 @@
           "type_only": false
         },
         {
-          "id": "utils/random.ts",
-          "type": "calls",
-          "type_only": false
-        },
-        {
-          "id": "utils/random.ts",
-          "type": "imports",
-          "type_only": false
-        },
-        {
           "id": "utils/revealImage.ts",
           "type": "calls",
           "type_only": false
@@ -1305,19 +1355,19 @@
           {
             "path": "components/ControlPanel.tsx",
             "symbol": "SetConfig",
-            "start_line": 9,
-            "end_line": 9,
+            "start_line": 10,
+            "end_line": 10,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "8c61a0b1d9035e0a8228127dc1893b0b0e0898afe04cc3fcd706c038ea1fbeab",
+            "source_digest": "951cc879b948ae7531519f6d6043b85fae3a0f91b2a1350a58a306a3194ff966",
             "kind": "definition"
           },
           {
             "path": "components/ControlPanel.tsx",
             "symbol": "ControlPanelProps",
-            "start_line": 11,
-            "end_line": 11,
+            "start_line": 12,
+            "end_line": 12,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "8c61a0b1d9035e0a8228127dc1893b0b0e0898afe04cc3fcd706c038ea1fbeab",
+            "source_digest": "951cc879b948ae7531519f6d6043b85fae3a0f91b2a1350a58a306a3194ff966",
             "kind": "definition"
           },
           {
@@ -1326,7 +1376,7 @@
             "start_line": 20,
             "end_line": 20,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "8c61a0b1d9035e0a8228127dc1893b0b0e0898afe04cc3fcd706c038ea1fbeab",
+            "source_digest": "951cc879b948ae7531519f6d6043b85fae3a0f91b2a1350a58a306a3194ff966",
             "kind": "definition"
           }
         ]
@@ -1383,6 +1433,16 @@
           "id": "types.ts",
           "type": "imports",
           "type_only": true
+        },
+        {
+          "id": "utils/random.ts",
+          "type": "calls",
+          "type_only": false
+        },
+        {
+          "id": "utils/random.ts",
+          "type": "imports",
+          "type_only": false
         }
       ],
       "parent": "components"
@@ -1502,7 +1562,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "file"
           }
         ]
@@ -1526,6 +1586,11 @@
         },
         {
           "id": "config/initialConfig.ts",
+          "type": "imports",
+          "type_only": false
+        },
+        {
+          "id": "config/presets.ts",
           "type": "imports",
           "type_only": false
         },
@@ -1558,7 +1623,8 @@
         "config/configState.test.ts",
         "engine/matrixRain.test.ts",
         "utils/exportHtml.test.ts",
-        "utils/persist.test.ts"
+        "utils/persist.test.ts",
+        "utils/random.test.ts"
       ],
       "test_evidence": [
         {
@@ -1570,7 +1636,7 @@
             "start_line": 3,
             "end_line": 3,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "import",
             "resolved_target": "config/configState.ts"
           }
@@ -1618,15 +1684,29 @@
           }
         },
         {
+          "test": "utils/random.test.ts",
+          "type": "imports",
+          "location": {
+            "path": "utils/random.test.ts",
+            "symbol": "import { factoryConfig } from '../config/configState.ts';",
+            "start_line": 3,
+            "end_line": 3,
+            "extractor": "tree-sitter-typescript",
+            "source_digest": "cbe681cb524b6f208a56758d4422399ccddd246e5a69a03df4cb8a4c2ac4fd0c",
+            "kind": "import",
+            "resolved_target": "config/configState.ts"
+          }
+        },
+        {
           "test": "config/configState.test.ts",
           "type": "calls",
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "mergeStoredConfig({})",
-            "start_line": 8,
-            "end_line": 8,
+            "start_line": 9,
+            "end_line": 9,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "mergeStoredConfig"
@@ -1638,10 +1718,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "mergeStoredConfig({ numColumns: 0, fontSize: '12', perspective: -1, minSpeed: -2, maxSpeed: 0 })",
-            "start_line": 12,
-            "end_line": 12,
+            "start_line": 13,
+            "end_line": 13,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "mergeStoredConfig"
@@ -1653,10 +1733,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "parseStoredConfig('{\"glyphSet\":\"custom\",\"customGlyphSet\":null}')",
-            "start_line": 21,
-            "end_line": 21,
+            "start_line": 22,
+            "end_line": 22,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "parseStoredConfig"
@@ -1668,10 +1748,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "mergeStoredConfig({ customGlyphSet: 'ΔΨ' })",
-            "start_line": 23,
-            "end_line": 23,
+            "start_line": 24,
+            "end_line": 24,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "mergeStoredConfig"
@@ -1683,10 +1763,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "mergeStoredConfig({ glyphColor: null, leaderColor: 12, backgroundColor: '' })",
-            "start_line": 27,
-            "end_line": 27,
+            "start_line": 28,
+            "end_line": 28,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "mergeStoredConfig"
@@ -1698,10 +1778,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "parseStoredConfig('[]')",
-            "start_line": 34,
-            "end_line": 34,
+            "start_line": 35,
+            "end_line": 35,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "parseStoredConfig"
@@ -1713,10 +1793,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "parseStoredConfig('not-json')",
-            "start_line": 35,
-            "end_line": 35,
+            "start_line": 36,
+            "end_line": 36,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "parseStoredConfig"
@@ -1728,10 +1808,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "parseStoredConfig(null)",
-            "start_line": 36,
-            "end_line": 36,
+            "start_line": 37,
+            "end_line": 37,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "parseStoredConfig"
@@ -1743,10 +1823,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "applyPreset(factoryConfig(), 'Caída Binaria')",
-            "start_line": 40,
-            "end_line": 40,
+            "start_line": 41,
+            "end_line": 41,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "applyPreset"
@@ -1758,10 +1838,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "factoryConfig()",
-            "start_line": 40,
-            "end_line": 40,
+            "start_line": 41,
+            "end_line": 41,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "factoryConfig"
@@ -1773,10 +1853,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "factoryConfig()",
-            "start_line": 46,
-            "end_line": 46,
+            "start_line": 47,
+            "end_line": 47,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "factoryConfig"
@@ -1788,10 +1868,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "applyPreset(start, 'no-existe')",
-            "start_line": 47,
-            "end_line": 47,
+            "start_line": 48,
+            "end_line": 48,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "applyPreset"
@@ -1803,10 +1883,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "factoryConfig()",
-            "start_line": 53,
-            "end_line": 53,
+            "start_line": 54,
+            "end_line": 54,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "factoryConfig"
@@ -1818,10 +1898,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "normalizeRange(8, 2)",
-            "start_line": 62,
-            "end_line": 62,
+            "start_line": 63,
+            "end_line": 63,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "normalizeRange"
@@ -1833,10 +1913,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "normalizeRange(3, 3)",
-            "start_line": 63,
-            "end_line": 63,
+            "start_line": 64,
+            "end_line": 64,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "normalizeRange"
@@ -1848,10 +1928,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "mergeStoredConfig({ minSpeed: 9, maxSpeed: 3, minTrailLength: 40, maxTrailLength: 8 })",
-            "start_line": 67,
-            "end_line": 67,
+            "start_line": 68,
+            "end_line": 68,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "mergeStoredConfig"
@@ -2051,6 +2131,21 @@
             "resolved_target": "config/configState.ts",
             "target_symbol": "serializeConfig"
           }
+        },
+        {
+          "test": "utils/random.test.ts",
+          "type": "calls",
+          "location": {
+            "path": "utils/random.test.ts",
+            "symbol": "factoryConfig()",
+            "start_line": 7,
+            "end_line": 7,
+            "extractor": "tree-sitter-typescript",
+            "source_digest": "cbe681cb524b6f208a56758d4422399ccddd246e5a69a03df4cb8a4c2ac4fd0c",
+            "kind": "call",
+            "resolved_target": "config/configState.ts",
+            "target_symbol": "factoryConfig"
+          }
         }
       ],
       "analysis": "analyzed",
@@ -2172,6 +2267,16 @@
         },
         {
           "id": "utils/persist.ts",
+          "type": "imports",
+          "type_only": false
+        },
+        {
+          "id": "utils/random.test.ts",
+          "type": "calls",
+          "type_only": false
+        },
+        {
+          "id": "utils/random.test.ts",
           "type": "imports",
           "type_only": false
         },
@@ -2343,7 +2448,7 @@
             "start_line": 5,
             "end_line": 5,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "import",
             "resolved_target": "config/controls.ts"
           }
@@ -2402,6 +2507,11 @@
         },
         {
           "id": "config/configState.test.ts",
+          "type": "imports",
+          "type_only": false
+        },
+        {
+          "id": "utils/random.ts",
           "type": "imports",
           "type_only": false
         }
@@ -2581,7 +2691,7 @@
             "start_line": 4,
             "end_line": 4,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "import",
             "resolved_target": "config/initialConfig.ts"
           }
@@ -2644,11 +2754,30 @@
       "type": "module",
       "boundary": "Repository",
       "entrypoints": [],
-      "tests": [],
-      "test_evidence": [],
+      "tests": [
+        "config/configState.test.ts"
+      ],
+      "test_evidence": [
+        {
+          "test": "config/configState.test.ts",
+          "type": "imports",
+          "location": {
+            "path": "config/configState.test.ts",
+            "symbol": "import { presetGroups, presets } from './presets.ts';",
+            "start_line": 6,
+            "end_line": 6,
+            "extractor": "tree-sitter-typescript",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
+            "kind": "import",
+            "resolved_target": "config/presets.ts"
+          }
+        }
+      ],
       "analysis": "analyzed",
       "is_test": false,
       "symbols": [
+        "preset",
+        "presetGroups",
         "presets"
       ],
       "evidence": {
@@ -2656,11 +2785,29 @@
         "locations": [
           {
             "path": "config/presets.ts",
+            "symbol": "preset",
+            "start_line": 6,
+            "end_line": 6,
+            "extractor": "tree-sitter-typescript",
+            "source_digest": "f49715440245742ffd8386053b5e855bb622faeea76f4bd19cdb566d18f5fd0c",
+            "kind": "definition"
+          },
+          {
+            "path": "config/presets.ts",
             "symbol": "presets",
             "start_line": 8,
             "end_line": 8,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "f7c33c4a7c6fc33fe682d93d6632f7c886e826226e1c55eed219a4141ff80c0b",
+            "source_digest": "f49715440245742ffd8386053b5e855bb622faeea76f4bd19cdb566d18f5fd0c",
+            "kind": "definition"
+          },
+          {
+            "path": "config/presets.ts",
+            "symbol": "presetGroups",
+            "start_line": 505,
+            "end_line": 505,
+            "extractor": "tree-sitter-typescript",
+            "source_digest": "f49715440245742ffd8386053b5e855bb622faeea76f4bd19cdb566d18f5fd0c",
             "kind": "definition"
           }
         ]
@@ -2668,6 +2815,11 @@
       "callers": [
         {
           "id": "components/ControlPanel.tsx",
+          "type": "imports",
+          "type_only": false
+        },
+        {
+          "id": "config/configState.test.ts",
           "type": "imports",
           "type_only": false
         },
@@ -3011,7 +3163,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "import",
             "resolved_target": "external:javascript:node:assert"
           }
@@ -3109,7 +3261,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "6551fe3c87950a5eae1d0ead5f747edf4546826de12cfe9b3baed15c0bc686c7",
+            "source_digest": "cbe681cb524b6f208a56758d4422399ccddd246e5a69a03df4cb8a4c2ac4fd0c",
             "kind": "import",
             "resolved_target": "external:javascript:node:assert"
           }
@@ -3127,7 +3279,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "import",
             "resolved_target": "external:javascript:node:assert"
           },
@@ -3656,7 +3808,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "import",
             "resolved_target": "external:javascript:node:test"
           }
@@ -3754,7 +3906,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "6551fe3c87950a5eae1d0ead5f747edf4546826de12cfe9b3baed15c0bc686c7",
+            "source_digest": "cbe681cb524b6f208a56758d4422399ccddd246e5a69a03df4cb8a4c2ac4fd0c",
             "kind": "import",
             "resolved_target": "external:javascript:node:test"
           }
@@ -3765,10 +3917,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "test('ARC-01 empty object yields the initial config', () => {\n  assert.deepEqual(mergeStoredConfig({}), initialConfig);\n})",
-            "start_line": 7,
-            "end_line": 9,
+            "start_line": 8,
+            "end_line": 10,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -3780,10 +3932,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "test('ARC-01 invalid numeric fields fall back to initial values', () => {\n  const merged = mergeStoredConfig({ numColumns: 0, fontSize: '12', perspective: -1, minSpeed: -2, maxSpeed: 0 });\n  assert.equal(merged.numColumns, initialConfig.numColumns);\n  assert.equal(merged.fontSize, initialConfig.fontSize);\n  assert.equal(merged.perspective, initialConfig.perspective);\n  assert.equal(merged.minSpeed, initialConfig.minSpeed);\n  assert.ok(merged.maxSpeed > 0);\n})",
-            "start_line": 11,
-            "end_line": 18,
+            "start_line": 12,
+            "end_line": 19,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -3795,10 +3947,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "test('ARC-01 invalid stored custom glyph text becomes an empty charset', () => {\n  const restored = parseStoredConfig('{\"glyphSet\":\"custom\",\"customGlyphSet\":null}');\n  assert.equal(restored.customGlyphSet, '');\n  assert.equal(mergeStoredConfig({ customGlyphSet: 'ΔΨ' }).customGlyphSet, 'ΔΨ');\n})",
-            "start_line": 20,
-            "end_line": 24,
+            "start_line": 21,
+            "end_line": 25,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -3810,10 +3962,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "test('ARC-01 missing colors fall back to initial values', () => {\n  const merged = mergeStoredConfig({ glyphColor: null, leaderColor: 12, backgroundColor: '' });\n  assert.equal(merged.glyphColor, initialConfig.glyphColor);\n  assert.equal(merged.leaderColor, initialConfig.leaderColor);\n  assert.equal(merged.backgroundColor, initialConfig.backgroundColor);\n})",
-            "start_line": 26,
-            "end_line": 31,
+            "start_line": 27,
+            "end_line": 32,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -3825,10 +3977,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "test('ARC-01 non-object JSON uses the initial config', () => {\n  assert.deepEqual(parseStoredConfig('[]'), initialConfig);\n  assert.deepEqual(parseStoredConfig('not-json'), initialConfig);\n  assert.deepEqual(parseStoredConfig(null), initialConfig);\n})",
-            "start_line": 33,
-            "end_line": 37,
+            "start_line": 34,
+            "end_line": 38,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -3840,10 +3992,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "test('ARC-08 known preset merges and records its name', () => {\n  const next = applyPreset(factoryConfig(), 'Caída Binaria');\n  assert.equal(next.preset, 'Caída Binaria');\n  assert.equal(next.glyphSet, 'binary');\n})",
-            "start_line": 39,
-            "end_line": 43,
+            "start_line": 40,
+            "end_line": 44,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -3855,10 +4007,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "test('ARC-08 unknown preset leaves the input unchanged', () => {\n  const start = factoryConfig();\n  const next = applyPreset(start, 'no-existe');\n  assert.equal(next, start);\n  assert.equal(start.glyphSet, initialConfig.glyphSet);\n})",
-            "start_line": 45,
-            "end_line": 50,
+            "start_line": 46,
+            "end_line": 51,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -3870,10 +4022,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "test('ARC-08 factoryConfig clones initialConfig', () => {\n  const clone = factoryConfig();\n  assert.deepEqual(clone, initialConfig);\n  assert.notEqual(clone, initialConfig);\n  const columns = initialConfig.numColumns;\n  clone.numColumns = columns + 1;\n  assert.equal(initialConfig.numColumns, columns);\n})",
-            "start_line": 52,
-            "end_line": 59,
+            "start_line": 53,
+            "end_line": 60,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -3885,10 +4037,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "test('UX-10 normalizeRange keeps both values in order', () => {\n  assert.deepEqual(normalizeRange(8, 2), [2, 8]);\n  assert.deepEqual(normalizeRange(3, 3), [3, 3]);\n})",
-            "start_line": 61,
-            "end_line": 64,
+            "start_line": 62,
+            "end_line": 65,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -3900,10 +4052,10 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "test('UX-10 inverted stored speeds are ordered', () => {\n  const merged = mergeStoredConfig({ minSpeed: 9, maxSpeed: 3, minTrailLength: 40, maxTrailLength: 8 });\n  assert.ok(merged.minSpeed <= merged.maxSpeed);\n  assert.ok(merged.minTrailLength <= merged.maxTrailLength);\n})",
-            "start_line": 66,
-            "end_line": 70,
+            "start_line": 67,
+            "end_line": 71,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -3915,10 +4067,25 @@
           "location": {
             "path": "config/configState.test.ts",
             "symbol": "test('control panel sections bind real config keys and ranges contain their defaults', () => {\n  for (const section of sections) {\n    for (const control of section.controls) {\n      if (!('key' in control)) continue;\n      assert.ok(control.key in initialConfig, `${section.id}: unknown key ${control.key}`);\n      if (control.kind !== 'range') continue;\n      const value = initialConfig[control.key];\n      assert.ok(value >= control.min && value <= control.max, `${control.key} default ${value} is outside its slider`);\n    }\n  }\n})",
-            "start_line": 72,
-            "end_line": 82,
+            "start_line": 73,
+            "end_line": 83,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
+            "kind": "call",
+            "resolved_target": "external:javascript:node:test",
+            "target_symbol": "default"
+          }
+        },
+        {
+          "test": "config/configState.test.ts",
+          "type": "calls",
+          "location": {
+            "path": "config/configState.test.ts",
+            "symbol": "test('every preset is grouped and keeps its values inside the panel ranges', () => {\n  const grouped = new Set(Object.values(presetGroups).flat());\n  for (const name of grouped) assert.ok(name in presets, `group lists unknown preset ${name}`);\n  const ranges = sections.flatMap((section) => section.controls).filter((control) => control.kind === 'range');\n  for (const [name, preset] of Object.entries(presets)) {\n    assert.ok(grouped.has(name), `${name} is not in any group`);\n    for (const control of ranges) {\n      const value = preset[control.key];\n      assert.ok(value >= control.min && value <= control.max, `${name}: ${control.key} ${value}`);\n    }\n  }\n})",
+            "start_line": 85,
+            "end_line": 96,
+            "extractor": "tree-sitter-typescript",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -4259,11 +4426,11 @@
           "type": "calls",
           "location": {
             "path": "utils/random.test.ts",
-            "symbol": "test('ARC-04 random configs keep ordered positive ranges', () => {\n  for (let i = 0; i < 100; i += 1) {\n    const config = generateRandomConfig();\n    assert.ok(config.minSpeed <= config.maxSpeed, `speed ${config.minSpeed} ${config.maxSpeed}`);\n    assert.ok(config.minTrailLength <= config.maxTrailLength);\n    assert.ok(config.minZ <= config.maxZ);\n    assert.ok(config.numColumns > 0);\n    assert.ok(config.fontSize > 0);\n  }\n})",
-            "start_line": 5,
-            "end_line": 14,
+            "symbol": "test('ARC-04 mutations change only a few controls and keep ordered positive ranges', () => {\n  let config = factoryConfig();\n  for (let i = 0; i < 200; i += 1) {\n    const { config: next, changed } = mutateConfig(config);\n    const differing = (Object.keys(next) as (keyof typeof next)[]).filter((key) => next[key] !== config[key]);\n    assert.ok(changed.length >= 3 && changed.length <= 5, `changed ${changed.length}`);\n    // Re-ordering a min/max pair can touch its partner, so allow one extra key per pair.\n    assert.ok(differing.length <= changed.length + 3, `${differing.join(', ')} for ${changed.join(', ')}`);\n    assert.ok(next.minSpeed <= next.maxSpeed, `speed ${next.minSpeed} ${next.maxSpeed}`);\n    assert.ok(next.minTrailLength <= next.maxTrailLength);\n    assert.ok(next.minZ <= next.maxZ);\n    assert.ok(next.numColumns > 0);\n    assert.ok(next.fontSize > 0);\n    assert.equal(next.revealSource, config.revealSource, 'never asks for the camera');\n    assert.equal(next.audioReactive, config.audioReactive, 'never asks for the microphone');\n    config = next;\n  }\n})",
+            "start_line": 6,
+            "end_line": 23,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "6551fe3c87950a5eae1d0ead5f747edf4546826de12cfe9b3baed15c0bc686c7",
+            "source_digest": "cbe681cb524b6f208a56758d4422399ccddd246e5a69a03df4cb8a4c2ac4fd0c",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -4282,7 +4449,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "import",
             "resolved_target": "external:javascript:node:test"
           },
@@ -4630,7 +4797,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "import",
             "resolved_target": "external:javascript:react"
           },
@@ -4640,7 +4807,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "8c61a0b1d9035e0a8228127dc1893b0b0e0898afe04cc3fcd706c038ea1fbeab",
+            "source_digest": "951cc879b948ae7531519f6d6043b85fae3a0f91b2a1350a58a306a3194ff966",
             "kind": "import",
             "resolved_target": "external:javascript:react"
           },
@@ -6174,13 +6341,23 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "6551fe3c87950a5eae1d0ead5f747edf4546826de12cfe9b3baed15c0bc686c7",
+            "source_digest": "cbe681cb524b6f208a56758d4422399ccddd246e5a69a03df4cb8a4c2ac4fd0c",
             "kind": "file"
           }
         ]
       },
       "callers": [],
       "callees": [
+        {
+          "id": "config/configState.ts",
+          "type": "calls",
+          "type_only": false
+        },
+        {
+          "id": "config/configState.ts",
+          "type": "imports",
+          "type_only": false
+        },
         {
           "id": "external:javascript:node:assert",
           "type": "imports",
@@ -6225,11 +6402,11 @@
           "type": "imports",
           "location": {
             "path": "utils/random.test.ts",
-            "symbol": "import { generateRandomConfig } from './random.ts';",
-            "start_line": 3,
-            "end_line": 3,
+            "symbol": "import { mutateConfig } from './random.ts';",
+            "start_line": 4,
+            "end_line": 4,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "6551fe3c87950a5eae1d0ead5f747edf4546826de12cfe9b3baed15c0bc686c7",
+            "source_digest": "cbe681cb524b6f208a56758d4422399ccddd246e5a69a03df4cb8a4c2ac4fd0c",
             "kind": "import",
             "resolved_target": "utils/random.ts"
           }
@@ -6239,66 +6416,68 @@
           "type": "calls",
           "location": {
             "path": "utils/random.test.ts",
-            "symbol": "generateRandomConfig()",
-            "start_line": 7,
-            "end_line": 7,
+            "symbol": "mutateConfig(config)",
+            "start_line": 9,
+            "end_line": 9,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "6551fe3c87950a5eae1d0ead5f747edf4546826de12cfe9b3baed15c0bc686c7",
+            "source_digest": "cbe681cb524b6f208a56758d4422399ccddd246e5a69a03df4cb8a4c2ac4fd0c",
             "kind": "call",
             "resolved_target": "utils/random.ts",
-            "target_symbol": "generateRandomConfig"
+            "target_symbol": "mutateConfig"
           }
         }
       ],
       "analysis": "analyzed",
       "is_test": false,
       "symbols": [
-        "generateRandomConfig",
-        "getRandomElement",
-        "getRandomFloat",
-        "getRandomHexColor",
-        "getRandomInt"
+        "Random",
+        "SKIPPED",
+        "hslToHex",
+        "labelOf",
+        "mutate",
+        "mutateConfig",
+        "pick"
       ],
       "evidence": {
         "status": "verified",
         "locations": [
           {
             "path": "utils/random.ts",
-            "symbol": "getRandomElement",
-            "start_line": 19,
-            "end_line": 19,
+            "symbol": "Random",
+            "start_line": 6,
+            "end_line": 6,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "13b10a241262d5991bcb6548b010c4e1b81b1a2e44a105aeec6329ada038bb0f",
+            "source_digest": "a1aafa9665a0547526f98939fb6b93df247cc16e4e90229e1edc2a4366e30aff",
             "kind": "definition"
           },
           {
             "path": "utils/random.ts",
-            "symbol": "getRandomFloat",
-            "start_line": 27,
-            "end_line": 27,
+            "symbol": "SKIPPED",
+            "start_line": 9,
+            "end_line": 9,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "13b10a241262d5991bcb6548b010c4e1b81b1a2e44a105aeec6329ada038bb0f",
+            "source_digest": "a1aafa9665a0547526f98939fb6b93df247cc16e4e90229e1edc2a4366e30aff",
             "kind": "definition"
           },
           {
             "path": "utils/random.ts",
-            "symbol": "getRandomInt",
-            "start_line": 35,
-            "end_line": 35,
+            "symbol": "pick",
+            "start_line": 11,
+            "end_line": 11,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "13b10a241262d5991bcb6548b010c4e1b81b1a2e44a105aeec6329ada038bb0f",
+            "source_digest": "a1aafa9665a0547526f98939fb6b93df247cc16e4e90229e1edc2a4366e30aff",
             "kind": "definition"
           }
         ]
       },
       "callers": [
         {
-          "id": "App.tsx",
+          "id": "components/ControlPanel.tsx",
           "type": "calls",
           "type_only": false
         },
         {
-          "id": "App.tsx",
+          "id": "components/ControlPanel.tsx",
           "type": "imports",
           "type_only": false
         },
@@ -6326,6 +6505,11 @@
         },
         {
           "id": "config/constants.ts",
+          "type": "imports",
+          "type_only": false
+        },
+        {
+          "id": "config/controls.ts",
           "type": "imports",
           "type_only": false
         },
@@ -6471,10 +6655,10 @@
           {
             "path": "App.tsx",
             "symbol": "import ControlPanel from './components/ControlPanel';",
-            "start_line": 10,
-            "end_line": 10,
+            "start_line": 9,
+            "end_line": 9,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "import",
             "resolved_target": "components/ControlPanel.tsx"
           }
@@ -6497,7 +6681,7 @@
             "start_line": 3,
             "end_line": 3,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "import",
             "resolved_target": "components/ParticleCanvas.tsx"
           }
@@ -6517,10 +6701,10 @@
           {
             "path": "App.tsx",
             "symbol": "applyPreset(prev, presetName)",
-            "start_line": 136,
-            "end_line": 136,
+            "start_line": 135,
+            "end_line": 135,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "applyPreset"
@@ -6544,7 +6728,7 @@
             "start_line": 5,
             "end_line": 5,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "import",
             "resolved_target": "config/configState.ts"
           }
@@ -6567,7 +6751,7 @@
             "start_line": 4,
             "end_line": 4,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "import",
             "resolved_target": "engine/matrixRain.js"
           }
@@ -6580,17 +6764,17 @@
       "to": "external:javascript:react",
       "type": "calls",
       "type_only": false,
-      "evidence_count": 23,
+      "evidence_count": 22,
       "evidence": {
         "status": "verified",
         "locations": [
           {
             "path": "App.tsx",
             "symbol": "useState(0)",
-            "start_line": 40,
-            "end_line": 40,
+            "start_line": 39,
+            "end_line": 39,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "call",
             "resolved_target": "external:javascript:react",
             "target_symbol": "useState"
@@ -6598,10 +6782,10 @@
           {
             "path": "App.tsx",
             "symbol": "useEffect(() => {\n    let frames = 0;\n    let start = performance.now();\n    let raf = 0;\n    const tick = (now: number) => {\n      frames += 1;\n      if (now - start >= 500) {\n        setFps(Math.round((frames * 1000) / (now - start)));\n        frames = 0;\n        start = now;\n      }\n      raf = requestAnimationFrame(tick);\n    };\n    raf = requestAnimationFrame(tick);\n    return () => cancelAnimationFrame(raf);\n  }, [])",
-            "start_line": 41,
-            "end_line": 56,
+            "start_line": 40,
+            "end_line": 55,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "call",
             "resolved_target": "external:javascript:react",
             "target_symbol": "useEffect"
@@ -6609,10 +6793,10 @@
           {
             "path": "App.tsx",
             "symbol": "useState<string | null>(null)",
-            "start_line": 64,
-            "end_line": 64,
+            "start_line": 63,
+            "end_line": 63,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "call",
             "resolved_target": "external:javascript:react",
             "target_symbol": "useState"
@@ -6636,7 +6820,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "import",
             "resolved_target": "external:javascript:react"
           }
@@ -6659,7 +6843,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "import",
             "resolved_target": "types.ts"
           }
@@ -6679,10 +6863,10 @@
           {
             "path": "App.tsx",
             "symbol": "readUiVisible(window.localStorage.getItem(UI_VISIBLE_STORAGE_KEY))",
-            "start_line": 77,
-            "end_line": 77,
+            "start_line": 76,
+            "end_line": 76,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "call",
             "resolved_target": "utils/editorUx.ts",
             "target_symbol": "readUiVisible"
@@ -6690,10 +6874,10 @@
           {
             "path": "App.tsx",
             "symbol": "isPanelToggleKey(event)",
-            "start_line": 107,
-            "end_line": 107,
+            "start_line": 106,
+            "end_line": 106,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "call",
             "resolved_target": "utils/editorUx.ts",
             "target_symbol": "isPanelToggleKey"
@@ -6701,10 +6885,10 @@
           {
             "path": "App.tsx",
             "symbol": "customGlyphNotice(config)",
-            "start_line": 183,
-            "end_line": 183,
+            "start_line": 178,
+            "end_line": 178,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "call",
             "resolved_target": "utils/editorUx.ts",
             "target_symbol": "customGlyphNotice"
@@ -6725,10 +6909,10 @@
           {
             "path": "App.tsx",
             "symbol": "import { customGlyphNotice, isPanelToggleKey, persistErrorMessage, readUiVisible } from './utils/editorUx';",
-            "start_line": 11,
-            "end_line": 11,
+            "start_line": 10,
+            "end_line": 10,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "import",
             "resolved_target": "utils/editorUx.ts"
           }
@@ -6748,10 +6932,10 @@
           {
             "path": "App.tsx",
             "symbol": "decideExportDelivery(await copyText(html), Date.now())",
-            "start_line": 162,
-            "end_line": 162,
+            "start_line": 157,
+            "end_line": 157,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "call",
             "resolved_target": "utils/exportDelivery.ts",
             "target_symbol": "decideExportDelivery"
@@ -6759,10 +6943,10 @@
           {
             "path": "App.tsx",
             "symbol": "downloadExportFilename(Date.now())",
-            "start_line": 180,
-            "end_line": 180,
+            "start_line": 175,
+            "end_line": 175,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "call",
             "resolved_target": "utils/exportDelivery.ts",
             "target_symbol": "downloadExportFilename"
@@ -6783,10 +6967,10 @@
           {
             "path": "App.tsx",
             "symbol": "import { decideExportDelivery, downloadExportFilename } from './utils/exportDelivery';",
-            "start_line": 8,
-            "end_line": 8,
+            "start_line": 7,
+            "end_line": 7,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "import",
             "resolved_target": "utils/exportDelivery.ts"
           }
@@ -6806,10 +6990,10 @@
           {
             "path": "App.tsx",
             "symbol": "generateStandaloneHtml(config, engineSource)",
-            "start_line": 161,
-            "end_line": 161,
+            "start_line": 156,
+            "end_line": 156,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "call",
             "resolved_target": "utils/exportHtml.ts",
             "target_symbol": "generateStandaloneHtml"
@@ -6817,10 +7001,10 @@
           {
             "path": "App.tsx",
             "symbol": "generateStandaloneHtml(config, engineSource)",
-            "start_line": 179,
-            "end_line": 179,
+            "start_line": 174,
+            "end_line": 174,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "call",
             "resolved_target": "utils/exportHtml.ts",
             "target_symbol": "generateStandaloneHtml"
@@ -6844,7 +7028,7 @@
             "start_line": 6,
             "end_line": 6,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "import",
             "resolved_target": "utils/exportHtml.ts"
           }
@@ -6864,10 +7048,10 @@
           {
             "path": "App.tsx",
             "symbol": "createPersistScheduler(window.localStorage, {\n        onResult: (result) => {\n          setPersistError(result.ok ? null : persistErrorMessage);\n        },\n      })",
-            "start_line": 68,
-            "end_line": 72,
+            "start_line": 67,
+            "end_line": 71,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "call",
             "resolved_target": "utils/persist.ts",
             "target_symbol": "createPersistScheduler"
@@ -6875,10 +7059,10 @@
           {
             "path": "App.tsx",
             "symbol": "loadConfig(window.localStorage)",
-            "start_line": 75,
-            "end_line": 75,
+            "start_line": 74,
+            "end_line": 74,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "call",
             "resolved_target": "utils/persist.ts",
             "target_symbol": "loadConfig"
@@ -6899,59 +7083,12 @@
           {
             "path": "App.tsx",
             "symbol": "import { createPersistScheduler, loadConfig } from './utils/persist';",
-            "start_line": 9,
-            "end_line": 9,
+            "start_line": 8,
+            "end_line": 8,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "import",
             "resolved_target": "utils/persist.ts"
-          }
-        ]
-      }
-    },
-    {
-      "id": "edge:f5bc5ec361774eb095d0",
-      "from": "App.tsx",
-      "to": "utils/random.ts",
-      "type": "calls",
-      "type_only": false,
-      "evidence_count": 1,
-      "evidence": {
-        "status": "verified",
-        "locations": [
-          {
-            "path": "App.tsx",
-            "symbol": "generateRandomConfig()",
-            "start_line": 140,
-            "end_line": 140,
-            "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
-            "kind": "call",
-            "resolved_target": "utils/random.ts",
-            "target_symbol": "generateRandomConfig"
-          }
-        ]
-      }
-    },
-    {
-      "id": "edge:259af1fb4954faf44d0a",
-      "from": "App.tsx",
-      "to": "utils/random.ts",
-      "type": "imports",
-      "type_only": false,
-      "evidence_count": 1,
-      "evidence": {
-        "status": "verified",
-        "locations": [
-          {
-            "path": "App.tsx",
-            "symbol": "import { generateRandomConfig } from './utils/random';",
-            "start_line": 7,
-            "end_line": 7,
-            "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
-            "kind": "import",
-            "resolved_target": "utils/random.ts"
           }
         ]
       }
@@ -6969,10 +7106,10 @@
           {
             "path": "App.tsx",
             "symbol": "readRevealImage(file)",
-            "start_line": 150,
-            "end_line": 150,
+            "start_line": 145,
+            "end_line": 145,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "call",
             "resolved_target": "utils/revealImage.ts",
             "target_symbol": "readRevealImage"
@@ -6993,10 +7130,10 @@
           {
             "path": "App.tsx",
             "symbol": "import { readRevealImage } from './utils/revealImage';",
-            "start_line": 12,
-            "end_line": 12,
+            "start_line": 11,
+            "end_line": 11,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "f3d5a9d52628bd2cb24e1326f6c2a717c3ddd9d232a0b9ed938eb290cda2c2b7",
+            "source_digest": "d1d3ac16ee2cafe898f6c432bfcb058a836acd294cd695a206b3d48db9fb06f3",
             "kind": "import",
             "resolved_target": "utils/revealImage.ts"
           }
@@ -7016,10 +7153,10 @@
           {
             "path": "components/ControlPanel.tsx",
             "symbol": "factoryConfig()",
-            "start_line": 384,
-            "end_line": 384,
+            "start_line": 408,
+            "end_line": 408,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "8c61a0b1d9035e0a8228127dc1893b0b0e0898afe04cc3fcd706c038ea1fbeab",
+            "source_digest": "951cc879b948ae7531519f6d6043b85fae3a0f91b2a1350a58a306a3194ff966",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "factoryConfig"
@@ -7043,7 +7180,7 @@
             "start_line": 3,
             "end_line": 3,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "8c61a0b1d9035e0a8228127dc1893b0b0e0898afe04cc3fcd706c038ea1fbeab",
+            "source_digest": "951cc879b948ae7531519f6d6043b85fae3a0f91b2a1350a58a306a3194ff966",
             "kind": "import",
             "resolved_target": "config/configState.ts"
           }
@@ -7066,7 +7203,7 @@
             "start_line": 4,
             "end_line": 4,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "8c61a0b1d9035e0a8228127dc1893b0b0e0898afe04cc3fcd706c038ea1fbeab",
+            "source_digest": "951cc879b948ae7531519f6d6043b85fae3a0f91b2a1350a58a306a3194ff966",
             "kind": "import",
             "resolved_target": "config/constants.ts"
           }
@@ -7089,7 +7226,7 @@
             "start_line": 5,
             "end_line": 5,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "8c61a0b1d9035e0a8228127dc1893b0b0e0898afe04cc3fcd706c038ea1fbeab",
+            "source_digest": "951cc879b948ae7531519f6d6043b85fae3a0f91b2a1350a58a306a3194ff966",
             "kind": "import",
             "resolved_target": "config/controls.ts"
           }
@@ -7112,7 +7249,7 @@
             "start_line": 6,
             "end_line": 6,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "8c61a0b1d9035e0a8228127dc1893b0b0e0898afe04cc3fcd706c038ea1fbeab",
+            "source_digest": "951cc879b948ae7531519f6d6043b85fae3a0f91b2a1350a58a306a3194ff966",
             "kind": "import",
             "resolved_target": "config/initialConfig.ts"
           }
@@ -7131,11 +7268,11 @@
         "locations": [
           {
             "path": "components/ControlPanel.tsx",
-            "symbol": "import { presets } from '../config/presets';",
+            "symbol": "import { presetGroups, presets } from '../config/presets';",
             "start_line": 7,
             "end_line": 7,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "8c61a0b1d9035e0a8228127dc1893b0b0e0898afe04cc3fcd706c038ea1fbeab",
+            "source_digest": "951cc879b948ae7531519f6d6043b85fae3a0f91b2a1350a58a306a3194ff966",
             "kind": "import",
             "resolved_target": "config/presets.ts"
           }
@@ -7148,7 +7285,7 @@
       "to": "external:javascript:react",
       "type": "calls",
       "type_only": false,
-      "evidence_count": 4,
+      "evidence_count": 6,
       "evidence": {
         "status": "verified",
         "locations": [
@@ -7158,7 +7295,7 @@
             "start_line": 25,
             "end_line": 25,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "8c61a0b1d9035e0a8228127dc1893b0b0e0898afe04cc3fcd706c038ea1fbeab",
+            "source_digest": "951cc879b948ae7531519f6d6043b85fae3a0f91b2a1350a58a306a3194ff966",
             "kind": "call",
             "resolved_target": "external:javascript:react",
             "target_symbol": "useState"
@@ -7169,7 +7306,7 @@
             "start_line": 26,
             "end_line": 45,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "8c61a0b1d9035e0a8228127dc1893b0b0e0898afe04cc3fcd706c038ea1fbeab",
+            "source_digest": "951cc879b948ae7531519f6d6043b85fae3a0f91b2a1350a58a306a3194ff966",
             "kind": "call",
             "resolved_target": "external:javascript:react",
             "target_symbol": "useEffect"
@@ -7180,7 +7317,7 @@
             "start_line": 76,
             "end_line": 76,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "8c61a0b1d9035e0a8228127dc1893b0b0e0898afe04cc3fcd706c038ea1fbeab",
+            "source_digest": "951cc879b948ae7531519f6d6043b85fae3a0f91b2a1350a58a306a3194ff966",
             "kind": "call",
             "resolved_target": "external:javascript:react",
             "target_symbol": "useId"
@@ -7204,7 +7341,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "8c61a0b1d9035e0a8228127dc1893b0b0e0898afe04cc3fcd706c038ea1fbeab",
+            "source_digest": "951cc879b948ae7531519f6d6043b85fae3a0f91b2a1350a58a306a3194ff966",
             "kind": "import",
             "resolved_target": "external:javascript:react"
           }
@@ -7227,9 +7364,56 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-tsx",
-            "source_digest": "8c61a0b1d9035e0a8228127dc1893b0b0e0898afe04cc3fcd706c038ea1fbeab",
+            "source_digest": "951cc879b948ae7531519f6d6043b85fae3a0f91b2a1350a58a306a3194ff966",
             "kind": "import",
             "resolved_target": "types.ts"
+          }
+        ]
+      }
+    },
+    {
+      "id": "edge:997ab9f5f990acd47951",
+      "from": "components/ControlPanel.tsx",
+      "to": "utils/random.ts",
+      "type": "calls",
+      "type_only": false,
+      "evidence_count": 1,
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "components/ControlPanel.tsx",
+            "symbol": "mutateConfig(config)",
+            "start_line": 308,
+            "end_line": 308,
+            "extractor": "tree-sitter-tsx",
+            "source_digest": "951cc879b948ae7531519f6d6043b85fae3a0f91b2a1350a58a306a3194ff966",
+            "kind": "call",
+            "resolved_target": "utils/random.ts",
+            "target_symbol": "mutateConfig"
+          }
+        ]
+      }
+    },
+    {
+      "id": "edge:9bbaf3f034d1dfe65ed0",
+      "from": "components/ControlPanel.tsx",
+      "to": "utils/random.ts",
+      "type": "imports",
+      "type_only": false,
+      "evidence_count": 1,
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "components/ControlPanel.tsx",
+            "symbol": "import { mutateConfig } from '../utils/random';",
+            "start_line": 8,
+            "end_line": 8,
+            "extractor": "tree-sitter-tsx",
+            "source_digest": "951cc879b948ae7531519f6d6043b85fae3a0f91b2a1350a58a306a3194ff966",
+            "kind": "import",
+            "resolved_target": "utils/random.ts"
           }
         ]
       }
@@ -7432,10 +7616,10 @@
           {
             "path": "config/configState.test.ts",
             "symbol": "mergeStoredConfig({})",
-            "start_line": 8,
-            "end_line": 8,
+            "start_line": 9,
+            "end_line": 9,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "mergeStoredConfig"
@@ -7443,10 +7627,10 @@
           {
             "path": "config/configState.test.ts",
             "symbol": "mergeStoredConfig({ numColumns: 0, fontSize: '12', perspective: -1, minSpeed: -2, maxSpeed: 0 })",
-            "start_line": 12,
-            "end_line": 12,
+            "start_line": 13,
+            "end_line": 13,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "mergeStoredConfig"
@@ -7454,10 +7638,10 @@
           {
             "path": "config/configState.test.ts",
             "symbol": "parseStoredConfig('{\"glyphSet\":\"custom\",\"customGlyphSet\":null}')",
-            "start_line": 21,
-            "end_line": 21,
+            "start_line": 22,
+            "end_line": 22,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "parseStoredConfig"
@@ -7481,7 +7665,7 @@
             "start_line": 3,
             "end_line": 3,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "import",
             "resolved_target": "config/configState.ts"
           }
@@ -7504,7 +7688,7 @@
             "start_line": 5,
             "end_line": 5,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "import",
             "resolved_target": "config/controls.ts"
           }
@@ -7527,9 +7711,32 @@
             "start_line": 4,
             "end_line": 4,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "import",
             "resolved_target": "config/initialConfig.ts"
+          }
+        ]
+      }
+    },
+    {
+      "id": "edge:55c1ef8107b762cd9475",
+      "from": "config/configState.test.ts",
+      "to": "config/presets.ts",
+      "type": "imports",
+      "type_only": false,
+      "evidence_count": 1,
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "config/configState.test.ts",
+            "symbol": "import { presetGroups, presets } from './presets.ts';",
+            "start_line": 6,
+            "end_line": 6,
+            "extractor": "tree-sitter-typescript",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
+            "kind": "import",
+            "resolved_target": "config/presets.ts"
           }
         ]
       }
@@ -7550,7 +7757,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "import",
             "resolved_target": "external:javascript:node:assert"
           }
@@ -7563,17 +7770,17 @@
       "to": "external:javascript:node:test",
       "type": "calls",
       "type_only": false,
-      "evidence_count": 11,
+      "evidence_count": 12,
       "evidence": {
         "status": "verified",
         "locations": [
           {
             "path": "config/configState.test.ts",
             "symbol": "test('ARC-01 empty object yields the initial config', () => {\n  assert.deepEqual(mergeStoredConfig({}), initialConfig);\n})",
-            "start_line": 7,
-            "end_line": 9,
+            "start_line": 8,
+            "end_line": 10,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -7581,10 +7788,10 @@
           {
             "path": "config/configState.test.ts",
             "symbol": "test('ARC-01 invalid numeric fields fall back to initial values', () => {\n  const merged = mergeStoredConfig({ numColumns: 0, fontSize: '12', perspective: -1, minSpeed: -2, maxSpeed: 0 });\n  assert.equal(merged.numColumns, initialConfig.numColumns);\n  assert.equal(merged.fontSize, initialConfig.fontSize);\n  assert.equal(merged.perspective, initialConfig.perspective);\n  assert.equal(merged.minSpeed, initialConfig.minSpeed);\n  assert.ok(merged.maxSpeed > 0);\n})",
-            "start_line": 11,
-            "end_line": 18,
+            "start_line": 12,
+            "end_line": 19,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -7592,10 +7799,10 @@
           {
             "path": "config/configState.test.ts",
             "symbol": "test('ARC-01 invalid stored custom glyph text becomes an empty charset', () => {\n  const restored = parseStoredConfig('{\"glyphSet\":\"custom\",\"customGlyphSet\":null}');\n  assert.equal(restored.customGlyphSet, '');\n  assert.equal(mergeStoredConfig({ customGlyphSet: 'ΔΨ' }).customGlyphSet, 'ΔΨ');\n})",
-            "start_line": 20,
-            "end_line": 24,
+            "start_line": 21,
+            "end_line": 25,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -7619,7 +7826,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "0e0fb4373b011c5bb24c6d7f626e0917acf0971502a4c7976136f9f4db2e047f",
+            "source_digest": "8d93d5e7ff6b6ad076fe3416d52d96bf9341023224a8977b605add85e187dada",
             "kind": "import",
             "resolved_target": "external:javascript:node:test"
           }
@@ -7943,7 +8150,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "f7c33c4a7c6fc33fe682d93d6632f7c886e826226e1c55eed219a4141ff80c0b",
+            "source_digest": "f49715440245742ffd8386053b5e855bb622faeea76f4bd19cdb566d18f5fd0c",
             "kind": "import",
             "resolved_target": "config/initialConfig.ts"
           }
@@ -7966,7 +8173,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "f7c33c4a7c6fc33fe682d93d6632f7c886e826226e1c55eed219a4141ff80c0b",
+            "source_digest": "f49715440245742ffd8386053b5e855bb622faeea76f4bd19cdb566d18f5fd0c",
             "kind": "import",
             "resolved_target": "types.ts"
           }
@@ -9762,6 +9969,53 @@
       }
     },
     {
+      "id": "edge:5b2dd2bd71fcdf2d3e1f",
+      "from": "utils/random.test.ts",
+      "to": "config/configState.ts",
+      "type": "calls",
+      "type_only": false,
+      "evidence_count": 1,
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "utils/random.test.ts",
+            "symbol": "factoryConfig()",
+            "start_line": 7,
+            "end_line": 7,
+            "extractor": "tree-sitter-typescript",
+            "source_digest": "cbe681cb524b6f208a56758d4422399ccddd246e5a69a03df4cb8a4c2ac4fd0c",
+            "kind": "call",
+            "resolved_target": "config/configState.ts",
+            "target_symbol": "factoryConfig"
+          }
+        ]
+      }
+    },
+    {
+      "id": "edge:ab83cd1a1ff9b98f3b12",
+      "from": "utils/random.test.ts",
+      "to": "config/configState.ts",
+      "type": "imports",
+      "type_only": false,
+      "evidence_count": 1,
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "utils/random.test.ts",
+            "symbol": "import { factoryConfig } from '../config/configState.ts';",
+            "start_line": 3,
+            "end_line": 3,
+            "extractor": "tree-sitter-typescript",
+            "source_digest": "cbe681cb524b6f208a56758d4422399ccddd246e5a69a03df4cb8a4c2ac4fd0c",
+            "kind": "import",
+            "resolved_target": "config/configState.ts"
+          }
+        ]
+      }
+    },
+    {
       "id": "edge:1750772cfb3a8cd18561",
       "from": "utils/random.test.ts",
       "to": "external:javascript:node:assert",
@@ -9777,7 +10031,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "6551fe3c87950a5eae1d0ead5f747edf4546826de12cfe9b3baed15c0bc686c7",
+            "source_digest": "cbe681cb524b6f208a56758d4422399ccddd246e5a69a03df4cb8a4c2ac4fd0c",
             "kind": "import",
             "resolved_target": "external:javascript:node:assert"
           }
@@ -9796,11 +10050,11 @@
         "locations": [
           {
             "path": "utils/random.test.ts",
-            "symbol": "test('ARC-04 random configs keep ordered positive ranges', () => {\n  for (let i = 0; i < 100; i += 1) {\n    const config = generateRandomConfig();\n    assert.ok(config.minSpeed <= config.maxSpeed, `speed ${config.minSpeed} ${config.maxSpeed}`);\n    assert.ok(config.minTrailLength <= config.maxTrailLength);\n    assert.ok(config.minZ <= config.maxZ);\n    assert.ok(config.numColumns > 0);\n    assert.ok(config.fontSize > 0);\n  }\n})",
-            "start_line": 5,
-            "end_line": 14,
+            "symbol": "test('ARC-04 mutations change only a few controls and keep ordered positive ranges', () => {\n  let config = factoryConfig();\n  for (let i = 0; i < 200; i += 1) {\n    const { config: next, changed } = mutateConfig(config);\n    const differing = (Object.keys(next) as (keyof typeof next)[]).filter((key) => next[key] !== config[key]);\n    assert.ok(changed.length >= 3 && changed.length <= 5, `changed ${changed.length}`);\n    // Re-ordering a min/max pair can touch its partner, so allow one extra key per pair.\n    assert.ok(differing.length <= changed.length + 3, `${differing.join(', ')} for ${changed.join(', ')}`);\n    assert.ok(next.minSpeed <= next.maxSpeed, `speed ${next.minSpeed} ${next.maxSpeed}`);\n    assert.ok(next.minTrailLength <= next.maxTrailLength);\n    assert.ok(next.minZ <= next.maxZ);\n    assert.ok(next.numColumns > 0);\n    assert.ok(next.fontSize > 0);\n    assert.equal(next.revealSource, config.revealSource, 'never asks for the camera');\n    assert.equal(next.audioReactive, config.audioReactive, 'never asks for the microphone');\n    config = next;\n  }\n})",
+            "start_line": 6,
+            "end_line": 23,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "6551fe3c87950a5eae1d0ead5f747edf4546826de12cfe9b3baed15c0bc686c7",
+            "source_digest": "cbe681cb524b6f208a56758d4422399ccddd246e5a69a03df4cb8a4c2ac4fd0c",
             "kind": "call",
             "resolved_target": "external:javascript:node:test",
             "target_symbol": "default"
@@ -9824,7 +10078,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "6551fe3c87950a5eae1d0ead5f747edf4546826de12cfe9b3baed15c0bc686c7",
+            "source_digest": "cbe681cb524b6f208a56758d4422399ccddd246e5a69a03df4cb8a4c2ac4fd0c",
             "kind": "import",
             "resolved_target": "external:javascript:node:test"
           }
@@ -9843,14 +10097,14 @@
         "locations": [
           {
             "path": "utils/random.test.ts",
-            "symbol": "generateRandomConfig()",
-            "start_line": 7,
-            "end_line": 7,
+            "symbol": "mutateConfig(config)",
+            "start_line": 9,
+            "end_line": 9,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "6551fe3c87950a5eae1d0ead5f747edf4546826de12cfe9b3baed15c0bc686c7",
+            "source_digest": "cbe681cb524b6f208a56758d4422399ccddd246e5a69a03df4cb8a4c2ac4fd0c",
             "kind": "call",
             "resolved_target": "utils/random.ts",
-            "target_symbol": "generateRandomConfig"
+            "target_symbol": "mutateConfig"
           }
         ]
       }
@@ -9867,11 +10121,11 @@
         "locations": [
           {
             "path": "utils/random.test.ts",
-            "symbol": "import { generateRandomConfig } from './random.ts';",
-            "start_line": 3,
-            "end_line": 3,
+            "symbol": "import { mutateConfig } from './random.ts';",
+            "start_line": 4,
+            "end_line": 4,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "6551fe3c87950a5eae1d0ead5f747edf4546826de12cfe9b3baed15c0bc686c7",
+            "source_digest": "cbe681cb524b6f208a56758d4422399ccddd246e5a69a03df4cb8a4c2ac4fd0c",
             "kind": "import",
             "resolved_target": "utils/random.ts"
           }
@@ -9890,33 +10144,33 @@
         "locations": [
           {
             "path": "utils/random.ts",
-            "symbol": "normalizeRange(getRandomFloat(1, 15), getRandomFloat(1, 15))",
-            "start_line": 58,
-            "end_line": 58,
+            "symbol": "normalizeRange(next.minSpeed, next.maxSpeed)",
+            "start_line": 95,
+            "end_line": 95,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "13b10a241262d5991bcb6548b010c4e1b81b1a2e44a105aeec6329ada038bb0f",
+            "source_digest": "a1aafa9665a0547526f98939fb6b93df247cc16e4e90229e1edc2a4366e30aff",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "normalizeRange"
           },
           {
             "path": "utils/random.ts",
-            "symbol": "normalizeRange(getRandomInt(5, 80), getRandomInt(5, 80))",
-            "start_line": 59,
-            "end_line": 59,
+            "symbol": "normalizeRange(next.minTrailLength, next.maxTrailLength)",
+            "start_line": 96,
+            "end_line": 96,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "13b10a241262d5991bcb6548b010c4e1b81b1a2e44a105aeec6329ada038bb0f",
+            "source_digest": "a1aafa9665a0547526f98939fb6b93df247cc16e4e90229e1edc2a4366e30aff",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "normalizeRange"
           },
           {
             "path": "utils/random.ts",
-            "symbol": "normalizeRange(useZ ? getRandomFloat(-50, 150) : 0, useZ ? getRandomFloat(-50, 150) : 50)",
-            "start_line": 60,
-            "end_line": 60,
+            "symbol": "normalizeRange(next.minZ, next.maxZ)",
+            "start_line": 97,
+            "end_line": 97,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "13b10a241262d5991bcb6548b010c4e1b81b1a2e44a105aeec6329ada038bb0f",
+            "source_digest": "a1aafa9665a0547526f98939fb6b93df247cc16e4e90229e1edc2a4366e30aff",
             "kind": "call",
             "resolved_target": "config/configState.ts",
             "target_symbol": "normalizeRange"
@@ -9940,7 +10194,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "13b10a241262d5991bcb6548b010c4e1b81b1a2e44a105aeec6329ada038bb0f",
+            "source_digest": "a1aafa9665a0547526f98939fb6b93df247cc16e4e90229e1edc2a4366e30aff",
             "kind": "import",
             "resolved_target": "config/configState.ts"
           }
@@ -9959,13 +10213,36 @@
         "locations": [
           {
             "path": "utils/random.ts",
-            "symbol": "import {\n  glyphSets,\n  mouseEffects,\n  fontFamilies,\n  fontWeights,\n  streamDirections,\n  streamMovements,\n  colorModes,\n  palettes,\n} from '../config/constants.ts';",
+            "symbol": "import { streamDirections } from '../config/constants.ts';",
             "start_line": 3,
-            "end_line": 12,
+            "end_line": 3,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "13b10a241262d5991bcb6548b010c4e1b81b1a2e44a105aeec6329ada038bb0f",
+            "source_digest": "a1aafa9665a0547526f98939fb6b93df247cc16e4e90229e1edc2a4366e30aff",
             "kind": "import",
             "resolved_target": "config/constants.ts"
+          }
+        ]
+      }
+    },
+    {
+      "id": "edge:a34a613e6a50b8d24060",
+      "from": "utils/random.ts",
+      "to": "config/controls.ts",
+      "type": "imports",
+      "type_only": false,
+      "evidence_count": 1,
+      "evidence": {
+        "status": "verified",
+        "locations": [
+          {
+            "path": "utils/random.ts",
+            "symbol": "import { paletteNames, sections, type Control } from '../config/controls.ts';",
+            "start_line": 4,
+            "end_line": 4,
+            "extractor": "tree-sitter-typescript",
+            "source_digest": "a1aafa9665a0547526f98939fb6b93df247cc16e4e90229e1edc2a4366e30aff",
+            "kind": "import",
+            "resolved_target": "config/controls.ts"
           }
         ]
       }
@@ -9986,7 +10263,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-typescript",
-            "source_digest": "13b10a241262d5991bcb6548b010c4e1b81b1a2e44a105aeec6329ada038bb0f",
+            "source_digest": "a1aafa9665a0547526f98939fb6b93df247cc16e4e90229e1edc2a4366e30aff",
             "kind": "import",
             "resolved_target": "types.ts"
           }
@@ -10390,404 +10667,16 @@
     }
   ],
   "triggers": [],
-  "source_digest": "1d254fe9f383d88b9c5d6ce47e9754dff7442c218d1ad9449350abe67525168f",
+  "source_digest": "4f740468347a8664d19fe95cc8ae40124ae8f59abcbbb5c1ed3e9ffac65bb746",
   "changes": {
-    "added_nodes": [
-      {
-        "id": "components/ControlPanel.tsx",
-        "path": "components/ControlPanel.tsx",
-        "type": "module",
-        "boundary": "Repository"
-      },
-      {
-        "id": "config/controls.ts",
-        "path": "config/controls.ts",
-        "type": "module",
-        "boundary": "Repository"
-      }
-    ],
-    "removed_nodes": [
-      {
-        "id": "components/TweakpanePanel.tsx",
-        "path": "components/TweakpanePanel.tsx",
-        "type": "module",
-        "boundary": "Repository",
-        "evidence": {
-          "status": "verified",
-          "locations": [
-            {
-              "path": "components/TweakpanePanel.tsx",
-              "symbol": "TweakpanePanelProps",
-              "start_line": 17,
-              "end_line": 17,
-              "extractor": "tree-sitter-tsx",
-              "source_digest": "74f9aaf0434e6633819370036b0c633328676faecc939e3d72b4c49c2dedfb76",
-              "kind": "definition"
-            },
-            {
-              "path": "components/TweakpanePanel.tsx",
-              "symbol": "toOptions",
-              "start_line": 27,
-              "end_line": 27,
-              "extractor": "tree-sitter-tsx",
-              "source_digest": "74f9aaf0434e6633819370036b0c633328676faecc939e3d72b4c49c2dedfb76",
-              "kind": "definition"
-            },
-            {
-              "path": "components/TweakpanePanel.tsx",
-              "symbol": "TweakpanePanel",
-              "start_line": 30,
-              "end_line": 30,
-              "extractor": "tree-sitter-tsx",
-              "source_digest": "74f9aaf0434e6633819370036b0c633328676faecc939e3d72b4c49c2dedfb76",
-              "kind": "definition"
-            }
-          ]
-        }
-      },
-      {
-        "id": "external:javascript:tweakpane",
-        "path": "external:javascript:tweakpane",
-        "type": "external",
-        "boundary": "External",
-        "evidence": {
-          "status": "verified",
-          "locations": [
-            {
-              "path": "components/TweakpanePanel.tsx",
-              "symbol": "import { Pane } from 'tweakpane';",
-              "start_line": 2,
-              "end_line": 2,
-              "extractor": "tree-sitter-tsx",
-              "source_digest": "74f9aaf0434e6633819370036b0c633328676faecc939e3d72b4c49c2dedfb76",
-              "kind": "import",
-              "resolved_target": "external:javascript:tweakpane"
-            }
-          ]
-        }
-      }
-    ],
-    "added_edges": [
-      {
-        "from": "App.tsx",
-        "to": "components/ControlPanel.tsx",
-        "type": "imports",
-        "type_only": false
-      },
-      {
-        "from": "components/ControlPanel.tsx",
-        "to": "config/configState.ts",
-        "type": "calls",
-        "type_only": false
-      },
-      {
-        "from": "components/ControlPanel.tsx",
-        "to": "config/configState.ts",
-        "type": "imports",
-        "type_only": false
-      },
-      {
-        "from": "components/ControlPanel.tsx",
-        "to": "config/constants.ts",
-        "type": "imports",
-        "type_only": false
-      },
-      {
-        "from": "components/ControlPanel.tsx",
-        "to": "config/controls.ts",
-        "type": "imports",
-        "type_only": false
-      },
-      {
-        "from": "components/ControlPanel.tsx",
-        "to": "config/initialConfig.ts",
-        "type": "imports",
-        "type_only": false
-      },
-      {
-        "from": "components/ControlPanel.tsx",
-        "to": "config/presets.ts",
-        "type": "imports",
-        "type_only": false
-      },
-      {
-        "from": "components/ControlPanel.tsx",
-        "to": "external:javascript:react",
-        "type": "calls",
-        "type_only": false
-      },
-      {
-        "from": "components/ControlPanel.tsx",
-        "to": "external:javascript:react",
-        "type": "imports",
-        "type_only": false
-      },
-      {
-        "from": "components/ControlPanel.tsx",
-        "to": "types.ts",
-        "type": "imports",
-        "type_only": true
-      },
-      {
-        "from": "config/configState.test.ts",
-        "to": "config/controls.ts",
-        "type": "imports",
-        "type_only": false
-      },
-      {
-        "from": "config/controls.ts",
-        "to": "config/constants.ts",
-        "type": "imports",
-        "type_only": false
-      },
-      {
-        "from": "config/controls.ts",
-        "to": "types.ts",
-        "type": "imports",
-        "type_only": true
-      }
-    ],
-    "removed_edges": [
-      {
-        "from": "App.tsx",
-        "to": "components/TweakpanePanel.tsx",
-        "type": "imports",
-        "type_only": false,
-        "evidence": {
-          "status": "verified",
-          "locations": [
-            {
-              "path": "App.tsx",
-              "symbol": "import('./components/TweakpanePanel')",
-              "start_line": 20,
-              "end_line": 20,
-              "extractor": "tree-sitter-tsx",
-              "source_digest": "15700f524096813e0752168ec3b7ab3078d3673476b738d097b7fcfaa2f42125",
-              "kind": "import",
-              "resolved_target": "components/TweakpanePanel.tsx"
-            }
-          ]
-        },
-        "evidence_count": 1
-      },
-      {
-        "from": "App.tsx",
-        "to": "config/presets.ts",
-        "type": "imports",
-        "type_only": false,
-        "evidence": {
-          "status": "verified",
-          "locations": [
-            {
-              "path": "App.tsx",
-              "symbol": "import { presets } from './config/presets';",
-              "start_line": 6,
-              "end_line": 6,
-              "extractor": "tree-sitter-tsx",
-              "source_digest": "15700f524096813e0752168ec3b7ab3078d3673476b738d097b7fcfaa2f42125",
-              "kind": "import",
-              "resolved_target": "config/presets.ts"
-            }
-          ]
-        },
-        "evidence_count": 1
-      },
-      {
-        "from": "components/TweakpanePanel.tsx",
-        "to": "config/configState.ts",
-        "type": "calls",
-        "type_only": false,
-        "evidence": {
-          "status": "verified",
-          "locations": [
-            {
-              "path": "components/TweakpanePanel.tsx",
-              "symbol": "factoryConfig()",
-              "start_line": 112,
-              "end_line": 112,
-              "extractor": "tree-sitter-tsx",
-              "source_digest": "74f9aaf0434e6633819370036b0c633328676faecc939e3d72b4c49c2dedfb76",
-              "kind": "call",
-              "resolved_target": "config/configState.ts",
-              "target_symbol": "factoryConfig"
-            }
-          ]
-        },
-        "evidence_count": 1
-      },
-      {
-        "from": "components/TweakpanePanel.tsx",
-        "to": "config/configState.ts",
-        "type": "imports",
-        "type_only": false,
-        "evidence": {
-          "status": "verified",
-          "locations": [
-            {
-              "path": "components/TweakpanePanel.tsx",
-              "symbol": "import { factoryConfig } from '../config/configState';",
-              "start_line": 4,
-              "end_line": 4,
-              "extractor": "tree-sitter-tsx",
-              "source_digest": "74f9aaf0434e6633819370036b0c633328676faecc939e3d72b4c49c2dedfb76",
-              "kind": "import",
-              "resolved_target": "config/configState.ts"
-            }
-          ]
-        },
-        "evidence_count": 1
-      },
-      {
-        "from": "components/TweakpanePanel.tsx",
-        "to": "config/constants.ts",
-        "type": "imports",
-        "type_only": false,
-        "evidence": {
-          "status": "verified",
-          "locations": [
-            {
-              "path": "components/TweakpanePanel.tsx",
-              "symbol": "import {\n  glyphSets,\n  fontFamilies,\n  fontWeights,\n  mouseEffects,\n  streamDirections,\n  streamMovements,\n  colorModes,\n  palettes,\n  revealSources,\n} from '../config/constants';",
-              "start_line": 5,
-              "end_line": 15,
-              "extractor": "tree-sitter-tsx",
-              "source_digest": "74f9aaf0434e6633819370036b0c633328676faecc939e3d72b4c49c2dedfb76",
-              "kind": "import",
-              "resolved_target": "config/constants.ts"
-            }
-          ]
-        },
-        "evidence_count": 1
-      },
-      {
-        "from": "components/TweakpanePanel.tsx",
-        "to": "external:javascript:react",
-        "type": "calls",
-        "type_only": false,
-        "evidence": {
-          "status": "verified",
-          "locations": [
-            {
-              "path": "components/TweakpanePanel.tsx",
-              "symbol": "useRef<HTMLDivElement>(null)",
-              "start_line": 38,
-              "end_line": 38,
-              "extractor": "tree-sitter-tsx",
-              "source_digest": "74f9aaf0434e6633819370036b0c633328676faecc939e3d72b4c49c2dedfb76",
-              "kind": "call",
-              "resolved_target": "external:javascript:react",
-              "target_symbol": "useRef"
-            },
-            {
-              "path": "components/TweakpanePanel.tsx",
-              "symbol": "useRef<Pane | null>(null)",
-              "start_line": 39,
-              "end_line": 39,
-              "extractor": "tree-sitter-tsx",
-              "source_digest": "74f9aaf0434e6633819370036b0c633328676faecc939e3d72b4c49c2dedfb76",
-              "kind": "call",
-              "resolved_target": "external:javascript:react",
-              "target_symbol": "useRef"
-            },
-            {
-              "path": "components/TweakpanePanel.tsx",
-              "symbol": "useRef({\n    ...config,\n    preset: config.preset ?? '',\n    activePreset: config.preset || 'Custom',\n  })",
-              "start_line": 40,
-              "end_line": 44,
-              "extractor": "tree-sitter-tsx",
-              "source_digest": "74f9aaf0434e6633819370036b0c633328676faecc939e3d72b4c49c2dedfb76",
-              "kind": "call",
-              "resolved_target": "external:javascript:react",
-              "target_symbol": "useRef"
-            }
-          ]
-        },
-        "evidence_count": 7
-      },
-      {
-        "from": "components/TweakpanePanel.tsx",
-        "to": "external:javascript:react",
-        "type": "imports",
-        "type_only": false,
-        "evidence": {
-          "status": "verified",
-          "locations": [
-            {
-              "path": "components/TweakpanePanel.tsx",
-              "symbol": "import React, { useEffect, useRef } from 'react';",
-              "start_line": 1,
-              "end_line": 1,
-              "extractor": "tree-sitter-tsx",
-              "source_digest": "74f9aaf0434e6633819370036b0c633328676faecc939e3d72b4c49c2dedfb76",
-              "kind": "import",
-              "resolved_target": "external:javascript:react"
-            }
-          ]
-        },
-        "evidence_count": 1
-      },
-      {
-        "from": "components/TweakpanePanel.tsx",
-        "to": "external:javascript:tweakpane",
-        "type": "imports",
-        "type_only": false,
-        "evidence": {
-          "status": "verified",
-          "locations": [
-            {
-              "path": "components/TweakpanePanel.tsx",
-              "symbol": "import { Pane } from 'tweakpane';",
-              "start_line": 2,
-              "end_line": 2,
-              "extractor": "tree-sitter-tsx",
-              "source_digest": "74f9aaf0434e6633819370036b0c633328676faecc939e3d72b4c49c2dedfb76",
-              "kind": "import",
-              "resolved_target": "external:javascript:tweakpane"
-            }
-          ]
-        },
-        "evidence_count": 1
-      },
-      {
-        "from": "components/TweakpanePanel.tsx",
-        "to": "types.ts",
-        "type": "imports",
-        "type_only": true,
-        "evidence": {
-          "status": "verified",
-          "locations": [
-            {
-              "path": "components/TweakpanePanel.tsx",
-              "symbol": "import type { Config } from '../types';",
-              "start_line": 3,
-              "end_line": 3,
-              "extractor": "tree-sitter-tsx",
-              "source_digest": "74f9aaf0434e6633819370036b0c633328676faecc939e3d72b4c49c2dedfb76",
-              "kind": "import",
-              "resolved_target": "types.ts"
-            }
-          ]
-        },
-        "evidence_count": 1
-      }
-    ],
+    "added_nodes": [],
+    "removed_nodes": [],
+    "added_edges": [],
+    "removed_edges": [],
     "boundary_changes": [],
     "new_cycles": [],
-    "changed": true,
-    "changed_node_ids": [
-      "App.tsx",
-      "components/ControlPanel.tsx",
-      "components/TweakpanePanel.tsx",
-      "config/configState.test.ts",
-      "config/configState.ts",
-      "config/constants.ts",
-      "config/controls.ts",
-      "config/initialConfig.ts",
-      "config/presets.ts",
-      "external:javascript:react",
-      "external:javascript:tweakpane",
-      "types.ts"
-    ]
+    "changed": false,
+    "changed_node_ids": []
   },
-  "generation_id": "32da6695743b350d61c6598b39d90582f6220f131c9b97558538148c2140ee5f"
+  "generation_id": "ff0054432a086770605a344471997509bddd3aee6537556aa7cbec677392650c"
 }

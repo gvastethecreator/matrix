@@ -10,7 +10,7 @@ The editor and standalone exports run the same Three.js engine. React owns edito
 | `components/ParticleCanvas.tsx`                | Canvas and engine-controller lifecycle. Configuration updates keep the controller mounted. |
 | `components/ControlPanel.tsx`                  | Terminal-style tabbed controls, preset cards, and the field renderers.                     |
 | `config/controls.ts`                           | Declarative control sections: config key, widget kind, range, and visibility rule.         |
-| `config/initialConfig.ts`, `config/presets.ts` | Defaults and partial named presets.                                                        |
+| `config/initialConfig.ts`, `config/presets.ts` | Defaults, grouped presets; every preset starts from the defaults.                          |
 | `config/constants.ts`                          | Glyph strings, selectable options, direction vectors, and renderer budgets.                |
 | `config/configState.ts`                        | Stored-config parsing, defaults, numeric range normalization, and preset application.      |
 | `utils/persist.ts`                             | Debounced storage writes, duplicate-write suppression, flush, and write-error results.     |
@@ -18,7 +18,7 @@ The editor and standalone exports run the same Three.js engine. React owns edito
 | `utils/exportHtml.ts`, `config/enginePin.ts`   | Standalone document generation and the Three.js CDN version pin.                           |
 | `utils/exportDelivery.ts`, `utils/editorUx.ts` | Export delivery, stored panel visibility, panel toggle keys, and editor notices.           |
 | `utils/revealImage.ts`                         | Downscales an uploaded reveal image to a small JPEG data URL.                              |
-| `utils/random.ts`                              | Random configurations with ordered speed, trail, and depth ranges.                         |
+| `utils/random.ts`                              | Mutate: changes 3 to 5 visible controls, keeps ordered speed, trail, and depth ranges.     |
 | `server.mjs`                                   | Local serving of an existing `dist/` build. GitHub Pages does not use this server.         |
 
 ## Configuration and persistence
@@ -37,6 +37,6 @@ Preserve `grow`, `attract`, `repel`, `swirl`, splash, and the direct download pa
 
 ## Verification
 
-`pnpm check` builds before running tests so the export test can inspect the fresh production bundle. The existing tests cover saved configuration, random ranges, persistence, export documents, and engine instance limits and lifecycle. Renderer or interaction changes also need a rendered browser check.
+`pnpm check` builds before running tests so the export test can inspect the fresh production bundle. The existing tests cover saved configuration, mutation limits, preset ranges, persistence, export documents, and engine instance limits and lifecycle. Renderer or interaction changes also need a rendered browser check.
 
 The generated [code map](codemap/codemap.md) contains static source relationships. Its unresolved references remain visible; it is not runtime proof.

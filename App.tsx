@@ -4,7 +4,6 @@ import ParticleCanvas from './components/ParticleCanvas';
 import engineSource from './engine/matrixRain.js?raw';
 import { applyPreset, UI_VISIBLE_STORAGE_KEY } from './config/configState';
 import { generateStandaloneHtml } from './utils/exportHtml';
-import { generateRandomConfig } from './utils/random';
 import { decideExportDelivery, downloadExportFilename } from './utils/exportDelivery';
 import { createPersistScheduler, loadConfig } from './utils/persist';
 import ControlPanel from './components/ControlPanel';
@@ -136,10 +135,6 @@ const App: React.FC = () => {
     setConfig((prev) => applyPreset(prev, presetName));
   }, []);
 
-  const randomizeConfig = useCallback(() => {
-    setConfig(generateRandomConfig());
-  }, []);
-
   const pickRevealImage = useCallback(() => imageInputRef.current?.click(), []);
 
   const onRevealImage = useCallback(async (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -214,7 +209,6 @@ const App: React.FC = () => {
           config={config}
           setConfig={setConfig}
           applyPreset={applyNamedPreset}
-          randomizeConfig={randomizeConfig}
           pickRevealImage={pickRevealImage}
           onClose={() => setIsUiVisible(false)}
         />
@@ -246,14 +240,14 @@ const App: React.FC = () => {
       </aside>
 
       {charsetNotice && (
-        <div className="fixed top-8 left-1/2 z-40 max-w-[min(90vw,28rem)] -translate-x-1/2 rounded-lg border border-amber-500/40 bg-amber-950/90 px-4 py-2 text-sm text-amber-100">
+        <div className="fixed top-8 left-1/2 z-40 max-w-[min(90vw,28rem)] -translate-x-1/2 rounded-md bg-amber-950/90 px-4 py-2 text-sm text-amber-100">
           {charsetNotice}
         </div>
       )}
 
       {persistError && (
         <div
-          className="fixed bottom-8 left-1/2 z-[70] max-w-[min(90vw,32rem)] -translate-x-1/2 rounded-lg border border-amber-500/40 bg-amber-950/95 px-4 py-3 text-sm text-amber-100 shadow-2xl"
+          className="fixed bottom-8 left-1/2 z-[70] max-w-[min(90vw,32rem)] -translate-x-1/2 rounded-md bg-amber-950/95 px-4 py-3 text-sm text-amber-100"
           role="alert"
         >
           <span>{persistError}</span>

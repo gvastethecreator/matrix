@@ -4,7 +4,8 @@ import { factoryConfig } from '../config/configState';
 import { GLYPH_SET_TABLE, palettes } from '../config/constants';
 import { paletteNames, sections, type Control } from '../config/controls';
 import { initialConfig } from '../config/initialConfig';
-import { presets } from '../config/presets';
+import { presetGroups, presets } from '../config/presets';
+import { mutateConfig } from '../utils/random';
 
 type SetConfig = React.Dispatch<React.SetStateAction<Config>>;
 
@@ -12,7 +13,6 @@ interface ControlPanelProps {
   config: Config;
   setConfig: SetConfig;
   applyPreset: (name: string) => void;
-  randomizeConfig: () => void;
   pickRevealImage: () => void;
   onClose: () => void;
 }
@@ -114,7 +114,7 @@ const Field: React.FC<{ control: Control; config: Config; setConfig: SetConfig; 
             onChange={(event) => set(control.key, event.target.checked)}
           />
           <span className="mx-switch" aria-hidden="true">
-            {config[control.key] ? '[■] ON' : '[ ] OFF'}
+            <i />
           </span>
         </label>
       );
@@ -300,15 +300,16 @@ const PresetCard: React.FC<{ name: string; active: boolean; onApply: () => void 
 
 const PRESET_TAB = 'presets';
 
-const ControlPanel: React.FC<ControlPanelProps> = ({
-  config,
-  setConfig,
-  applyPreset,
-  randomizeConfig,
-  pickRevealImage,
-  onClose,
-}) => {
+const ControlPanel: React.FC<ControlPanelProps> = ({ config, setConfig, applyPreset, pickRevealImage, onClose }) => {
   const [tab, setTab] = useState(PRESET_TAB);
+  const [group, setGroup] = useState('all');
+  const [mutation, setMutation] = useState<string[]>([]);
+  const mutate = () => {
+    const result = mutateConfig(config);
+    setConfig(result.config);
+    setMutation(result.changed);
+  };
+  const shownPresets = group === 'all' ? Object.keys(presets) : presetGroups[group];
   const tabs = [{ id: PRESET_TAB, title: 'Presets' }, ...sections];
   const section = sections.find((s) => s.id === tab);
   const title = section ? section.title : 'Presets';
@@ -346,6 +347,24 @@ const ControlPanel: React.FC<ControlPanelProps> = ({
         ))}
       </nav>
 
+      <div className="mx-mutate">
+        <button
+          type="button"
+          className="mx-button mx-button-primary"
+          onClick={mutate}
+          title="Change 3 to 5 random controls"
+        >
+          &gt; mutate
+        </button>
+        <p aria-live="polite">
+          {mutation.length ? (
+            <Decoded text={`~ ${mutation.join(' · ').toLowerCase()}`} />
+          ) : (
+            'tweak a few random controls'
+          )}
+        </p>
+      </div>
+
       <div
         id="mx-tabpanel"
         role="tabpanel"
@@ -372,15 +391,20 @@ const ControlPanel: React.FC<ControlPanelProps> = ({
             ))
         ) : (
           <>
+            <div className="mx-chips mx-groups" role="radiogroup" aria-label="Preset groups">
+              {['all', ...Object.keys(presetGroups)].map((name) => (
+                <label key={name} className="mx-chip">
+                  <input type="radio" name="preset-group" checked={group === name} onChange={() => setGroup(name)} />
+                  <span>{name}</span>
+                </label>
+              ))}
+            </div>
             <div className="mx-presets">
-              {Object.keys(presets).map((name) => (
+              {shownPresets.map((name) => (
                 <PresetCard key={name} name={name} active={config.preset === name} onApply={() => applyPreset(name)} />
               ))}
             </div>
             <div className="mx-actions">
-              <button type="button" className="mx-button" onClick={randomizeConfig}>
-                &gt; randomize
-              </button>
               <button type="button" className="mx-button" onClick={() => setConfig(factoryConfig())}>
                 &gt; factory reset
               </button>

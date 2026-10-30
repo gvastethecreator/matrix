@@ -3,6 +3,7 @@ import test from 'node:test';
 import { applyPreset, factoryConfig, mergeStoredConfig, normalizeRange, parseStoredConfig } from './configState.ts';
 import { initialConfig } from './initialConfig.ts';
 import { sections } from './controls.ts';
+import { presetGroups, presets } from './presets.ts';
 
 test('ARC-01 empty object yields the initial config', () => {
   assert.deepEqual(mergeStoredConfig({}), initialConfig);
@@ -77,6 +78,19 @@ test('control panel sections bind real config keys and ranges contain their defa
       if (control.kind !== 'range') continue;
       const value = initialConfig[control.key];
       assert.ok(value >= control.min && value <= control.max, `${control.key} default ${value} is outside its slider`);
+    }
+  }
+});
+
+test('every preset is grouped and keeps its values inside the panel ranges', () => {
+  const grouped = new Set(Object.values(presetGroups).flat());
+  for (const name of grouped) assert.ok(name in presets, `group lists unknown preset ${name}`);
+  const ranges = sections.flatMap((section) => section.controls).filter((control) => control.kind === 'range');
+  for (const [name, preset] of Object.entries(presets)) {
+    assert.ok(grouped.has(name), `${name} is not in any group`);
+    for (const control of ranges) {
+      const value = preset[control.key];
+      assert.ok(value >= control.min && value <= control.max, `${name}: ${control.key} ${value}`);
     }
   }
 });
