@@ -3,21 +3,13 @@ import type { Config } from './types';
 import ParticleCanvas from './components/ParticleCanvas';
 import engineSource from './engine/matrixRain.js?raw';
 import { applyPreset, UI_VISIBLE_STORAGE_KEY } from './config/configState';
-import { presets } from './config/presets';
 import { generateStandaloneHtml } from './utils/exportHtml';
 import { generateRandomConfig } from './utils/random';
 import { decideExportDelivery, downloadExportFilename } from './utils/exportDelivery';
 import { createPersistScheduler, loadConfig } from './utils/persist';
-import {
-  customGlyphNotice,
-  isPanelToggleKey,
-  panelFallbackLabel,
-  persistErrorMessage,
-  readUiVisible,
-} from './utils/editorUx';
+import ControlPanel from './components/ControlPanel';
+import { customGlyphNotice, isPanelToggleKey, persistErrorMessage, readUiVisible } from './utils/editorUx';
 import { readRevealImage } from './utils/revealImage';
-
-const TweakpanePanel = React.lazy(() => import('./components/TweakpanePanel'));
 
 // Controls fade out after this long without input, unless the pointer or focus is inside the panel.
 const IDLE_MS = 2500;
@@ -43,29 +35,30 @@ const triggerDownload = (html: string, filename: string) => {
   URL.revokeObjectURL(url);
 };
 
-const Icons = {
-  Settings: () => (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <circle cx="12" cy="12" r="3" />
-      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
-    </svg>
-  ),
-  Collapse: () => (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <polyline points="9 6 15 12 9 18" />
-    </svg>
-  ),
-  Download: () => (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
-    </svg>
-  ),
-  Check: () => (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <polyline points="20 6 9 17 4 12" />
-    </svg>
-  ),
+// Frames the browser actually presents, sampled twice a second for the status line.
+const useFps = () => {
+  const [fps, setFps] = useState(0);
+  useEffect(() => {
+    let frames = 0;
+    let start = performance.now();
+    let raf = 0;
+    const tick = (now: number) => {
+      frames += 1;
+      if (now - start >= 500) {
+        setFps(Math.round((frames * 1000) / (now - start)));
+        frames = 0;
+        start = now;
+      }
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, []);
+  return fps;
 };
+
+// Own component so the twice-a-second update re-renders only this label.
+const Fps = () => <span>{useFps()} fps</span>;
 
 const App: React.FC = () => {
   const [persistError, setPersistError] = useState<string | null>(null);
@@ -143,8 +136,6 @@ const App: React.FC = () => {
     setConfig((prev) => applyPreset(prev, presetName));
   }, []);
 
-  const presetNames = useMemo(() => Object.keys(presets), []);
-
   const randomizeConfig = useCallback(() => {
     setConfig(generateRandomConfig());
   }, []);
@@ -207,9 +198,9 @@ const App: React.FC = () => {
           onClick={() => setIsUiVisible(true)}
           aria-label="Mostrar controles (H)"
           title="Mostrar controles (H)"
-          className={`fixed top-4 right-4 z-40 rounded-full border border-white/10 bg-black/50 p-2.5 text-white/60 backdrop-blur-md hover:bg-white/10 hover:text-white ${fade}`}
+          className={`mx-handle fixed top-4 right-4 z-40 ${fade}`}
         >
-          <Icons.Settings />
+          &gt;_
         </button>
       )}
 
@@ -217,73 +208,40 @@ const App: React.FC = () => {
         ref={panelRef}
         aria-label="Controles de Matrix"
         inert={!isUiVisible}
-        className={`fixed inset-y-0 right-0 z-30 flex w-80 max-w-[90vw] flex-col border-l border-white/10 bg-black/70 backdrop-blur-xl transition-[translate,opacity] duration-300 ease-out ${isUiVisible ? 'translate-x-0' : 'translate-x-full'} ${idle ? 'opacity-0' : 'opacity-100'}`}
+        className={`mx-panel fixed inset-y-0 right-0 z-30 flex w-[22rem] max-w-[92vw] flex-col transition-[translate,opacity] duration-300 ease-out ${isUiVisible ? 'translate-x-0' : 'translate-x-full'} ${idle ? 'opacity-0' : 'opacity-100'}`}
       >
-        <header className="flex items-center justify-between border-b border-white/10 px-4 py-3">
-          <span className="text-[11px] tracking-[0.35em] text-white/70 uppercase">Matrix</span>
-          <div className="flex items-center gap-2">
-            <kbd className="rounded border border-white/15 px-1.5 text-[10px] text-white/40">H</kbd>
+        <ControlPanel
+          config={config}
+          setConfig={setConfig}
+          applyPreset={applyNamedPreset}
+          randomizeConfig={randomizeConfig}
+          pickRevealImage={pickRevealImage}
+          onClose={() => setIsUiVisible(false)}
+        />
+
+        <footer className="mx-footer">
+          <div className="flex gap-2">
             <button
-              onClick={() => setIsUiVisible(false)}
-              aria-label="Ocultar controles (H)"
-              title="Ocultar controles (H)"
-              className="rounded-full p-1.5 text-white/60 hover:bg-white/10 hover:text-white"
+              onClick={handleCopyHtml}
+              disabled={copyState !== 'idle'}
+              aria-live="polite"
+              className="mx-button mx-button-primary flex-1"
             >
-              <Icons.Collapse />
+              {copyState === 'idle' && '> export html'}
+              {copyState === 'loading' && '> compiling...'}
+              {copyState === 'success' && '> copied to clipboard'}
+              {copyState === 'downloaded' && '> downloaded'}
+              {copyState === 'error' && '> error'}
+            </button>
+            <button onClick={handleDownloadHtml} className="mx-button">
+              &gt; descargar
             </button>
           </div>
-        </header>
-
-        <div className="min-h-0 flex-1 overflow-x-hidden overflow-y-auto">
-          <React.Suspense
-            fallback={
-              <div className="px-4 py-3 text-xs tracking-widest text-white/60 uppercase" role="status">
-                {panelFallbackLabel}
-              </div>
-            }
-          >
-            <TweakpanePanel
-              config={config}
-              setConfig={setConfig}
-              applyPreset={applyNamedPreset}
-              presetNames={presetNames}
-              randomizeConfig={randomizeConfig}
-              pickRevealImage={pickRevealImage}
-            />
-          </React.Suspense>
-        </div>
-
-        <footer className="flex items-center gap-2 border-t border-white/10 p-3">
-          <button
-            onClick={handleCopyHtml}
-            disabled={copyState !== 'idle'}
-            aria-live="polite"
-            className={`flex flex-1 items-center justify-center gap-2 rounded-md px-3 py-2 text-[11px] font-bold tracking-widest uppercase transition-colors ${
-              copyState === 'idle' ? 'bg-white text-black hover:bg-white/80' : 'bg-white/10 text-white/70'
-            } ${copyState === 'error' ? 'text-red-300' : ''}`}
-          >
-            {copyState === 'idle' && (
-              <>
-                <Icons.Download />
-                <span>Export HTML</span>
-              </>
-            )}
-            {copyState === 'loading' && <span>Processing...</span>}
-            {(copyState === 'success' || copyState === 'downloaded') && (
-              <>
-                <Icons.Check />
-                <span>{copyState === 'success' ? 'Copied!' : 'Downloaded'}</span>
-              </>
-            )}
-            {copyState === 'error' && <span>Error</span>}
-          </button>
-          <button
-            onClick={handleDownloadHtml}
-            className="rounded-md bg-white/10 px-3 py-2 text-[11px] font-bold tracking-widest uppercase hover:bg-white/20"
-          >
-            Descargar
-          </button>
-          {backend && <span className="text-[9px] tracking-[0.2em] text-white/35 uppercase">{backend}</span>}
+          <p className="mx-status">
+            <span>{backend ?? 'booting'}</span>
+            <Fps />
+            <span>{config.numColumns} streams</span>
+          </p>
         </footer>
       </aside>
 

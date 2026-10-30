@@ -8,7 +8,8 @@ The editor and standalone exports run the same Three.js engine. React owns edito
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------ |
 | `App.tsx`                                      | Configuration state, side panel, idle fade, keyboard toggle, reveal image upload, export.  |
 | `components/ParticleCanvas.tsx`                | Canvas and engine-controller lifecycle. Configuration updates keep the controller mounted. |
-| `components/TweakpanePanel.tsx`                | Lazy-loaded controls with stable callback and value references.                            |
+| `components/ControlPanel.tsx`                  | Terminal-style tabbed controls, preset cards, and the field renderers.                     |
+| `config/controls.ts`                           | Declarative control sections: config key, widget kind, range, and visibility rule.         |
 | `config/initialConfig.ts`, `config/presets.ts` | Defaults and partial named presets.                                                        |
 | `config/constants.ts`                          | Glyph strings, selectable options, direction vectors, and renderer budgets.                |
 | `config/configState.ts`                        | Stored-config parsing, defaults, numeric range normalization, and preset application.      |

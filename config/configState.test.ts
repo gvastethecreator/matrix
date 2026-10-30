@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { applyPreset, factoryConfig, mergeStoredConfig, normalizeRange, parseStoredConfig } from './configState.ts';
 import { initialConfig } from './initialConfig.ts';
+import { sections } from './controls.ts';
 
 test('ARC-01 empty object yields the initial config', () => {
   assert.deepEqual(mergeStoredConfig({}), initialConfig);
@@ -66,4 +67,16 @@ test('UX-10 inverted stored speeds are ordered', () => {
   const merged = mergeStoredConfig({ minSpeed: 9, maxSpeed: 3, minTrailLength: 40, maxTrailLength: 8 });
   assert.ok(merged.minSpeed <= merged.maxSpeed);
   assert.ok(merged.minTrailLength <= merged.maxTrailLength);
+});
+
+test('control panel sections bind real config keys and ranges contain their defaults', () => {
+  for (const section of sections) {
+    for (const control of section.controls) {
+      if (!('key' in control)) continue;
+      assert.ok(control.key in initialConfig, `${section.id}: unknown key ${control.key}`);
+      if (control.kind !== 'range') continue;
+      const value = initialConfig[control.key];
+      assert.ok(value >= control.min && value <= control.max, `${control.key} default ${value} is outside its slider`);
+    }
+  }
 });

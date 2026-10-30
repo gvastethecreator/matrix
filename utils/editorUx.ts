@@ -1,7 +1,5 @@
 import type { Config } from '../types.ts';
 
-export const panelFallbackLabel = 'Cargando controles';
-
 export const persistErrorMessage = 'No se pudo guardar la configuración en este navegador.';
 
 export const readUiVisible = (raw: string | null): boolean => raw !== 'false';
@@ -19,5 +17,8 @@ export const isPanelToggleKey = (event: ToggleKeyEvent): boolean => {
   if (event.key === 'Escape') return true;
   if (event.key.toLowerCase() !== 'h' || event.ctrlKey || event.metaKey || event.altKey) return false;
   const target = event.target as Element | null;
-  return !target?.closest?.('input, textarea, select, [contenteditable="true"]');
+  // Sliders, switches and chips keep focus after a click; only text entry should swallow H.
+  return !target?.closest?.(
+    'textarea, select, [contenteditable="true"], input:not([type="range"], [type="checkbox"], [type="radio"], [type="color"])',
+  );
 };

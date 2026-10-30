@@ -1,17 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
-import {
-  customGlyphNotice,
-  isPanelToggleKey,
-  panelFallbackLabel,
-  persistErrorMessage,
-  readUiVisible,
-} from './editorUx.ts';
-
-test('UX-02 panel fallback label is non-empty', () => {
-  assert.ok(panelFallbackLabel.length > 0);
-});
+import { customGlyphNotice, isPanelToggleKey, persistErrorMessage, readUiVisible } from './editorUx.ts';
 
 test('UX-04 stealth persistence parses booleans', () => {
   assert.equal(readUiVisible(null), true);
@@ -29,16 +19,14 @@ test('UX-09 persist error message tells the user it could not save', () => {
   assert.ok(persistErrorMessage.includes('guardar'));
 });
 
-test('UX surface: App wires fallback, download, collapsible panel, and notices', () => {
+test('UX surface: App wires download, collapsible panel, and notices', () => {
   const app = readFileSync(new URL('../App.tsx', import.meta.url), 'utf8');
-  assert.equal(app.includes('panelFallbackLabel'), true);
   assert.equal(app.includes('handleDownloadHtml'), true);
   assert.equal(app.includes('inert={!isUiVisible}'), true);
   assert.equal(app.includes('isPanelToggleKey(event)'), true);
   assert.equal(app.includes('persistErrorMessage'), true);
   assert.equal(app.includes('customGlyphNotice'), true);
-  const panel = readFileSync(new URL('../components/TweakpanePanel.tsx', import.meta.url), 'utf8');
-  assert.equal(panel.includes('activePreset'), true);
+  const panel = readFileSync(new URL('../components/ControlPanel.tsx', import.meta.url), 'utf8');
   assert.equal(panel.includes('factoryConfig()'), true);
 });
 
@@ -54,4 +42,6 @@ test('UX-01 Escape or H toggles the panel, but H is ignored while typing or in c
   assert.equal(toggles('h', field), false);
   assert.equal(toggles('h', canvas, true), false);
   assert.equal(toggles('j', canvas), false);
+  const slider = { closest: (selector: string) => (selector.includes(':not(') ? null : {}) };
+  assert.equal(toggles('h', slider), true);
 });

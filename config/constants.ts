@@ -8,7 +8,7 @@ import type {
   RevealSource,
 } from '../types.ts';
 
-const GLYPH_SET_TABLE: Record<Exclude<GlyphSet, 'custom'>, string> = {
+export const GLYPH_SET_TABLE: Record<Exclude<GlyphSet, 'custom'>, string> = {
   film: 'ﾊﾐﾋｰｳｼﾅﾓﾆｻﾜﾂｵﾘｱﾎﾃﾏｹﾒｴｶｷﾑﾕﾗｾﾈｽﾀﾇﾍ012345789Z:・."=*+-<>¦｜',
   katakana:
     'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン',
