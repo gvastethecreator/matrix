@@ -6,6 +6,9 @@ export const initialConfig: Config = {
   glyphSet: 'film',
   customGlyphSet: '01',
   message: '',
+  revealSource: 'text',
+  revealImage: '',
+  revealInvert: false,
 
   // Appearance
   fontSize: 16,
@@ -16,6 +19,7 @@ export const initialConfig: Config = {
   colorMode: 'monochrome',
   glyphColor: '#00ff41',
   leaderColor: '#c8ffc8',
+  palette: 'synthwave',
 
   fadeOutSpeed: 0.1,
   characterSpacing: 1.0,
@@ -56,8 +60,13 @@ export const initialConfig: Config = {
   perspective: 150,
   minZ: 0,
   maxZ: 50,
+  depthLayers: 0,
   depthOfField: 0.5,
   cameraDrift: 0.35,
+
+  // Audio
+  audioReactive: false,
+  audioSensitivity: 1,
 
   // Interactivity
   mouseEffect: 'grow',

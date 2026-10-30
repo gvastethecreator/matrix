@@ -1,7 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three/webgpu';
 import type { Config } from '../types.ts';
-import { getAnimationLogicString } from '../utils/exportEngine.ts';
+import { engineTables } from '../config/constants.ts';
+import { runMatrixAnimation } from '../engine/matrixRain.js';
 
 type EngineController = {
   update: (newConfig: Config) => void;
@@ -9,16 +10,6 @@ type EngineController = {
   resize: (w: number, h: number) => void;
   ready: Promise<string | null>;
 };
-
-const bindEngine = new Function(
-  'THREE',
-  `${getAnimationLogicString()}
-  return function runBound(canvas, initialConfig) {
-    return runMatrixAnimation(THREE, canvas, initialConfig);
-  };`,
-) as (three: typeof THREE) => (canvas: HTMLCanvasElement, config: Config) => EngineController;
-
-const runBoundEngine = bindEngine(THREE);
 
 interface ParticleCanvasProps {
   config: Config;
@@ -37,7 +28,7 @@ const ParticleCanvas: React.FC<ParticleCanvasProps> = ({ config, onBackend }) =>
     canvas.className = 'absolute inset-0 w-full h-full block';
     container.replaceChildren(canvas);
 
-    const controller = runBoundEngine(canvas, config);
+    const controller: EngineController = runMatrixAnimation(THREE, canvas, config, engineTables);
     animationController.current = controller;
     void controller.ready.then((backend) => {
       if (backend) onBackend(backend);

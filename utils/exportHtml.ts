@@ -1,7 +1,8 @@
 import type { Config } from '../types.ts';
 import { THREE_MODULE_VERSION } from '../config/enginePin.ts';
+import { engineTables } from '../config/constants.ts';
 
-export const generateStandaloneHtml = (config: Config, animationLogicString: string): string => {
+export const generateStandaloneHtml = (config: Config, engineSource: string): string => {
   if (!config || typeof config.numColumns !== 'number' || config.numColumns <= 0) {
     return '<!-- ERROR: Configuración inválida. El número de columnas debe ser mayor que cero. -->';
   }
@@ -10,13 +11,14 @@ export const generateStandaloneHtml = (config: Config, animationLogicString: str
         import * as THREE from 'https://unpkg.com/three@${THREE_MODULE_VERSION}/build/three.webgpu.js';
 
         const initialConfig = ${JSON.stringify(config)};
+        const tables = ${JSON.stringify(engineTables)};
 
-        ${animationLogicString}
+        ${engineSource.replace(/^export /gm, '')}
 
         window.addEventListener('load', () => {
             const canvas = document.getElementById('matrix-canvas');
             if (canvas) {
-                runMatrixAnimation(THREE, canvas, initialConfig);
+                runMatrixAnimation(THREE, canvas, initialConfig, tables);
             } else {
                 console.error('Elemento Canvas no encontrado');
             }

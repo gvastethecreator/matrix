@@ -37,3 +37,10 @@ body,
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Tweakpane fills the side panel instead of floating over the rain. */
+.matrix-pane .tp-rotv {
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+}

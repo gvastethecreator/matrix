@@ -8,6 +8,7 @@ import {
   streamDirections,
   streamMovements,
   colorModes,
+  palettes,
 } from '../config/constants.ts';
 
 /**
@@ -63,6 +64,9 @@ export const generateRandomConfig = (): Config => {
     glyphSet: getRandomElement(glyphSets),
     customGlyphSet: 'RANDOM',
     message: '',
+    revealSource: 'text',
+    revealImage: '',
+    revealInvert: false,
     fontSize: getRandomInt(10, 24),
     fontFamily: getRandomElement(fontFamilies),
     fontWeight: getRandomElement(fontWeights),
@@ -71,6 +75,7 @@ export const generateRandomConfig = (): Config => {
     colorMode: isColor ? getRandomElement(colorModes.filter((m) => m !== 'monochrome')) : 'monochrome',
     glyphColor: getRandomHexColor(),
     leaderColor: getRandomHexColor(),
+    palette: getRandomElement(Object.keys(palettes) as Config['palette'][]),
 
     fadeOutSpeed: getRandomFloat(0.05, 0.2),
     characterSpacing: getRandomFloat(0.8, 1.5),
@@ -102,8 +107,11 @@ export const generateRandomConfig = (): Config => {
     perspective: useZ ? getRandomFloat(100, 400) : 150,
     minZ,
     maxZ,
+    depthLayers: useZ && Math.random() > 0.6 ? getRandomInt(2, 5) : 0,
     depthOfField: useZ ? getRandomFloat(0, 1) : 0,
     cameraDrift: getRandomFloat(0, 0.8),
+    audioReactive: false,
+    audioSensitivity: 1,
     mouseEffect: getRandomElement(mouseEffects),
     mouseRadius: getRandomFloat(50, 250),
     mouseForce: getRandomFloat(1, 10),

@@ -15,7 +15,7 @@ Browser-only Matrix digital-rain editor. Keep the existing stack and `pnpm@12.0.
 - Logs go under ignored `logs/`.
 - Preserve `grow`, `attract`, `repel`, `swirl`, and splash.
 - Keep `matrix_config` and `matrix_ui_visible` stable.
-- The editor and HTML export share injected engine source with a `THREE` parameter. Do not serialize engine closures with `Function#toString()`.
+- The editor imports `engine/matrixRain.js`; the HTML export embeds its text with `?raw`. Keep that file free of imports (Three.js and lookup tables arrive as parameters). Do not serialize engine closures with `Function#toString()`.
 
 ## Code map
 

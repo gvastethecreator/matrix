@@ -1,5 +1,4 @@
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import { factoryConfig } from '../config/configState.ts';
 import { THREE_MODULE_VERSION } from '../config/enginePin.ts';
@@ -41,11 +40,4 @@ test('PERF-06 export JSON is compact and parseable', () => {
   const parsed = JSON.parse(html.slice(start, end)) as { numColumns: number; glyphSet: string };
   assert.equal(parsed.numColumns, config.numColumns);
   assert.equal(parsed.glyphSet, config.glyphSet);
-});
-
-test('PERF-10 ParticleCanvas binds the export engine instead of Function#toString', () => {
-  const source = readFileSync(new URL('../components/ParticleCanvas.tsx', import.meta.url), 'utf8');
-  assert.equal(source.includes('getAnimationLogicString'), true);
-  assert.equal(source.includes('export const animationLogicString'), false);
-  assert.equal(source.includes('.toString()'), false);
 });

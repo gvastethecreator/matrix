@@ -6,16 +6,17 @@ The editor and standalone exports run the same Three.js engine. React owns edito
 
 | Path                                           | Responsibility                                                                             |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| `App.tsx`                                      | Configuration state, backend status, clipboard/download actions, and control visibility.   |
+| `App.tsx`                                      | Configuration state, side panel, idle fade, keyboard toggle, reveal image upload, export.  |
 | `components/ParticleCanvas.tsx`                | Canvas and engine-controller lifecycle. Configuration updates keep the controller mounted. |
 | `components/TweakpanePanel.tsx`                | Lazy-loaded controls with stable callback and value references.                            |
 | `config/initialConfig.ts`, `config/presets.ts` | Defaults and partial named presets.                                                        |
 | `config/constants.ts`                          | Glyph strings, selectable options, direction vectors, and renderer budgets.                |
 | `config/configState.ts`                        | Stored-config parsing, defaults, numeric range normalization, and preset application.      |
 | `utils/persist.ts`                             | Debounced storage writes, duplicate-write suppression, flush, and write-error results.     |
-| `utils/exportEngine.ts`                        | Shared WebGPU/WebGL2 renderer, shader effects, pointer interaction, resize, and cleanup.   |
+| `engine/matrixRain.js`                         | Shared WebGPU/WebGL2 renderer, shader effects, reveal masks, pointer input, and cleanup.   |
 | `utils/exportHtml.ts`, `config/enginePin.ts`   | Standalone document generation and the Three.js CDN version pin.                           |
-| `utils/exportDelivery.ts`, `utils/editorUx.ts` | Export delivery decisions, stored visibility parsing, and editor notices.                  |
+| `utils/exportDelivery.ts`, `utils/editorUx.ts` | Export delivery, stored panel visibility, panel toggle keys, and editor notices.           |
+| `utils/revealImage.ts`                         | Downscales an uploaded reveal image to a small JPEG data URL.                              |
 | `utils/random.ts`                              | Random configurations with ordered speed, trail, and depth ranges.                         |
 | `server.mjs`                                   | Local serving of an existing `dist/` build. GitHub Pages does not use this server.         |
 
@@ -27,9 +28,9 @@ The saved keys are `matrix_config` and `matrix_ui_visible`. Keep them stable. Pe
 
 ## Rendering and export
 
-`getAnimationLogicString()` returns engine source with `THREE` as a parameter. The editor injects its local Three.js namespace. Standalone HTML imports the pinned `three.webgpu.js` module. Keep this source independent of surrounding closures and do not replace it with `Function#toString()`; minification would change that contract.
+`engine/matrixRain.js` is a plain JavaScript module with no imports. `runMatrixAnimation(THREE, canvas, config, tables)` receives Three.js and the lookup data from `engineTables` in `config/constants.ts`. The editor imports the module. The export embeds the file text through Vite's `?raw` import, removes `export`, and serializes `engineTables` beside it; standalone HTML imports the pinned `three.webgpu.js` module. Keep the file self-contained and do not replace the text with `Function#toString()`; minification would change that contract.
 
-One TSL graph supports both WebGPU and the WebGL2 fallback. Glyph transforms and visual effects run in the shader. Font or character-set changes rebuild the glyph atlas; ordinary visual changes update uniforms. The engine observes canvas size, pauses while the document is hidden, and disposes its resources and listeners when destroyed.
+One TSL graph supports both WebGPU and the WebGL2 fallback. Each stream slot gets a fixed trail length when streams are built, and a per-instance slot attribute maps every drawn instance to a live glyph; the GPU never processes hidden trail slots. Reveal masks come from text, an uploaded image, or the camera; the shader reads their luminance. The optional audio mode reads microphone loudness with a Web Audio analyser each frame; loudness raises speed, glyph brightness, and bloom, and sudden energy jumps trigger a splash and a short glitch burst. Glyph transforms and visual effects run in the shader. Font or character-set changes rebuild the glyph atlas; ordinary visual changes update uniforms. The engine observes canvas size, pauses while the document is hidden, and disposes its resources and listeners when destroyed.
 
 Preserve `grow`, `attract`, `repel`, `swirl`, splash, and the direct download path. Rendering limits are capacity bounds; they do not promise a frame rate.
 

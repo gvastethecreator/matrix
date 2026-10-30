@@ -61,6 +61,9 @@ export const mergeStoredConfig = (raw: unknown): Config => {
   if (typeof merged.customGlyphSet !== 'string') {
     merged.customGlyphSet = '';
   }
+  if (typeof merged.revealImage !== 'string') {
+    merged.revealImage = '';
+  }
   return merged;
 };
 

@@ -6,7 +6,7 @@ Interactive Matrix digital-rain editor with WebGPU, WebGL2, and standalone HTML 
 
 ## Use the editor
 
-Choose a preset from **Library**, then adjust the character set, colors, motion, depth, and pointer effects. **Message** draws text with the rain. **Export HTML** copies a standalone page and downloads it if clipboard access fails. **Descargar HTML** downloads the page directly. Press Escape to show or hide the controls.
+Choose a preset from **Library**, then adjust the character set, colors and palettes, motion (including **Wave**), depth layers, and pointer effects. **Reveal** shapes the rain from a message, an uploaded image, or the live camera; **Invert** swaps light and dark for image and camera sources. **Audio → Mic Reactive** makes the rain speed up, glow, and splash with the microphone; **Sensitivity** scales the response. **Export HTML** copies a standalone page and downloads it if clipboard access fails. **Descargar** downloads the page directly. The side panel opens and closes with H or Escape, and the controls fade out after a few seconds without input.
 
 The editor saves your configuration in browser storage. It does not need an API key or an application backend. Exported pages load Three.js from a CDN and need a network connection.
 

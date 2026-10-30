@@ -10,6 +10,8 @@ import {
   streamDirections,
   streamMovements,
   colorModes,
+  palettes,
+  revealSources,
 } from '../config/constants';
 
 interface TweakpanePanelProps {
@@ -18,6 +20,7 @@ interface TweakpanePanelProps {
   applyPreset: (name: string) => void;
   presetNames: string[];
   randomizeConfig: () => void;
+  pickRevealImage: () => void;
 }
 
 // Helper to convert arrays to Tweakpane options { Label: value }
@@ -30,6 +33,7 @@ const TweakpanePanel: React.FC<TweakpanePanelProps> = ({
   applyPreset,
   presetNames,
   randomizeConfig,
+  pickRevealImage,
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const paneRef = useRef<Pane | null>(null);
@@ -38,11 +42,11 @@ const TweakpanePanel: React.FC<TweakpanePanelProps> = ({
     preset: config.preset ?? '',
     activePreset: config.preset || 'Custom',
   });
-  const callbacksRef = useRef({ setConfig, applyPreset, randomizeConfig });
+  const callbacksRef = useRef({ setConfig, applyPreset, randomizeConfig, pickRevealImage });
 
   useEffect(() => {
-    callbacksRef.current = { setConfig, applyPreset, randomizeConfig };
-  }, [setConfig, applyPreset, randomizeConfig]);
+    callbacksRef.current = { setConfig, applyPreset, randomizeConfig, pickRevealImage };
+  }, [setConfig, applyPreset, randomizeConfig, pickRevealImage]);
 
   // Sync external config changes (e.g. Presets) to Tweakpane UI
   useEffect(() => {
@@ -71,11 +75,7 @@ const TweakpanePanel: React.FC<TweakpanePanelProps> = ({
     if (!containerRef.current || paneRef.current) return;
 
     const PARAMS = paramsRef.current;
-    const pane = new Pane({
-      title: 'MATRIX_OS v5.0 // ADMIN',
-      container: containerRef.current,
-      expanded: true,
-    });
+    const pane = new Pane({ container: containerRef.current });
     paneRef.current = pane;
 
     const updateState = () => {
@@ -129,7 +129,14 @@ const TweakpanePanel: React.FC<TweakpanePanelProps> = ({
       })
       .on('change', updateState);
 
-    contentFolder.addBinding(PARAMS, 'message', { label: 'Message' }).on('change', updateState);
+    // --- 2. REVEAL: text, an image, or the camera shapes the rain ---
+    const revealFolder = pane.addFolder({ title: 'REVEAL', expanded: true });
+    revealFolder
+      .addBinding(PARAMS, 'revealSource', { label: 'Source', options: toOptions(revealSources) })
+      .on('change', updateState);
+    revealFolder.addBinding(PARAMS, 'message', { label: 'Message' }).on('change', updateState);
+    revealFolder.addButton({ title: 'LOAD IMAGE…' }).on('click', () => callbacksRef.current.pickRevealImage());
+    revealFolder.addBinding(PARAMS, 'revealInvert', { label: 'Invert' }).on('change', updateState);
 
     // --- 3. OPTICS (Appearance) ---
     const lookFolder = pane.addFolder({ title: 'OPTICS', expanded: false });
@@ -170,6 +177,9 @@ const TweakpanePanel: React.FC<TweakpanePanelProps> = ({
       })
       .on('change', updateState);
 
+    colorFolder
+      .addBinding(PARAMS, 'palette', { label: 'Palette', options: toOptions(Object.keys(palettes)) })
+      .on('change', updateState);
     colorFolder.addBinding(PARAMS, 'backgroundColor', { label: 'Void Color' }).on('change', updateState);
     colorFolder.addBinding(PARAMS, 'glyphColor', { label: 'Base Color' }).on('change', updateState);
     colorFolder.addBinding(PARAMS, 'leaderColor', { label: 'Lead Color' }).on('change', updateState);
@@ -248,8 +258,18 @@ const TweakpanePanel: React.FC<TweakpanePanelProps> = ({
     spaceFolder.addBinding(PARAMS, 'perspective', { min: 10, max: 1000, label: 'FOV' }).on('change', updateState);
     spaceFolder.addBinding(PARAMS, 'minZ', { min: -200, max: 100, label: 'Near Plane' }).on('change', updateState);
     spaceFolder.addBinding(PARAMS, 'maxZ', { min: 0, max: 1000, label: 'Far Plane' }).on('change', updateState);
+    spaceFolder
+      .addBinding(PARAMS, 'depthLayers', { min: 0, max: 6, step: 1, label: 'Layers' })
+      .on('change', updateState);
     spaceFolder.addBinding(PARAMS, 'depthOfField', { min: 0, max: 1, label: 'Depth Blur' }).on('change', updateState);
     spaceFolder.addBinding(PARAMS, 'cameraDrift', { min: 0, max: 1, label: 'Camera Drift' }).on('change', updateState);
+
+    // --- AUDIO: microphone drives speed, glow, and beat splashes ---
+    const audioFolder = pane.addFolder({ title: 'AUDIO', expanded: false });
+    audioFolder.addBinding(PARAMS, 'audioReactive', { label: 'Mic Reactive' }).on('change', updateState);
+    audioFolder
+      .addBinding(PARAMS, 'audioSensitivity', { min: 0.2, max: 4, label: 'Sensitivity' })
+      .on('change', updateState);
 
     // --- 8. INTERACTION ---
     const inputFolder = pane.addFolder({ title: 'INTERACTION', expanded: false });
@@ -280,13 +300,7 @@ const TweakpanePanel: React.FC<TweakpanePanelProps> = ({
     };
   }, []); // Run once on mount, updates handled internally
 
-  return (
-    <div
-      ref={containerRef}
-      aria-label="Panel de configuración Matrix"
-      className="fixed top-4 right-4 z-30 w-[300px] max-h-[90vh] overflow-y-auto overflow-x-hidden bg-black/40 backdrop-blur-md rounded-xl border border-white/5 shadow-2xl custom-scrollbar"
-    />
-  );
+  return <div ref={containerRef} aria-label="Panel de configuración Matrix" className="matrix-pane" />;
 };
 
 export default TweakpanePanel;

@@ -5,39 +5,35 @@ import test from 'node:test';
 import { fileURLToPath } from 'node:url';
 import { runInNewContext } from 'node:vm';
 import * as THREE from 'three/webgpu';
+import { engineTables } from '../config/constants.ts';
 import { factoryConfig } from '../config/configState.ts';
-import { getAnimationLogicString } from './exportEngine.ts';
-import { generateStandaloneHtml } from './exportHtml.ts';
+import { generateStandaloneHtml } from '../utils/exportHtml.ts';
 
-test('PERF-10 engine source is injected text with THREE.*, not Function#toString closures', () => {
-  const source = getAnimationLogicString();
-  assert.match(source, /function runMatrixAnimation\(THREE, canvas, initialConfig\)/);
-  assert.match(source, /new THREE\.Scene\(/);
-  assert.match(source, /new THREE\.WebGPURenderer\(/);
-  assert.match(source, /new THREE\.InstancedBufferGeometry\(/);
-  assert.match(source, /new THREE\.NodeMaterial\(/);
-  assert.match(source, /THREE\.TSL/);
-  assert.equal(source.includes('.toString()'), false);
-  const kind = new Function(`${source}\nreturn typeof runMatrixAnimation;`)();
-  assert.equal(kind, 'function');
+const engineSource = readFileSync(new URL('./matrixRain.js', import.meta.url), 'utf8');
+const scriptSource = engineSource.replace(/^export /gm, '');
+
+test('PERF-10 engine module is self-contained text that runs without imports', () => {
+  assert.equal(/^\s*import\b/m.test(engineSource), false);
+  assert.match(engineSource, /^export function runMatrixAnimation\(THREE, canvas, initialConfig, tables\)/m);
+  assert.equal(engineSource.includes('.toString()'), false);
+  assert.equal(runInNewContext(`${scriptSource}\ntypeof runMatrixAnimation`), 'function');
 });
 
 const distAssets = join(dirname(fileURLToPath(import.meta.url)), '..', 'dist', 'assets');
 const distIndex =
   existsSync(distAssets) && readdirSync(distAssets).find((name) => name.startsWith('index-') && name.endsWith('.js'));
 
-test('production index bundle keeps injected THREE.* engine text', { skip: !distIndex }, () => {
+test('production index bundle keeps the unminified engine text for export', { skip: !distIndex }, () => {
   const bundle = readFileSync(join(distAssets, distIndex as string), 'utf8');
-  assert.equal(bundle.includes('function runMatrixAnimation(THREE, canvas, initialConfig)'), true);
-  assert.equal(bundle.includes('new THREE.Scene('), true);
+  assert.equal(bundle.includes('function runMatrixAnimation(THREE, canvas, initialConfig, tables)'), true);
   assert.equal(bundle.includes('new THREE.WebGPURenderer('), true);
-  assert.equal(bundle.includes('animationLogic.toString'), false);
 });
 
-test('ARC-03 standalone HTML calls the injected THREE engine', () => {
-  const html = generateStandaloneHtml(factoryConfig(), getAnimationLogicString());
-  assert.match(html, /runMatrixAnimation\(THREE, canvas, initialConfig\)/);
-  assert.match(html, /new THREE\.Scene\(/);
+test('ARC-03 standalone HTML embeds the engine as a script and passes its tables', () => {
+  const html = generateStandaloneHtml(factoryConfig(), engineSource);
+  assert.match(html, /runMatrixAnimation\(THREE, canvas, initialConfig, tables\)/);
+  assert.match(html, /const tables = \{"directionVectors"/);
+  assert.equal(/^\s*export /m.test(html), false);
   assert.match(html, /import \* as THREE from 'https:\/\/unpkg\.com\/three@[\d.]+\/build\/three\.webgpu\.js'/);
 });
 
@@ -71,7 +67,7 @@ test('shared engine caps instances, updates trails, and advances by elapsed time
       if (Object.prototype.toString.call(args[0]) === '[object Float32Array]') streams = args[0] as Float32Array;
     }
   }
-  const run = runInNewContext(`${getAnimationLogicString()}; runMatrixAnimation`, {
+  const run = runInNewContext(`${scriptSource}; runMatrixAnimation`, {
     window: { devicePixelRatio: 1 },
     document: {
       hidden: false,
@@ -118,7 +114,7 @@ test('shared engine caps instances, updates trails, and advances by elapsed time
     glyphSet: 'custom',
     customGlyphSet: '❤️🔥',
   };
-  const controller = run({ ...THREE, WebGPURenderer: Renderer, DataTexture }, canvas, config);
+  const controller = run({ ...THREE, WebGPURenderer: Renderer, DataTexture }, canvas, config, engineTables);
   try {
     assert.equal(await controller.ready, 'WebGPU');
     assert.ok(frame);

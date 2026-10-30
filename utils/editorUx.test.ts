@@ -1,7 +1,13 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
-import { customGlyphNotice, panelFallbackLabel, persistErrorMessage, readUiVisible } from './editorUx.ts';
+import {
+  customGlyphNotice,
+  isPanelToggleKey,
+  panelFallbackLabel,
+  persistErrorMessage,
+  readUiVisible,
+} from './editorUx.ts';
 
 test('UX-02 panel fallback label is non-empty', () => {
   assert.ok(panelFallbackLabel.length > 0);
@@ -23,15 +29,29 @@ test('UX-09 persist error message tells the user it could not save', () => {
   assert.ok(persistErrorMessage.includes('guardar'));
 });
 
-test('UX surface: App wires fallback, download, stealth, and notices', () => {
+test('UX surface: App wires fallback, download, collapsible panel, and notices', () => {
   const app = readFileSync(new URL('../App.tsx', import.meta.url), 'utf8');
   assert.equal(app.includes('panelFallbackLabel'), true);
-  assert.equal(app.includes('Descargar HTML'), true);
-  assert.equal(app.includes('aria-pressed'), true);
-  assert.equal(app.includes("event.key !== 'Escape'"), true);
+  assert.equal(app.includes('handleDownloadHtml'), true);
+  assert.equal(app.includes('inert={!isUiVisible}'), true);
+  assert.equal(app.includes('isPanelToggleKey(event)'), true);
   assert.equal(app.includes('persistErrorMessage'), true);
   assert.equal(app.includes('customGlyphNotice'), true);
   const panel = readFileSync(new URL('../components/TweakpanePanel.tsx', import.meta.url), 'utf8');
   assert.equal(panel.includes('activePreset'), true);
   assert.equal(panel.includes('factoryConfig()'), true);
+});
+
+const toggles = (key: string, target: unknown, ctrlKey = false) =>
+  isPanelToggleKey({ key, target: target as EventTarget, ctrlKey, metaKey: false, altKey: false });
+
+test('UX-01 Escape or H toggles the panel, but H is ignored while typing or in chords', () => {
+  const field = { closest: (selector: string) => (selector.includes('input') ? {} : null) };
+  const canvas = { closest: () => null };
+  assert.equal(toggles('Escape', field), true);
+  assert.equal(toggles('h', canvas), true);
+  assert.equal(toggles('H', null), true);
+  assert.equal(toggles('h', field), false);
+  assert.equal(toggles('h', canvas, true), false);
+  assert.equal(toggles('j', canvas), false);
 });
